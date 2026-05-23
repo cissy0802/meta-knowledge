@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>元知识详解：经济学原理 — Day 8</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#e85a4f 0%,#f7a072 35%,#52b788 70%,#3a86ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e85a4f;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#e85a4f;border:1px solid #f0d2cf}
+.tag.alt{color:#3a86ff;border-color:#d8e0eb}
+.tag.warm{color:#f7a072;border-color:#fbe5d9}
+.tag.green{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #e85a4f}
+.card:nth-of-type(2){border-top-color:#3a86ff}
+.card:nth-of-type(3){border-top-color:#52b788}
+.card:nth-of-type(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#fbe5e2;color:#e85a4f;margin-bottom:18px;letter-spacing:0.5px}
+.card:nth-of-type(2) .subfield{background:#e6eef9;color:#3a86ff}
+.card:nth-of-type(3) .subfield{background:#e3f1e8;color:#52b788}
+.card:nth-of-type(4) .subfield{background:#fbe5d9;color:#f7a072}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#e85a4f;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#fbe5e2;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#e85a4f}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #e85a4f;margin-top:6px}
+.section.english{background:#fbe5e2;padding:14px 16px;border-radius:8px;margin-top:18px}
+.section.english p{font-size:0.92rem;color:#3a3a4a;font-style:italic}
+.section.english .label{background:#e85a4f;color:#fff}
+.section.question{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072}
+.section.question .label{background:#f7a072;color:#fff}
+.section.question p{font-style:italic;color:#5a4a3a}
+.resources{font-size:0.92rem;color:#52b788}
+.nav{text-align:center;margin-top:40px;padding:20px}
+.nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
+.nav a:hover{background:#e85a4f;color:#fff}
+.viz{margin:22px 0 8px;padding:20px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
+.viz-title{font-size:0.82rem;color:#e85a4f;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
+.ca-table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;font-size:0.88rem}
+.ca-table th,.ca-table td{padding:12px 10px;text-align:center;border-bottom:1px solid #e8e2d8}
+.ca-table th{background:#e6eef9;color:#3a86ff;font-weight:700;letter-spacing:0.5px}
+.ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
+.ca-table td.highlight{background:#fff7f5;color:#e85a4f;font-weight:700}
+.ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.goods-grid{display:grid;grid-template-columns:60px 1fr 1fr;gap:0;background:#fff;border-radius:10px;overflow:hidden;border:1px solid #d6e8dd}
+.goods-cell{padding:14px 12px;border:1px solid #e8e2d8;display:flex;flex-direction:column;justify-content:center;min-height:90px}
+.goods-cell.header{background:#e3f1e8;color:#52b788;font-weight:700;text-align:center;font-size:0.82rem;min-height:42px;align-items:center}
+.goods-cell.corner{background:#52b788;color:#fff;font-weight:700;font-size:0.75rem;text-align:center;min-height:42px;align-items:center;line-height:1.3}
+.goods-cell.row-label{background:#f4f1ed;color:#2a2a3a;font-weight:700;font-size:0.82rem;text-align:center;align-items:center}
+.goods-type{font-size:0.92rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
+.goods-example{font-size:0.78rem;color:#6b6b7d;line-height:1.5}
+.lemon-viz{display:flex;flex-direction:column;gap:8px}
+.lemon-step{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:8px;border-left:3px solid #f7a072}
+.lemon-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:#f7a072;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.82rem}
+.lemon-text{font-size:0.85rem;color:#3a3a4a;flex:1}
+.lemon-arrow{text-align:center;color:#f7a072;font-size:1.1rem;margin:-4px 0}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+  .goods-grid{grid-template-columns:50px 1fr 1fr;font-size:0.78rem}
+  .ca-table{font-size:0.78rem}
+  .ca-table th,.ca-table td{padding:8px 6px}
+}
+</style>
+</head>
+<body>
+<a href="https://cissy0802.github.io/" style="position:fixed;top:14px;left:14px;font-size:0.82rem;color:inherit;opacity:0.55;text-decoration:none;padding:6px 12px;border:1px solid currentColor;border-radius:20px;z-index:100;backdrop-filter:blur(6px);transition:opacity 0.2s" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.55">← Hub</a>
+
+<div class="container">
+<header>
+  <h1>元知识详解：经济学原理</h1>
+  <div class="meta">2026 年 5 月 23 日 · Meta Knowledge Daily</div>
+  <div class="day">DAY 08</div>
+  <div class="tags">
+    <span class="tag">微观经济学</span>
+    <span class="tag alt">国际贸易</span>
+    <span class="tag green">公共选择</span>
+    <span class="tag warm">信息经济学</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>机会成本</h2>
+  <div class="en">Opportunity Cost</div>
+  <div class="subfield">微观经济学 · 决策理论</div>
+
+  <div class="section insight">
+    <span class="label">核心洞察</span>
+    <p>真正的成本不是你支付的钱，而是你为此放弃的"次优选择"。一旦把这个概念内化，你会发现"免费"几乎总是骗局，"忙碌"几乎总是隐性亏损。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">历史与提出者</span>
+    <p>由奥地利学派的弗里德里希·冯·维塞尔（Friedrich von Wieser）在 1889 年《自然价值》（<em>Der natürliche Werth</em>）中系统提出，被门格尔学派用以攻击古典学派的"成本=投入劳动"理论。后被弗兰克·奈特、罗纳德·科斯等继承，演化为现代决策科学的基石。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">核心机制</span>
+    <p>资源（时间、金钱、注意力）的稀缺性决定：选 A 即放弃 B。理性决策的核心不是计算"做这件事赚多少"，而是计算"做这件事我损失了什么其他可能"。一笔投资即便回报率 8%，若同期标普 500 回报 15%，机会成本高达 7 个百分点——你实际上在亏损。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">反直觉例子</span>
+    <p>沉没成本与机会成本是镜像关系。康奈尔的实验：付了 100 美元滑雪票的人，即便天气恶劣也会去；而免费收到票的人会理性放弃——前者把已花费的钱当作"理由"，却忽视了真正的成本是"用这段时间还能做什么"。诺奖得主 Daniel Kahneman 称这是"成本盲点"。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">跨学科迁移</span>
+    <p>在<strong>进化生物学</strong>中表现为"生命史权衡"（life history trade-off）——能量投入繁殖就无法投入生长；在<strong>计算机科学</strong>中是 CPU 调度的优先级问题；在<strong>认知心理学</strong>中对应"注意力即货币"（Herbert Simon）；在<strong>管理学</strong>中是 Andy Grove 的"高杠杆活动"概念——CEO 时间的机会成本极高，必须只做不可替代的事。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">生活应用</span>
+    <p><strong>经典：</strong>读研 vs 工作——两年学费 + 两年放弃的工资 + 工作经验，真实成本可能高达 60 万。<strong>用户场景：</strong>作为"超级个体"，每接一个小项目都要问"如果这段时间专注 AI 工具栈建设，三年后的复利价值是多少"。育儿亦同：陪伴孩子的 1 小时是用最高时薪计算的——但这正是它珍贵的原因。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">深入资源</span>
+    <p class="resources">📖 Russ Roberts《How Adam Smith Can Change Your Life》｜📖 Tim Harford《The Logic of Life》｜📰 Buchanan, "Cost and Choice" (1969)</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">English Summary</span>
+    <p>Opportunity cost is the value of the next-best alternative foregone. Every "yes" is implicitly a "no" to everything else. The concept exposes the hidden price of time, attention, and capital — and renders "free" almost always misleading.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">思考题</span>
+    <p>过去 30 天里，你做的最高机会成本的选择是什么？如果你把那段时间投入到第二选项，今天会处在什么位置？</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>比较优势</h2>
+  <div class="en">Comparative Advantage</div>
+  <div class="subfield">国际贸易 · 分工理论</div>
+
+  <div class="section insight">
+    <span class="label">核心洞察</span>
+    <p>即使你在所有事情上都比对方做得更好，分工合作仍然让双方更富有。"全能选手"应该专注于自己相对最强的领域——这是反直觉但严格可证的经济学定理。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">历史与提出者</span>
+    <p>大卫·李嘉图（David Ricardo）1817 年《政治经济学及赋税原理》（<em>On the Principles of Political Economy and Taxation</em>）中以英国-葡萄牙的呢绒与葡萄酒为例首次严格证明。被保罗·萨缪尔森称为"全部社会科学中最非平凡且为真的命题"（the only proposition in social science that is both true and non-trivial）。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">核心机制</span>
+    <p>判断分工不看绝对生产率，看<strong>放弃的机会成本</strong>。即使 A 在 X、Y 上都比 B 强，只要 A 在 X 上的优势"更大"，A 就应该专精 X，把 Y 让给 B——双方都受益。这是机会成本逻辑的延伸：你应该做"放弃成本最低"的事。</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ 李嘉图经典示例（生产 1 单位所需小时数）</div>
+    <table class="ca-table">
+      <tr><th></th><th>呢绒</th><th>葡萄酒</th><th>机会成本（呢绒/酒）</th></tr>
+      <tr><td class="label-col">英国</td><td>100</td><td>120</td><td class="highlight">1 酒 = 1.2 呢绒</td></tr>
+      <tr><td class="label-col">葡萄牙</td><td>90</td><td>80</td><td class="highlight">1 酒 = 0.89 呢绒</td></tr>
+    </table>
+    <div class="ca-note">葡萄牙在两者上都更高效（绝对优势），但葡萄牙生产酒的机会成本更低 → 葡萄牙专精酒、英国专精呢绒，双方均获益</div>
+  </div>
+
+  <div class="section">
+    <span class="label">反直觉例子</span>
+    <p>世界顶级律师每小时收费 $1000，同时打字速度也是全办公室最快的。但她仍应该雇助理打字——即便助理每小时 $30 比她慢 3 倍。因为律师打字 1 小时 = 放弃 $1000 法律服务；助理打字 3 小时 = 成本 $90。"全能 CEO"亲自做所有事，实际上是在销毁价值。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">跨学科迁移</span>
+    <p>在<strong>生态学</strong>中表现为"生态位分化"——两个物种共存不靠谁更强，靠各自利用不同资源；在<strong>认知科学</strong>中对应"模块化心智"（Fodor）——大脑用分布式专门化处理信息；在<strong>AI 系统设计</strong>中是 Mixture-of-Experts 架构的理论基础；在<strong>团队管理</strong>中是任务分配的核心原则——T 型人才协作而非全员通才。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">生活应用</span>
+    <p><strong>经典：</strong>全球供应链——美国设计 iPhone、中国组装、日韩供应芯片，没有任何一国"全做"。<strong>用户场景：</strong>作为多才能的资深技术人，最大陷阱是"什么都自己做"。识别你的"超线性领域"——在那里 1 小时产出别人 10 小时也做不到——其他全部外包/AI 化。育儿同理：父母不必是最好的钢琴老师，时间花在不可替代的"陪伴与价值观传递"上更高效。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">深入资源</span>
+    <p class="resources">📖 Paul Krugman《The Self-Organizing Economy》｜📰 Ricardo (1817) Ch.7｜📖 Matt Ridley《The Rational Optimist》</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">English Summary</span>
+    <p>Comparative advantage shows that mutually beneficial trade exists even when one party is more productive in everything. What matters is the ratio of opportunity costs, not absolute superiority. This is why specialization plus exchange beats autarky — at any scale, from nations to individuals.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">思考题</span>
+    <p>列出你能做的 5 件事。哪一件你的"放弃成本"最低（即做这件事时，你最不舍得放弃的另一件事是什么）？你现在的时间分配，是否符合这个排序？</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>公共品与外部性</h2>
+  <div class="en">Public Goods & Externalities</div>
+  <div class="subfield">公共经济学 · 市场失灵</div>
+
+  <div class="section insight">
+    <span class="label">核心洞察</span>
+    <p>市场只对"我付钱、我独享"的东西有效。一旦收益或代价溢出到第三方（外部性），或一旦无法排除"白吃者"（公共品），市场必然失灵——这不是道德问题，而是结构问题。理解这一点，你就懂了为什么世界上有政府、有法律、有 ESG。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">历史与提出者</span>
+    <p>外部性概念由 Arthur Pigou 在《福利经济学》（<em>The Economics of Welfare</em>, 1920）首次系统化，提出"庇古税"。公共品理论由 Paul Samuelson 1954 年《公共支出的纯粹理论》定义其"非排他性、非竞争性"特征。Elinor Ostrom 因研究公共池塘资源治理获 2009 诺奖，颠覆了"必须靠市场或政府"的二元对立。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">核心机制</span>
+    <p>外部性 = 私人决策的成本/收益没有完全反映到决策者身上。工厂排污：成本由下游居民承担；疫苗接种：收益惠及未接种者。当外部性为负时，市场会"过度供给"（污染太多）；为正时，市场会"供给不足"（基础研究太少）。庇古的解决方案：用税收/补贴把外部成本"内部化"。</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ 物品的四种类型（Samuelson 框架）</div>
+    <div class="goods-grid">
+      <div class="goods-cell corner">↓排他<br>竞争→</div>
+      <div class="goods-cell header">竞争性高</div>
+      <div class="goods-cell header">竞争性低</div>
+      <div class="goods-cell row-label">可排他</div>
+      <div class="goods-cell">
+        <div class="goods-type">私人品</div>
+        <div class="goods-example">面包、衣服<br>市场可有效供给</div>
+      </div>
+      <div class="goods-cell">
+        <div class="goods-type">俱乐部品</div>
+        <div class="goods-example">付费 Netflix、收费高速<br>常见付费墙</div>
+      </div>
+      <div class="goods-cell row-label">难排他</div>
+      <div class="goods-cell">
+        <div class="goods-type">公共池塘资源</div>
+        <div class="goods-example">渔场、地下水<br>易"公地悲剧"</div>
+      </div>
+      <div class="goods-cell">
+        <div class="goods-type">纯公共品</div>
+        <div class="goods-example">国防、灯塔、知识<br>市场必然失灵</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="label">反直觉例子</span>
+    <p>开源软件是纯公共品的胜利。Linux 内核每个人都能"白用"，按经典理论应供给为零，但实际上是地球上最关键基础设施之一。Eric Raymond《大教堂与集市》揭示了原因：声誉激励、模块化协作、低边际成本，让公共品在数字时代"自下而上"涌现。Ostrom 在尼泊尔灌溉系统中发现类似机制——社区可以靠规则自治避免公地悲剧。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">跨学科迁移</span>
+    <p>在<strong>进化生物学</strong>中对应"合作问题"——为何利他行为能稳定存在（汉密尔顿规则、互惠利他）；在<strong>气候科学/政治</strong>中是全球公共品的协调难题（巴黎协定为何困难）；在<strong>组织行为</strong>中是"团队搭便车"问题；在<strong>AI 时代</strong>是数据外部性——你的数据训练了模型，但你没收到补偿。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">生活应用</span>
+    <p><strong>经典：</strong>碳税、烟草税都是庇古思路的现代应用。<strong>用户场景：</strong>领导力中识别"组织级外部性"——某个团队的短期 KPI 优化可能在牺牲其他团队的长期价值（如销售压货损害客户成功）。育儿场景：屏幕时间是"负外部性"——你的孩子用了 iPad，但戒断的代价由 5 年后才显现的注意力衰退承担；家庭规则就是内部化机制。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">深入资源</span>
+    <p class="resources">📖 Elinor Ostrom《Governing the Commons》（必读）｜📖 Mariana Mazzucato《The Value of Everything》｜📰 Hardin (1968) "The Tragedy of the Commons"</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">English Summary</span>
+    <p>Markets fail when costs or benefits spill onto non-participants (externalities) or when goods cannot exclude free-riders (public goods). The fix is to internalize spillovers via taxes, property rights, or — as Ostrom showed — community-designed rules. The framework explains why pollution persists and why basic research is underfunded everywhere.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">思考题</span>
+    <p>你所在的组织/家庭，存在哪些"未被定价的外部性"？谁在承担代价？如果你是规则设计者，你会用哪种机制（定价、规则、产权）让它内部化？</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>信息不对称</h2>
+  <div class="en">Information Asymmetry</div>
+  <div class="subfield">信息经济学 · 市场设计</div>
+
+  <div class="section insight">
+    <span class="label">核心洞察</span>
+    <p>当交易双方知道的信息不同，市场不仅"运行不完美"——它可能完全崩溃。理解这一点你就懂了：为什么二手车便宜得离谱、保险公司要体检、好公司要披露财报、相亲市场要"信号"。世界的运行很大程度上是为了对抗信息不对称。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">历史与提出者</span>
+    <p>George Akerlof 1970 年《柠檬市场：质量不确定性与市场机制》（<em>The Market for Lemons</em>）首次形式化。该论文最初被三家顶刊拒稿（理由："太琐碎"或"太显然错"），最终 1970 年在 QJE 发表。Akerlof、Spence、Stiglitz 三人因此 2001 年共获诺奖。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">核心机制</span>
+    <p>两种典型问题：<strong>逆向选择</strong>（交易前的信息不对称）——卖方知道车况，买方不知。买方只愿出"平均价"，导致好车主退出市场，留下的全是"柠檬"（劣质二手车），最终市场崩塌。<strong>道德风险</strong>（交易后的信息不对称）——你买了全险后开车更鲁莽，因为后果由保险公司承担。解决方案：信号（学历、保修）、筛选（体检、压力面试）、激励合约（绩效奖金、deductible）。</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ 柠檬市场如何崩塌（Akerlof 1970）</div>
+    <div class="lemon-viz">
+      <div class="lemon-step"><div class="lemon-num">1</div><div class="lemon-text">市场上一半好车（$10k 价值）、一半烂车（$4k 价值）。买方无法分辨。</div></div>
+      <div class="lemon-arrow">↓</div>
+      <div class="lemon-step"><div class="lemon-num">2</div><div class="lemon-text">买方只愿支付平均价 $7k（按概率算的期望值）。</div></div>
+      <div class="lemon-arrow">↓</div>
+      <div class="lemon-step"><div class="lemon-num">3</div><div class="lemon-text">好车主拒绝 $7k 卖车（低于真实价值），退出市场。</div></div>
+      <div class="lemon-arrow">↓</div>
+      <div class="lemon-step"><div class="lemon-num">4</div><div class="lemon-text">市场只剩烂车。买方意识到后只愿付 $4k → 没人会卖好车 → 市场坍缩。</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="label">反直觉例子</span>
+    <p>Michael Spence 的"信号理论"：教育的经济价值，可能很大一部分不来自"学到什么"，而来自"信号传递"——能熬过四年高强度学习的人，本身就证明了能力与毅力。这解释了为什么辍学开公司成功的人（Gates、Jobs）反而备受推崇——他们用"创业成功"这个更强的信号替代了文凭信号。AI 时代正在颠覆这一切：当 GPT 能写论文，文凭信号正在贬值。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">跨学科迁移</span>
+    <p>在<strong>进化生物学</strong>中是"代价信号假说"（Zahavi handicap principle）——孔雀的尾巴正因为代价高昂，才是真实的健康信号；在<strong>分布式系统</strong>中对应拜占庭容错——如何在不信任的节点间达成共识；在<strong>AI 对齐</strong>中是"机制设计"问题——如何让 AI 在你不知道它真实意图时仍可信；在<strong>社交媒体</strong>中是"信号通胀"——当人人都晒精致生活，信号失效。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">生活应用</span>
+    <p><strong>经典：</strong>保险业整套设计（免赔额、共保比例、体检）都是对付道德风险与逆向选择的机制。<strong>用户场景：</strong>投资中——你为什么应该警惕"内部人正在卖出的公司"？因为他们是信息优势方。招聘资深岗位时，过度依赖简历会被"包装能力"逆向选择，结构化案例面试是更好的筛选。育儿场景：孩子说"作业做完了"——这是典型的信息不对称，需要"机制"（家长抽查 vs 信任与放权的边界设计）。</p>
+  </div>
+
+  <div class="section">
+    <span class="label">深入资源</span>
+    <p class="resources">📖 Akerlof & Shiller《Phishing for Phools》｜📰 Akerlof (1970) "The Market for Lemons"｜📖 Tim Harford《The Undercover Economist》</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">English Summary</span>
+    <p>When one party knows more than the other, markets can collapse (adverse selection) or actors take hidden risks (moral hazard). Signals, screening, and incentive-compatible contracts are evolved responses. Information asymmetry is why warranties exist, why insurance requires medicals, and why "free" lunches usually aren't.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">思考题</span>
+    <p>在你最近的一次重要决策（雇佣、合作、投资、购买）中，你是信息优势方还是劣势方？你用了什么"信号"或"筛选"机制来对抗不对称？事后证明它有效吗？</p>
+  </div>
+</div>
+
+<div class="nav"><a href="index.html">← 返回首页</a></div>
+</div>
+<script src="https://cissy0802.github.io/comments.js" defer></script>
+<script src="https://cissy0802.github.io/index-button.js" defer></script>
+</body>
+</html>
