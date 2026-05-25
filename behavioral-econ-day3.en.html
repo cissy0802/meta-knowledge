@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta-Knowledge Deep Dive: Behavioral Economics — Day 3</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#e85a4f 0%,#f7a072 40%,#52b788 80%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e85a4f;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#3a86ff;border:1px solid #d8e0eb}
+.tag.alt{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #e85a4f}
+.card:nth-child(2){border-top-color:#52b788}
+.card:nth-child(3){border-top-color:#3a86ff}
+.card:nth-child(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#fef0ed;color:#e85a4f;margin-bottom:18px;letter-spacing:0.5px}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#e85a4f;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#fef0ed;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#e85a4f}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #e85a4f;margin-top:6px}
+.section.english{background:#f0f4f8;padding:14px 16px;border-radius:8px;margin-top:18px}
+.section.english p{font-size:0.92rem;color:#3a3a4a;font-style:italic}
+.section.english .label{background:#3a86ff;color:#fff}
+.section.question{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072}
+.section.question .label{background:#f7a072;color:#fff}
+.section.question p{font-style:italic;color:#5a4a3a}
+.resources{font-size:0.92rem;color:#52b788}
+.nav{text-align:center;margin-top:40px;padding:20px}
+.nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
+.nav a:hover{background:#e85a4f;color:#fff}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>Meta-Knowledge Deep Dive: Behavioral Economics</h1>
+  <div class="meta">May 20, 2026 &middot; Meta Knowledge Daily</div>
+  <div class="day">DAY 03</div>
+  <div class="tags">
+    <span class="tag">Behavioral Economics</span>
+    <span class="tag alt">Cognitive Psychology</span>
+    <span class="tag">Decision Science</span>
+    <span class="tag alt">Financial Markets</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>Prospect Theory</h2>
+  <div class="en">Prospect Theory &middot; Kahneman &amp; Tversky, 1979</div>
+  <span class="subfield">Choice Under Risk</span>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>People do not decide on the basis of final wealth states. They decide on gains and losses relative to a reference point. The pain of a loss is roughly 2 to 2.5 times the pleasure of an equivalent gain. This single observation overturned 250 years of expected utility theory and pivoted economics from the "rational agent" assumption back toward psychology.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>Daniel Kahneman and Amos Tversky's 1979 <em>Econometrica</em> paper "Prospect Theory: An Analysis of Decision under Risk" is one of the most cited works in the social sciences. The 1992 revision, <em>Cumulative Prospect Theory</em>, fixed the mathematical inconsistencies of the original. Kahneman received the 2002 Nobel Prize in Economics for this work (Tversky had died in 1996).</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Three pillars: (1) <strong>reference dependence</strong> — the value function is anchored at a reference point, not at absolute wealth; (2) <strong>loss aversion</strong> — the value function is steeper for losses than for gains, with a slope ratio of about 2.25:1; (3) <strong>probability weighting distortion</strong> — people overweight small probabilities (lottery tickets, insurance) and underweight moderate-to-high ones. The result is an S-shaped value curve and an inverse-S probability weighting curve, which together predict the famous reversal: risk-averse in gains, risk-seeking in losses.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>The Asian disease problem (Tversky &amp; Kahneman 1981): same policy, expressed two ways. "Out of 600, 200 will be saved for certain" vs. "1/3 chance all 600 saved, 2/3 chance all 600 die." Expected values are identical. With the "saved" framing, 72% chose certainty; with the "die" framing, 78% chose the gamble. Same people, same facts, different reference point — and the choice flips. This is the source experiment of the framing effect.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p><strong>Financial markets</strong>: the disposition effect — investors sell winners too early and hold losers too long — is loss aversion in trading form (Shefrin &amp; Statman 1985). <strong>Negotiation</strong>: an opening offer is an anchor; it forces the counterparty's reference point and determines whether subsequent concessions are felt as gains or losses. <strong>Reinforcement learning</strong>: modern RLHF loss functions implicitly penalize harmful outputs far more than they reward helpful ones — structurally isomorphic to loss aversion. <strong>Product design</strong>: at the end of a free trial, users hate giving up what they already "have," which is why conversion rates dwarf direct paid acquisition.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Real-Life Application</span>
+    <p>Classic: insurance and lottery tickets coexist in the same wallet because people overreact to very low probabilities on both the loss side (fire) and the gain side (jackpot). BigCat scenario: in portfolio management, the urge to avoid realizing a loss keeps bad positions on the books forever. The disciplined fix: redefine "holding" as "buying it at today's price right now" — force a reference-point reset. In parenting, praising effort (raising the reference point) is more robust than praising outcomes (where any failure registers as loss) — the neurological cousin of Dweck's growth mindset.</p>
+  </div>
+
+  <div class="section resources">
+    <span class="label" style="color:#52b788;background:#e8f3ec">Going Deeper</span>
+    <p>Kahneman, <em>Thinking, Fast and Slow</em> (2011), chapters 26-32; Richard Thaler, <em>Misbehaving</em> (2015) traces how prospect theory went from rejected to mainstream.</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">Summary</span>
+    <p>Prospect Theory replaces expected utility's "absolute wealth" with reference-dependent gains and losses. Losses loom roughly 2&times; larger than equivalent gains, and people overweight rare events. The S-shaped value function explains framing reversals that classical rationality cannot.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question to Sit With</span>
+    <p>The last time you turned down a seemingly reasonable opportunity — was it because you overweighted "potential future loss," or because the expected value was actually negative? How do you tell the two apart?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Availability Heuristic</h2>
+  <div class="en">Availability Heuristic</div>
+  <span class="subfield">Judgment Biases</span>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>When people estimate the probability of an event, they are really estimating how easily it comes to mind. Media coverage, emotion, and recency all contaminate that measurement. What you fear is rarely what is actually most dangerous — it is what is most easily recalled. This principle reshaped risk communication, journalism, and the entire debate over AI training-data bias.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>Tversky &amp; Kahneman, "Availability: A Heuristic for Judging Frequency and Probability," <em>Cognitive Psychology</em> 5 (1973). It is one of the three heuristics they proposed, alongside representativeness and anchoring. Paul Slovic and colleagues later extended it into risk perception, founding modern risk communication (Slovic, <em>The Perception of Risk</em>, 2000).</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>The brain has no built-in frequency counter, so it substitutes retrieval fluency as a proxy. Three amplifiers: (1) <strong>vividness</strong> — one plane crash is more visualizable than five hundred car wrecks; (2) <strong>recency</strong> — what you read last week outweighs the same kind of event five years ago; (3) <strong>emotional salience</strong> — events that trigger fear or anger get retrieved faster. The metacognitive failure: people don't correct for "why this is easy to recall." They just equate fluency with true frequency.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Lichtenstein et al. (1978) had subjects estimate the relative frequency of 41 causes of death. Tornadoes were judged to kill four times as many as asthma — in reality, asthma kills twenty times more. Lightning deaths were judged more common than smallpox deaths, even though smallpox at the time was still killing thousands annually. The dark-comic case: after a wave of shark attack coverage, beach-town visits dropped — but the resulting switch to road trips killed far more people in car accidents than sharks ever did (cited by Sunstein).</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p><strong>Political science</strong>: terrorism shapes public policy out of all proportion to its actual death toll, because every attack makes the front page — Cass Sunstein calls this "probability neglect." <strong>AI / LLM</strong>: models become overconfident about content that's overrepresented in training data — the machine version of availability. LLMs are slick on famous bugs and embarrassingly wrong on long-tail ones. <strong>Medical diagnosis</strong>: after seeing one rare case, a clinician's diagnostic probability for that disease systematically rises for weeks. <strong>Investing</strong>: VIX systematically overestimates short-term volatility after a black swan — market-scale availability heuristic.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Real-Life Application</span>
+    <p>Classic: lottery ticket sales spike right after a record jackpot headline. BigCat scenario: when reviewing resumes or investment decks, having just rejected a failure that "looked like X" will systematically underweight every X-shaped opportunity for the next few days. The remedy: a decision journal plus an enforced one-week cooling-off. In parenting, one memorable bad behavior from your child can color your evaluation for days — replace "what I saw yesterday" with a 30-day behavior log.</p>
+  </div>
+
+  <div class="section resources">
+    <span class="label" style="color:#52b788;background:#e8f3ec">Going Deeper</span>
+    <p>Cass Sunstein, <em>Laws of Fear</em> (2005) systematically explores how availability distorts public policy; Hans Rosling, <em>Factfulness</em> (2018) offers a wealth of "worse than you think it's improving" anti-availability data.</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">Summary</span>
+    <p>The availability heuristic substitutes "how easily can I recall an instance" for "how frequent is this event." Vividness, recency, and emotional salience inflate perceived probability — which is why we fear plane crashes more than cars, and terrorism more than diabetes.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question to Sit With</span>
+    <p>Your last "gut" judgment about a market or a person — was the underlying evidence the actual base rate, or just the content that flowed through your feed in the past 72 hours?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Endowment Effect</h2>
+  <div class="en">Endowment Effect</div>
+  <span class="subfield">Ownership and Valuation</span>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>The mere fact of "owning" something changes what it's worth to you — usually doubling it. This overturns the classical assumption that market prices aggregate individual utilities. It also explains why old possessions are hard to discard, why portfolios drift, and why reforms are so difficult — every vested interest is anchored by the gravity of loss aversion.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>Richard Thaler first named the effect in his 1980 paper "Toward a Positive Theory of Consumer Choice." The most influential empirical demonstration came from Kahneman, Knetsch &amp; Thaler in their 1990 <em>Journal of Political Economy</em> paper using the Cornell coffee-mug experiment. Thaler received the 2017 Nobel Prize in Economics for integrating these findings into a complete behavioral economics framework.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>The endowment effect is loss aversion projected onto the dimension of exchange. Once an object is "yours," the reference point shifts to "the state of owning it" — so selling registers as a loss. Sellers' willingness-to-accept (WTA) is therefore systematically higher than buyers' willingness-to-pay (WTP). fMRI work (Knutson et al. 2008) showed that being asked to sell activates the insula — the same region that processes physical pain and disgust. Ownership isn't an idea; it's a body response.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>The coffee-mug experiment: half the students were randomly given a mug (retail value about $6); the other half got nothing. The two groups were then allowed to trade freely. Classical theory predicts about 50% of mugs change hands (since preferences are random). The actual trading rate was about 15%. Mug owners asked an average of $5.78; non-owners offered $2.21 — random allocation 30 minutes earlier produced a 2.5&times; valuation gap. A later field experiment by Hossain &amp; List in a Chinese factory showed that "give the bonus first then claw it back if targets are missed" lifted performance ~30% over "earn the bonus by hitting targets" — the endowment effect reverse-engineered for incentives.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p><strong>Law &amp; economics</strong>: the Coase theorem assumes initial property allocation doesn't affect final efficiency — the endowment effect refutes this directly. Initial allocations stick. <strong>Political science</strong>: status quo bias is the endowment effect at the institutional scale — tax cuts pass easily; benefit cuts almost never. <strong>Product growth</strong>: free trials, personalized settings, and accumulated points all manufacture "virtual endowment," turning your loss aversion into a moat against churn. <strong>Negotiation</strong>: get the counterparty to verbally describe what it would feel like to already own X, and their valuation of X jumps instantly.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Real-Life Application</span>
+    <p>Classic: a test-driven car is far harder to walk away from; sellers on secondhand marketplaces consistently price above market — the endowment effect surfacing en masse. BigCat scenario: that mediocre stock or that mediocre business unit you can't quite let go of is being kept not because it has a future but because you already own it. Run the "zero-based portfolio" exercise: would you buy it today with cash? With children, attachment to their own Lego builds and drawings is the pristine childhood form of the endowment effect — respect it, but use a rotating display wall to teach selective letting-go.</p>
+  </div>
+
+  <div class="section resources">
+    <span class="label" style="color:#52b788;background:#e8f3ec">Going Deeper</span>
+    <p>Thaler &amp; Sunstein, <em>Nudge</em> (2008) shows how to combine defaults and the endowment effect for public policy; Dan Ariely, <em>Predictably Irrational</em> (2008) has a chapter dedicated to why we overvalue what we own.</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">Summary</span>
+    <p>The endowment effect: people demand far more to give up an object than they would pay to acquire it. Mere ownership shifts the reference point, turning sale into loss. It breaks the Coase theorem's neutrality assumption and underlies status quo bias in politics, business, and personal life.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question to Sit With</span>
+    <p>List three things you currently "hold" (an asset, a relationship, a habit) that you would not acquire today if starting from scratch. What is stopping you from converting them into cash or energy?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Hyperbolic Discounting</h2>
+  <div class="en">Hyperbolic Discounting</div>
+  <span class="subfield">Intertemporal Preference</span>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>People don't discount the future on a smooth exponential curve. The discount is steep near today and flat far away — a hyperbola. The consequence: today's "you" sells out tomorrow's "you" every chance you get. Procrastination, overeating, and overspending aren't weak will; they're the brain massively overweighting the present. This rule reshaped savings policy, retirement plan design, addiction treatment, and the underlying logic of long-horizon AI planning.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>Experimental psychologist Richard Herrnstein (1961) first observed non-exponential discounting in pigeons. George Ainslie's <em>Picoeconomics</em> (1992) systematized it into the "hyperbolic discounting + internal multiple selves" framework. David Laibson's 1997 <em>QJE</em> paper "Golden Eggs and Hyperbolic Discounting" introduced the &beta;-&delta; (quasi-hyperbolic) model, which let the framework slot directly into mainstream savings models.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Exponential discounting: the discount rate is independent of distance — yesterday's you and today's you both prefer "one year from now vs. one year and a day from now" the same way. Hyperbolic discounting: the discount rate itself decays with time — you'll take $10 today over $11 tomorrow, but the same you happily picks $11 one year and a day from now over $10 one year from now. The result is preference reversal: rational in planning, weak at showtime. Neurally, ventromedial prefrontal cortex represents the "long-term self" while nucleus accumbens represents the "immediate-reward self" (McClure et al. 2004, <em>Science</em>); both compete in real time inside the fMRI scanner.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Ariely &amp; Wertenbroch (2002) had MIT students submit three papers in three conditions: (A) all due at the end of term; (B) student-chosen deadlines; (C) forced equally spaced deadlines. Classical theory predicts (A) yields the best work because it offers the most flexibility. Result reversed: (C) had the highest quality and on-time rates, (A) the lowest. Students voluntarily gave up freedom because they knew their future selves were unreliable. This is the experimental origin of the commitment device. Another striking data point: switching 401(k) defaults from opt-in to opt-out lifted participation from 30% to over 90% — same people, same benefit, just the default flipped (Madrian &amp; Shea 2001).</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p><strong>Public policy</strong>: the entire nudge toolkit rests on borrowing strength from "future you" via defaults, auto-renewals, and mandatory cooling-off periods. <strong>RL in AI</strong>: choosing the discount factor &gamma; is the machine version of "patience." Too low and the agent is myopic; too high and the learning signal goes sparse — the same multi-self conflict in algorithmic form. <strong>Clinical medicine</strong>: contingency management in addiction treatment uses small immediate rewards to outcompete distant health benefits — 2-3&times; more effective than counseling alone. <strong>Personal finance</strong>: young people don't undersave because of income; it's hyperbolic discounting compounded by an intuitive blindness to compounding itself.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Real-Life Application</span>
+    <p>Classic: gyms with automatic monthly billing have ~5&times; the renewal rate of pay-as-you-go ones, because the rational moment of signing up locks the future you in. BigCat scenario: as a senior leader running multiple long-term projects, the highest-leverage move isn't "more discipline" — it's building commitment infrastructure: calendared blocks, public commitments, defaults, auto-debits, so the future you doesn't need willpower to execute. With children, homework procrastination isn't a moral defect — it's hyperbolic discounting running on an underdeveloped prefrontal cortex. Pomodoro timers and small immediate rewards beat "you'll thank us later" by a wide margin. In investing, dollar-cost averaging is the mechanical conversion of "today's discipline" into "no decisions needed tomorrow."</p>
+  </div>
+
+  <div class="section resources">
+    <span class="label" style="color:#52b788;background:#e8f3ec">Going Deeper</span>
+    <p>George Ainslie, <em>Breakdown of Will</em> (2001) treats willpower as internal bargaining; Dan Ariely, <em>Predictably Irrational</em> (2008) has a strong "delayed gratification" chapter; Thaler &amp; Benartzi's "Save More Tomorrow" reports are the gold-standard policy application.</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">Summary</span>
+    <p>Hyperbolic discounting: humans devalue future rewards far more steeply in the near term than later, producing preference reversals over time. We are not single rational agents but a chain of selves bargaining across time — which is why commitment devices, defaults, and automatic enrollment beat willpower.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question to Sit With</span>
+    <p>The goals you set this year but already broke — were you short on willpower, or short on a commitment device that locked your future self in before your present self could defect?</p>
+  </div>
+</div>
+
+<div class="nav">
+  <a href="index.en.html">&larr; Back to Meta Knowledge Daily</a>
+</div>
+
+</div>
+</body>
+</html>

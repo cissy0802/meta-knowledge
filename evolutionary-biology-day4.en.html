@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta-Knowledge Deep Dive: Evolutionary Biology — Day 4</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#52b788 0%,#3a86ff 40%,#e85a4f 80%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#52b788;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#3a86ff;border:1px solid #d8e0eb}
+.tag.alt{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #52b788}
+.card:nth-child(2){border-top-color:#e85a4f}
+.card:nth-child(3){border-top-color:#3a86ff}
+.card:nth-child(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#e8f3ec;color:#52b788;margin-bottom:18px;letter-spacing:0.5px}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#52b788;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#e8f3ec;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#52b788}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #52b788;margin-top:6px}
+.section.english{background:#f0f4f8;padding:14px 16px;border-radius:8px;margin-top:18px}
+.section.english p{font-size:0.92rem;color:#3a3a4a;font-style:italic}
+.section.english .label{background:#3a86ff;color:#fff}
+.section.question{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072}
+.section.question .label{background:#f7a072;color:#fff}
+.section.question p{font-style:italic;color:#5a4a3a}
+.resources{font-size:0.92rem;color:#52b788}
+.nav{text-align:center;margin-top:40px;padding:20px}
+.nav a{color:#52b788;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #52b788;border-radius:24px;transition:all 0.2s}
+.nav a:hover{background:#52b788;color:#fff}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>Meta-Knowledge Deep Dive: Evolutionary Biology</h1>
+  <div class="meta">May 21, 2026 &middot; Meta Knowledge Daily</div>
+  <div class="day">DAY 04</div>
+  <div class="tags">
+    <span class="tag alt">Evolutionary Biology</span>
+    <span class="tag">Behavioral Ecology</span>
+    <span class="tag alt">Genetics</span>
+    <span class="tag">Paleontology</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>Selection Pressure</h2>
+  <div class="en">Selection Pressure &middot; Darwin 1859</div>
+  <span class="subfield">The Engine of Natural Selection</span>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Evolution isn't organisms "wanting to improve." It is the differential mortality and reproduction the environment imposes on heritable variation. Anything that magnifies or dampens that differential — climate, predators, sexual selection, human intervention — is a chisel. Once you grasp that pressure is design's engine, you see why every complex adaptive system (ecosystem, market, organization, algorithm) needs a non-zero failure rate to evolve. Zero failure means zero signal means zero adaptation.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>Darwin's <em>On the Origin of Species</em> (1859) gave us the three ingredients of natural selection: variation, heredity, and differential reproduction. The term "selection pressure" was quantified in the mid-twentieth century during the Modern Synthesis (Huxley 1942). J.B.S. Haldane formally defined the selection coefficient <em>s</em> in 1949; Bumpus's 1899 morphometric study of sparrows that survived versus died after a snowstorm is generally regarded as the first field record of natural selection caught in the act.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Selection pressure acts on differential reproduction of phenotypes. Three canonical shapes: <strong>directional selection</strong> (e.g., industrial melanism in the peppered moth, light to dark); <strong>stabilizing selection</strong> (human newborns in the 3.2-3.8 kg range have the highest survival); <strong>disruptive selection</strong> (Darwin's finches' beak shapes oscillate between drought and wet years). Intensity is captured by the selection coefficient: if a genotype is 1% less fit, <em>s</em> = 0.01 reduces its frequency from 50% to 1% in roughly 700 generations. Key constraint: selection can only act on existing variation — it never creates new traits, which is why every evolutionary product looks like a patched-together inheritance.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Peter &amp; Rosemary Grant tracked finches on Daphne Major in the Galápagos for 40 years (<em>The Beak of the Finch</em>, 1994 Pulitzer). The 1977 drought favored hard seeds; birds with beaks just 0.5 mm deeper survived at 6&times; the rate of their neighbors, and the population mean beak depth rose 4% in a single year. It is the fastest "real-time evolution" ever recorded. Even more counterintuitive: the 1983 El Niño deluge reversed the environment and reversed the beak selection. Evolution isn't monotonic improvement; it is a random walk driven by an unstable environment.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p><strong>Machine learning</strong>: genetic algorithms and neural architecture search (NAS) reuse the "pressure + variation + selection" trio; the loss function <em>is</em> the selection pressure. <strong>Market competition</strong>: Alchian (1950) gave economics its own selection logic — markets don't need entrepreneurs to be rational; they just need to eliminate the irrational ones. <strong>Organizational management</strong>: A/B tests and retention metrics are micro-scale selection pressure; SOEs and family firms without elimination mechanisms inevitably accumulate maladaptive "genes." <strong>Antibiotic resistance</strong>: overusing antibiotics turns humans into bacteria's selection pressure, accelerating drug-resistant strains — one of the most severe "reverse natural selection" crises of the 21st century.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Real-Life Application</span>
+    <p>Classic: every modern dog breed is the product of just ~15,000 years of artificial selection pressure — compressing tens of millions of years of natural evolution into the human generational scale. BigCat scenario: when you lead a team, an environment with no cost to failure stalls both talent and strategy. Deliberately preserve "small, controlled failures" — written postmortems, quarterly cuts of the bottom project — to engineer organizational selection pressure. In parenting, overprotection removes selection pressure; brains, emotions, and social skills all require appropriately scaled challenge. "Difficulty as nutrient" is the same principle in child development and evolutionary biology.</p>
+  </div>
+
+  <div class="section resources">
+    <span class="label" style="color:#3a86ff;background:#e6eef9">Going Deeper</span>
+    <p>Jonathan Weiner, <em>The Beak of the Finch</em> (1994, Pulitzer) — the Grants' fieldwork is the best entry into real-time evolution; Richard Dawkins, <em>The Greatest Show on Earth</em> (2009) lays out the evidence chain for selection pressure.</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">Summary</span>
+    <p>Selection pressure is the differential mortality and reproduction imposed by the environment on heritable variation. It does not create traits — it sculpts from what already varies. Zero failure means zero signal means zero adaptation, which is why every adaptive system (market, immune, neural) needs a non-zero loss rate to evolve.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question to Sit With</span>
+    <p>Your organization, your portfolio, your child's environment — which of these three has selection pressure so weak that bad variants can't be culled? And which has it so strong that beneficial variants get killed off?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Sexual Selection</h2>
+  <div class="en">Sexual Selection &middot; Darwin 1871</div>
+  <span class="subfield">Why Costly Ornaments Exist</span>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Darwin said the sight of a peacock's tail made him sick — clearly bad for survival, yet ubiquitous. His solution: alongside natural selection, a second independent force — <em>sexual selection</em>: same-sex competition plus mate choice. This principle explains every apparently "wasteful extravagance," from antlers to Lamborghinis, from peacock feathers to academic flex papers, from courtship dances to LinkedIn titles. They are all signals expensive enough to be uncheatable.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>Darwin's <em>The Descent of Man, and Selection in Relation to Sex</em> (1871) — he openly admitted <em>Origin of Species</em> couldn't account for the peacock. After a century of neglect, Ronald Fisher mathematized it in 1930 (<em>The Genetical Theory of Natural Selection</em>) as "Fisherian runaway" selection. Amotz Zahavi proposed the Handicap Principle in 1975, later proven rigorously by Alan Grafen (1990).</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Two sub-mechanisms: <strong>(1) intrasexual competition</strong> — force or status contests within one sex, driving body size, weaponry, and territoriality (sea lions, elk antlers); <strong>(2) intersexual selection</strong> — typically females choosing males, driving display traits (plumage, song, nest-building). Zahavi's Handicap Principle: a signal is reliable only when it is too expensive for low-fitness senders to fake — a peacock dragging that tail and still escaping predators proves its underlying genes. Fisherian runaway: once a preference gene and a trait gene become correlated, positive feedback can drive the trait into territory genuinely harmful to survival, until natural selection pulls the reins.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Andersson (1982, <em>Nature</em>) experimentally cut the tail feathers of long-tailed widowbirds: males with artificially extended tails attracted twice as many females as controls, while shortened-tail males attracted almost none. Female choice was actively selecting tail length. Even more striking: male bowerbirds in Australia don't parent at all and have instead evolved elaborate architectural and artistic abilities. They collect blue plastic bottle caps and colored glass, arrange them by color, and "exhibit." Females tour the displays one by one; the best curators monopolize over 30% of matings. Aesthetics — not strength — became the selection pressure.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p><strong>Economics / marketing</strong>: Veblen's conspicuous consumption is essentially Zahavi's Handicap Principle — Rolex and Hermès markups are only modest in functional terms; what you really pay for is the signal "I can afford this." <strong>Labor market</strong>: Spence's signaling theory (1973 Nobel) explains why a degree is a high-wage signal even when it confers no skill — it's expensive enough that low-ability candidates can't earn it. <strong>Tech companies</strong>: open-sourced large models, moonshots, and lavish headquarters are corporate peacock tails, broadcasting "we can afford this" to investors and top talent. <strong>Online content</strong>: long-form video, high-production podcasts, and deep essays function as their creators' sexual-selection signals.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Real-Life Application</span>
+    <p>Classic: young men have systematically higher accidental death rates than women — risk-taking itself is an evolutionary legacy of male sexual selection (Daly &amp; Wilson 1988). BigCat scenario: as an investor or hiring manager, the job isn't to be dazzled by signals — it's to distinguish "expensive signals coupled to ability" (sustained commit history, track record of successful projects) from "expensive but goal-decoupled display" (titles, plush offices). The first is informative; the second is Fisherian runaway. With teenage boys, extreme risk-taking (street racing, stunts) isn't "rebellion" — it's sexual selection circuitry firing in a low-risk modern world where it has nowhere productive to go. Channeling beats forbidding.</p>
+  </div>
+
+  <div class="section resources">
+    <span class="label" style="color:#3a86ff;background:#e6eef9">Going Deeper</span>
+    <p>Geoffrey Miller, <em>The Mating Mind</em> (2000) — an ambitious argument that the human mind itself is a peacock's tail; Amotz Zahavi &amp; Avishag Zahavi, <em>The Handicap Principle</em> (1997) is the popular treatment.</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">Summary</span>
+    <p>Sexual selection — Darwin's second force — favors traits that win mates rather than fight environments. Costly, hard-to-fake signals (peacock tails, antlers, luxury goods, PhDs) reveal underlying fitness precisely because cheaters cannot afford them. It explains why "wasteful" extravagance is everywhere in biology and culture.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question to Sit With</span>
+    <p>Your last major purchase, career move, or public statement — what share was actual utility, and what share was Zahavi-style signaling? Could you reallocate that ratio?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Hamilton's Rule (Kin Selection)</h2>
+  <div class="en">Hamilton's Rule &middot; rB &gt; C, 1964</div>
+  <span class="subfield">The Algebra of Altruism</span>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>"Why would any organism sacrifice itself for another?" — Darwin's largest unsolved crack, one that nearly broke the theory. In 1964 William D. Hamilton handed altruism back to genes with one neat inequality: <strong>rB &gt; C</strong>. So long as relatedness times the recipient's benefit exceeds the actor's cost, kin-directed altruism is selected for. Family firms, clan networks, nationalism, even a worker bee's suicidal sting — all collapse into a single line of algebra. This is where "the selfish gene" was born.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>Hamilton's two 1964 papers in the <em>Journal of Theoretical Biology</em>, "The Genetical Evolution of Social Behaviour I &amp; II," gave the formula and the proof — work Cambridge nearly rejected for being "too mathematical, too unbiological." J.B.S. Haldane had already quipped over a pint: "I would lay down my life for two brothers or eight cousins" — the intuitive preview of r = 1/2 and r = 1/8. Richard Dawkins popularized it in <em>The Selfish Gene</em> (1976). E.O. Wilson later turned against kin selection in favor of multilevel selection, triggering the most heated biology debate of the 2010s.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>r = relatedness = probability that two individuals share a given gene (parent-child = 0.5, full siblings = 0.5, first cousins = 0.125). B = recipient's reproductive benefit. C = actor's reproductive cost. When rB &gt; C, helping a relative actually increases the actor's gene frequency in the next generation — so genes "want" to evolve altruistic behavior. The honeybee twist: hymenopteran males are haploid, making worker sisters r = 0.75 (higher than the r = 0.5 they'd share with their own daughters). Helping the queen produce more sisters is genetically more profitable than reproducing themselves — Hamilton's algebraic explanation for why eusociality keeps independently evolving in insects.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Emlen's long-term study of African white-fronted bee-eaters (1995): young males who stayed home as "helpers" to younger siblings produced more gene copies than they would have by going off to breed independently. More dramatic still are naked mole-rats (Sherman et al. 1991) — one of the few eusocial mammals: a single breeding queen, sterile workers digging tunnels for life. Because of inbreeding, relatedness inside a colony reaches r ≈ 0.81 — well past the eusociality threshold. Or consider Trivers &amp; Hare (1976): ants invest in male versus female offspring at exactly a 3:1 ratio, the precise quantitative prediction of Hamilton's rule at the colony level — verified repeatedly in the field.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p><strong>Sociology / anthropology</strong>: the prevalence of clan networks, family firms, and cousin marriage in traditional societies has a hard answer in Hamilton's rule — not just cultural preference. <strong>Economics</strong>: inheritance, family trusts, and the capital flows of the Jewish or Wenzhou business networks are rB &gt; C realized as property arrangements. <strong>Organizational management</strong>: the PayPal Mafia, partnerships, and alumni networks all amplify <em>r</em> (shared identity) to lower the cost of cooperation — synthetic kin. <strong>Multi-agent AI</strong>: reward-sharing in cooperative agent systems = artificially raising <em>r</em> to convert competitive gradients into cooperative ones.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Real-Life Application</span>
+    <p>Classic: wallet-return rates rise monotonically with <em>r</em> from stranger to cousin to sibling (Burnstein et al. 1994, cross-cultural). BigCat scenario: in team building, shared hardship synthesizes virtual kinship — which is why the first 20 hires of a startup are bonded far more tightly than equivalently talented later hires; the organizational version of raising <em>r</em>. Evaluating succession risk in a family business is essentially evaluating Hamilton algebra: siblings share r = 0.5, but cousins share r = 0.25 — which is why third-generation breakups happen far more often than second. In parenting, siblings are r = 0.5 by default, but the bond needs continuous reinforcement through shared experiences (family trips, joint projects); blood alone is not enough.</p>
+  </div>
+
+  <div class="section resources">
+    <span class="label" style="color:#3a86ff;background:#e6eef9">Going Deeper</span>
+    <p>Richard Dawkins, <em>The Selfish Gene</em> (1976) remains the best entry point; Hamilton's own <em>Narrow Roads of Gene Land</em> (1996, 1998), the two-volume autobiography of his papers, is a singular work in the history of science; Robert Trivers, <em>Social Evolution</em> (1985), integrates kin selection with reciprocal altruism.</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">Summary</span>
+    <p>Hamilton's rule (rB &gt; C, 1964) reduces altruism to algebra: relatedness &times; recipient benefit must exceed actor's cost. This single inequality explains why bees sting themselves to death, why family firms exist, and why coalitions form around shared identity. It transformed Darwinism from individual-level to gene-level logic.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question to Sit With</span>
+    <p>The people, organizations, or causes for which you accept asymmetric cost — what is the real <em>r</em> behind them? Blood, shared experience, shared identity, or carefully manufactured "synthetic kinship"? Does this explain a time you "gave too much"?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Punctuated Equilibrium</h2>
+  <div class="en">Punctuated Equilibrium &middot; Eldredge &amp; Gould 1972</div>
+  <span class="subfield">The Temporal Structure of Evolution</span>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>In the fossil record, species sit nearly unchanged for millions of years and then morph rapidly within a geological instant (a few tens of thousands of years). This collides with Darwin's "slow and gradual" picture. In 1972 Gould and Eldredge proposed that evolution's real rhythm isn't smooth at all — it's long stasis punctuated by bursts. The concept then leapt beyond biology, reshaping how we think about technological revolutions, organizational change, market paradigms, and personal growth.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>Niles Eldredge &amp; Stephen Jay Gould, "Punctuated equilibria: an alternative to phyletic gradualism," in <em>Models in Paleontology</em> (1972). Gould went on to popularize the idea over decades in his <em>Natural History</em> columns (collected in <em>The Panda's Thumb</em> and others). Richard Dawkins pushed back sharply, calling it just "rapid gradualism" inflated into something it isn't — a debate that continues today, though the fossil pattern itself is widely accepted.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>The key explanation: in large populations, stabilizing selection suppresses any peripheral variant and gene flow dilutes it. Real speciation typically happens in small, geographically isolated peripheral populations — drift + local selection + founder effects allow new traits to fix rapidly. The new species then migrates back and replaces the parent, leaving an apparent "jump" in the fossil layer. The transition is too brief (often 50,000-100,000 years) to be captured at typical fossil resolution, producing the illusion of discontinuity. Mayr's allopatric speciation is the underlying mechanism.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Trilobites (the subject of Eldredge's doctoral work): in 400-million-year-old New York strata, the Devonian <em>Phacops rana</em> lineage shows almost no morphological change over 8 million years — then, in a thin layer spanning under 100,000 years, the number of eye columns jumps from 18 to 17 and never reverts. That's the prototype "punctuation" Eldredge first saw. More broadly counterintuitive: the Cambrian Explosion (~540 million years ago), in which nearly every animal phylum appears within a geological eyeblink (~20 million years). Gradualism cannot account for it, but "environmental upheaval + ecological vacancies + gene-regulatory network innovation" can.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p><strong>History of science</strong>: Thomas Kuhn's <em>The Structure of Scientific Revolutions</em> (1962) independently described paradigm shift — long normal-science accumulation, then anomaly accumulation, then paradigm replacement. The epistemological version of punctuated equilibrium. <strong>Organizational change</strong>: Tushman &amp; Romanelli (1985) argued firms evolve through alternating "convergence" and "reorientation" periods — long local optimization followed by mandatory large-scale restructuring. <strong>Market paradigms</strong>: Christensen's disruptive innovation S-curve chains are structurally identical. <strong>Personal growth</strong>: real skill and cognition curves are not linear — they are "plateau plus jump," matching Ericsson's deliberate practice data for motor skill and second-language acquisition.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Real-Life Application</span>
+    <p>Classic: Darwin's finches' rapid morphological switches between drought and El Niño years are punctuated equilibrium playing out on a microscopic time scale. BigCat scenario: on the long path to becoming a "super-individual," dismantle the illusion of linear progress — most substantive cognitive jumps happen in <em>forced peripheries</em> (failed projects, health scares, role changes), not in comfort. Strategically, manufacture your own "small peripheral isolations" — solo retreat weeks, cross-disciplinary sabbaticals, deliberately stepping out of your default social circle. That is personal-scale allopatric speciation. In children, ability develops in plateau-then-jump patterns (Piaget's stages are the same shape) — a plateau is not stagnation; it's the underlying conditions accumulating for the next jump. Don't pile pressure on during plateaus.</p>
+  </div>
+
+  <div class="section resources">
+    <span class="label" style="color:#3a86ff;background:#e6eef9">Going Deeper</span>
+    <p>Stephen Jay Gould, <em>The Structure of Evolutionary Theory</em> (2002, 1,400 pages) is the definitive statement; for accessible entry, <em>Wonderful Life</em> (1989) uses the Burgess Shale to argue for evolutionary contingency; Thomas Kuhn, <em>The Structure of Scientific Revolutions</em> (1962), pairs beautifully as a cross-disciplinary read.</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">Summary</span>
+    <p>Punctuated equilibrium (Eldredge &amp; Gould 1972) holds that species spend most of their existence in stasis, with morphological change concentrated in geologically brief episodes — typically when small isolated populations diverge and replace the parent stock. Stability is the rule; change is bursty. The pattern recurs in paradigm shifts, organizational change, and personal growth.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question to Sit With</span>
+    <p>Look back at your three most important leaps of the past decade. When they happened, were you in the "mainstream comfort zone" or in a "peripheral isolation"? If your next five years are destined to be punctuated, what kind of edge-isolation should you start engineering today to catalyze the next jump?</p>
+  </div>
+</div>
+
+<div class="nav">
+  <a href="index.en.html">&larr; Back to Meta Knowledge Daily</a>
+</div>
+
+</div>
+</body>
+</html>

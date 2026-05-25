@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta-Knowledge Deep Dive: Foundations of Neuroscience — Day 1</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#e85a4f 0%,#f7a072 40%,#52b788 80%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e85a4f;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#3a86ff;border:1px solid #d8e0eb}
+.tag.alt{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #e85a4f}
+.card:nth-child(2){border-top-color:#52b788}
+.card:nth-child(3){border-top-color:#3a86ff}
+.card:nth-child(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#fef0ed;color:#e85a4f;margin-bottom:18px;letter-spacing:0.5px}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#e85a4f;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#fef0ed;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#e85a4f}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #e85a4f;margin-top:6px}
+.section.english{background:#f0f4f8;padding:14px 16px;border-radius:8px;margin-top:18px}
+.section.english p{font-size:0.92rem;color:#3a3a4a;font-style:italic}
+.section.english .label{background:#3a86ff;color:#fff}
+.section.question{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072}
+.section.question .label{background:#f7a072;color:#fff}
+.section.question p{font-style:italic;color:#5a4a3a}
+.resources{font-size:0.92rem;color:#52b788}
+.nav{text-align:center;margin-top:40px;padding:20px}
+.nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
+.nav a:hover{background:#e85a4f;color:#fff}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>Meta-Knowledge Deep Dive: Foundations of Neuroscience</h1>
+  <div class="meta">May 19, 2026 &middot; Meta Knowledge Daily</div>
+  <div class="day">DAY 01</div>
+  <div class="tags">
+    <span class="tag">Neuroscience</span>
+    <span class="tag alt">Cognitive Science</span>
+    <span class="tag">Machine Learning</span>
+    <span class="tag alt">Sociology</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>Predictive Processing</h2>
+  <div class="en">Predictive Coding / Predictive Processing</div>
+  <span class="subfield">Computational Neuroscience</span>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>The brain is not a camera passively receiving sensory input. It is constantly guessing — generating a model of the world and spending neural resources only on the parts where the guess turns out to be wrong. What you "see" is, in essence, a controlled hallucination produced by the brain.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>In 1999 Rao &amp; Ballard published "Predictive coding in the visual cortex" in <em>Nature Neuroscience</em>, using V1/V2 feedback connections to explain classical center-surround suppression. Karl Friston generalized the idea from 2005 onward into the Free Energy Principle, arguing that every self-organizing system minimizes prediction error. Andy Clark's <em>Surfing Uncertainty</em> (2016) brought the framework into mainstream philosophy and cognitive science.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>The cortex is hierarchically organized: higher layers send predictions downward (top-down) while lower layers send back only the part that doesn't match — the prediction error (bottom-up). Attention is the precision-weighting that tunes these error signals. The same framework unifies perception, motor control, and learning — movement is literally the brain predicting that it has already moved, then forcing the body to comply.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>The viral "dress" image of 2015 (blue/black vs. white/gold) split viewers because each brain made a different prior assumption about the lighting. Even more classic is the McGurk effect: play the syllable /ba/ while showing lips forming /ga/, and most people "hear" /da/. The visual prior literally rewrites the output of the auditory cortex.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p><strong>Machine learning</strong>: variational autoencoders and diffusion models are essentially generative models plus error backpropagation — structurally isomorphic to predictive processing. <strong>Clinical psychiatry</strong>: hallucinations in schizophrenia are reframed as priors too strong to be overridden by sensory evidence; autism is the opposite, with priors too weak so sensory input floods through. <strong>Management</strong>: "exception reporting" inside organizations — where employees surface only deviations from plan — is the corporate version of prediction error.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Real-Life Application</span>
+    <p>Classic: a new approach to chronic pain treats it as the brain stubbornly "predicting" pain in a body part — therapy aims to update the prior rather than block the signal. BigCat scenario: as an AI product leader, design team feedback so only off-prediction metrics are escalated (anomaly detection) rather than exhaustive reports; with school-age children, "rebellion" is often just prediction error against your outdated model of who they are — updating the model converges faster than correcting the child.</p>
+  </div>
+
+  <div class="section resources">
+    <span class="label" style="color:#52b788;background:#e8f3ec">Going Deeper</span>
+    <p>Andy Clark, <em>Surfing Uncertainty</em> (2016); Anil Seth, <em>Being You</em> (2021) — the most lucid treatment of the "controlled hallucination" view.</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">Summary</span>
+    <p>The brain is a prediction machine that constantly generates hypotheses about sensory input; only prediction errors are propagated upward. Perception, action, and learning are unified as minimization of prediction error — a framework now bridging neuroscience and generative AI.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question to Sit With</span>
+    <p>If what you "see" is the brain's prediction, what epistemic status remains for "objective fact"? When you and another person describe the same event differently, how often is it not that one is lying, but that the priors simply differ?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Default Mode Network</h2>
+  <div class="en">Default Mode Network (DMN)</div>
+  <span class="subfield">Brain Functional Connectivity</span>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>When the brain appears to be doing "nothing," it isn't resting at all — a specific set of regions becomes more active, dedicated to self-reflection, recalling the past, imagining the future, and simulating other minds. Mind-wandering is not a bug; it is a core operating mode of the brain, and likely the substrate of both creativity and a continuous sense of self.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>In 2001 Marcus Raichle's team published "A default mode of brain function" in <em>PNAS</em>, accidentally discovering that the "control" condition (doing no task) in fMRI experiments had higher metabolic activity than the task condition. The implicated regions include medial prefrontal cortex, posterior cingulate, precuneus, and angular gyrus. Buckner and colleagues later systematized the network, and it has since become one of the most important neuroscience findings of the past two decades.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>The DMN is anticorrelated with the task-positive network — when one turns on, the other turns off. It activates strongly during autobiographical memory retrieval, theory of mind, future episodic simulation, and moral reasoning. The DMN does not fully mature in children until ages 9–12, matching the developmental curve of self-awareness.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>The main neural mechanism of psilocybin and LSD is not activation but the <strong>disintegration</strong> of the DMN. Carhart-Harris's 2012 fMRI study showed that the greater the drop in DMN connectivity, the stronger the subjective experience of ego dissolution. This hints that the felt sense of "self" may live inside the stable oscillation pattern of the DMN.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p><strong>Meditation</strong>: long-term meditators show markedly reduced DMN activity (Brewer 2011, Yale), matching the subjective report of "no-self." <strong>Depression</strong>: in major depression the DMN is hyperactive and hard to downregulate, manifesting as rumination. <strong>AI</strong>: an LLM's off-task chain-of-thought has a formal resemblance to the DMN's integrative function and has been used as an analogy for emergent capabilities.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Real-Life Application</span>
+    <p>Classic: shower or walking insights — the task network goes offline, the DMN takes over, and distant associations surface. BigCat scenario: as a leader making dense decisions all day, reserving 20–30 minutes a day of pure mind-wandering (no phone, no podcast) is the physical prerequisite for strategic insight. Letting a child "stare into space" without an agenda is protecting DMN development, not wasted time.</p>
+  </div>
+
+  <div class="section resources">
+    <span class="label" style="color:#52b788;background:#e8f3ec">Going Deeper</span>
+    <p>Michael Pollan, <em>How to Change Your Mind</em> (2018) is the most accessible take on DMN and psychedelics; Buckner et al., "The Brain's Default Network," <em>Annals of NYAS</em> (2008) is the academic starting point.</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">Summary</span>
+    <p>The Default Mode Network is the brain's "idle" circuit that activates during mind-wandering, self-referential thought, and future simulation. Its disruption underlies psychedelic ego-dissolution, while its hyperactivity correlates with depressive rumination — making "doing nothing" a cognitively expensive state.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question to Sit With</span>
+    <p>If "the self" is a stable oscillation pattern of the DMN, then "becoming a better self" and "temporarily letting go of the self" are two opposite training directions. Which way does your current life lean?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Neuroplasticity</h2>
+  <div class="en">Neuroplasticity</div>
+  <span class="subfield">Development &amp; Learning</span>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>The brain is not hardware that ships fixed at the factory — it is an organ that rewrites its own physical structure for life. Every day's attention allocation and every habit literally reshape synaptic weights. "You are what you repeatedly do" is not a metaphor; at the molecular level it is the plain truth.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>Donald Hebb's 1949 <em>The Organization of Behavior</em> gave us "neurons that fire together, wire together." Michael Merzenich's monkey cortical mapping experiments in the 1980s–90s provided the first hard evidence of adult plasticity. Eric Kandel won the 2000 Nobel Prize for tracing long-term potentiation (LTP) in the sea slug Aplysia down to molecular detail, reducing learning and memory to chemistry.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Three layers: synaptic plasticity (LTP/LTD changing connection strength, seconds to minutes); structural plasticity (new dendritic spines forming and being pruned, days to weeks); cortical remapping (functional boundaries shifting, months to years). BDNF (brain-derived neurotrophic factor) is the key molecular switch — exercise and deep sleep are its strongest inducers.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>London taxi driver study (Maguire 2000, <em>PNAS</em>): drivers who passed the famously punishing "The Knowledge" exam had measurably larger posterior hippocampi than controls, and the volume scaled with years driven — then shrank again after retirement. Blind people repurpose visual cortex for hearing and touch; reading Braille lights up the "visual" cortex. This means the visual cortex is not fundamentally about vision but about processing spatial structure.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p><strong>Machine learning</strong>: training a neural network is artificial plasticity; dropout and catastrophic forgetting all have biological counterparts. <strong>Organizational science</strong>: organizational capability is essentially collective plasticity — every process rehearsal rewrites the company's "synaptic weights." <strong>Rehabilitation</strong>: constraint-induced movement therapy (CIMT) for stroke patients forces use of the affected side, compelling healthy cortex to remap motor function.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Real-Life Application</span>
+    <p>Classic: gray-matter increases after learning a new language are measurable. BigCat scenario: instead of asking "am I cut out for X?" ask "am I willing to invest enough time to let my brain rewrite itself?" — this is the neuroscience underneath the "super-individual" mindset. Critical periods are real but overhyped; second languages and instruments are most efficient in childhood, but adults can learn — they just burn more BDNF, which means more exercise and better sleep.</p>
+  </div>
+
+  <div class="section resources">
+    <span class="label" style="color:#52b788;background:#e8f3ec">Going Deeper</span>
+    <p>Norman Doidge, <em>The Brain That Changes Itself</em> (2007) is the case-rich entry point; Eric Kandel, <em>In Search of Memory</em> (2006) blends science with personal history.</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">Summary</span>
+    <p>Neuroplasticity is the lifelong capacity of the brain to rewire its synapses, dendrites, and even cortical maps in response to experience. From Hebbian learning to cortical remapping after amputation, it dissolves the boundary between hardware and software in cognition.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question to Sit With</span>
+    <p>If your brain is being reshaped right now by how you allocated attention over the past 90 days, which functions did you "train" and which did you "prune"? If an outsider could read your synaptic weights, would the picture match your self-description?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Mirror Neurons</h2>
+  <div class="en">Mirror Neurons</div>
+  <span class="subfield">Social Neuroscience</span>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>When you watch someone perform an action, the neurons in your brain that would execute that action also fire. You don't merely "understand" what they're doing — you quietly simulate it inside your own motor system. This may be the neural substrate of empathy, imitation learning, and cumulative culture. It is also one of the most over-mythologized concepts in 21st-century neuroscience.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>In 1992, Giacomo Rizzolatti's team at the University of Parma was studying area F5 motor cortex in macaques when they noticed certain neurons firing both when the monkey grasped a peanut and when it watched the experimenter do so. The paper appeared in <em>Experimental Brain Research</em>; the term "mirror neurons" was formally introduced in 1996. V.S. Ramachandran famously called them "the cells that shaped civilization" and predicted they would rewrite psychology.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Direct single-cell evidence exists in macaques; human evidence is indirect (fMRI, TMS, EMG). The Mirror Neuron System includes at least the inferior frontal gyrus (IFG, including Broca's area) and the inferior parietal lobule (IPL). Activation depends on the goal-directedness of the action, not mere kinematic similarity — the system encodes intention, not posture.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Newborns 42 minutes old can imitate tongue protrusion (Meltzoff &amp; Moore 1977, <em>Science</em>) — before they have ever seen their own tongue. This hinted at an innate see-to-do mapping. But a large-scale 2016 replication (Oostenbroek et al., <em>Current Biology</em>) found the effect unstable, triggering a major debate about whether the mirror-neuron hypothesis had been wildly overstated. The current consensus: the phenomenon is real, but its explanatory reach has been inflated — empathy almost certainly emerges from many systems cooperating.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p><strong>Sports training</strong>: observational learning activates the same motor cortex, so watching game film is, at the neural level, partially equivalent to practice. <strong>Economics</strong>: Robert Shiller's narrative economics — financial panics spread through mirror-like emotional contagion. <strong>AI</strong>: imitation learning, behavioral cloning, and RLHF are machine versions of mirroring — but they lack goal encoding, which is why they often mimic the surface motion without grasping intent.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Real-Life Application</span>
+    <p>Classic: a therapist's micro-expression synchrony is key to building the working alliance. BigCat scenario: as a leader, your team will mirror your emotional state far more than your stated strategy — anxiety spreads faster than vision. With children, "show, don't tell" is literal neuroscience: they copy how you hold your phone more precisely than you'd guess.</p>
+  </div>
+
+  <div class="section resources">
+    <span class="label" style="color:#52b788;background:#e8f3ec">Going Deeper</span>
+    <p>Giacomo Rizzolatti &amp; Corrado Sinigaglia, <em>Mirrors in the Brain</em> (2008); for the critical view, Gregory Hickok's <em>The Myth of Mirror Neurons</em> (2014) — read both in parallel.</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">Summary</span>
+    <p>Mirror neurons fire both when an animal performs an action and when it observes the same action — first found in macaque premotor cortex by Rizzolatti's team. Hailed as the neural basis of empathy and imitation, the concept is now reassessed as one mechanism among many in social cognition, not the master key.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question to Sit With</span>
+    <p>If the people around you are quietly simulating your every micro-expression and emotional tone, then "leading by example" may be the most underrated leverage in leadership. Conversely, how much of your own mood today was mirrored from one specific person?</p>
+  </div>
+</div>
+
+<div class="nav">
+  <a href="index.en.html">&larr; Back to Index</a>
+</div>
+
+</div>
+</body>
+</html>
