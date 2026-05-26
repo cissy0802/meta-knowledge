@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Knowledge: Statistics &amp; Probability — Day 12</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#e85a4f 0%,#f7a072 35%,#52b788 70%,#3a86ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e85a4f;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#e85a4f;border:1px solid #f0d2cf}
+.tag.alt{color:#3a86ff;border-color:#d8e0eb}
+.tag.warm{color:#f7a072;border-color:#fbe5d9}
+.tag.green{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #e85a4f}
+.card:nth-of-type(2){border-top-color:#3a86ff}
+.card:nth-of-type(3){border-top-color:#52b788}
+.card:nth-of-type(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#fbe5e2;color:#e85a4f;margin-bottom:18px;letter-spacing:0.5px}
+.card:nth-of-type(2) .subfield{background:#e6eef9;color:#3a86ff}
+.card:nth-of-type(3) .subfield{background:#e3f1e8;color:#52b788}
+.card:nth-of-type(4) .subfield{background:#fbe5d9;color:#f7a072}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#e85a4f;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#fbe5e2;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#e85a4f}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #e85a4f;margin-top:6px}
+.section.bigcat{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072;margin-top:18px}
+.section.bigcat .label{background:#f7a072;color:#fff}
+.section.bigcat p{color:#5a4a3a}
+.section.bigcat .q{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed #f0d2a4;font-style:italic;color:#6b5a3a}
+.resources-card{background:#fff;border-radius:14px;padding:24px 26px;margin-top:28px;border-left:4px solid #52b788}
+.resources-card h3{font-size:1.1rem;color:#52b788;margin-bottom:14px;letter-spacing:0.5px}
+.resources-card ul{list-style:none;padding:0}
+.resources-card li{padding:8px 0;border-bottom:1px solid #f0ece4;font-size:0.92rem;color:#3a3a4a}
+.resources-card li:last-child{border-bottom:none}
+.resources-card li strong{color:#52b788}
+.viz{margin:22px 0 8px;padding:18px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
+.viz-title{font-size:0.78rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
+.payoff-table{width:100%;border-collapse:collapse;font-size:0.85rem;background:#fff;border-radius:8px;overflow:hidden}
+.payoff-table th,.payoff-table td{padding:10px 12px;text-align:center;border:1px solid #e8e2d8}
+.payoff-table th{background:#f4f1ed;color:#6b6b7d;font-weight:600;font-size:0.78rem;letter-spacing:0.5px}
+.payoff-table td.label{background:#f4f1ed;font-weight:600;color:#6b6b7d}
+.payoff-table td.hit{background:#fff7f5;color:#e85a4f;font-weight:700}
+.payoff-table td.miss{background:#f4f1ed;color:#6b6b7d}
+.payoff-table td.good{background:#e3f1e8;color:#2a7a4a;font-weight:700}
+.payoff-table td.reverse{background:#fef0d9;color:#b56b00;font-weight:700}
+.payoff-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+  .payoff-table th,.payoff-table td{padding:6px 4px;font-size:0.74rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>Meta Knowledge: Statistics &amp; Probability</h1>
+  <div class="meta">May 26, 2026 · Meta Knowledge Daily</div>
+  <div class="day">DAY 12</div>
+  <div class="tags">
+    <span class="tag">Statistical Inference</span>
+    <span class="tag alt">Computational Statistics</span>
+    <span class="tag green">Data Bias</span>
+    <span class="tag warm">Causal Inference</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>Bayesian Inference</h2>
+  <div class="en">Probability as belief, updated by evidence</div>
+  <div class="subfield">Probability as Belief · Priors and Updating</div>
+
+  <div class="section insight">
+    <span class="label">CORE INSIGHT</span>
+    <p>Probability is not an objective property of the world — it is a <strong>degree of belief</strong>. New evidence shouldn't erase prior belief but reweight it via "prior × likelihood = posterior." Ignoring base rates is the single most systematic error in human intuitive probability — among doctors, judges, and investors alike.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">ORIGIN &amp; MECHANISM</span>
+    <p>Thomas Bayes (1701-1761), a Presbyterian minister, was published posthumously in 1763 by Richard Price ("An Essay towards solving a Problem in the Doctrine of Chances"); Laplace independently rediscovered and extended it (1774) to celestial measurement. For much of the 20th century, frequentists (Fisher, Neyman, Pearson) dismissed Bayesianism as "subjective." Only E. T. Jaynes' <em>Probability Theory: The Logic of Science</em> — recasting Bayesian probability as <strong>extended logic</strong> — plus the 1990s MCMC computational revolution put it back in the mainstream. The formula P(H|D) = P(D|H)·P(H)/P(D) is trivial; the hard part is realizing <strong>every probability is conditional on what you know</strong> — there is no information-free probability.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Rare-disease test: 1% prior, 95/95 accuracy → just 16% posterior</div>
+    <table class="payoff-table">
+      <tr><th></th><th>Test Positive</th><th>Test Negative</th><th>Total</th></tr>
+      <tr><td class="label">Actually Sick</td><td class="hit">95</td><td>5</td><td>100</td></tr>
+      <tr><td class="label">Actually Healthy</td><td class="reverse">495</td><td>9405</td><td>9900</td></tr>
+      <tr><td class="label">Total</td><td>590</td><td>9410</td><td>10000</td></tr>
+    </table>
+    <div class="payoff-note">P(sick | positive) = 95 / 590 ≈ <strong>16.1%</strong>. A positive result still means you're most likely healthy — the 1% base rate dominates the 95% accuracy.</div>
+  </div>
+
+  <div class="section">
+    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
+    <p>Casscells, Schoenberger &amp; Grayboys (<em>NEJM</em>, 1978) posed the above puzzle to faculty and students at Harvard Medical School. Only <strong>18%</strong> got an answer near correct; the average estimate was 95%. Physicians' base-rate neglect was no better than the public's. The Sally Clark case (UK 1999): both prosecution and defense treated "P(two SIDS deaths) = P(one)² = 1 in 73,000,000" as evidence of guilt. The Royal Statistical Society publicly protested in 2002 — flawed independence assumptions plus base-rate error jointly produced a wrongful conviction.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
+    <p>In <strong>machine learning</strong>, Bayesian networks, variational inference, conjugate priors, and Bayesian Deep Learning anchor uncertainty modeling; in <strong>cognitive science</strong>, Friston's "free-energy principle" and Clark's "predictive brain" argue the brain is a hierarchical Bayesian inference machine; in <strong>evidence-based medicine</strong>, Bayesian diagnostic reasoning is now standard; in <strong>AI alignment</strong>, RLHF reward modeling and Constitutional AI iterative correction are Bayesian updates in disguise; in <strong>finance</strong>, investors "find religion" after black swan events — really just a violent prior update.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT APPLICATION + REFLECTION</span>
+    <p>"That person always procrastinates" is usually base-rate error — every project slips (base rate ~80%); their personal slip rate barely updates anything. Conversely, the optimistic "this launch will be huge" routinely ignores the prior that 90% of industry launches barely ripple. Train the reflex of asking "before I saw this evidence, what was my prior on H? Is the likelihood ratio P(D|H)/P(D|¬H) really 20x or just 2x?" — it kills most hasty conclusions. Same with kids: three wrong problems shouldn't update you to "she's bad at math" — three problems against a semester of hundreds can't move any prior worth holding.</p>
+    <span class="q">▸ Reflection: Take your most recent "I knew it" judgment and write it as P(H|D). What was your prior? Does the likelihood ratio really support that posterior jump?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Monte Carlo Methods</h2>
+  <div class="en">Trading computation for analytical insight</div>
+  <div class="subfield">Random Sampling · Compute Over Cleverness</div>
+
+  <div class="section insight">
+    <span class="label">CORE INSIGHT</span>
+    <p>When a problem <strong>can't be solved analytically</strong> but <strong>can be simulated</strong>, repeated random sampling converges to arbitrary precision — turning "thinking" into "number of trials." This dissolves the old equation "complex = unsolvable": many problems once treated as deep math are today just compute problems.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">ORIGIN &amp; MECHANISM</span>
+    <p>In 1946, Stanislaw Ulam — bedridden, playing solitaire — tried to compute his winning probability, found analysis hopeless but simulation trivial. Back at Los Alamos he and von Neumann ran the first systematic application on ENIAC, simulating neutron diffusion for the hydrogen bomb. Nicholas Metropolis named it (after the Monaco casino). The theoretical backbone is the law of large numbers: <strong>any integral, expectation, or path sum becomes "sample then average."</strong> The Metropolis-Hastings algorithm (1953), Hamiltonian Monte Carlo, sequential Monte Carlo, and MCTS all descend from this idea — using randomness to precisely approximate determinism.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
+    <p>Estimating π: scatter N uniform points in a 1×1 square; the fraction landing in the inscribed quarter-circle, times 4, gives π. 10⁴ points → ~3.14; 10⁶ → ~3.1416. <strong>Not a line of geometry</strong> — just dice. The same idea now powers exotic derivative pricing beyond Black-Scholes, Bayesian posterior sampling (modern Bayesian inference is basically MCMC), AlphaGo's MCTS (thousands of simulated games per move), and every large language model's token-by-token sampling — your chat with an LLM is essentially shallow Monte Carlo.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
+    <p>In <strong>physics</strong>, quantum Monte Carlo for many-body problems; in <strong>finance</strong>, VaR, CVaR, derivative pricing; in <strong>statistics</strong>, Gibbs sampling, NUTS, and variational inference made modern Bayesian methods tractable; in <strong>game AI</strong>, MCTS is the heart of AlphaGo/MuZero; in <strong>climate science</strong>, ensemble forecasts perturb initial conditions to sample the future distribution; in <strong>drug discovery</strong>, molecular conformational sampling; in <strong>robotics</strong>, particle filters for localization and tracking.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT APPLICATION + REFLECTION</span>
+    <p>For complex decisions (change jobs? will the project ship?), the common error is <strong>trying to "calculate" rather than to "sample."</strong> Sketching three or four scenarios and concluding "60% it'll work" is far weaker than simulating 20 concrete execution paths (including extreme edges) and noting which failure modes recur. Taleb calls it "path thinking" — the outcome distribution matters far more than the expected value. Same for parenting: don't make "the perfect plan" — first simulate ten variants of "Wednesday night the kid's sick and you're still on a call at 8 pm." That's where the P95 stress lives. Treating decisions as samplable random processes is one of the highest-leverage transfers from engineering into life.</p>
+    <span class="q">▸ Reflection: For your most recent big decision, can you "sample" 10 concrete paths rather than only computing expectations? Which path most unsettles you? Is it actually in your contingency plan?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Survivorship Bias</h2>
+  <div class="en">The data you can see is selected — the failures are silent</div>
+  <div class="subfield">Selection Bias · Silent Data</div>
+
+  <div class="section insight">
+    <span class="label">CORE INSIGHT</span>
+    <p>When you only observe "survivors," your conclusions are almost certainly wrong. Failures are silent; what looks like "success factors" may be <strong>noise specific to survivors</strong>, not real causation. The deadliest bias is not in the data itself but in the <strong>data-generating process</strong> — what you see has been filtered by "what samples could reach you."</p>
+  </div>
+
+  <div class="section">
+    <span class="label">ORIGIN &amp; MECHANISM</span>
+    <p>The canonical case is Abraham Wald at the WWII Statistical Research Group. The US Air Force wanted to armor returning bombers where bullet holes clustered — wings and tail. Wald reversed it: <strong>armor where the holes are absent</strong> (engines, cockpit) — because planes hit there never returned. An extreme form of selection bias: samples filtered on survival. Generalized: any data conditional on survival overestimates upside and underestimates risk. Berkson's paradox, publication bias, and liquidation bias are all incarnations of the same phenomenon in different domains.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
+    <p>1990s "success literature" uniformly found Fortune-500 CEOs share traits like "wake early, read, persevere" — but the same traits are likely just as common in <strong>bankrupt CEOs</strong>. Phil Rosenzweig's <em>The Halo Effect</em> (2007) showed Jim Collins' "great companies" in <em>Good to Great</em> mostly performed mediocrely or died within five years of publication — <strong>under survivorship sampling, post-hoc attribution is pure narrative</strong>. Hedge-fund median returns look glossy because failing funds liquidate out of the database (Brown, Goetzmann, Ibbotson &amp; Ross 1992 showed "liquidation bias" inflates reported returns by ~3% annually).</p>
+  </div>
+
+  <div class="section">
+    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
+    <p>In <strong>history</strong>, "ancient buildings were all sturdy" — the fragile ones crumbled long ago; in <strong>clinical medicine</strong>, only positive results get published (publication bias), driving the literature's optimism and fueling the replication crisis; in <strong>machine learning</strong>, training data is itself a filtered sample ("offline metrics great, production bad" often originates here); in <strong>migration studies</strong>, "immigrants are harder-working" ignores that "lazy people don't emigrate" is the selection; in <strong>education</strong>, "Harvard graduates earn more" ignores that "being admitted" is the strong signal; in <strong>AI benchmarks</strong>, tuning on public tasks systematically overestimates "in-the-wild" performance.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT APPLICATION + REFLECTION</span>
+    <p>The trap technologists fall into most is <strong>only studying successful open-source projects, startups, and AI products</strong>, treating their designs as scripture. A debiasing drill: for every success story you read, force yourself to find three failed cases that used the same strategy. If you can't find them, either the failures had no voice, or the "strategy" isn't identifiable — in both cases, distrust the attribution. Same for parenting: before copying "Tsinghua mom shares her kid-raising secrets," ask "where are the moms who used the same method but whose kids didn't get in?" Their silence doesn't mean they don't exist.</p>
+    <span class="q">▸ Reflection: For a "success path" you're currently emulating, can you list three failed cases using the same method? If not, are you following a pattern or following noise?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Simpson's Paradox</h2>
+  <div class="en">Aggregate flips the sign — confounders decide direction</div>
+  <div class="subfield">Confounding Variables · Gateway to Causal Inference</div>
+
+  <div class="section insight">
+    <span class="label">CORE INSIGHT</span>
+    <p>A may be better than B in aggregate, yet B may be better than A <strong>in every subgroup</strong> — summation can flip the sign. This means <strong>the direction of a statistical correlation depends on whether you've controlled for the right confounder</strong>. It's not that "data lies"; it's that data without a causal model has no direction — this is the watershed from descriptive statistics into causal inference.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">ORIGIN &amp; MECHANISM</span>
+    <p>Edward Simpson formalized it in 1951 (Pearson noted a precursor in 1899). The most famous case: 1973 UC Berkeley graduate admissions — men admitted at 44%, women at 35%; superficially, gender discrimination. Bickel, Hammel &amp; O'Connell (<em>Science</em>, 1975), going department by department, found <strong>nearly every department admitted women at rates equal to or higher than men</strong>. The confounder was "choice of department" — women disproportionately applied to humanities, where admit rates were lower for everyone. Pearl's do-calculus gives the rigorous criterion: whether to condition on a variable Z depends on whether Z is a confounder, mediator, or collider — blind stratification and blind aggregation both manufacture paradoxes.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Simpson reversal: women admitted more in every dept, less overall</div>
+    <table class="payoff-table">
+      <tr><th>Dept</th><th>Men apply / admit</th><th>Men rate</th><th>Women apply / admit</th><th>Women rate</th></tr>
+      <tr><td class="label">A (easy admit)</td><td>800 / 480</td><td class="miss">60%</td><td>100 / 70</td><td class="good">70%</td></tr>
+      <tr><td class="label">B (hard admit)</td><td>200 / 40</td><td class="miss">20%</td><td>900 / 225</td><td class="good">25%</td></tr>
+      <tr><td class="label"><strong>Overall</strong></td><td>1000 / 520</td><td class="good">52%</td><td>1000 / 295</td><td class="reverse">29.5%</td></tr>
+    </table>
+    <div class="payoff-note">Women win in each department, lose overall — because they cluster in hard-admit Dept B (confounder = choice of department).</div>
+  </div>
+
+  <div class="section">
+    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
+    <p>Charig et al. (<em>BMJ</em>, 1986) on kidney-stone treatments A vs B: overall A succeeds 78%, B 83% — B looks better. But stratifying by stone size: <strong>small stones A 93% &gt; B 87%; large stones A 73% &gt; B 69% — A wins regardless of size</strong>. The reason: physicians assigned the harder, larger stones disproportionately to A. The "which treatment is better" answer depends on whether you're asking about <strong>the treatment's causal effect</strong> or about its <strong>marginal performance under the physicians' assignment policy</strong> — two different causal questions on identical data.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
+    <p>In <strong>causal inference</strong>, Pearl's do-calculus and causal graphs (2011 ACM Turing Award) exist precisely to disentangle this; in <strong>A/B testing</strong>, Simpson reversal is the analyst's most common trap (user-group differences hide the real effect); in <strong>ML fairness</strong>, "the algorithm is more accurate in every subgroup but less overall" (or vice versa); in <strong>epidemiology</strong>, vaccine effectiveness must be stratified by age; in <strong>education</strong>, "this school's admission rate is high" may come entirely from incoming student quality; in <strong>benchmarks</strong>, model A winning every dataset yet losing the aggregate score.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT APPLICATION + REFLECTION</span>
+    <p>The biggest trap in data-driven decisions isn't "missing data" — it's <strong>aggregated data</strong>. Team productivity is up 10%, but it may all come from one new high-output member while everyone else declined; DAU is up 20%, but new users may be less engaged than churned users, so apparent growth is actually dilution. For any key metric, immediately ask <strong>"after which stratification does this still hold?"</strong> — this is the gulf between engineers and vanity metrics. Same in parenting: kid finished homework faster this month — real progress or easier problem set? Without proper stratification, every "improvement" judgment may be reversed.</p>
+    <span class="q">▸ Reflection: For a recent "clearly improving / worsening" metric in your team, product, or family, does it hold after stratifying three different ways? Which stratification flips the conclusion?</span>
+  </div>
+</div>
+
+<div class="resources-card">
+  <h3>Further Resources</h3>
+  <ul>
+    <li><strong>📰 Essential:</strong> Bayes &amp; Price (1763) "An Essay towards solving a Problem in the Doctrine of Chances," <em>Phil. Trans.</em> — the original text of Bayes' theorem</li>
+    <li><strong>📖 Classic:</strong> E. T. Jaynes, <em>Probability Theory: The Logic of Science</em> (Cambridge, 2003) — reconstructs probability as extended logic</li>
+    <li><strong>📖 Textbook:</strong> Andrew Gelman et al., <em>Bayesian Data Analysis</em> (3rd ed., 2013) — modern Bayesian standard, with MCMC in practice</li>
+    <li><strong>📰 Paper:</strong> Bickel, Hammel &amp; O'Connell (1975) "Sex Bias in Graduate Admissions: Data from Berkeley," <em>Science</em> 187:398-404 — the most famous public application of Simpson's paradox</li>
+    <li><strong>📖 Causality:</strong> Judea Pearl &amp; Dana Mackenzie, <em>The Book of Why</em> (2018) — accessible companion to why correlation ≠ causation</li>
+    <li><strong>📖 Bias:</strong> Nassim Taleb, <em>Fooled by Randomness</em> (2001) — readable treatment of survivorship bias and luck</li>
+    <li><strong>📖 Monte Carlo:</strong> Christian Robert &amp; George Casella, <em>Monte Carlo Statistical Methods</em> (2nd ed., 2004) — graduate standard, includes MCMC</li>
+    <li><strong>🎥 Video:</strong> 3Blue1Brown "Bayes theorem, the geometry of changing beliefs" (YouTube) — geometric intuition for Bayes</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>
