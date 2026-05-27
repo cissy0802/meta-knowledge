@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Knowledge: Network Science — Day 13</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#e85a4f 0%,#f7a072 35%,#52b788 70%,#3a86ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e85a4f;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#e85a4f;border:1px solid #f0d2cf}
+.tag.alt{color:#3a86ff;border-color:#d8e0eb}
+.tag.warm{color:#f7a072;border-color:#fbe5d9}
+.tag.green{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #e85a4f}
+.card:nth-of-type(2){border-top-color:#3a86ff}
+.card:nth-of-type(3){border-top-color:#52b788}
+.card:nth-of-type(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#fbe5e2;color:#e85a4f;margin-bottom:18px;letter-spacing:0.5px}
+.card:nth-of-type(2) .subfield{background:#e6eef9;color:#3a86ff}
+.card:nth-of-type(3) .subfield{background:#e3f1e8;color:#52b788}
+.card:nth-of-type(4) .subfield{background:#fbe5d9;color:#f7a072}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#e85a4f;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#fbe5e2;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#e85a4f}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #e85a4f;margin-top:6px}
+.section.bigcat{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072;margin-top:18px}
+.section.bigcat .label{background:#f7a072;color:#fff}
+.section.bigcat p{color:#5a4a3a}
+.section.bigcat .q{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed #f0d2a4;font-style:italic;color:#6b5a3a}
+.resources-card{background:#fff;border-radius:14px;padding:24px 26px;margin-top:28px;border-left:4px solid #52b788}
+.resources-card h3{font-size:1.1rem;color:#52b788;margin-bottom:14px;letter-spacing:0.5px}
+.resources-card ul{list-style:none;padding:0}
+.resources-card li{padding:8px 0;border-bottom:1px solid #f0ece4;font-size:0.92rem;color:#3a3a4a}
+.resources-card li:last-child{border-bottom:none}
+.resources-card li strong{color:#52b788}
+.viz{margin:22px 0 8px;padding:18px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
+.viz-title{font-size:0.78rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
+.payoff-table{width:100%;border-collapse:collapse;font-size:0.85rem;background:#fff;border-radius:8px;overflow:hidden}
+.payoff-table th,.payoff-table td{padding:10px 12px;text-align:center;border:1px solid #e8e2d8}
+.payoff-table th{background:#f4f1ed;color:#6b6b7d;font-weight:600;font-size:0.78rem;letter-spacing:0.5px}
+.payoff-table td.label{background:#f4f1ed;font-weight:600;color:#6b6b7d;text-align:left}
+.payoff-table td.hit{background:#fff7f5;color:#e85a4f;font-weight:700}
+.payoff-table td.miss{background:#f4f1ed;color:#6b6b7d}
+.payoff-table td.good{background:#e3f1e8;color:#2a7a4a;font-weight:700}
+.payoff-table td.reverse{background:#fef0d9;color:#b56b00;font-weight:700}
+.payoff-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+  .payoff-table th,.payoff-table td{padding:6px 4px;font-size:0.74rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>Meta Knowledge: Network Science</h1>
+  <div class="meta">May 27, 2026 · Meta Knowledge Daily</div>
+  <div class="day">DAY 13</div>
+  <div class="tags">
+    <span class="tag">Graph Topology</span>
+    <span class="tag alt">Complex Networks</span>
+    <span class="tag green">Spreading Dynamics</span>
+    <span class="tag warm">Structure &amp; Power</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>Small-World Phenomenon</h2>
+  <div class="en">High clustering + a few long-range links</div>
+  <div class="subfield">Why every network is "small"</div>
+
+  <div class="section insight">
+    <span class="label">CORE INSIGHT</span>
+    <p>Any two nodes — people, neurons, web pages — are roughly six steps apart not by social accident, but because as soon as a network combines <strong>high local clustering</strong> with <strong>a tiny fraction of long-range edges</strong>, the average path length collapses from order N to order log N. "Small" doesn't mean few nodes; it means <strong>diameter barely grows with size</strong>. This is the shared topology of brains, power grids, social ties, and the internet.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>Stanley Milgram's 1967 "Small World Experiment" asked Nebraska residents to forward letters to a Boston target through acquaintances — average chain length 5.5. The theoretical breakthrough was Duncan Watts &amp; Steven Strogatz's 1998 <em>Nature</em> paper "Collective dynamics of 'small-world' networks": starting from a regular ring, <strong>rewiring edges with vanishingly small probability p</strong> leaves the clustering coefficient C nearly unchanged while the average path length L crashes. A wide parameter range yields networks that are <strong>locally dense yet globally short</strong>. Backstrom et al. 2012 measured 4.74 average hops across 721 million Facebook users; Travers &amp; Milgram's 1969 follow-up found 5.2 in the actual completed chains.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Watts-Strogatz: a tiny number of long-range links triggers small-world</div>
+    <table class="payoff-table">
+      <tr><th>Network type</th><th>Rewiring p</th><th>Clustering C</th><th>Path length L</th><th>Character</th></tr>
+      <tr><td class="label">Regular ring</td><td>0</td><td class="good">High (~0.5)</td><td class="hit">Long (~N/4)</td><td>Cliquey, world is huge</td></tr>
+      <tr><td class="label"><strong>Small-world</strong></td><td>0.001 – 0.1</td><td class="good">High (~0.4)</td><td class="good">Short (~log N)</td><td><strong>Best of both</strong></td></tr>
+      <tr><td class="label">Random graph</td><td>1</td><td class="hit">Very low</td><td class="good">Short</td><td>No local structure</td></tr>
+    </table>
+    <div class="payoff-note">Rewiring just 1%–10% of edges is enough to enter "small-world" territory. A handful of <strong>cross-domain bridges</strong> rewrites the geometry of the whole graph.</div>
+  </div>
+
+  <div class="section">
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>The complete <strong>302-neuron connectome of <em>C. elegans</em></strong> (White et al. 1986) is itself a small world — any two neurons are 2.65 synapses apart on average. Bassett &amp; Bullmore 2006 (<em>Neuroscientist</em>) showed the human brain's small-world topology is a <strong>Pareto optimum between energy cost and integration efficiency</strong>: schizophrenic brain networks show reduced small-worldness, autistic brains often show excess local clustering. The same topological signature spans scales — from 302 worm neurons to 86 billion human neurons, from an 8-person friend group to a 3-billion-node Facebook graph: <strong>the geometry is the same</strong>.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>epidemiology</strong>, COVID's "long-distance jumps + local clusters" is textbook small-world spread. In <strong>power grids</strong>, the 2003 North American blackout cascaded along small-world topology. In <strong>distributed systems</strong>, gossip protocols and the Chord DHT engineer small-world structure for O(log N) lookups. In <strong>neuroscience</strong>, Global Workspace Theory rests on a small-world + hub assumption. In <strong>organizations</strong>, Cross &amp; Parker 2004 use small-world metrics to diagnose communication bottlenecks. In <strong>linguistics</strong>, word co-occurrence networks are small-world, which speeds word acquisition.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT APPLICATION + REFLECTION</span>
+    <p>Slow information flow in a team is rarely "not enough communication" — it's <strong>too few long-range edges</strong>. Adding two or three cross-functional relationships (no need for daily contact) can cut path length from ~N to ~log N, accelerating decisions by an order of magnitude. This is structural leverage: a tenth of the relational cost for ten times the information efficiency. The same applies to a child's social circle: <strong>a large homogeneous group is less valuable than one with 1–2 cross-group friends</strong> — those bridges deliver new <em>dimensions</em>, not just more <em>volume</em>. Reid Hoffman explicitly built LinkedIn's early growth on Watts-Strogatz: inviting your 2nd-degree distant contacts opens new territories faster than inviting close friends.</p>
+    <span class="q">▸ Reflection: list the 3 most valuable long-range edges in your professional network (different department or domain). If those 3 disappeared, how far would your information radius shrink?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Scale-Free Networks</h2>
+  <div class="en">Preferential attachment · Power-law degree · Hubs are inevitable</div>
+  <div class="subfield">Robust yet fragile</div>
+
+  <div class="section insight">
+    <span class="label">CORE INSIGHT</span>
+    <p>Most real networks have a <strong>power-law degree distribution P(k) ∝ k<sup>−γ</sup></strong>, not a bell curve. There is no "typical node" and no meaningful "average degree." <strong>Hubs are not anomalies; they are mathematically inevitable</strong>. The same property creates two opposite fates: <strong>extreme robustness to random failure, extreme fragility to targeted attack</strong>. The same topology is both unkillable and lethally exposed.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>Barabási &amp; Albert 1999 <em>Science</em> "Emergence of scaling in random networks" proposed the BA model: networks <strong>grow over time + new nodes attach preferentially to already-high-degree nodes</strong>. Two simple rules spontaneously generate γ≈3 power laws. "Rich-get-richer" was named the <strong>Matthew effect</strong> by Merton 1968; equivalent models exist in Yule 1925 (biology) and Simon 1955 (word frequency), but BA pushed it into networks. A caution: Clauset, Shalizi &amp; Newman 2009 <em>SIAM Review</em> showed with rigorous statistical tests that many empirical "power laws" are overclaimed — <strong>heavy tails are real, pure power laws are rare</strong>; most are log-normal or truncated power laws. This does not weaken the core conclusion: heterogeneous degree distributions and ubiquitous hubs are the norm.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>Albert, Jeong &amp; Barabási 2000 <em>Nature</em>, "Error and attack tolerance of complex networks": randomly removing <strong>5% of internet AS nodes</strong> barely changes connectivity; but <strong>targeted removal of the top 5% by degree blows the diameter from ~4 to ~28</strong>. The same property let SARS-CoV-2 race between cities through hub airports (Beijing, London, New York) — and made <strong>a few superspreader individuals responsible for 80% of transmission</strong> (Lloyd-Smith et al. 2005 <em>Nature</em>). Two faces of one coin: hubs are both the source of resilience and the largest attack surface.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>science</strong>, de Solla Price observed citation power laws in 1965, 34 years before BA. In <strong>economics</strong>, Pareto's 80/20 wealth distribution, company size, and Zipfian city populations are the same shape. In <strong>protein interaction networks</strong>, high-degree proteins are disproportionately lethal when knocked out (Jeong et al. 2001). In <strong>language</strong>, Zipf's law. In <strong>finance</strong>, the systemically important nodes of inter-bank exposure. In <strong>LLMs</strong>, training-token frequency is heavily power-law, and the long tail governs generalization. In <strong>GitHub</strong>, star and contributor distributions. In the <strong>attention economy</strong>, creator income.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT APPLICATION + REFLECTION</span>
+    <p>The practical implication of a power law is that <strong>the marginal value of choosing a hub is non-linear</strong>. The <strong>top 5 accounts/authors you follow</strong> likely shape 80% of your information diet — quality control reduces to just a few decisions. Likewise, 1–2 super-connectors in a team carry most of the informal information flow; their illness or departure has outsized impact regardless of titles. In the AI era, attention allocation matters exponentially more than "casting a wide net": <strong>picking the right hub places you on the high-degree end of the power law</strong>. Same in parenting: choosing the hub teacher or community is far more leveraged than "more classes."</p>
+    <span class="q">▸ Reflection: list the top 5 sources of your information inputs in the last 30 days. What fraction of your total input do they represent? If you swapped one of them for a deliberately opposing hub, how much would your world model shift?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Epidemic Dynamics</h2>
+  <div class="en">R₀ · Herd immunity threshold · Topology shifts critical points</div>
+  <div class="subfield">Why "viral" is a phase transition, not a metaphor</div>
+
+  <div class="section insight">
+    <span class="label">CORE INSIGHT</span>
+    <p>A single parameter — <strong>R₀, the basic reproduction number</strong> — determines whether an epidemic, idea, or product <strong>dies out or explodes</strong>. R₀ &gt; 1 forces exponential growth; R₀ &lt; 1 self-extinguishes. The crossing is not gradual; it is a <strong>phase transition</strong>. Deeper still: <strong>network topology shifts the critical condition itself</strong> — on scale-free networks there is essentially no epidemic threshold, so even tiny infectivity sustains spread. This is why information goes "viral on social media" with no apparent threshold.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>Kermack &amp; McKendrick 1927 <em>Proc. Royal Society</em> introduced the SIR model: populations split into Susceptible / Infected / Recovered with <strong>R₀ = β/γ</strong> (effective contact rate / recovery rate). The <strong>herd immunity threshold = 1 − 1/R₀</strong>. Pastor-Satorras &amp; Vespignani 2001 <em>PRL</em> proved that on scale-free networks with diverging second-moment degree distribution, <strong>the epidemic threshold vanishes</strong> — hubs relay the spread so even arbitrarily small infectivity persists. Classical SIR, which assumes homogeneous mixing, completely misses this. It is why traditional pandemic models repeatedly fail in the social-network era.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ R₀ dictates herd-immunity threshold (H = 1 − 1/R₀)</div>
+    <table class="payoff-table">
+      <tr><th>Pathogen</th><th>R₀</th><th>Herd-immunity threshold</th><th>Character</th></tr>
+      <tr><td class="label">Seasonal flu</td><td>1.3</td><td class="good">~23%</td><td>Containable</td></tr>
+      <tr><td class="label">COVID-19 original</td><td>~2.5</td><td class="reverse">~60%</td><td>Difficult</td></tr>
+      <tr><td class="label">COVID-19 Omicron</td><td>~8–10</td><td class="hit">~88%</td><td>Nearly unstoppable</td></tr>
+      <tr><td class="label">Measles</td><td>~15</td><td class="hit">~94%</td><td>Vaccine coverage must be high</td></tr>
+      <tr><td class="label">Viral video (est.)</td><td>1.05–2</td><td>—</td><td>No threshold on net</td></tr>
+    </table>
+    <div class="payoff-note">Measles' R₀ of 15 means <strong>any unvaccinated person almost guarantees an outbreak</strong> — the mathematical reason anti-vaccine communities keep igniting flare-ups.</div>
+  </div>
+
+  <div class="section">
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>After Lehman's 2008 collapse, the inter-bank exposure network's "financial R₀" passed 1: a single default cascaded through hub banks (e.g. AIG) to the world. Haldane &amp; May 2011 <em>Nature</em> "Systemic risk in banking ecosystems" rewrote financial regulation using epidemic models. In the <strong>brain</strong>, seizures can be modeled as a "R₀ &gt; 1 critical state" of neural firing. In <strong>marketing</strong>, the Bass 1969 diffusion model is essentially an SIR variant — product adoption <em>is</em> contagion. The most counter-intuitive case: network structure, not pathogen virulence, often decides outbreaks — a virus with R₀=0.8 dies in a homogeneous population but can persist for months on a scale-free network (airports + cities).</p>
+  </div>
+
+  <div class="section">
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>epidemiology</strong>, SIR/SEIR are public-health standards. In <strong>information diffusion</strong>, Bass and Independent Cascade / Linear Threshold models predict virality. In <strong>finance</strong>, SIFI ratings flow from network contagion theory. In <strong>neuroscience</strong>, criticality and seizure dynamics. In <strong>social movements</strong>, Granovetter's 1978 threshold model explains "silence to explosion" jumps. In <strong>misinformation</strong>, Vosoughi, Roy &amp; Aral 2018 <em>Science</em> measured that false news on Twitter spreads with R₀ roughly 6× higher than true news. In <strong>organizational change</strong>, Rogers 1962 diffusion of innovations.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT APPLICATION + REFLECTION</span>
+    <p>"Burnout culture," "team anxiety," and "new-tool adoption" are R₀ problems. <strong>Blocking or activating 2–3 super-spreaders is dramatically more effective than influencing everyone</strong>. A new product or process that launches with R₀ &lt; 1 will only decay linearly no matter how much spend you throw at it — the seeds must be pushed across the critical line first. In parenting: a child's habits are mostly "infected" by 2–3 closest peers, not the class as a whole — identifying those 2–3 nodes is an order of magnitude more leveraged than "switching environments" wholesale. Same in AI product cold-start: 5 R₀ &gt; 1 seed users beat 10,000 cold impressions.</p>
+    <span class="q">▸ Reflection: for something you're trying to spread (a habit, product, or consensus), what is the approximate R₀? Who are the 2–3 seeds that decide whether it crosses 1?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Betweenness Centrality</h2>
+  <div class="en">Structural holes · Bridge power · Irreplaceability</div>
+  <div class="subfield">Not how many you know — how many must go through you</div>
+
+  <div class="section insight">
+    <span class="label">CORE INSIGHT</span>
+    <p>A node's "power" isn't how many connections it has, it's <strong>how many shortest paths must pass through it</strong>. High-betweenness nodes occupy <strong>structural holes</strong> — they connect otherwise disconnected groups and monopolize cross-domain information flow. In most organizations, the highest-betweenness person is not the CEO but a <strong>cross-domain coordinator</strong> — low in PageRank but <strong>irreplaceable</strong>.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>Linton Freeman 1977 <em>Sociometry</em> "A set of measures of centrality based on betweenness" gave the formal definition: a node v's betweenness = Σ<sub>s≠t≠v</sub> σ<sub>st</sub>(v)/σ<sub>st</sub>, the share of all-pairs shortest paths that traverse v. Granovetter 1973 <em>AJS</em> "The Strength of Weak Ties" was its sociological forerunner: weak ties matter not in quantity, but because they <strong>sit atop structural holes</strong>. Ronald Burt 1992 <em>Structural Holes</em> ported this into organizations: <strong>people spanning structural holes don't need the most friends; they own the largest information arbitrage space</strong>. Girvan-Newman 2002 <em>PNAS</em> inverted the idea: iteratively delete the highest-edge-betweenness link and communities emerge naturally.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>Krebs 2002 <em>Connections</em> "Mapping Networks of Terrorist Cells" reconstructed the 9/11 hijacker network from public information: the highest-degree node wasn't the key figure — <strong>Mohamed Atta had the highest betweenness</strong>. This finding reshaped counter-terror intelligence. Burt's 2004 <em>AJS</em> Raytheon study found employees' betweenness correlated with idea-adoption probability at r = 0.41, far above tenure or rank. A common organizational trap is cutting "redundant coordinators" whose KPIs are unimpressive but whose betweenness is high — Cross &amp; Parker 2004 show cross-functional project cycle times rise 30%–60% after such removals. <strong>The value of a bridge becomes visible only once it's gone</strong>.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>proteomics</strong>, Yu et al. 2007 <em>PLoS Comp Bio</em> coined "bottleneck proteins" — high-betweenness proteins are deadlier to knock out than high-degree ones. In <strong>transportation</strong>, airport betweenness predicts cascade impact of cancellations. In <strong>finance</strong>, clearing banks' systemic importance is mostly betweenness-driven. In <strong>translation and cross-cultural work</strong>, bilingual brokers. In <strong>knowledge graphs and recommendation</strong>, bridge items are entry points for new topic discovery. In <strong>the brain</strong>, "rich club" + high-betweenness nodes form the connectome backbone. In <strong>open source</strong>, maintainers — not contributor count — decide project survival.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT APPLICATION + REFLECTION</span>
+    <p>The real question for AI-era career defensibility is not "what skills do I have" but <strong>"what position do I hold in the network."</strong> Skill hubs are flattened easily by LLMs (any single-point expertise is replaceable), but <strong>betweenness is brutally hard to replace</strong> — AI can imitate experts, but it cannot inherit years of accumulated cross-domain context and relational structure. The most leveraged career move is often deliberately bridging two groups of people, tech stacks, or departments that previously didn't talk. The hidden parenting lesson is the same: 1–2 friends in a child's life from completely different groups have more structural leverage than expanding the same homogeneous circle. Burt called this position the <strong>"information arbitrageur"</strong> — a dividend that doesn't vanish with technological substitution.</p>
+    <span class="q">▸ Reflection: in your professional network, if you stepped away for 3 months, which 2–3 information or collaboration flows would break? Those breakpoints are your real betweenness — is it rising or falling in the AI era?</span>
+  </div>
+</div>
+
+<div class="resources-card">
+  <h3>Further Reading</h3>
+  <ul>
+    <li><strong>📰 Foundational:</strong> Watts &amp; Strogatz (1998) "Collective dynamics of 'small-world' networks," <em>Nature</em> 393:440-442 — the original small-world paper</li>
+    <li><strong>📰 Foundational:</strong> Barabási &amp; Albert (1999) "Emergence of scaling in random networks," <em>Science</em> 286:509-512 — preferential attachment and scale-free networks</li>
+    <li><strong>📖 Textbook:</strong> Albert-László Barabási, <em>Network Science</em> (Cambridge, 2016; freely available online) — the canonical systematic textbook</li>
+    <li><strong>📖 Textbook:</strong> Mark Newman, <em>Networks: An Introduction</em> (Oxford, 2nd ed. 2018) — the more mathematical/physics-leaning standard</li>
+    <li><strong>📰 Paper:</strong> Pastor-Satorras &amp; Vespignani (2001) "Epidemic spreading in scale-free networks," <em>Phys. Rev. Lett.</em> 86:3200 — network topology eliminates the epidemic threshold</li>
+    <li><strong>📖 Classic:</strong> Ronald Burt, <em>Structural Holes: The Social Structure of Competition</em> (Harvard, 1992) — foundational text on structural holes</li>
+    <li><strong>📰 Paper:</strong> Granovetter (1973) "The Strength of Weak Ties," <em>American Journal of Sociology</em> 78:1360-1380 — weak ties as bridges, cited 70,000+ times</li>
+    <li><strong>📰 Caution:</strong> Clauset, Shalizi &amp; Newman (2009) "Power-law distributions in empirical data," <em>SIAM Review</em> 51:661-703 — many "power laws" overclaimed; how to test rigorously</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>
