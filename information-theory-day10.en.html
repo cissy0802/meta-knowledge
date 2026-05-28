@@ -36,12 +36,6 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .section.bigcat .label{background:#f7a072;color:#fff}
 .section.bigcat p{color:#5a4a3a}
 .section.bigcat .q{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed #f0d2a4;font-style:italic;color:#6b5a3a}
-.resources-card{background:#fff;border-radius:14px;padding:24px 26px;margin-top:28px;border-left:4px solid #52b788}
-.resources-card h3{font-size:1.1rem;color:#52b788;margin-bottom:14px;letter-spacing:0.5px}
-.resources-card ul{list-style:none;padding:0}
-.resources-card li{padding:8px 0;border-bottom:1px solid #f0ece4;font-size:0.92rem;color:#3a3a4a}
-.resources-card li:last-child{border-bottom:none}
-.resources-card li strong{color:#52b788}
 .viz{margin:22px 0 8px;padding:18px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
 .viz-title{font-size:0.78rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
 .channel-diagram{display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap;font-size:0.78rem}
@@ -67,93 +61,93 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   <div class="day">DAY 10</div>
   <div class="tags">
     <span class="tag">Information Theory</span>
-    <span class="tag alt">Communication</span>
-    <span class="tag green">Complexity</span>
+    <span class="tag alt">Communication Engineering</span>
+    <span class="tag green">Complexity Theory</span>
     <span class="tag warm">ML Foundations</span>
   </div>
 </header>
 
 <div class="card">
   <h2>Shannon Entropy</h2>
-  <div class="en">H(X) = −Σ p log₂ p</div>
-  <div class="subfield">Information Theory · Probability &amp; Uncertainty</div>
+  <div class="en">Information = uncertainty removed</div>
+  <div class="subfield">Why surprise is the real unit of information</div>
 
   <div class="section insight">
     <span class="label">CORE INSIGHT</span>
-    <p>Information is not "content" — it is "uncertainty removed". "The sun will rise tomorrow" carries nearly 0 bits; "an earthquake hit Tokyo" carries enormous information. The more predictable an event, the duller and less worth transmitting; the more surprising, the more it deserves to be encoded.</p>
+    <p>Information isn't "content" — it's <strong>uncertainty removed</strong>. "The sun rises tomorrow" carries almost 0 bits; "an earthquake hits somewhere tomorrow" carries an enormous amount. The more predictable an event, the less information it holds; the more surprising, the more worth encoding and sharing.</p>
   </div>
 
   <div class="section">
-    <span class="label">ORIGIN &amp; MECHANISM</span>
-    <p>Claude Shannon's 1948 <em>A Mathematical Theory of Communication</em> founded the entire digital age. From a few axioms he derived the unique form H = −Σ p·log₂ p — the average "surprise" of a message. Entropy is maximal under a uniform distribution (least predictable) and zero under certainty. The form is structurally identical to Boltzmann's thermodynamic entropy. When Shannon asked von Neumann what to call it, von Neumann reportedly said: "Call it entropy — nobody really understands it, so in any debate you'll always have the advantage."</p>
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>In 1948 Shannon proposed a formula for how "surprising" a message is on average. <strong>When all outcomes are equally likely and hardest to guess, information (entropy) is at its maximum; when the outcome is certain, entropy is 0</strong>. This is the very same "entropy" from physics — a measure of disorder.</p>
   </div>
 
   <div class="section">
-    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
-    <p>English looks like 26 uniformly distributed letters (log₂26 ≈ 4.7 bits/char), but due to letter frequency, word frequency, and grammar, Shannon estimated the actual entropy at about 1 bit/char — meaning English text can be compressed to under a quarter of its size. This is exactly why large language models can predict next tokens so well: natural language is a deeply compressible, low-entropy stream.</p>
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>English has 26 letters, so at first glance each needs about 4.7 bits. But because letters and words follow heavy regularities (a "q" is almost always followed by "u"), the <strong>real information content is only about 1 bit per letter</strong> — meaning English text can be compressed to under a quarter of its size. This is exactly why large language models can "autocomplete" so accurately: natural language is fundamentally highly compressible.</p>
   </div>
 
   <div class="section">
-    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
-    <p>In <strong>thermodynamics</strong>, it is Boltzmann's S = k·ln W; in <strong>machine learning</strong>, training minimizes cross-entropy between predicted and true distributions; in <strong>decision trees</strong>, "information gain" drives ID3; in <strong>ecology</strong>, it is the Shannon diversity index; in <strong>cognitive science</strong>, predictive processing models the brain as a machine that continually minimizes expected entropy (surprise).</p>
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>physics</strong> it's the disorder of a system; in <strong>machine learning</strong> it's the "cross-entropy loss" you minimize during training — making the model's predictions match reality; in <strong>ecology</strong> it measures species diversity; in <strong>cognitive science</strong> it maps to "surprise" — one theory holds that the brain is a machine that constantly works to reduce surprise.</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT APPLICATION + REFLECTION</span>
-    <p>This changes how you evaluate prompts, meetings, and stand-up reports: not "how many words" but "how much uncertainty was removed". "Project is on track" carries ~0 bits; "blocked on subtask X, missing resource Y, ETA slips 3 days" is high-bit intel. Likewise, parenting: "How was your day?" almost guarantees a low-entropy reply; an unpredictable, specific question is what raises information yield.</p>
-    <span class="q">▸ Reflection: Among the 5 longest messages you sent or received this week, how many bits (genuine uncertainty removed) did each carry? Which was shortest yet most informative?</span>
+    <p>The way to judge a prompt, a meeting, or a status update changes: not "how many words," but <strong>how much uncertainty it removed</strong>. "The project is going well" carries almost 0 bits; "blocked on subtask X, missing resource Y, expect a 3-day slip" is genuinely high-information intel. Same in parenting: "How was today?" almost always returns a low-information "fine" — better to ask something specific and unpredictable.</p>
+    <span class="q">▸ Reflection: of the 5 longest messages you sent or received this week, how much uncertainty did each really remove? Which was the shortest yet most informative?</span>
   </div>
 </div>
 
 <div class="card">
   <h2>Mutual Information</h2>
-  <div class="en">I(X;Y) = H(X) − H(X|Y)</div>
-  <div class="subfield">Information Theory · Statistical Dependence</div>
+  <div class="en">A more universal measure of dependence than correlation</div>
+  <div class="subfield">Statistical dependence beyond straight lines</div>
 
   <div class="section insight">
     <span class="label">CORE INSIGHT</span>
-    <p>Correlation only captures linear co-movement; mutual information measures "how much knowing X reduces uncertainty about Y" — over any dependence, linear, nonlinear, chaotic, or discrete. It is a strictly stronger tool for detecting causality and hidden coupling, and it is the modern objective behind representation learning.</p>
+    <p>A correlation coefficient only tells you whether two things rise and fall together. Mutual information measures <strong>"how much knowing X tells me about Y"</strong> — whether the relationship is a straight line, a curve, or seemingly chaotic. It's a far stronger tool for spotting hidden dependencies.</p>
   </div>
 
   <div class="section">
-    <span class="label">ORIGIN &amp; MECHANISM</span>
-    <p>I(X;Y) = H(X) + H(Y) − H(X,Y) = H(X) − H(X|Y). Intuition: after observing Y, by how much has uncertainty about X dropped? Zero under independence, equal to H(X) when X is fully determined by Y. It is invariant under invertible transformations and defined for any distribution, so it is fundamentally more general than Pearson correlation. Shannon introduced it in the original 1948 paper; Linfoot and Kullback later generalized it into the KL-divergence family.</p>
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>Mutual information answers an intuitive question: <strong>once I know Y, how much does X's uncertainty shrink?</strong> It's 0 when the two are completely independent, and maximal when one fully determines the other. It doesn't care about the shape of the distribution or demand a straight-line relationship, so it's far more universal than the everyday correlation coefficient.</p>
   </div>
 
   <div class="section">
-    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
-    <p>Let X be uniform on [−1, 1] and Y = X². Pearson correlation is exactly 0 — they are "linearly uncorrelated". Yet Y is fully determined by X, so mutual information is over 1 bit. Any finance, risk, or epidemiology model relying on correlation alone will miss this entire class of dependence. A great deal of the 2008 financial crisis came from confusing "zero correlation" with "independence".</p>
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>Let X be uniform between −1 and 1, and let Y = X². Their correlation coefficient is <strong>exactly 0</strong> — by correlation they look "unrelated." Yet Y is completely determined by X, so their mutual information is high. Any finance or risk model that relies only on correlation misses this — and in the 2008 crisis many risk models failed on exactly this point: "zero correlation" does not mean "independent."</p>
   </div>
 
   <div class="section">
-    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
-    <p>In <strong>neuroscience</strong>, it quantifies effective information flow between brain regions (Tononi's IIT is built on it); in <strong>representation learning</strong>, it is the objective of InfoNCE, CLIP, and contrastive methods — maximize mutual information across views; in <strong>causal inference</strong>, it underlies Transfer Entropy; in <strong>genetics</strong>, it reconstructs regulatory networks; in <strong>cryptography</strong>, "perfect secrecy" is formally defined as I(plaintext; ciphertext) = 0.</p>
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>neuroscience</strong> it measures how much information actually flows between two brain regions; in <strong>AI representation learning</strong>, contrastive learning (e.g. CLIP aligning images and text) aims to maximize the mutual information between different views; in <strong>genetics</strong> it identifies regulatory relationships between genes; in <strong>cryptography</strong>, "perfect secrecy" is defined as zero mutual information between ciphertext and plaintext.</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT APPLICATION + REFLECTION</span>
-    <p>In team and project diagnostics, ask "which early indicator has the highest mutual information with final outcome", not "which correlates highest". You will often find: surface KPIs (e.g. weekly report length) carry near-zero MI, while soft signals (average length of code review comments, silence duration in stand-ups) genuinely predict delivery quality. In AI feature selection, MI routinely surfaces strong predictors that linear methods miss entirely.</p>
-    <span class="q">▸ Reflection: In your current work, which "ignored weak signal" might have far higher mutual information with the outcome than the central KPI everyone is watching?</span>
+    <p>When diagnosing a team or project, ask <strong>"which early signal has the highest mutual information with the final outcome,"</strong> not "which metric has the highest correlation." You'll often find the surface KPI (like weekly-report word count) has almost no predictive power, while a neglected weak signal (the length of comments in code review, the duration of silence in standups) is what truly forecasts delivery quality. When picking features for an AI system, mutual information often surfaces unexpectedly strong predictors.</p>
+    <span class="q">▸ Reflection: is there a "neglected weak signal" in your work whose predictive power is actually far higher than the core KPI your team keeps staring at?</span>
   </div>
 </div>
 
 <div class="card">
   <h2>Channel Capacity</h2>
-  <div class="en">C = B·log₂(1 + S/N)</div>
-  <div class="subfield">Communication Engineering · Coding Theory</div>
+  <div class="en">Noise is a resource you can trade away with coding</div>
+  <div class="subfield">Why slow-but-accurate always wins</div>
 
   <div class="section insight">
     <span class="label">CORE INSIGHT</span>
-    <p>Shannon's 1948 noisy channel theorem: across any noisy channel, as long as transmission rate ≤ C (channel capacity), there exists an encoding that drives error probability to zero. Noise is not unbeatable fate — it is a resource that can be traded against coding redundancy. The entire digital civilization rests on this counterintuitive claim.</p>
+    <p>Shannon proved something counter-intuitive: over any noisy channel, as long as your transmission rate stays below a certain ceiling (the channel capacity), <strong>there must exist an encoding that drives the error rate toward 0</strong>. Noise isn't an unbeatable fate — it's a resource you can trade away, in proportion, with redundant coding. The entire digital civilization rests on this claim.</p>
   </div>
 
   <div class="section">
-    <span class="label">ORIGIN &amp; MECHANISM</span>
-    <p>Shannon–Hartley theorem: C = B·log₂(1 + S/N), where B is bandwidth and S/N is signal-to-noise ratio. Capacity grows linearly with bandwidth but only logarithmically with SNR — which is why 5G pursues more spectrum rather than just more power. Shannon's original proof was existential, leaving the engineering question open; only with LDPC and Turbo codes (1990s) and Polar codes (2008) did practical schemes approach the Shannon limit. A rare case of mathematics preceding implementation by 40 years.</p>
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>The capacity formula tells us: <strong>double the bandwidth and you double the capacity; but double the signal-to-noise ratio and capacity barely rises</strong> — which is why 5G fights so hard for wider spectrum rather than just cranking up power. Shannon only proved "such a good code must exist," not how to build one; engineers then spent about 40 years actually constructing codes that approach this theoretical limit.</p>
   </div>
 
   <div class="viz">
-    <div class="viz-title">▸ Shannon's Communication Model (1948)</div>
+    <div class="viz-title">▸ How a message crosses a noisy channel</div>
     <div class="channel-diagram">
       <div class="channel-box">Source</div>
       <div class="channel-arrow">→</div>
@@ -163,78 +157,60 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
       <div class="channel-arrow">→</div>
       <div class="channel-box">Decoder</div>
       <div class="channel-arrow">→</div>
-      <div class="channel-box">Sink</div>
+      <div class="channel-box">Receiver</div>
     </div>
-    <div class="channel-note">If rate R ≤ C, an encoding exists driving error arbitrarily low; if R &gt; C, error necessarily → 1</div>
+    <div class="channel-note">Below capacity, an encoding exists that makes errors arbitrarily small; once you exceed capacity, the error rate inevitably surges</div>
   </div>
 
   <div class="section">
-    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
-    <p>Deep space communication: Voyager 1 is 24 billion km from Earth, with signal weaker than cosmic background noise — SNR far below 1. Naive intuition says decoding is impossible. Yet NASA, using Reed–Solomon plus convolutional coding at extremely low rate, still receives complete data at about 160 bit/s. The capacity theorem guarantees this: at low SNR you simply trade speed for fidelity — slow but accurate, Shannon's gift to interstellar exploration.</p>
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>A deep-space probe billions of kilometers away sends back a signal <strong>weaker than the cosmic background noise</strong> — by intuition, unreadable. Yet with carefully designed error-correcting codes plus an extremely slow transmission rate, it still returns its data intact. That's the promise of the capacity theorem: no matter how strong the noise, slow the rate down and you can buy back accuracy — slow, but error-free.</p>
   </div>
 
   <div class="section">
-    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
-    <p>In <strong>cognitive science</strong>, attention is a bandwidth — about 10 Mbit/s enters the eye but only ~50 bit/s reaches consciousness, so "seen ≠ processed"; in <strong>organizational communication</strong>, Dunbar's number and hierarchy reflect compounding re-encoding losses across layers; in <strong>AI</strong>, a Transformer's context window functions as an effective channel capacity; in <strong>biology</strong>, synaptic transmission is Shannon-style optimization under low SNR.</p>
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>cognitive science</strong> it's the bandwidth of attention — the eye takes in far more per second than consciousness can process, so "seeing" isn't "taking in"; in <strong>organizational communication</strong>, information gets re-narrated and degraded at every layer it passes through; in <strong>AI</strong>, a large model's context window is effectively its channel capacity; in <strong>biology</strong>, a synapse passing a signal is itself a piece of elegant coding under heavy noise.</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT APPLICATION + REFLECTION</span>
-    <p>Remote collaboration is fundamentally channel-capacity management. Text Slack is narrow-band but high-SNR — best for asynchronous deep questions; video calls are wide-band but noisy — best for trust-building and resolving disagreements; emotional issues require in-person bandwidth. Mismatched media (firing someone over Slack, daily status over Zoom) is organizational capacity waste. Same logic at home: a sticky note, a hug, and a long conversation are three radically different channels.</p>
-    <span class="q">▸ Reflection: In your key communications this week, did any "small topic use a wide-band channel" or "big topic use a narrow-band channel"? Would a different medium have worked better?</span>
+    <p>Remote collaboration is fundamentally <strong>channel-capacity management</strong>. Text is narrow-bandwidth but high signal-to-noise, ideal for asynchronous, deep questions; video is wide-bandwidth but noisy, ideal for building trust and resolving disagreements; emotional topics often need the full bandwidth of being face to face. Mismatching the medium (layoffs over text, routine updates over video) is capacity waste at the organizational level. Same in parenting: a sticky note, a hug, and a long talk are three channels with completely different capacities.</p>
+    <span class="q">▸ Reflection: in your key conversations this week, did a "small matter use a high-bandwidth medium" or a "big matter use a low-bandwidth one"? Would switching the medium have been better?</span>
   </div>
 </div>
 
 <div class="card">
   <h2>Kolmogorov Complexity</h2>
-  <div class="en">K(x) = length of shortest program producing x</div>
-  <div class="subfield">Algorithmic Information Theory · Computation</div>
+  <div class="en">True information = length of the shortest program</div>
+  <div class="subfield">"Looks random" isn't "is random"</div>
 
   <div class="section insight">
     <span class="label">CORE INSIGHT</span>
-    <p>The true information content of an object equals the length of the shortest program that produces it. This goes beyond Shannon entropy (which depends on a probability distribution) — it measures the intrinsic complexity of a single individual object. "Looks random" ≠ "is random": the first trillion digits of π appear chaotic but can be generated by a 200-character program, so its Kolmogorov complexity is tiny.</p>
+    <p>A thing's true information content equals <strong>the length of the shortest program that can generate it</strong>. "Looks random" isn't the same as "is random": the first trillion digits of π look like gibberish, yet a few-hundred-character program can compute them — so its complexity is actually tiny.</p>
   </div>
 
   <div class="section">
-    <span class="label">ORIGIN &amp; MECHANISM</span>
-    <p>Independently formulated by Andrey Kolmogorov, Ray Solomonoff, and Gregory Chaitin in the 1960s. Formal definition: K(x) is the length of the shortest program on a fixed universal Turing machine that outputs x. The quantity is not computable (equivalent to the halting problem), yet has remarkable properties: K almost-surely lower-bounds Shannon entropy and constitutes a strict mathematical formulation of Occam's razor. From this, Solomonoff derived universal inductive inference — the principle that learning at its limit means "prefer the shortest explanation".</p>
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>In the 1960s, several mathematicians (Kolmogorov being the figurehead) independently proposed: an object's complexity is <strong>the length of the shortest program that generates it</strong>. Strikingly, that length can't actually be computed (it's as unsolvable as the "halting problem"), yet it gives Occam's razor — simpler explanations are better — a rigorous mathematical form. The ultimate goal of all learning is to find the shortest explanation for the data.</p>
   </div>
 
   <div class="section">
-    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
-    <p>Chaitin's theorem: within any formal system, there exist many "random" true statements whose proofs exceed the length any program in that system can express — you simply cannot decide them. This is the algorithmic version of Gödel incompleteness. The physical extension: a perfectly random string (high K) cannot be compressed by any theory — so "true chaos" is in principle unknowable to science. Science is possible only because the universe is far more compressible than its raw length.</p>
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>There's a theorem that says: in any mathematical system, there exist many "random" true statements whose proofs are longer than the system itself — so you can never decide whether they're true or false. In other words, <strong>something truly random can't be compressed by any theory</strong>. And science is only possible because the universe is far more compressible than it "looks" — a handful of simple laws explain a vast number of phenomena.</p>
   </div>
 
   <div class="section">
-    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
-    <p>In <strong>machine learning</strong>, the MDL (Minimum Description Length) principle states: the best model minimizes "model + data residual" total encoding length; in <strong>physics</strong>, "shortest law = best model" — E = mc² has such explanatory power precisely because it is short; in <strong>biology</strong>, the compressibility of genomes (repeats) reflects evolution's algorithmic structure; in <strong>AI alignment</strong>, Solomonoff induction underlies AIXI universal intelligence; in <strong>art and design</strong>, the math of minimalism — less is more = lower K, purer signal.</p>
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>machine learning</strong>, the "best model" is the one whose "model + the error it fails to explain" has the shortest total encoding; in <strong>physics</strong>, E=mc² is great precisely because it's tiny yet enormously explanatory; in <strong>biology</strong>, the many repeated segments in a genome show it's highly compressible; in <strong>design</strong>, "less is more" is the same idea — the more concise, the purer the signal.</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT APPLICATION + REFLECTION</span>
-    <p>Use K to test the "true depth" of an insight, technical proposal, or product pitch — how short can it be compressed while still reconstructable? Genuinely deep ideas usually fit one sentence ("markets fail when externalities exist"); things requiring 2,000 words to explain are often high-entropy noise disguised as thinking. The standard is brutal for senior engineers: an elaborate architecture diagram ≠ high value; a design captured in one diagram or one equation has the highest K compression ratio. Apply this to your writing, demos, and reviews: after deleting until you cannot delete more, what is left?</p>
-    <span class="q">▸ Reflection: Compress your most important recent work into one sentence. Stripped of jargon and packaging, is the kernel still powerful? Or was the packaging the whole thing?</span>
+    <p>To judge the "real depth" of an insight, plan, or proposal, ask: <strong>how short can it be compressed and still make sense?</strong> Genuinely deep insights usually fit in one sentence ("markets fail when externalities exist"); the ones that need 2,000 words are often noise disguised as ideas. This standard is especially brutal for senior engineers: a complex architecture diagram isn't high value — a design you can capture in one diagram or one line is the real skill. Apply it to your own writing, demos, and reports: after cutting everything you can, does the remaining core still hold up?</p>
+    <span class="q">▸ Reflection: compress your most important recent work into one sentence. Strip away all the jargon and build-up — is the "core" still powerful? Or was the build-up the whole thing?</span>
   </div>
 </div>
 
-<div class="resources-card">
-  <h3>Further Resources</h3>
-  <ul>
-    <li><strong>📰 Essential:</strong> Claude E. Shannon (1948) "A Mathematical Theory of Communication", <em>Bell System Technical Journal</em> — one of the most important papers in human history</li>
-    <li><strong>📖 Textbook:</strong> Cover &amp; Thomas, <em>Elements of Information Theory</em> (2006, 2nd ed.) — the field bible; chapters 1–2 cover Shannon entropy and mutual information</li>
-    <li><strong>📖 Narrative:</strong> James Gleick, <em>The Information: A History, A Theory, A Flood</em> (2011) — superb storytelling history</li>
-    <li><strong>📖 Advanced:</strong> Li &amp; Vitányi, <em>An Introduction to Kolmogorov Complexity and Its Applications</em> (4th ed.) — definitive reference</li>
-    <li><strong>📰 Paper:</strong> Solomonoff (1964) "A Formal Theory of Inductive Inference" — origin of algorithmic information theory and universal AI</li>
-    <li><strong>🎓 Courses:</strong> MIT 6.441 / Stanford EE376A Information Theory (open lecture notes)</li>
-    <li><strong>📖 Accessible:</strong> John Pierce, <em>An Introduction to Information Theory: Symbols, Signals and Noise</em> — written by Shannon's Bell Labs colleague, ideal entry point</li>
-    <li><strong>🎥 Video:</strong> 3Blue1Brown "But what is information?" series — fastest path to visual intuition</li>
-  </ul>
 </div>
-
-</div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
 </body>
 </html>

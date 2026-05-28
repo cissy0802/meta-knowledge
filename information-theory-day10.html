@@ -36,12 +36,6 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .section.bigcat .label{background:#f7a072;color:#fff}
 .section.bigcat p{color:#5a4a3a}
 .section.bigcat .q{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed #f0d2a4;font-style:italic;color:#6b5a3a}
-.resources-card{background:#fff;border-radius:14px;padding:24px 26px;margin-top:28px;border-left:4px solid #52b788}
-.resources-card h3{font-size:1.1rem;color:#52b788;margin-bottom:14px;letter-spacing:0.5px}
-.resources-card ul{list-style:none;padding:0}
-.resources-card li{padding:8px 0;border-bottom:1px solid #f0ece4;font-size:0.92rem;color:#3a3a4a}
-.resources-card li:last-child{border-bottom:none}
-.resources-card li strong{color:#52b788}
 .viz{margin:22px 0 8px;padding:18px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
 .viz-title{font-size:0.78rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
 .channel-diagram{display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap;font-size:0.78rem}
@@ -76,84 +70,84 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <div class="card">
   <h2>香农熵</h2>
   <div class="en">Shannon Entropy</div>
-  <div class="subfield">信息论 · 概率与不确定性</div>
+  <div class="subfield">信息 = 被消除的不确定性</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>信息不是"内容"，是"消除的不确定性"。"明天太阳升起" 几乎 0 bit；"明天发生地震"则承载巨量信息。世界上的事情越可预测，越乏味也越无用；越意外，越值得编码与传播。</p>
+    <p>信息不是"内容"，而是<strong>被消除掉的不确定性</strong>。"明天太阳照常升起"几乎是 0 比特；"明天某地发生地震"则携带巨量信息。一件事越可预测，就越没有信息量；越出人意料，越值得被编码和传播。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>Claude Shannon 1948 年《通信的数学理论》（<em>A Mathematical Theory of Communication</em>）一文奠定整个数字时代。他从一组朴素公理推出唯一形式 H = -Σ p·log₂ p——一条消息的平均"惊讶度"。均匀分布时熵最大（最难预测），完全确定时熵为 0。这同时是热力学 Boltzmann 熵的同构表达——Shannon 在与冯·诺依曼讨论时，后者建议他叫它"熵"，因为"没人真正理解它，你在辩论中永远会赢"。</p>
+    <p>1948 年 Shannon 提出一个公式，用来衡量一条消息平均有多"出人意料"。<strong>当各种结果势均力敌、最难猜时，信息量（熵）最大；当结果完全确定时，熵就是 0</strong>。这和物理里的"熵"——系统的混乱程度——其实是同一个东西。</p>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>英语字母看似 26 个均匀字符（log₂26 ≈ 4.7 bit/字符），但因为字母频率、词频、语法约束，Shannon 估计实际熵只有约 1 bit/字符——这意味着英文文本可压缩到原来的 1/4 以下。这也是大语言模型能"接龙"如此精准的根本原因：自然语言本质上是高度可压缩的低熵流。</p>
+    <p>英语有 26 个字母，乍看每个字母要用约 4.7 比特来表示。但因为字母和单词的出现有大量规律（q 后面几乎总跟着 u），<strong>真实信息量只有约 1 比特/字母</strong>——也就是说英文文本能压缩到原来的四分之一以下。这正是大语言模型能如此精准"接龙"的根本原因：自然语言本质上是高度可压缩的。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>热力学</strong>中是 Boltzmann 熵 S = k·ln W；在<strong>机器学习</strong>中是 cross-entropy loss——模型训练即最小化预测分布与真实分布的熵差；在<strong>决策树</strong>中是 ID3 算法的"信息增益"准则；在<strong>生态学</strong>中是 Shannon 多样性指数；在<strong>认知科学</strong>中对应"惊讶度"——预测加工理论认为大脑就是一台不断最小化预期熵的引擎。</p>
+    <p>在<strong>物理</strong>里它是系统的混乱程度；在<strong>机器学习</strong>里是训练时要最小化的"交叉熵损失"——让模型的预测尽量贴近真实；在<strong>生态学</strong>里用来衡量物种多样性；在<strong>认知科学</strong>里对应"惊讶度"——有理论认为，大脑就是一台不断降低意外的预测机器。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>评估 Prompt、会议、stand-up 报告的方式变了：不看"说了多少字"，而看"消除了多少不确定性"。"项目进展顺利"信息量 ≈ 0；"卡在 X 子任务、缺 Y 资源、预计延期 3 天"才是高熵情报。同理，育儿中"今天怎么样？" 几乎必得低熵回答，需要换成不可预测的具体问题。</p>
-    <span class="q">▸ 思考题：你最近一周收到/发出的 5 条最长信息中，真正的 bit 数（消除的不确定性）有多少？哪一条字数最少却信息量最大？</span>
+    <p>评估一段 Prompt、一场会议、一份日报，标准变了：不看"说了多少字"，而看<strong>消除了多少不确定性</strong>。"项目进展顺利"信息量几乎为 0；"卡在 X 子任务、缺 Y 资源、预计延期 3 天"才是真正有价值的高信息情报。育儿也一样："今天怎么样？"几乎必然换来一句低信息的"还行"，不如换成具体而难以预测的问题。</p>
+    <span class="q">▸ 思考题：你最近一周收发的 5 条最长信息里，真正消除了多少不确定性？哪一条字数最少，信息量却最大？</span>
   </div>
 </div>
 
 <div class="card">
   <h2>互信息</h2>
   <div class="en">Mutual Information</div>
-  <div class="subfield">信息论 · 统计依赖</div>
+  <div class="subfield">比"相关系数"更普适的依赖度量</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>相关系数只看"线性同步"，互信息测量"知道 X 能告诉我多少关于 Y 的信息"——无论线性、非线性、混沌、离散。这是检测因果与隐性依赖的更强工具，也是现代表征学习的核心目标。</p>
+    <p>相关系数只能看出"两者是否同涨同跌"，互信息却能衡量<strong>"知道 X 能告诉我多少关于 Y 的信息"</strong>——不管两者关系是直线、曲线还是看似杂乱。它是发现隐藏依赖关系的更强工具。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>I(X;Y) = H(X) + H(Y) − H(X,Y) = H(X) − H(X|Y)。直觉：观察 Y 之后，X 的不确定性减少了多少？独立时 I = 0，完全决定时 I = H(X)。它对所有变换不变、对任意分布都有定义，因此比皮尔逊相关系数本质上更普适。Shannon 在原始论文中就引入了这一概念，后被 Linfoot、Kullback 推广到 KL 散度族。</p>
+    <p>互信息回答一个直觉问题：<strong>知道了 Y 之后，X 的不确定性减少了多少？</strong>两者完全独立时是 0，一个能完全决定另一个时达到最大。它不挑分布、也不要求关系是一条直线，所以比常用的"相关系数"普适得多。</p>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>设 X 在 [−1, 1] 均匀分布，Y = X²。皮尔逊相关系数严格为 0——它们"线性无关"。但 Y 完全由 X 决定，互信息高达 1 bit 以上。任何只用相关系数的金融、风险、流行病学模型都会漏掉这种关系。2008 年金融危机中大量风险模型就是栽在"零相关 ≠ 独立"上。</p>
+    <p>设 X 在 −1 到 1 之间均匀取值，Y = X²。这两者的相关系数<strong>严格等于 0</strong>——按相关系数看它们"毫无关系"。但 Y 完全由 X 决定，互信息很高。任何只用相关系数的金融或风险模型，都会漏掉这种关系——2008 年金融危机里，不少风险模型就栽在"零相关并不等于相互独立"上。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>神经科学</strong>中度量脑区之间的有效信息流（Tononi 的 IIT 直接建立在互信息上）；在<strong>表征学习</strong>中是 InfoNCE、CLIP、对比学习的目标函数——最大化"视图间"的互信息；在<strong>因果推断</strong>中是 Transfer Entropy 的基础；在<strong>遗传学</strong>中识别基因调控网络；在<strong>密码学</strong>中"完美保密"的形式定义即 I(明文; 密文) = 0。</p>
+    <p>在<strong>神经科学</strong>里用来衡量两个脑区之间真正流动了多少信息；在<strong>AI 表征学习</strong>里，对比学习（如 CLIP 把图像和文字对齐）的目标就是最大化不同视角之间的互信息；在<strong>遗传学</strong>里用来识别基因之间的调控关系；在<strong>密码学</strong>里，"完美保密"的定义就是密文和明文之间的互信息为 0。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>在团队/项目诊断中，问"哪个早期指标与最终结果互信息最高"，而不是"哪个指标相关性最高"。常常发现：表面 KPI（如周报字数）互信息接近 0，而隐性信号（如代码 review 评论平均长度、stand-up 沉默时长）才真正预测交付质量。AI 系统设计中，feature selection 用互信息而非线性相关，往往能挖出意想不到的强预测器。</p>
-    <span class="q">▸ 思考题：在你的工作中，有哪条"被忽视的弱信号"，其互信息可能远高于团队当前盯着的核心 KPI？</span>
+    <p>诊断团队或项目时，该问<strong>"哪个早期信号和最终结果的互信息最高"</strong>，而不是"哪个指标相关性最高"。常会发现：表面 KPI（如周报字数）几乎没有预测力，而一些被忽视的弱信号（如代码评审里评论的长度、站会沉默的时长）才真正预示交付质量。做 AI 系统挑特征时，用互信息常能挖出意想不到的强预测器。</p>
+    <span class="q">▸ 思考题：你工作中有没有某个"被忽视的弱信号"，它的预测力其实远高于团队当前死盯的核心 KPI？</span>
   </div>
 </div>
 
 <div class="card">
   <h2>信道容量</h2>
   <div class="en">Channel Capacity</div>
-  <div class="subfield">通信工程 · 编码理论</div>
+  <div class="subfield">噪声是可以被编码兑换的资源</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>Shannon 1948 的核心定理：在任意有噪声的信道中，只要传输速率 ≤ C（信道容量），就存在编码方式使错误概率→0。噪声不是"不可战胜的命运"，是可以被编码冗余"按比例兑换"的资源。整个数字文明建立在这个反直觉断言上。</p>
+    <p>Shannon 证明了一件反直觉的事：在任何有噪声的信道里，只要传输速率不超过某个上限（信道容量），就<strong>一定存在某种编码方式，让出错概率趋近于 0</strong>。噪声不是不可战胜的命运，而是一种可以用"冗余编码"按比例兑换掉的资源。整个数字文明都建立在这个断言上。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>Shannon-Hartley 定理：C = B·log₂(1 + S/N)，其中 B 是带宽，S/N 是信噪比。容量随带宽线性增长，随信噪比仅对数增长——所以 5G 拼命扩频谱而不是只加功率。当年 Shannon 给出的是"存在性证明"，没说怎么编码；直到 1990s LDPC 与 Turbo Code、2008 年 Polar Code 才在工程上逼近 Shannon 极限。这是数学先于实现 40 年的罕见案例。</p>
+    <p>信道容量的公式告诉我们：<strong>带宽翻倍，容量也翻倍；但信噪比翻倍，容量只增加一点点</strong>——所以 5G 拼命去抢更宽的频谱，而不是单纯加大发射功率。Shannon 当年只证明了"这样的好编码一定存在"，却没说怎么造出来；工程师又花了大约 40 年，才真正做出逼近这个理论极限的编码。</p>
   </div>
 
   <div class="viz">
-    <div class="viz-title">▸ Shannon 通信模型（1948）</div>
+    <div class="viz-title">▸ 一条消息如何穿过有噪声的信道</div>
     <div class="channel-diagram">
       <div class="channel-box">信源</div>
       <div class="channel-arrow">→</div>
@@ -163,78 +157,60 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
       <div class="channel-arrow">→</div>
       <div class="channel-box">解码器</div>
       <div class="channel-arrow">→</div>
-      <div class="channel-box">信宿</div>
+      <div class="channel-box">接收者</div>
     </div>
-    <div class="channel-note">速率 R ≤ C 时存在编码使错误率任意小；R &gt; C 时错误率必然→1</div>
+    <div class="channel-note">速率不超过容量时，存在编码让错误率任意小；一旦超过容量，错误率必然飙升</div>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>深空通信：旅行者 1 号距地球 240 亿公里，信号到达时弱于宇宙背景辐射，信噪比远小于 1。按朴素直觉应当无法解读。但 NASA 用 Reed-Solomon 编码 + 卷积码 + 极慢码率，仍然以 160 bit/秒 完整传回数据。容量定理说"低信噪比下只要降速率即可"——慢但准确，是 Shannon 留给宇宙探测的礼物。</p>
+    <p>深空探测器距离地球上百亿公里，信号传回时<strong>比宇宙背景噪声还要弱</strong>，按直觉根本没法读取。但靠着精心设计的纠错编码加上极慢的传输速率，它依然能把数据完整送回。这正是容量定理的承诺：噪声再大，只要把速度降下来，就能换回准确——慢，但不出错。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>认知科学</strong>中是注意力带宽——人类视觉信道约 10 Mbit/s 进入眼睛，但意识只处理 ~50 bit/s，编码瓶颈决定了"看得见 ≠ 看进去"；在<strong>组织沟通</strong>中是 Dunbar 数与层级——信息每跨一层组织都被"重编码"造成损失；在<strong>AI</strong>中 Transformer 的 context window 即等效信道容量；在<strong>生物</strong>中突触的信号传递就是低信噪比下的 Shannon 优化。</p>
+    <p>在<strong>认知科学</strong>里是注意力带宽——眼睛每秒接收的信息远超意识能处理的量，所以"看见"不等于"看进去"；在<strong>组织沟通</strong>里，信息每经过一层级就被重新转述一次、损失一些；在<strong>AI</strong>里，大模型的上下文窗口就相当于它的信道容量；在<strong>生物</strong>里，神经突触传递信号本身就是一种在强噪声下的精妙编码。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>远程协作的本质是"信道容量管理"。文字 Slack 带宽窄但信噪比高，适合异步深度问题；视频会议带宽宽但噪声多，适合建立信任与解决分歧；情绪议题面对面才能足够带宽。错配介质（用 Slack 谈裁员、用视频做日常进度）是组织级容量浪费。育儿同理：写字条 vs 拥抱 vs 长谈，是三种容量完全不同的信道。</p>
-    <span class="q">▸ 思考题：本周你的关键沟通中，是否有"小议题用了高带宽介质"或"大议题用了低带宽介质"？换一种介质会更好吗？</span>
+    <p>远程协作的本质，就是<strong>管理信道容量</strong>。文字消息带宽窄但信噪比高，适合异步处理需要深思的问题；视频会议带宽宽但噪声多，适合建立信任、化解分歧；情绪化的话题往往只有面对面才有足够带宽。用错介质（用文字谈裁员、用视频开例行进度会）就是组织层面的容量浪费。育儿也一样：写张字条、一个拥抱、一次长谈，是三种容量完全不同的渠道。</p>
+    <span class="q">▸ 思考题：这周你的关键沟通里，有没有"小事用了高带宽介质"或"大事用了低带宽介质"？换一种方式会不会更好？</span>
   </div>
 </div>
 
 <div class="card">
   <h2>柯尔莫哥洛夫复杂度</h2>
   <div class="en">Kolmogorov Complexity</div>
-  <div class="subfield">算法信息论 · 计算理论</div>
+  <div class="subfield">真信息量 = 最短程序的长度</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>一个对象的"真信息量" = 能生成它的最短程序长度。这超越了 Shannon 熵（依赖概率分布）——它度量"单个个体"的内在复杂性。"看起来随机" ≠ "真正随机"：π 的前一万亿位看似乱码，但能用 200 字符的程序生成，所以柯氏复杂度极低。</p>
+    <p>一个东西真正的信息量，等于<strong>"能生成它的最短程序"有多长</strong>。"看起来随机"并不等于"真的随机"：圆周率 π 的前一万亿位看着像乱码，却能用一个几百字符的小程序算出来，所以它的复杂度其实极低。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>Andrey Kolmogorov、Ray Solomonoff、Gregory Chaitin 在 1960s 各自独立提出。形式定义：K(x) = 在一个固定通用图灵机上能输出 x 的最短程序的长度。该量不可计算（与停机问题等价），但具有惊人理论性质：K 几乎确定地下界了 Shannon 熵，构成"奥卡姆剃刀"的严格数学版本。Solomonoff 由此提出归纳推理理论——一切学习的极限即"对所有解释优先取最短"。</p>
+    <p>1960 年代，几位数学家（其中以 Kolmogorov 为代表）各自独立提出：一个对象的复杂度，就是<strong>能生成它的最短程序的长度</strong>。有意思的是，这个长度无法被算出来（和"停机问题"一样不可解），但它给了"奥卡姆剃刀"——解释越简单越好——一个严格的数学版本。一切学习的终极目标，就是为数据找到最短的解释。</p>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>Chaitin 定理：在每个形式系统内，存在大量"随机"的真命题，其证明长度超过该系统能表达的任何程序——你无法判断它们是真是假。这是 Gödel 不完备性的算法版本。物理上的延伸：一个完全随机的字符串（K 高）无法被任何理论压缩——所以"完美的混沌"对科学而言不可知。科学之所以可能，恰恰因为宇宙的可压缩性远高于其字符串长度。</p>
+    <p>有一条定理说：任何一套数学系统里，都存在大量"随机"的真命题，它们的证明比系统本身还长——于是你永远无法判定它们的真假。换句话说，<strong>一个完全随机的东西，没法被任何理论压缩</strong>。而科学之所以可能，恰恰因为宇宙远比它"看上去"更可压缩——少数几条简单定律，就能解释海量现象。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>机器学习</strong>中是 MDL（Minimum Description Length）原则——最佳模型 = 最短"模型 + 数据残差"的总编码；在<strong>物理学</strong>中对应"最简定律即最佳模型"——E=mc² 的解释力恰因其极短；在<strong>生物</strong>中基因组的可压缩性（重复序列）反映演化的算法结构；在<strong>AI 对齐</strong>中 Solomonoff 归纳是 AIXI 通用智能的理论基础；在<strong>艺术与设计</strong>中极简主义美学的数学化——少即是多 = K 越小，信号越纯。</p>
+    <p>在<strong>机器学习</strong>里，"最好的模型"就是把"模型本身 + 它没解释的误差"加起来、总编码最短的那个；在<strong>物理</strong>里，E=mc² 之所以伟大，正因为它极短却解释力极强；在<strong>生物</strong>里，基因组里大量重复片段说明它高度可压缩；在<strong>设计</strong>里，"少即是多"其实就是同一个道理——越简洁，信号越纯。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>判断一个洞察、技术方案、产品提案的"真深度"——能压缩到多短而仍可重建？真正深刻的洞察通常一句话讲清（"市场会失灵当外部性存在"），需要 2000 字才说清的常常是"高熵噪声"伪装成思想。这个标准对资深技术人尤其残酷：复杂架构图 ≠ 高价值；能用一张图、一行公式概括的设计才是高 K 压缩率。同理可评估自己的写作、 demo、汇报：删到不能再删后，剩下的是什么？</p>
-    <span class="q">▸ 思考题：把你最近做过的最重要的工作压缩成一句话。如果剥掉所有术语和铺陈，"内核"是否仍然有力？还是说，铺陈本身就是这件事的全部？</span>
+    <p>判断一个洞察、方案或提案的"真深度"，可以问：<strong>它能压缩到多短、还能讲清楚？</strong>真正深刻的洞察往往一句话就能说透（"有外部性时市场会失灵"）；需要两千字才说明白的，常常是噪声伪装成思想。这条标准对资深技术人尤其残酷：复杂的架构图不等于高价值，能用一张图、一行公式概括的设计才是真功夫。拿它评估自己的写作、演示、汇报：删到不能再删之后，剩下的内核还站得住吗？</p>
+    <span class="q">▸ 思考题：把你最近最重要的一项工作压缩成一句话。剥掉所有术语和铺垫后，那个"内核"还有力吗？还是说，铺垫本身就是这件事的全部？</span>
   </div>
 </div>
 
-<div class="resources-card">
-  <h3>深入资源</h3>
-  <ul>
-    <li><strong>📰 必读：</strong> Claude E. Shannon (1948) "A Mathematical Theory of Communication"，<em>Bell System Technical Journal</em>——人类历史上最重要的论文之一</li>
-    <li><strong>📖 教材：</strong> Cover &amp; Thomas, <em>Elements of Information Theory</em>（2006，第二版）——领域圣经，第 1-2 章即覆盖香农熵与互信息</li>
-    <li><strong>📖 经典：</strong> James Gleick, <em>The Information: A History, A Theory, A Flood</em>（2011）——叙事极佳的科普史</li>
-    <li><strong>📖 进阶：</strong> Li &amp; Vitányi, <em>An Introduction to Kolmogorov Complexity and Its Applications</em>（第四版）——领域权威著作</li>
-    <li><strong>📰 论文：</strong> Solomonoff (1964) "A Formal Theory of Inductive Inference"——算法信息论与通用 AI 的源头</li>
-    <li><strong>🎓 课程：</strong> MIT 6.441 / Stanford EE376A Information Theory（公开课件）</li>
-    <li><strong>📖 通俗：</strong> John Pierce, <em>An Introduction to Information Theory: Symbols, Signals and Noise</em>——Shannon 同事亲笔，最适合入门</li>
-    <li><strong>🎥 视频：</strong> 3Blue1Brown "But what is information?" 系列——视觉直觉建立利器</li>
-  </ul>
 </div>
-
-</div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
 </body>
 </html>

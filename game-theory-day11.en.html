@@ -36,12 +36,6 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .section.bigcat .label{background:#f7a072;color:#fff}
 .section.bigcat p{color:#5a4a3a}
 .section.bigcat .q{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed #f0d2a4;font-style:italic;color:#6b5a3a}
-.resources-card{background:#fff;border-radius:14px;padding:24px 26px;margin-top:28px;border-left:4px solid #52b788}
-.resources-card h3{font-size:1.1rem;color:#52b788;margin-bottom:14px;letter-spacing:0.5px}
-.resources-card ul{list-style:none;padding:0}
-.resources-card li{padding:8px 0;border-bottom:1px solid #f0ece4;font-size:0.92rem;color:#3a3a4a}
-.resources-card li:last-child{border-bottom:none}
-.resources-card li strong{color:#52b788}
 .viz{margin:22px 0 8px;padding:18px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
 .viz-title{font-size:0.78rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
 .payoff-table{width:100%;border-collapse:collapse;font-size:0.85rem;background:#fff;border-radius:8px;overflow:hidden}
@@ -75,160 +69,142 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 
 <div class="card">
   <h2>Nash Equilibrium</h2>
-  <div class="en">No player has a unilateral incentive to deviate</div>
-  <div class="subfield">Non-Cooperative Games · Equilibrium Concept</div>
+  <div class="en">Nash Equilibrium</div>
+  <div class="subfield">The stable point no one is tempted to break</div>
 
   <div class="section insight">
     <span class="label">CORE INSIGHT</span>
-    <p>"Rational" doesn't mean "do what's best for you" — it means "given everyone else is playing as predicted, you have no incentive to unilaterally change strategy." Equilibrium need not be optimal — it is merely "the configuration nobody is motivated to break first." Many social traps (arms races, price wars, overwork culture) are stable Nash equilibria: everyone wants out; no one dares move first.</p>
+    <p>"Rational" isn't "do what's best for me" — it's <strong>"given that everyone acts as currently predicted, I have no incentive to unilaterally change my strategy."</strong> An equilibrium isn't necessarily optimal — it's simply where no one has a reason to move first. Many social traps (arms races, price wars, chronic overtime) are stable Nash equilibria: everyone wants out, yet no one dares leave first.</p>
   </div>
 
   <div class="section">
-    <span class="label">ORIGIN &amp; MECHANISM</span>
-    <p>John Nash's 1950 PhD thesis — only 21 pages — proved that every finite game has at least one equilibrium in mixed strategies, lifting the problem to Kakutani's fixed-point theorem. Von Neumann had earlier solved only zero-sum games; Nash generalized equilibrium to arbitrary non-cooperative games and laid the micro-foundation of modern economics. He shared the 1994 Nobel. Nash himself later remarked: equilibrium doesn't predict behavior, it specifies "a self-consistent system of beliefs" — the system is stable only when everyone's expectations about others are confirmed.</p>
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>In 1950 Nash proved that every game has at least one such "stable point" — a state where no one can make themselves better off by changing strategy alone. Before him, people only solved zero-sum "winner-take-all" games; Nash extended it to all non-cooperative games, laying the micro-foundations of modern economics. The key point: <strong>an equilibrium doesn't predict "who wins" — it describes a self-consistent state where everyone's expectations of each other are confirmed</strong>.</p>
   </div>
 
   <div class="viz">
-    <div class="viz-title">▸ Prisoner's Dilemma: Unique Nash ≠ Pareto Optimal</div>
+    <div class="viz-title">▸ Prisoner's dilemma: the only equilibrium ≠ the best outcome for both</div>
     <table class="payoff-table">
-      <tr><th></th><th>B Cooperate</th><th>B Defect</th></tr>
-      <tr><td class="label">A Cooperate</td><td class="pareto">−1, −1</td><td>−10, 0</td></tr>
-      <tr><td class="label">A Defect</td><td>0, −10</td><td class="nash">−5, −5</td></tr>
+      <tr><th></th><th>B cooperates</th><th>B defects</th></tr>
+      <tr><td class="label">A cooperates</td><td class="pareto">−1, −1</td><td>−10, 0</td></tr>
+      <tr><td class="label">A defects</td><td>0, −10</td><td class="nash">−5, −5</td></tr>
     </table>
-    <div class="payoff-note">Red = unique Nash equilibrium (both defect). Green = Pareto optimum (both cooperate). Rationality drives both players to the worse outcome.</div>
+    <div class="payoff-note">Red = the only Nash equilibrium (both defect); green = the outcome that's better for both (both cooperate). Each side's rationality pushes them to the worse result.</div>
   </div>
 
   <div class="section">
-    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
-    <p>Braess' paradox: in 1968 Dietrich Braess proved that <strong>adding a shortcut</strong> to a congested road network can make everyone's travel time longer. The reason: each driver's "self-optimizing fastest path" reconstructs into a worse Nash equilibrium. New York's 42nd Street and Seoul's Cheonggyecheon both shortened average commute times by <strong>closing roads, not building them</strong> — removing options pushed the game into a better equilibrium.</p>
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>Braess's paradox: <strong>building a new shortcut</strong> in a congested road network can make everyone's travel time longer. Because each driver picks the route that's "fastest for me," they form a new, worse equilibrium. In reality, New York and Seoul have both shortened average commutes by <strong>closing certain roads</strong> — removing an option pushed the whole system toward a better equilibrium.</p>
   </div>
 
   <div class="section">
-    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
-    <p>In <strong>biology</strong>, ESS (see third card); in <strong>machine learning</strong>, GANs are a Nash equilibrium of generator vs discriminator, and multi-agent RL with self-play (AlphaGo, AlphaZero) is equilibrium search; in <strong>political science</strong>, Schelling's focal points explain why distributed coordination converges on "salient" points; in <strong>arms control</strong>, Cold War mutual assured destruction was a stable equilibrium; in <strong>market design</strong>, equilibria of auctions drive ad pricing (Google AdWords' second-price auction).</p>
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>biology</strong> it shows up as the "evolutionarily stable strategy" (see card 3); in <strong>AI</strong>, a GAN is a generator and a discriminator finding an equilibrium by competing, and AlphaGo's self-play is also an equilibrium search; in the <strong>Cold War</strong>, "mutually assured destruction" was a stable equilibrium no one dared break first; in <strong>ad auctions</strong>, the result of a search engine's bidding is itself an equilibrium.</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT APPLICATION + REFLECTION</span>
-    <p>"Over-promise → slip → over-promise again" is a textbook Nash equilibrium: everyone knows estimates are optimistic, but whoever first gives a conservative estimate is marginalized. Breaking the equilibrium requires changing payoffs (publicly tracking estimate vs actual, making accuracy a scarce skill), not exhorting people to "be honest." Parenting is the same: a child and parent locked in a "nag → procrastinate" loop don't break out through reasoning; changing the rules (natural consequences instead of nagging) is what shifts the equilibrium.</p>
-    <span class="q">▸ Reflection: Which "exhausting recurring tug-of-war" in your team or home is fundamentally a Nash equilibrium? Which payoff cell needs to change to break it?</span>
+    <p>"Over-promise → slip → over-promise again" on a team is a classic Nash equilibrium: everyone knows the estimates are too optimistic, but whoever gives a conservative estimate first gets sidelined first. To break it, don't exhort people to "be more honest" — <strong>change the payoffs</strong>: publicly track "estimate vs. actual" so accuracy becomes a visible, scarce skill. Same in parenting: a child and parent stuck in a "nag → stall" equilibrium won't be moved by reasoning — only changing the rules (natural consequences instead of nagging) shifts the equilibrium.</p>
+    <span class="q">▸ Reflection: the most exhausting "recurring tug-of-war" in your team or family — which Nash equilibrium is it really? To break it, which cell's payoff must change?</span>
   </div>
 </div>
 
 <div class="card">
-  <h2>Repeated Games &amp; the Evolution of Cooperation</h2>
-  <div class="en">When the future is heavy enough, cooperation becomes equilibrium</div>
-  <div class="subfield">Dynamic Games · Trust &amp; Reputation</div>
+  <h2>Repeated Games &amp; Evolution of Cooperation</h2>
+  <div class="en">Repeated Games &amp; Evolution of Cooperation</div>
+  <div class="subfield">How cooperation emerges among the self-interested</div>
 
   <div class="section insight">
     <span class="label">CORE INSIGHT</span>
-    <p>In a one-shot game, defection is rational; but when the game is infinitely repeated and the future has enough weight (discount factor δ near 1), cooperation can become equilibrium — with no need for morality, contracts, or third-party enforcement. Civilization, trust, reputation, and long-term relationships are essentially structures that embed short-term games inside long-term ones.</p>
+    <p>In a one-shot game, "defect" is rational; but if the game repeats indefinitely and the future matters enough, <strong>cooperation itself can become the equilibrium</strong> — with no morality, contract, or third-party enforcement required. Civilization, trust, reputation, and long-term relationships are all, at bottom, short-term games embedded into a long-term structure.</p>
   </div>
 
   <div class="section">
-    <span class="label">ORIGIN &amp; MECHANISM</span>
-    <p>The Folk Theorem: in infinitely repeated games, any feasible payoff profile above the minimax can be supported by a subgame-perfect equilibrium — meaning cooperation, partial cooperation, or rotating exploitation can all be stable. Robert Axelrod's 1980 iterated prisoner's dilemma tournament was won by Anatol Rapoport's 4-line "Tit-for-Tat". Its winning traits: nice (cooperates first), retaliatory (defects after defection), forgiving (returns to cooperation when the other does), clear (transparent and learnable).</p>
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>In theory, as long as a game keeps repeating, almost any outcome can stabilize — cooperation, half-cooperation, taking turns exploiting each other. The most famous experiment was a "repeated prisoner's dilemma" tournament, won by a 4-line strategy: <strong>"Tit-for-Tat."</strong> Its winning recipe: open with goodwill, retaliate immediately when betrayed, forgive the moment the other cooperates, and stay transparent and easy to read.</p>
   </div>
 
   <div class="section">
-    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
-    <p>The "Live and Let Live" system on the WWI Western Front: in the winter of 1914–15, British and German soldiers in opposing trenches spontaneously stopped firing for effect — they shot into the air at fixed times, even sharing Christmas celebrations. Tony Ashworth's 1980 historical study showed this was an iterated cooperation equilibrium produced by <strong>the same units facing each other for extended periods</strong>. The military's countermove was precisely <strong>constant troop rotation and forced night raids</strong> — artificially returning a long-term game to one-shot status to destroy cooperation. Structure shapes behavior far more powerfully than ideology.</p>
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>In WWI trenches a strange "live and let live" truce emerged: opposing soldiers would fire into the air at fixed times, and even celebrated Christmas together. The reason is simple — <strong>the same units facing each other for a long time turned the war into a repeated game</strong>, and cooperation arose on its own. The military's countermeasure was precisely to <strong>rotate units constantly and force night raids</strong> — artificially turning the "long game" back into a "one-shot game," and cooperation collapsed. Structure drives behavior, far more than slogans do.</p>
   </div>
 
   <div class="section">
-    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
-    <p>In <strong>business</strong>, the gap between long-term supply relationships (Toyota's keiretsu) and one-shot bargaining is a repeated-game difference; in <strong>anthropology</strong>, gift economies and Mediterranean honor cultures sustain themselves via reputation; in <strong>blockchain</strong>, PoS slashing turns "cheating = permanent loss of stake," engineering miners into a repeated game; in <strong>diplomacy</strong>, Charles Osgood's GRIT strategy uses unilateral incremental gestures to trigger reciprocity; in <strong>AI alignment</strong>, multi-turn trust calibration is essentially reputational play.</p>
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>business</strong>, a long-term supply-chain relationship is completely different from one-off haggling; in <strong>blockchain</strong>, staking-and-slashing makes "cheating = permanently losing your deposit," forcing participants into a repeated game; in <strong>diplomacy</strong>, sustained unilateral goodwill can elicit reciprocity; in <strong>everyday life</strong>, reputation systems (ratings, reviews) embed every transaction into a long game.</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT APPLICATION + REFLECTION</span>
-    <p>To judge whether a counterparty will "screw you," a better question than intuition is: is this one-shot or repeated? A ride-hail driver has near-zero incentive to defraud because the rating system embeds every trip in long-term reputation; an exit-day performance conversation is a textbook one-shot game and warrants different priors. In teams, converting "every project is a new game" rotating structures into "members with continuous history" stable teams often raises cooperation without any new policy — structure is an order of magnitude stronger than preaching.</p>
-    <span class="q">▸ Reflection: Which important relationship or collaboration of yours is structurally a one-shot game but you treat as a repeated one? Conversely, which one should you treat as one-shot but you are trapped by a "long-term relationship" illusion?</span>
+    <p>To judge "will this person screw me over," a more reliable question than gut instinct is: <strong>is this a one-shot game or a repeated one?</strong> A stranger driving a rideshare has almost no incentive to cheat, because the rating system folds every trip into long-term reputation; an employee's final performance review before quitting is a classic one-shot game — adjust your expectations accordingly. On a team, turning "ad-hoc, freshly-assembled" projects into "standing teams with a continuous track record" often boosts cooperation directly, without any new policy — structure beats preaching by an order of magnitude.</p>
+    <span class="q">▸ Reflection: which important relationship of yours is structurally a one-shot game, yet you're investing in it as if it were long-term? And conversely, which one should you treat as one-shot, but you're trapped by the illusion of a "long-term relationship"?</span>
   </div>
 </div>
 
 <div class="card">
   <h2>Evolutionarily Stable Strategy</h2>
-  <div class="en">Equilibrium without anyone knowing they are playing a game</div>
-  <div class="subfield">Evolutionary Game Theory · Population Dynamics</div>
+  <div class="en">Evolutionarily Stable Strategy (ESS)</div>
+  <div class="subfield">No "rationality" needed — just copy the winners</div>
 
   <div class="section insight">
     <span class="label">CORE INSIGHT</span>
-    <p>No player needs to understand "rationality" — they only need to "copy the successful." A population still converges to game-theoretic equilibrium. Maynard Smith extended Nash equilibrium into the unconscious world: genes, cultural memes, and corporate strategies all play games without anyone understanding game theory. Equilibrium is an inevitable product of selection pressure, not of deliberate reasoning.</p>
+    <p>No one needs to understand "rationality" — as long as "successful players get copied," a population still converges to the game's equilibrium. Genes, cultures, and corporate strategies are all playing games, yet none of them understands game theory. <strong>An "equilibrium" is a product of selection pressure, not of deliberate reasoning</strong>.</p>
   </div>
 
   <div class="section">
-    <span class="label">ORIGIN &amp; MECHANISM</span>
-    <p>John Maynard Smith &amp; George Price's 1973 <em>The Logic of Animal Conflict</em> defined ESS: a strategy S is evolutionarily stable if, when almost the entire population plays S, the expected fitness of any rare invading mutant S' is strictly lower than S's. Formally, ESS refines Nash equilibrium — it not only requires "no one wants to deviate" but also "robustness to small perturbations." The replicator dynamic gives the dynamical version: strategy shares grow exponentially with relative fitness, converging to ESS. This framework unified explanations of animal conflict, sex ratios, and altruism.</p>
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>A strategy is "evolutionarily stable" when, once nearly everyone adopts it, <strong>any new "invading" strategy can't gain an edge and dies out</strong>. It's stricter than an ordinary Nash equilibrium — it requires not only "no one wants to deviate" but also "robustness to small disturbances." Dynamically: whichever strategy is doing better right now grows faster as a share of the population, eventually converging on this stable point.</p>
   </div>
 
   <div class="section">
-    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
-    <p>In the "Hawk-Dove" game with cost C &gt; resource value V (the cost of fighting exceeds the prize), the population converges neither to all hawks (mutual injury) nor all doves (a sparse hawk would dominate doves), but stabilizes at a mixed ratio of V/C. This explains why most animal conflict is <strong>ritualized display</strong> rather than real combat — red deer roaring, parallel walking, are ESS products. The same logic explains why sex ratios stabilize at ≈ 1:1 (Fisher's principle): the rarer sex has higher marginal reproductive return, pulling the ratio back to 50/50.</p>
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>The "hawk-dove game" assumes fighting costs more than the food is worth: the population ends up neither all aggressive "hawks" (mutual injury is too costly) nor all yielding "doves" (a single hawk among doves wins everything), but <strong>stable at some mixed ratio</strong>. This explains why most animal conflict is bluffing ritual (roaring, posturing) rather than real fighting. The same logic explains why <strong>sex ratios trend toward 1:1</strong> — whichever sex is rarer is more "profitable" to produce, so the ratio is automatically pulled back.</p>
   </div>
 
   <div class="section">
-    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
-    <p>In <strong>cultural evolution</strong>, Boyd &amp; Richerson use ESS to explain stable coexistence of imitation norms ("follow the majority" vs "follow the successful"); in <strong>multi-agent RL</strong>, self-play converges to ESS (AlphaStar, Diplomacy agents); in <strong>organizations</strong>, "why didn't Google ship ChatGPT first" — the explore-vs-exploit ESS ratio of incumbents lets breakthroughs originate at the periphery; in <strong>finance</strong>, the market-share drift between value and momentum follows the same dynamics; in <strong>antibiotic resistance</strong>, bacterial ESS explains why resistant strains don't vanish immediately after a drug is withdrawn.</p>
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>culture</strong> it explains why "follow the crowd" and "imitate the successful" can coexist long-term; in <strong>AI</strong>, multi-agent self-play also converges to such stable strategies; in <strong>business</strong>, disruptive breakthroughs often come from non-mainstream players — because a big company's "explore vs. defend" ratio is itself a stable equilibrium; in <strong>medicine</strong>, it explains why drug-resistant bacteria don't vanish immediately after you stop the drug.</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT APPLICATION + REFLECTION</span>
-    <p>Personal career choices are routinely misled by ESS intuition: when everyone floods toward the "apparently optimal" lane, its payoff drops from congestion, and the minority pursuing "suboptimal" paths captures the higher marginal return. Especially in the AI era — "everyone becomes a prompt engineer" cannot be ESS; rapidly imitated skills decay in value. For the "AI super-individual" path, the question is not "which skill is hottest now," but "which combination remains stable when everyone catches up." Usually that's hard-to-imitate cross-domain mixes: deep technical skill × specific industry insight × teaching/communication ability.</p>
-    <span class="q">▸ Reflection: Does your most prized current skill still have marginal advantage in a population where everyone around you has acquired it? What combination is your unique ESS?</span>
+    <p>Personal career choices are often misled by this intuition: when everyone floods into the "seemingly optimal" track, crowding drives its payoff down, and it's the few on the "suboptimal" path who reap the high returns. Especially true in the AI era — "everyone pivoting to one hot skill" can never be a stable strategy; a skill that's quickly copied loses value fast. For the "AI super-individual," the real question isn't "which skill is hottest now," but "<strong>which combination stays solid even after everyone follows</strong>" — usually a hard-to-imitate cross-domain mix: deep tech × industry insight × communication/teaching ability.</p>
+    <span class="q">▸ Reflection: your most sought-after ability right now — does it still hold an edge in a population where everyone around you has it too? What combination is a stable strategy that belongs only to you?</span>
   </div>
 </div>
 
 <div class="card">
   <h2>Mechanism Design</h2>
-  <div class="en">Inverse Game Theory — designing the rules, not playing them</div>
-  <div class="subfield">Inverse Game Theory · Institutional Engineering</div>
+  <div class="en">Mechanism Design</div>
+  <div class="subfield">Reverse game theory · turning social engineering into design</div>
 
   <div class="section insight">
     <span class="label">CORE INSIGHT</span>
-    <p>Standard game theory asks "given the rules, how will players behave?" Mechanism design inverts this: "given the outcome I want, what rules should I design?" It is inverse game theory — turning social engineering into mathematical optimization. The designer, knowing everyone will game any rule and knowing everyone knows everyone else is gaming, still arranges things so private truth is optimally revealed and social efficiency is maximized. This is the holy grail of institutional engineering.</p>
+    <p>Ordinary game theory asks "given the rules, what will people do"; mechanism design flips it: "<strong>I want a certain outcome — what rules should I design?</strong>" It's "reverse game theory" — knowing full well that everyone will game the system (and that everyone knows everyone is gaming it), yet still designing rules where <strong>telling the truth is the most profitable move and overall efficiency is highest</strong>. This is the holy grail of institution engineering.</p>
   </div>
 
   <div class="section">
-    <span class="label">ORIGIN &amp; MECHANISM</span>
-    <p>Leonid Hurwicz, Eric Maskin, and Roger Myerson shared the 2007 Nobel. Two foundations: the <strong>Revelation Principle</strong> — any equilibrium outcome can be implemented by a direct mechanism in which players truthfully report their preferences; and <strong>Incentive Compatibility</strong> — players' best strategy is to tell the truth. The canonical example is the Vickrey second-price auction: the highest bidder wins but pays the second-highest bid. The dominant strategy is honest bidding — both shading down and inflating only hurt you. Google AdWords, eBay rankings, and spectrum auctions all rest on this principle.</p>
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>Two cornerstones: first, any ideal outcome can be achieved with rules where "honestly stating your true preference pays best"; second, "incentive compatibility" — making each participant's optimal strategy be to tell the truth. The classic example is the <strong>"second-price auction": the highest bidder wins, but pays only the second-highest price</strong>. Now neither inflating nor lowballing your bid helps, so "bid your true value" becomes the optimal strategy. Most ad auctions today are built on this principle.</p>
   </div>
 
   <div class="section">
-    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
-    <p>The Gibbard–Satterthwaite impossibility theorem (1973): in any non-dictatorial single-winner election with 3+ candidates, no voting rule is simultaneously incentive-compatible (telling the truth is never worse). That is, <strong>any seemingly fair voting system inherently rewards strategic voting</strong> (defection from underdogs, vote-suppression, etc.). "Perfect democracy" is mathematically impossible — we can only choose among the "least bad" mechanisms (Borda, IRV, Condorcet each with tradeoffs). Hurwicz himself remarked that political science's deepest puzzle is, at root, mechanism-design impossibility.</p>
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>A famous theorem proves that with more than 3 candidates, <strong>no voting rule can fully eliminate "strategic voting"</strong> (abandoning a favorite, holding your nose to vote for a second choice). In other words, a "perfectly fair democratic vote" simply doesn't exist mathematically — we can only pick the "least bad" among many imperfect rules. This reduces a political dilemma to a fundamental limit of mechanism design itself.</p>
   </div>
 
   <div class="section">
-    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
-    <p>In <strong>matching</strong>, the Gale-Shapley algorithm solves stable marriage (Shapley's 2012 Nobel) and is used for US medical school residency matching and NYC public school assignment; in <strong>blockchain</strong>, Ethereum's EIP-1559 and PoS slashing are incentive-compatible designs; in <strong>organizations</strong>, OKRs intentionally decouple ambitious goals from bonuses to prevent target-shading; in <strong>AI governance</strong>, RLHF and Constitutional AI attempt to design mechanisms eliciting honest evaluation; in <strong>climate policy</strong>, carbon pricing and emissions trading are mechanism design applied to the planet.</p>
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>resource allocation</strong>, algorithms can perform stable "matching" (used to pair medical students with hospitals, students with schools); in <strong>blockchain</strong>, reward-and-penalty rules are designed so "cheating doesn't pay"; in <strong>organizations</strong>, "ambitious goals not hard-tied to bonuses" is designed precisely to stop people from deliberately lowballing targets; in <strong>climate</strong>, carbon pricing and emissions trading are mechanism design put into practice.</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT APPLICATION + REFLECTION</span>
-    <p>Leading a team, building a product, designing rewards — all are mechanism design. The common mistake is "KPI design ≠ mechanism design": stating "what I want" without asking "how will players game this?" Setting support KPIs to call count → agents hang up faster; setting engineering KPIs to lines of code → bloat. The incentive-compatibility check is to repeatedly ask: if I were a clever player optimizing this metric, what is the cheapest way to maximize it — and does that align with what I actually want? Same for children: rewarding "problems completed" produces shallow drilling; rewarding "teaching a difficult problem to someone else" turns learning itself into the equilibrium.</p>
-    <span class="q">▸ Reflection: Pick one incentive mechanism you currently use (KPI, points, bonus, household rule). If an extremely clever, purely self-interested player came to maximize it, what "perfectly aligned yet absurd" outcome would emerge?</span>
+    <p>Leading a team, building a product, setting rewards — all of it is mechanism design. The most common mistake is equating "KPI design" with "mechanism design" — thinking only about "what I want" and never asking "<strong>how will participants game this KPI?</strong>" Measure support staff by call volume → they'll hang up fast; measure engineers by lines of code → the code bloats. For every incentive, ask in reverse: if I were smart and purely self-interested, what's the laziest way to max out this metric? Does it match what I actually want? Same with kids: rewarding "number of problems done" breeds going-through-the-motions drilling; rewarding "explaining a hard problem to someone else" makes real learning the optimal strategy.</p>
+    <span class="q">▸ Reflection: an incentive you currently use (a KPI, points, a bonus, a house rule) — if you handed it to a brilliant, purely self-interested person to maximize, what "perfect but absurd" outcome would pop out?</span>
   </div>
 </div>
 
-<div class="resources-card">
-  <h3>Further Resources</h3>
-  <ul>
-    <li><strong>📰 Essential:</strong> John Nash (1950) "Non-Cooperative Games" (Princeton PhD thesis, only 27 pages) — the original proof of Nash equilibrium</li>
-    <li><strong>📖 Textbook:</strong> Martin Osborne &amp; Ariel Rubinstein, <em>A Course in Game Theory</em> (MIT Press, 1994) — concise, rigorous graduate standard</li>
-    <li><strong>📖 Classic:</strong> Robert Axelrod, <em>The Evolution of Cooperation</em> (1984) — the Tit-for-Tat tournaments and how cooperation emerges among self-interested agents</li>
-    <li><strong>📖 Evolutionary:</strong> John Maynard Smith, <em>Evolution and the Theory of Games</em> (1982) — foundational text for ESS and biological games</li>
-    <li><strong>📰 Paper:</strong> Maynard Smith &amp; Price (1973) "The Logic of Animal Conflict," <em>Nature</em> — the original ESS paper</li>
-    <li><strong>📖 Mechanism Design:</strong> Tilman Börgers, <em>An Introduction to the Theory of Mechanism Design</em> (2015) — including Vickrey auctions and the Revelation Principle</li>
-    <li><strong>🎥 Video:</strong> Yale OYC ECON 159 <em>Game Theory</em> (Ben Polak open course) — widely regarded as the best video introduction</li>
-    <li><strong>📖 Accessible:</strong> Avinash Dixit &amp; Barry Nalebuff, <em>The Art of Strategy</em> (2008) — richest in business and political examples</li>
-  </ul>
 </div>
-
-</div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
 </body>
 </html>

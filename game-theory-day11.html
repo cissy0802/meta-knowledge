@@ -36,12 +36,6 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .section.bigcat .label{background:#f7a072;color:#fff}
 .section.bigcat p{color:#5a4a3a}
 .section.bigcat .q{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed #f0d2a4;font-style:italic;color:#6b5a3a}
-.resources-card{background:#fff;border-radius:14px;padding:24px 26px;margin-top:28px;border-left:4px solid #52b788}
-.resources-card h3{font-size:1.1rem;color:#52b788;margin-bottom:14px;letter-spacing:0.5px}
-.resources-card ul{list-style:none;padding:0}
-.resources-card li{padding:8px 0;border-bottom:1px solid #f0ece4;font-size:0.92rem;color:#3a3a4a}
-.resources-card li:last-child{border-bottom:none}
-.resources-card li strong{color:#52b788}
 .viz{margin:22px 0 8px;padding:18px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
 .viz-title{font-size:0.78rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
 .payoff-table{width:100%;border-collapse:collapse;font-size:0.85rem;background:#fff;border-radius:8px;overflow:hidden}
@@ -76,159 +70,141 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <div class="card">
   <h2>纳什均衡</h2>
   <div class="en">Nash Equilibrium</div>
-  <div class="subfield">非合作博弈 · 均衡概念</div>
+  <div class="subfield">没人有动力先打破的稳定点</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>"理性"不是"做对自己最好的事"，而是"在所有人都按当前预测行动时，自己没有单方面改变策略的动机"。均衡未必最优——它只是"没人有动力先打破"。许多社会困境（军备竞赛、价格战、过度加班）正是稳定的纳什均衡：所有人都想退出，没人敢先退。</p>
+    <p>"理性"不是"做对自己最好的事"，而是<strong>"在所有人都按当前预测行动时，自己没有单方面改变策略的动机"</strong>。均衡未必最优——它只是"没人有动力先打破"。许多社会困境（军备竞赛、价格战、过度加班）正是稳定的纳什均衡：人人都想退出，却没人敢先退。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>John Nash 1950 年仅 21 页的博士论文证明：任何有限博弈在混合策略下至少存在一个均衡——把博弈推到了集合不动点定理（Kakutani）的层次。冯·诺依曼此前只解决了零和博弈；Nash 把均衡推广到任意非合作博弈，奠定现代经济学微观基础。1994 年获诺贝尔经济学奖。Nash 本人后来评价：均衡不预言行为，它给出"自洽的信念结构"——只有当每个人对他人的预期都被验证时，系统才稳定。</p>
+    <p>1950 年 Nash 证明：任何博弈都至少存在一个这样的"稳定点"——没有人能靠单方面改变策略让自己变得更好。在他之前，人们只会算"你死我活"的零和博弈；Nash 把它推广到一切非合作博弈，奠定了现代经济学的微观基础。要点是：<strong>均衡并不预测"谁会赢"，它只描述一种"所有人的预期都被彼此验证"的自洽状态</strong>。</p>
   </div>
 
   <div class="viz">
-    <div class="viz-title">▸ 囚徒困境：唯一纳什均衡 ≠ 帕累托最优</div>
+    <div class="viz-title">▸ 囚徒困境：唯一均衡 ≠ 双方最好的结果</div>
     <table class="payoff-table">
       <tr><th></th><th>B 合作</th><th>B 背叛</th></tr>
       <tr><td class="label">A 合作</td><td class="pareto">−1, −1</td><td>−10, 0</td></tr>
       <tr><td class="label">A 背叛</td><td>0, −10</td><td class="nash">−5, −5</td></tr>
     </table>
-    <div class="payoff-note">红色 = 唯一纳什均衡（双方背叛）；绿色 = 帕累托最优（双方合作）。理性把两人推到次优。</div>
+    <div class="payoff-note">红色 = 唯一的纳什均衡（双方背叛）；绿色 = 对双方都更好的结果（双方合作）。各自的理性，把两人推向了更差的结局。</div>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>Braess 悖论：1968 年 Dietrich Braess 证明，在拥堵的路网中<strong>新建一条捷径</strong>，所有人的通行时间反而变长。原因：每个司机的"自利最快路径"重新构造出更糟的纳什均衡。纽约 42 街、首尔清溪川都通过<strong>关闭道路</strong>而非新建道路缩短了平均通勤——拆掉选项，反而把博弈推向更好的均衡。</p>
+    <p>Braess 悖论：在拥堵的路网里<strong>新修一条捷径</strong>，结果所有人的通行时间反而变长了。因为每个司机都各自选"对自己最快"的路，重新形成了一个更糟的均衡。现实中，纽约、首尔都曾通过<strong>关闭某些道路</strong>反而缩短了平均通勤——拆掉一个选项，竟把整个系统推向了更好的均衡。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>生物学</strong>中是 ESS（见第三卡）；在<strong>机器学习</strong>中 GAN 是生成器与判别器的纳什均衡，强化学习多智能体的 self-play（AlphaGo、AlphaZero）即均衡搜索；在<strong>政治学</strong>中 Schelling 焦点解释了为何分布式协调能聚焦于"显著点"；在<strong>军备控制</strong>中冷战的"相互确保毁灭"即一个稳定均衡；在<strong>市场设计</strong>中拍卖均衡决定了广告竞价（Google AdWords 的二价拍卖）。</p>
+    <p>在<strong>生物学</strong>里它表现为"进化稳定策略"（见第三张卡）；在<strong>AI</strong>里，GAN 就是生成器与鉴别器在互相博弈中找均衡，AlphaGo 的自我对弈也是在搜索均衡；在<strong>冷战</strong>中，"相互确保毁灭"就是一个谁也不敢先动的稳定均衡；在<strong>广告竞价</strong>里，搜索引擎的拍卖结果也是一种均衡。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>团队"过度承诺—延期—再过度承诺"是典型纳什均衡：每个人都知道估算偏乐观，但谁先给保守估计谁先被边缘化。打破均衡靠改变 payoff（公开记录估算 vs 实际，把准确性变成稀缺能力），而不是号召大家"诚实一点"。育儿也一样：孩子和家长在"催促—拖延"的稳定均衡里，劝说没用，改变规则（例如自然后果取代催促）才让均衡漂移。</p>
-    <span class="q">▸ 思考题：你团队/家庭里最让人疲惫的某个"反复发生的拉锯"，本质是哪种纳什均衡？要破局，需要改哪一格 payoff？</span>
+    <p>团队里"过度承诺 → 延期 → 再过度承诺"是典型的纳什均衡：每个人都知道估算偏乐观，但谁先给保守估计，谁就先被边缘化。要打破它，靠的不是号召大家"诚实一点"，而是<strong>改变收益</strong>——比如公开记录"估算 vs 实际"，让准确性变成一种被看见的稀缺能力。育儿同理：孩子和家长卡在"催促 → 拖延"的稳定均衡里，讲道理没用，改变规则（用自然后果代替催促）才能让均衡松动。</p>
+    <span class="q">▸ 思考题：你团队或家庭里最让人疲惫的那个"反复拉锯"，本质是哪种纳什均衡？要破局，需要改动哪一格的收益？</span>
   </div>
 </div>
 
 <div class="card">
   <h2>重复博弈与合作演化</h2>
   <div class="en">Repeated Games &amp; Evolution of Cooperation</div>
-  <div class="subfield">动态博弈 · 信任与声誉</div>
+  <div class="subfield">合作如何在自利者之间涌现</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>一次性博弈中"背叛"是理性的；但当博弈无限重复且未来足够"重"（贴现因子 δ 接近 1），合作可以成为均衡——而无需任何道德、契约或第三方执法。文明、信任、声誉、长期关系，本质上都是把短期博弈嵌入到长期博弈的结构中。</p>
+    <p>一次性博弈里，"背叛"是理性的；但如果博弈会无限重复、而且未来足够重要，那么<strong>合作本身就能成为均衡</strong>——不需要任何道德、契约或第三方执法。文明、信任、声誉、长期关系，本质上都是把短期博弈嵌进了长期结构。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>"无名氏定理"（Folk Theorem）：在无限重复博弈中，任何高于"最小最大"（minimax）报酬的可行支付组合，都可被子博弈完美均衡支撑——意即合作、半合作、轮流剥削，理论上都能稳定。Robert Axelrod 1980 年发起著名的迭代囚徒困境锦标赛，Anatol Rapoport 提交的 4 行代码 "Tit-for-Tat"（一报还一报）夺冠。它的胜利特征：善意（首轮合作）、报复（被叛即叛）、宽恕（对方合作即恢复）、清晰（策略透明可学习）。</p>
+    <p>理论上，只要博弈不断重复，合作、半合作、轮流占便宜……几乎任何结果都能稳定下来。最有名的实验是一场"重复囚徒困境"竞赛：夺冠的竟是一个只有 4 行的简单策略——<strong>"一报还一报"</strong>（Tit-for-Tat）。它的取胜之道是：先释放善意、被背叛就立刻回敬、对方一合作就既往不咎、而且规则透明易懂。</p>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>一战西线的"自己活也让别人活"（Live and Let Live）现象：1914-15 年冬，对峙堑壕中的英德士兵自发停止真心射击——每日早晚固定时段对空开火，圣诞节甚至共同庆祝。Tony Ashworth 1980 年的史学研究表明：这是<strong>同一批部队长期对峙</strong>导致的迭代合作均衡。军方的对策恰恰是<strong>不断轮换部队、发起夜袭</strong>——人为把"长期博弈"切回"一次性博弈"，从而摧毁合作。结构决定行为，比意识形态宣传有效得多。</p>
+    <p>一战堑壕里出现过"你不打我、我也不打你"的奇特默契：对峙的双方士兵会在固定时段朝天放枪，圣诞节甚至一起庆祝。原因很简单——<strong>同一批人长期对峙，就把战争变成了重复博弈</strong>，于是合作自发涌现。军方的破解之道恰恰是<strong>不断轮换部队、强制夜袭</strong>，人为把"长期博弈"打回"一次性博弈"，合作就崩了。结构决定行为，远比宣传口号有效。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>商业</strong>中长期供应链关系（丰田 Keiretsu）和一次性砍价的差别即重复博弈；在<strong>人类学</strong>中礼物经济、地中海"荣誉文化"靠声誉机制维持；在<strong>区块链</strong>中 PoS 的 slashing 机制把"作恶 = 永久损失质押"，工程化地把矿工拉进重复博弈；在<strong>外交</strong>中 GRIT 策略（Charles Osgood）通过单方面渐进示好引发对方互惠；在<strong>AI 对齐</strong>中多轮交互模型的"信任校准"本质上是声誉博弈。</p>
+    <p>在<strong>商业</strong>里，长期供应链关系和一次性砍价完全不同；在<strong>区块链</strong>里，质押—罚没机制把"作恶 = 永久损失押金"，硬把参与者拉进重复博弈；在<strong>外交</strong>里，单方面持续示好可以诱发对方回报；在<strong>日常</strong>里，靠声誉维持的口碑系统（评分、点评）就是把每一次交易都嵌进了长期博弈。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>判断对方"会不会坑我"，比直觉更可靠的问法是：这是一次性博弈还是重复博弈？陌生网约车司机几乎没有动机欺诈，因为评分系统把每一次都嵌入了长期声誉；初创公司离职前最后一次绩效谈判则是典型一次性博弈，要为此调整预期。在团队中，把"每次都是新博弈"的临时项目结构改成"成员有连续记录的常驻团队"，往往能不靠制度直接提升合作度——结构比说教强一个量级。</p>
-    <span class="q">▸ 思考题：你目前哪段重要关系或合作，结构上是一次性博弈但你按重复博弈在投入？反过来，哪段你应当用一次性策略却被"长期关系"幻觉绑住？</span>
+    <p>判断"对方会不会坑我"，比凭直觉更靠谱的问法是：<strong>这是一次性博弈，还是重复博弈？</strong>陌生的网约车司机几乎没有动机欺诈，因为评分系统把每一单都接进了长期声誉；而员工离职前的最后一次绩效谈判，则是典型的一次性博弈，要据此调整预期。在团队里，把"每次都是临时拼凑"的项目，改成"成员有连续记录的常驻团队"，往往不靠制度就直接提升了合作——结构比说教强一个量级。</p>
+    <span class="q">▸ 思考题：你当前哪段重要关系，结构上其实是一次性博弈，你却按长期关系在投入？反过来，哪段你本该用长期心态，却被当成了一次性？</span>
   </div>
 </div>
 
 <div class="card">
   <h2>进化稳定策略</h2>
   <div class="en">Evolutionarily Stable Strategy (ESS)</div>
-  <div class="subfield">演化博弈论 · 种群动力学</div>
+  <div class="subfield">无需"理性"，只需"复制成功者"</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>不需要任何参与者懂"理性"，只需要"复制成功者"，种群依然会收敛到博弈均衡。Maynard Smith 把纳什均衡推向无意识的世界——基因、文化模因、企业策略都在玩博弈，无需任何人懂博弈论。"均衡"是选择压力的必然产物，不是脑力推导的产物。</p>
+    <p>不需要任何人懂"理性"，只要"成功者会被复制"，整个群体照样会收敛到博弈的均衡。基因、文化、企业策略都在玩博弈，却没有谁真的懂博弈论。<strong>"均衡"是选择压力的产物，不是脑子想出来的</strong>。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>John Maynard Smith &amp; George Price 1973 年《<em>The Logic of Animal Conflict</em>》提出 ESS：一个策略 S 是 ESS，当种群几乎全部采用 S 时，任何稀有"突变策略" S' 入侵后的期望适应度都严格低于 S。形式上是纳什均衡的精炼——既要求"无人想偏离"，还要求"对小扰动鲁棒"。Replicator Dynamic 给出动态版本：策略份额按"相对适应度"指数增长，最终汇聚到 ESS。这一框架统一了动物冲突、性别比、利他行为的解释。</p>
+    <p>一个策略是"进化稳定"的，意思是：当几乎所有个体都采用它时，<strong>任何想"入侵"的新策略都占不到便宜、活不下来</strong>。它比普通的纳什均衡更严格——不仅要求"没人想偏离"，还要求"能扛住小扰动"。动态地看，哪个策略当下更成功，它在群体里的占比就会越涨越快，最终收敛到这个稳定点。</p>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>"鹰鸽博弈"中假设伤害成本 C &gt; 资源价值 V（撕咬代价高于食物价值）：种群最终既不全是鹰（互相伤害太亏），也不全是鸽（鸽群里偶尔出现鹰会大获其利），而是稳定在 V/C 的混合比例。这解释了为什么动物冲突大多是<strong>仪式化展示</strong>而非真打——红鹿的吼叫、平行行走，是 ESS 的产物。同一逻辑解释了"性别比 ≈ 1:1"（Fisher 性别比定理）——稀有性别后代的边际收益更高，把比例拉回 50/50。</p>
+    <p>"鹰鸽博弈"假设打架的代价高于食物的价值：群体最终既不会全是好斗的"鹰"（互相伤害太亏），也不会全是退让的"鸽"（鸽群里冒出一只鹰就通吃），而是<strong>稳定在某个混合比例上</strong>。这解释了为什么动物冲突大多是虚张声势的仪式（吼叫、对峙）而非真打。同一逻辑也解释了为什么<strong>性别比总是趋近 1:1</strong>——哪种性别稀少，生它就更"划算"，于是比例被自动拉回来。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>文化演化</strong>中 Boyd &amp; Richerson 用 ESS 解释模仿规范（"跟随大多数" vs "跟随成功者"）的稳定共存；在<strong>多智能体强化学习</strong>中 self-play 收敛到 ESS（AlphaStar、Diplomacy 模型）；在<strong>组织</strong>中"先发起 ChatGPT 的不一定是 Google"——大公司"探索 vs 开发"的 ESS 比例让突破常来自非主流势力；在<strong>金融</strong>中"价值投资 vs 动量投资"的市场份额漂移服从同样动力学；在<strong>抗生素耐药</strong>中细菌种群 ESS 解释了为何停药后耐药菌不会立刻消失。</p>
+    <p>在<strong>文化</strong>里它解释了"随大流"和"学成功者"两种习惯为何能长期共存；在<strong>AI</strong>里，多智能体的自我对弈也收敛到这种稳定策略；在<strong>商业</strong>里，颠覆性突破常来自非主流玩家——因为大公司"探索 vs 守成"的比例本身就是一种稳定均衡；在<strong>医学</strong>里，它解释了为什么停药后耐药细菌不会马上消失。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>个人职业选择常被 ESS 直觉误导：所有人都涌向"看似最优"的赛道时，该赛道的 payoff 因拥挤而下降，少数走"次优"路径的人反而获得高边际回报。AI 时代尤其如此——"全员转 Prompt 工程师"必然不是 ESS，被快速复制的技能价值衰减。对于"AI 超级个体"路径，问题不是"哪个技能现在最火"，而是"哪个组合在所有人都跟进时仍稳定"——通常是难以模仿的跨域组合：深度技术 × 特定行业洞察 × 教学/沟通能力。</p>
-    <span class="q">▸ 思考题：你当前最受欢迎的能力，在"周围所有人都获得它"的种群里还有边际优势吗？什么组合是你独特的 ESS？</span>
+    <p>个人的职业选择常被这种直觉误导：当所有人都涌向"看起来最优"的赛道时，拥挤会把它的回报压低，反而是少数走"次优"路径的人拿到高回报。AI 时代尤其如此——"全员转去做某个热门技能"绝不可能是稳定策略，能被快速复制的技能，价值会迅速衰减。对"AI 超级个体"而言，真正的问题不是"现在哪个技能最火"，而是"<strong>哪种组合，在所有人都跟进之后依然稳固</strong>"——通常是难以模仿的跨域组合：深度技术 × 行业洞察 × 表达／教学能力。</p>
+    <span class="q">▸ 思考题：你当前最受欢迎的那项能力，在"周围人都拥有它"的群体里还有优势吗？什么样的组合，是只属于你的稳定策略？</span>
   </div>
 </div>
 
 <div class="card">
   <h2>机制设计</h2>
   <div class="en">Mechanism Design</div>
-  <div class="subfield">逆向博弈论 · 制度工程</div>
+  <div class="subfield">逆向博弈论 · 把社会工程变成设计</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>常规博弈论问"给定规则，参与者会怎么做"；机制设计反过来问"给定我想要的结果，应该设计什么规则"。它是"逆向博弈论"——把社会工程变成数学优化。规则的设计者考虑到所有人都会博弈，并且大家都知道彼此都在博弈，仍然让真实信息最优显露、社会效率最大——这是制度工程的圣杯。</p>
+    <p>常规博弈论问"给定规则，大家会怎么做"；机制设计反过来问"<strong>我想要某个结果，该设计什么规则</strong>"。它是"逆向博弈论"——明知道每个人都会钻空子、而且大家都知道彼此在钻空子，却依然能设计出让人<strong>说真话最划算、整体效率最高</strong>的规则。这是制度工程的圣杯。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>Leonid Hurwicz、Eric Maskin、Roger Myerson 共获 2007 年诺奖。两块基石：<strong>显示原理</strong>（Revelation Principle）——任何均衡可被"诚实显示真实偏好"的直接机制实现；<strong>激励相容</strong>（Incentive Compatibility）——参与者的最优策略恰是说实话。最优案例是 Vickrey 二价拍卖：出价最高者赢，但只付次高者的价格——主导策略是诚实出价，因为压价或抬价都只可能让自己更糟。Google AdWords、eBay 排名拍卖、频谱拍卖都基于这一原理。</p>
+    <p>两块基石：一是任何理想结果，都能用一套"诚实表达真实意愿最划算"的规则来实现；二是"激励相容"——让参与者的最优策略恰好就是说实话。经典例子是<strong>"次价拍卖"：出价最高者中标，但只需付第二高的价格</strong>。这样一来，无论抬价还是压价都只会让自己更糟，于是"如实出价"成了最优策略。今天的广告竞价大多基于这个原理。</p>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>Gibbard-Satterthwaite 不可能定理（1973）：在有 3 个以上候选人的非独裁单赢家选举中，没有任何投票规则能同时满足"激励相容"（说真话不吃亏）。也就是说，<strong>任何看似公平的投票系统，都内在地激励策略性投票</strong>（弃保、压低对手等）。这意味着"完美民主"在数学上不存在——只能在不同取舍中选择"最不坏"的机制（Borda、IRV、Condorcet 各有优劣）。诺贝尔奖得主 Hurwicz 称：政治学的根本难题，本质是机制设计的不可能性。</p>
+    <p>有一条著名定理证明：当候选人超过 3 个时，<strong>没有任何投票规则能完全杜绝"策略性投票"</strong>（弃保、含泪投次选等）。也就是说，"完美公平的民主投票"在数学上根本不存在——我们只能在各种各样"不完美"的规则里，挑一个"最不坏"的。这把一个政治难题，还原成了机制设计本身的根本局限。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>分配</strong>中 Gale-Shapley 算法解决稳定婚姻问题（Shapley 2012 诺奖），现实中用于美国医学院实习配对、纽约公立学校招生；在<strong>区块链</strong>中以太坊 EIP-1559、PoS 奖罚是激励相容设计；在<strong>组织</strong>中 OKR 的"挑战性目标 + 不强绑奖金"是为避免人为压低目标而设计；在<strong>AI 治理</strong>中 RLHF 与 Constitutional AI 试图设计"诚实评估"机制；在<strong>气候政策</strong>中碳定价、排放交易是机制设计的工程化应用。</p>
+    <p>在<strong>资源分配</strong>里，有算法能稳定地完成"配对"（用于医学生与医院、学生与学校的匹配）；在<strong>区块链</strong>里，奖惩规则被设计成"作恶不划算"；在<strong>组织</strong>里，"挑战性目标但不硬绑奖金"的设计，正是为了防止大家故意把目标定低；在<strong>气候</strong>里，碳定价和排放交易也是机制设计的工程化应用。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>带团队、做产品、设计奖励，都是机制设计。常见错误是"KPI 设计 ≠ 机制设计"——只考虑"想要什么"而不问"参与者会如何博弈这个 KPI"。客服 KPI 设为通话量 → 员工会快速挂断；研发 KPI 设为代码行数 → 代码膨胀冗余。激励相容的反复检查问：如果我是聪明的参与者，最大化这个指标的最便宜路径是什么？它和我真正想要的结果一致吗？孩子的奖励机制同理：奖励"做题数"催生应付式刷题，奖励"教别人一道难题"才让学习成为博弈均衡。</p>
-    <span class="q">▸ 思考题：你正在使用的某个激励机制（KPI、积分、奖金、家庭规则），如果一个非常聪明又只顾自己的参与者来最大化它，会出现什么"完美但荒谬"的结果？</span>
+    <p>带团队、做产品、定奖励，本质都是机制设计。最常见的错误是把"KPI 设计"等同于"机制设计"——只想"我要什么"，却不问"<strong>参与者会怎么钻这个 KPI 的空子</strong>"。客服按通话量考核 → 员工会飞快挂断；研发按代码行数考核 → 代码越写越臃肿。每设一个激励，都要反问：如果我是个又聪明又只顾自己的人，把这个指标刷到最高的最省事办法是什么？它和我真正想要的一致吗？孩子也一样：奖励"做了多少题"会催生应付式刷题，奖励"把一道难题讲懂给别人"才让学习本身变成最优策略。</p>
+    <span class="q">▸ 思考题：你正在用的某个激励机制（KPI、积分、奖金、家规），如果交给一个绝顶聪明又只顾自己的人去最大化，会冒出什么"完美却荒谬"的结果？</span>
   </div>
 </div>
 
-<div class="resources-card">
-  <h3>深入资源</h3>
-  <ul>
-    <li><strong>📰 必读：</strong> John Nash (1950) "Non-Cooperative Games"（普林斯顿博士论文，仅 27 页）——纳什均衡的原始证明</li>
-    <li><strong>📖 教材：</strong> Martin Osborne &amp; Ariel Rubinstein, <em>A Course in Game Theory</em>（MIT Press, 1994）——简洁严谨的研究生标准教材</li>
-    <li><strong>📖 经典：</strong> Robert Axelrod, <em>The Evolution of Cooperation</em>（1984）——Tit-for-Tat 锦标赛与合作如何在自利者中涌现</li>
-    <li><strong>📖 演化：</strong> John Maynard Smith, <em>Evolution and the Theory of Games</em>（1982）——ESS 与生物博弈的奠基之作</li>
-    <li><strong>📰 论文：</strong> Maynard Smith &amp; Price (1973) "The Logic of Animal Conflict"，<em>Nature</em>——ESS 的原始论文</li>
-    <li><strong>📖 机制设计：</strong> Tilman Börgers, <em>An Introduction to the Theory of Mechanism Design</em>（2015）——含 Vickrey 拍卖与显示原理</li>
-    <li><strong>🎥 视频：</strong> Yale OYC ECON 159 <em>Game Theory</em>（Ben Polak 公开课）——口碑最佳入门视频课</li>
-    <li><strong>📖 通俗：</strong> Avinash Dixit &amp; Barry Nalebuff, <em>The Art of Strategy</em>（2008）——商业与政治例子最丰富的科普读本</li>
-  </ul>
 </div>
-
-</div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
 </body>
 </html>

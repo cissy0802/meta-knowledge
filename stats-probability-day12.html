@@ -36,12 +36,6 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .section.bigcat .label{background:#f7a072;color:#fff}
 .section.bigcat p{color:#5a4a3a}
 .section.bigcat .q{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed #f0d2a4;font-style:italic;color:#6b5a3a}
-.resources-card{background:#fff;border-radius:14px;padding:24px 26px;margin-top:28px;border-left:4px solid #52b788}
-.resources-card h3{font-size:1.1rem;color:#52b788;margin-bottom:14px;letter-spacing:0.5px}
-.resources-card ul{list-style:none;padding:0}
-.resources-card li{padding:8px 0;border-bottom:1px solid #f0ece4;font-size:0.92rem;color:#3a3a4a}
-.resources-card li:last-child{border-bottom:none}
-.resources-card li strong{color:#52b788}
 .viz{margin:22px 0 8px;padding:18px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
 .viz-title{font-size:0.78rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
 .payoff-table{width:100%;border-collapse:collapse;font-size:0.85rem;background:#fff;border-radius:8px;overflow:hidden}
@@ -78,123 +72,123 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <div class="card">
   <h2>贝叶斯推断</h2>
   <div class="en">Bayesian Inference</div>
-  <div class="subfield">概率作为信念 · 先验与更新</div>
+  <div class="subfield">概率 = 相信的程度，可被证据更新</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>概率不是世界的客观属性，而是<strong>对信念的程度</strong>。新证据不应抹去旧信念，而是按"先验 × 似然 = 后验"重新加权。忽略基础率（base rate）是几乎所有人类直觉概率判断的系统性错误——包括医生、法官、投资人。</p>
+    <p>概率不是世界的客观属性，而是<strong>你对一件事相信的程度</strong>。新证据不该抹掉旧信念，而是按"先验 × 似然"重新加权。忽略"基础率"（一件事本身有多常见），是几乎所有人——包括医生、法官、投资人——在直觉判断概率时的系统性错误。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>Thomas Bayes（1701-1761）牧师，1763 年由 Richard Price 在其死后发表《An Essay towards solving a Problem in the Doctrine of Chances》；Laplace 1774 年独立重新发现并推广到天体测量。20 世纪前半被频率学派（Fisher、Neyman、Pearson）压制为"主观"。直到 E. T. Jaynes《Probability Theory: The Logic of Science》把贝叶斯重建为<strong>扩展的逻辑学</strong>，加上 1990s 的 MCMC 计算革命，贝叶斯才主流化。公式 P(H|D) = P(D|H)·P(H)/P(D) 本身简单；难的是<strong>任何概率都是相对于"已知信息"的</strong>——没有信息无关的概率。</p>
+    <p>这个思想以 18 世纪的 Bayes 命名。公式本身很简单：<strong>先验（你原有的相信程度）× 似然（新证据有多符合）→ 后验（更新后的相信程度）</strong>。难的是那条容易被忽略的原则：任何概率都是相对于"你已知的信息"而言的，没有脱离信息的概率。直到上世纪 90 年代计算方法成熟，贝叶斯才真正普及。</p>
   </div>
 
   <div class="viz">
-    <div class="viz-title">▸ 罕见病检测：先验 1%, 检测 95/95 → 后验仅 16%</div>
+    <div class="viz-title">▸ 罕见病检测：发病率 1%、准确率 95%，阳性者真患病却只有 16%</div>
     <table class="payoff-table">
       <tr><th></th><th>检测阳性</th><th>检测阴性</th><th>合计</th></tr>
       <tr><td class="label">真实患病</td><td class="hit">95</td><td>5</td><td>100</td></tr>
       <tr><td class="label">真实健康</td><td class="reverse">495</td><td>9405</td><td>9900</td></tr>
       <tr><td class="label">合计</td><td>590</td><td>9410</td><td>10000</td></tr>
     </table>
-    <div class="payoff-note">P(患病｜阳性) = 95 / 590 ≈ <strong>16.1%</strong>。被检测为阳性，绝大多数仍是健康人——基础率（1%）压倒了 95% 准确率。</div>
+    <div class="payoff-note">在 590 个阳性里，真患病的只有 95 人 → 约 <strong>16%</strong>。健康人基数太大，哪怕误报率低，误报的绝对人数也远超真患者。</div>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>Casscells、Schoenberger &amp; Grayboys 1978 年（<em>NEJM</em>）在 Harvard 医学院教职员工与学生身上提了上面这道题，只有 <strong>18%</strong> 给出接近正确的答案，平均估计是 95%。医生群体的基础率忽略与普通人无异。Sally Clark 案（英国 1999）：辩护方与起诉方误把 "P(两个婴儿猝死) = P(一个)² = 1/73,000,000" 当成有罪证据，皇家统计学会 2002 年公开抗议——独立性假设与基础率错误共同制造冤狱。</p>
+    <p>曾有人拿上面这道"罕见病检测"题去考医学院的师生：一种发病率 1% 的病，检测准确率 95%，那么"测出阳性"的人真的患病的概率是多少？大多数人脱口而出 95%，<strong>正确答案却只有约 16%</strong>——因为健康人基数太大，误报的绝对人数远超真患者。连医生都会忽略基础率。法庭上同类错误（把几个小概率直接连乘、当成铁证）甚至制造过冤案。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>机器学习</strong>中贝叶斯网络、变分推断、共轭先验、Bayesian Deep Learning 是不确定性建模的核心；在<strong>认知科学</strong>中 Friston 的"自由能原理"与 Clark 的"预测大脑"主张大脑就是层级贝叶斯推断机；在<strong>循证医学</strong>中"贝叶斯诊断推理"已是标准；在<strong>AI 对齐</strong>中 RLHF 的奖励建模与 Constitutional AI 的迭代修正本质都是贝叶斯更新；在<strong>金融</strong>中黑天鹅事件后投资人会"突然信教"——其实是先验剧烈更新。</p>
+    <p>在<strong>机器学习</strong>里，处理不确定性的方法大多是贝叶斯式的；在<strong>认知科学</strong>里，有理论认为大脑本身就是一台层层做贝叶斯推断的预测机器；在<strong>医学</strong>里，"看到症状后再更新患病概率"已是标准诊断思路；在<strong>投资</strong>里，黑天鹅之后人们"突然信教"，本质就是先验被剧烈更新。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>团队中"那个人总爱拖延"的判断，几乎都是基础率失误——所有项目都拖（基础率 80%），单看 ta 拖的次数说明不了什么；反之，新功能"会爆"的乐观估计也常忽略行业 90% 发布波澜不惊的先验。养成系统性问"在我看到这条证据前，我对 H 的先验是多少？这条证据的似然比 P(D｜H)/P(D｜¬H) 到底是 2 倍还是 20 倍？"——能阻止大多数草率结论。育儿同理：孩子做错 3 道题不该立即更新到"她不擅长数学"，三题相对一学期数百题，证据强度撼动不了任何先验。</p>
-    <span class="q">▸ 思考题：把你最近一次"我就知道"的判断写成 P(H|D) 形式——先验是多少？似然比真的支持这个后验跳跃吗？</span>
+    <p>团队里"那个人总爱拖延"的判断，几乎都是基础率失误——如果所有项目都拖（基础率 80%），单看 ta 拖几次根本说明不了什么；反过来，"这个新功能一定会爆"的乐观，也常常忽略了"行业里九成发布都波澜不惊"这个先验。养成一个习惯：在看到证据前，先问<strong>"我原本的相信程度是多少？这条证据到底把概率提高了 2 倍，还是 20 倍？"</strong>——能挡掉大多数草率结论。育儿同理：孩子做错三道题，不该立刻更新成"她数学不行"——相对一学期几百道题，这点证据撼动不了任何先验。</p>
+    <span class="q">▸ 思考题：把你最近一次"我早就知道"的判断写成贝叶斯形式——你原本的先验是多少？那条证据真的强到支撑这个结论吗？</span>
   </div>
 </div>
 
 <div class="card">
   <h2>蒙特卡罗方法</h2>
   <div class="en">Monte Carlo Methods</div>
-  <div class="subfield">随机采样 · 用计算换洞察</div>
+  <div class="subfield">算不出来，就反复模拟</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>当一个问题<strong>无法解析求解</strong>，但可以<strong>抽样模拟</strong>，重复随机采样就能给出任意精度的近似——把"思考"转化为"计算次数"。这彻底瓦解了"复杂 = 不可解"的旧观念：很多以前被视为数学难题的对象，今天只是算力问题。</p>
+    <p>当一个问题<strong>没法用公式直接算出来，却可以反复模拟</strong>时，只要随机采样足够多次，就能得到任意精度的近似答案——把"思考"换成了"计算次数"。这彻底打破了"复杂 = 无解"的旧观念：很多曾被视为数学难题的东西，今天只是算力问题。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>1946 年 Stanislaw Ulam 病中打 Solitaire，试图算出获胜概率，发现解析太难但模拟容易。回到 Los Alamos 后与 von Neumann 在 ENIAC 上为氢弹中子扩散问题首次系统应用，由 Nicholas Metropolis 命名（取自摩纳哥的赌场）。理论支撑是大数定律：<strong>把任何积分/期望/路径求和变成"采样—平均"</strong>。后催生 Metropolis-Hastings 算法（1953）、Hamiltonian Monte Carlo、序贯蒙特卡罗、MCTS（蒙特卡罗树搜索）等家族——共同特征是用随机性精确逼近确定性。</p>
+    <p>它的起源很有画面感：一位数学家生病时打牌消遣，想算清某种牌局的获胜概率，发现用公式推导极难，但<strong>直接模拟很多局再数一数</strong>却很容易。背后的原理是"大数定律"：把任何求和、求平均、求面积的问题，都变成"大量采样再取平均"。后来它发展出一大家族方法，共同点是——<strong>用随机性去精确逼近确定的答案</strong>。</p>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>估算 π：在 1×1 正方形内均匀撒 N 个点，落在内切 1/4 圆内的比例 × 4 → π。10⁴ 点得 ~3.14，10⁶ 点得 ~3.1416。<strong>没有任何几何推导</strong>，只有反复掷骰。同一思想撑起了：Black-Scholes 解析解之外的复杂衍生品定价、贝叶斯后验采样（现代贝叶斯本质上就是 MCMC）、AlphaGo 的 MCTS（每步模拟万次对局），以及大语言模型每步 token 都是温度采样——你与 LLM 对话的本质是一次浅蒙特卡罗。</p>
+    <p>估算圆周率 π：在一个正方形里随机撒大量的点，数一数落进内切圆里的比例，再乘以 4，就约等于 π。撒一万个点得到约 3.14，撒一百万个点得到约 3.1416——<strong>全程没有任何几何推导，只有反复"掷骰子"</strong>。同一个思路撑起了：复杂金融产品的定价、现代贝叶斯计算、AlphaGo 每步棋背后的上万次模拟对局，甚至大模型每吐一个字，本质上也是一次随机采样。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>物理</strong>中量子蒙特卡罗用于多体问题；在<strong>金融</strong>中 VaR、CVaR、衍生品定价；在<strong>统计</strong>中 Gibbs sampling、NUTS、变分推断让现代贝叶斯可计算；在<strong>游戏 AI</strong>中 MCTS 是 AlphaGo/MuZero 核心；在<strong>气候模型</strong>中集合预报通过扰动初始条件采样未来分布；在<strong>药物发现</strong>中分子构象采样；在<strong>机器人</strong>中粒子滤波（Particle Filter）做定位与跟踪。</p>
+    <p>在<strong>物理</strong>里用来处理多粒子难题；在<strong>金融</strong>里用来给衍生品定价、估算风险；在<strong>游戏 AI</strong>里是 AlphaGo 这类棋手的核心；在<strong>气候</strong>里通过扰动初始条件来"采样"未来的多种可能；在<strong>机器人</strong>里用来做定位与跟踪。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>面对复杂决策（换工作？项目按期？），最常见错误是<strong>追求"算清"而非"采样"</strong>——草拟三五个情景给自己 "60% 通过"感，远不如设想 20 条具体执行轨迹（包含极端边界），看其中哪类失败模式重复出现。Taleb 称为"路径思考"：结果分布远比期望值重要。育儿计划同理——不要做"完美计划"，先模拟 10 种"周三晚孩子病了你 8 点还在开会"的场景，那是 P95 分位的真实压力点。把决策当成可采样的随机过程，是技术人迁移到生活决策最有杠杆的迁移之一。</p>
-    <span class="q">▸ 思考题：你最近一个重要决策，能否"采样"10 条具体路径而非只算期望值？哪条路径让你最不安？这条路径是否已被你纳入预案？</span>
+    <p>面对复杂决策（要不要换工作？项目能不能按期？），最常见的错误是<strong>追求"算出一个准数"，而不是"采样多种可能"</strong>。草拟三五个情景、给自己一个"60% 能成"的安心，远不如认真设想 20 条具体的执行路径（包括极端情况），看看哪类失败反复出现。结果的"分布"，往往比那个"平均值"重要得多。育儿计划也一样——别做"完美计划"，先模拟十种"周三晚上孩子病了、你八点还在开会"的场景，那才是真正的压力点。</p>
+    <span class="q">▸ 思考题：你最近一个重要决策，能不能"采样"出 10 条具体路径，而不只是算一个期望值？哪条路径让你最不安？你为它准备预案了吗？</span>
   </div>
 </div>
 
 <div class="card">
   <h2>生存偏差</h2>
   <div class="en">Survivorship Bias</div>
-  <div class="subfield">选择偏差 · 沉默数据</div>
+  <div class="subfield">沉默的失败者，扭曲了你看到的一切</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>当你只观察到"幸存样本"，结论几乎一定错。失败者沉默、不能说话，你看到的"成功要素"可能正是<strong>幸存者的随机噪声</strong>，而非真正因果。最致命的偏差不在数据本身，而在<strong>数据生成机制</strong>——你看到什么，被"什么样本能被你看到"过滤过。</p>
+    <p>当你只看得到"幸存下来的样本"时，结论几乎必然出错。失败者沉默、无法发声，于是你以为的"成功要素"，可能只是<strong>幸存者身上的随机噪声</strong>，而非真正原因。最致命的偏差不在数据本身，而在"<strong>什么样的样本才能被你看到</strong>"。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>经典案例是二战 SRG（统计研究组）的 Abraham Wald。美军根据返航轰炸机弹孔分布想加固机翼和尾部——弹孔最多的位置。Wald 指出反了：<strong>弹孔少的部位（引擎、驾驶舱）才该加固</strong>——因为击中这些部位的飞机根本飞不回来。这是选择偏差的极端形式：观测样本被"是否生存"过滤。一般化：任何 conditional on survival 的数据都会高估正面、低估风险。Berkson 悖论、出版偏差、清算偏差都是同一现象在不同领域的化身。</p>
+    <p>二战时最经典的案例：军方想根据返航轰炸机上的弹孔分布来加固机身，自然想加固弹孔最密的地方。一位统计学家却指出反了——<strong>该加固的恰恰是弹孔最少的部位（如引擎）</strong>：因为被打中那里的飞机根本没能飞回来，所以你在幸存的飞机上看不到那些弹孔。任何"只统计幸存者"的数据，都会高估好处、低估风险。</p>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>1990 年代"成功学"统一发现，财富 500 强 CEO 共同特征是"早起、阅读、坚毅"——但相同特征在<strong>破产 CEO</strong>中比例可能更高。Phil Rosenzweig《The Halo Effect》(2007) 指出 Jim Collins《Good to Great》中的"卓越公司"在书出版后 5 年内大多业绩平平甚至消亡——<strong>事后归因在幸存者抽样下全是合理化叙事</strong>。对冲基金中位数收益光鲜，是因为亏损基金提前清盘退出数据库（Brown、Goetzmann、Ibbotson &amp; Ross 1992 论文证明"清算偏差"使报告收益年均虚高 3%）。</p>
+    <p>各种"成功学"总结出富豪 CEO 的共同点是"早起、爱读书、坚毅"——但这些特点在<strong>破产的 CEO</strong>身上可能比例更高，只是没人去统计失败者。所谓"卓越公司"的研究对象，往往在书出版几年后就泯然众人——<strong>事后归因，在只看幸存者的前提下，全是合理化的故事</strong>。对冲基金的平均收益看着光鲜，也是因为亏掉的基金早早关停、退出了统计。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>历史</strong>中"古代建筑都很坚固"——脆弱的早就倒了；在<strong>临床医学</strong>中只发表阳性结果（publication bias）使整体文献过度乐观，是再现性危机的核心成因之一；在<strong>机器学习</strong>中训练数据本身是经过过滤的样本（"线下指标好、线上崩"常源于此）；在<strong>移民研究</strong>中"移民比本国人勤奋"忽略"懒惰者不会出国"的自选择；在<strong>教育</strong>中"哈佛毕业生年薪高"忽略"被录取"已是强信号；在<strong>AI Benchmark</strong>中只在已公开任务上调参，模型在"野外"分布的表现被严重高估。</p>
+    <p>在<strong>历史</strong>里，"古建筑都很坚固"——其实是脆弱的早塌了；在<strong>科研</strong>里，只发表阳性结果让整体文献过度乐观，是"可复现性危机"的根源之一；在<strong>机器学习</strong>里，训练数据本身就是被筛过的样本（"线下指标好、上线就崩"常源于此）；在<strong>教育</strong>里，"名校毕业生年薪高"忽略了"能被录取"本身已是极强的信号。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>技术人最常落入的陷阱是<strong>只研究成功的开源项目、创业案例、AI 产品</strong>，把它们的设计当圣经。一个反偏差训练：每读一篇成功案例，强制自己找 3 个用相似策略但失败的案例。如果找不到，要么是失败者无声音、要么是这个"策略"根本不可识别——两种情况你都不该相信归因。育儿同理：参考"清华妈妈分享带娃秘诀"前，问"用同样方法但孩子没考上的妈妈在哪里"——她们沉默不代表不存在。</p>
-    <span class="q">▸ 思考题：你正在效仿的某个"成功路径"，能否列出 3 个用相同方法失败的案例？如果列不出，你在跟从模式还是跟从噪声？</span>
+    <p>技术人最容易掉进的坑，是<strong>只研究成功的开源项目、创业案例、AI 产品</strong>，把它们的做法奉为圣经。一个反偏差的小训练：每读一个成功案例，强迫自己找出 3 个用了相似策略却失败的例子。如果找不到，要么是失败者没声音、要么是这个"策略"根本无法被识别——两种情况你都不该轻信那套归因。育儿同理：在参考"某某妈妈带娃秘诀"之前，先问一句"用了同样方法、孩子却没考好的妈妈在哪里"——她们的沉默，不代表她们不存在。</p>
+    <span class="q">▸ 思考题：你正在效仿的某条"成功路径"，能不能列出 3 个用同样方法却失败的案例？如果列不出来，你跟随的是规律，还是噪声？</span>
   </div>
 </div>
 
 <div class="card">
   <h2>辛普森悖论</h2>
   <div class="en">Simpson's Paradox</div>
-  <div class="subfield">混杂变量 · 因果推断的起点</div>
+  <div class="subfield">加总能让结论彻底反转</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>整体上 A 优于 B，但<strong>分组后每一组</strong>都可能是 B 优于 A——加总能把符号翻转。这意味着<strong>统计相关性的方向取决于你是否控制了正确的混杂变量</strong>。不是数据骗人，而是没有因果图的数据本身没有方向——这是从描述统计跨入因果推断的分水岭。</p>
+    <p>整体上看 A 比 B 好，但<strong>一分组，每一组里都可能是 B 比 A 好</strong>——加总能让结论彻底反转。这意味着：相关性的方向，取决于你有没有控制对的"混杂变量"。不是数据骗人，而是没有因果判断的数据本身没有方向。这是从"描述数据"迈向"理解因果"的分水岭。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>Edward Simpson 1951 年系统化（Pearson 1899 已观察到雏形）。最著名案例：1973 年 UC Berkeley 研究生录取——男性 44%、女性 35%，表面是性别歧视。Bickel、Hammel &amp; O'Connell（<em>Science</em>, 1975）逐院系拆解后发现：<strong>几乎每个院系女性录取率都不低于男性</strong>。混杂变量是"申请方向"——女性集中申请录取率本就低的人文学科。Judea Pearl 的 do-calculus 给出严格判据：是否控制变量 Z，取决于 Z 是混杂变量、中介变量还是对撞变量——盲目分层与盲目不分层都可能制造悖论。</p>
+    <p>最著名的案例：某大学研究生录取，整体看男性录取率明显高于女性，像是性别歧视。但<strong>逐个院系拆开看，几乎每个系女性录取率都不低于男性</strong>。真相是：女性更多申请了那些本来就难录取的热门院系。换句话说，"申请方向"这个隐藏变量，制造了整体上的假象。控不控制某个变量，会得出完全相反的结论。</p>
   </div>
 
   <div class="viz">
@@ -205,44 +199,26 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
       <tr><td class="label">B（难录取）</td><td>200 / 40</td><td class="miss">20%</td><td>900 / 225</td><td class="good">25%</td></tr>
       <tr><td class="label"><strong>整体</strong></td><td>1000 / 520</td><td class="good">52%</td><td>1000 / 295</td><td class="reverse">29.5%</td></tr>
     </table>
-    <div class="payoff-note">每个部门女性都赢，整体女性输——因为女性集中在难录取的 B 部门（混杂变量 = 申请方向）。</div>
+    <div class="payoff-note">每个部门女性录取率都更高，整体女性却更低——因为女性集中申请了难录取的 B 部门（隐藏变量 = 申请方向）。</div>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>Charig 等 1986 年（<em>BMJ</em>）肾结石治疗 A vs B：整体 A 成功率 78%，B 83%——B 似乎更好。但按结石大小分层：<strong>小结石 A 93% &gt; B 87%，大结石 A 73% &gt; B 69%——无论大小 A 都赢</strong>。原因：医生把难治的大结石更多分给 A。同一数据下"哪种治疗好"的答案，取决于你问的是"治疗本身的因果效应"还是"在医生选择策略下的边际效应"——这是两个不同的因果问题。</p>
+    <p>肾结石的两种疗法 A、B：整体数据显示 B 的成功率更高。但<strong>按结石大小分组后，无论大结石还是小结石，A 都更好</strong>。原因是医生把更难治的大结石更多地分给了 A，拖累了 A 的整体数字。同一份数据，"哪种疗法更好"的答案，取决于你问的是"疗法本身的效果"，还是"在医生分配习惯下的平均效果"——这是两个不同的问题。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>因果推断</strong>中 Pearl 的 do-calculus 与因果图（2011 ACM 图灵奖）正是为辨别这类悖论而生；在<strong>A/B 测试</strong>中 Simpson 反转是分析师最常踩的坑（用户群体差异掩盖真效果）；在<strong>机器学习公平性</strong>中"算法在每个子群准确率更高、整体却更低"或反之；在<strong>流行病学</strong>中疫苗效力分析必须分层年龄；在<strong>教育</strong>中"某校升学率高"可能完全来自生源；在<strong>性能基准</strong>中模型 A 每个数据集都赢、综合分却输的现象。</p>
+    <p>在<strong>A/B 测试</strong>里，这是分析师最常踩的坑——用户群体的差异会掩盖真实效果；在<strong>算法公平性</strong>里，"每个子群准确率都更高、整体却更低"时有发生；在<strong>流行病学</strong>里，疫苗效果必须按年龄分层来看；在<strong>教育</strong>里，"某校升学率高"可能完全来自生源差异，而非教学。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>数据驱动决策的最大陷阱不是"没数据"，而是<strong>加总数据</strong>。团队整体生产力上升 10%，可能是新加入的高产成员拉高的，原成员每人都在下降；DAU 涨了 20%，可能新用户活跃度低于流失用户的均值，看似增长实为稀释。看任何关键指标，<strong>立即追问"按什么分层后还成立？"</strong>——这是工程师与"虚荣指标"之间的根本区别。育儿同理：孩子"这个月作业速度快了"，是真进步还是题量简单了？分层不到位，所有"进步"判断都可能反向。</p>
-    <span class="q">▸ 思考题：你团队/产品/家庭最近一个"明显好转/恶化"的指标，按 3 种不同方式分层后还成立吗？哪一种分层会让结论翻转？</span>
+    <p>数据驱动决策的最大陷阱，往往不是"没数据"，而是<strong>只看加总数据</strong>。团队整体生产力涨了 10%，可能是新来的高产成员拉高的，老成员其实人人都在下滑；日活涨了 20%，也可能是新用户活跃度低于流失用户，看着增长、实则稀释。看任何关键指标，都<strong>立刻追问一句"按不同方式分组之后，结论还成立吗"</strong>——这正是工程师和"虚荣指标"之间的根本区别。育儿同理：孩子"这个月做题快了"，是真进步，还是这个月的题更简单了？</p>
+    <span class="q">▸ 思考题：你团队、产品或家庭里最近一个"明显变好/变差"的指标，按 3 种不同方式分组后还成立吗？哪一种分组会让结论翻转？</span>
   </div>
 </div>
 
-<div class="resources-card">
-  <h3>深入资源</h3>
-  <ul>
-    <li><strong>📰 必读：</strong> Bayes &amp; Price (1763) "An Essay towards solving a Problem in the Doctrine of Chances," <em>Phil. Trans.</em>——贝叶斯定理的原始文本</li>
-    <li><strong>📖 经典：</strong> E. T. Jaynes, <em>Probability Theory: The Logic of Science</em>（Cambridge, 2003）——把概率重建为扩展逻辑学的现代奠基</li>
-    <li><strong>📖 教材：</strong> Andrew Gelman et al., <em>Bayesian Data Analysis</em>（3rd ed., 2013）——现代贝叶斯标准教材，含 MCMC 实战</li>
-    <li><strong>📰 论文：</strong> Bickel, Hammel &amp; O'Connell (1975) "Sex Bias in Graduate Admissions: Data from Berkeley," <em>Science</em> 187:398-404——辛普森悖论最著名的公开应用</li>
-    <li><strong>📖 因果：</strong> Judea Pearl &amp; Dana Mackenzie, <em>The Book of Why</em>（2018）——为何相关 ≠ 因果的可视读本</li>
-    <li><strong>📖 偏差：</strong> Nassim Taleb, <em>Fooled by Randomness</em>（2001）——生存偏差与运气的可读论述</li>
-    <li><strong>📖 蒙特卡罗：</strong> Christian Robert &amp; George Casella, <em>Monte Carlo Statistical Methods</em>（2nd ed., 2004）——含 MCMC 的研究生标准</li>
-    <li><strong>🎥 视频：</strong> 3Blue1Brown "Bayes theorem, the geometry of changing beliefs"（YouTube）——贝叶斯几何直觉</li>
-  </ul>
 </div>
-
-</div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
 </body>
 </html>

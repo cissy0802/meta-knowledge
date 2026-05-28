@@ -36,12 +36,6 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .section.bigcat .label{background:#f7a072;color:#fff}
 .section.bigcat p{color:#5a4a3a}
 .section.bigcat .q{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed #f0d2a4;font-style:italic;color:#6b5a3a}
-.resources-card{background:#fff;border-radius:14px;padding:24px 26px;margin-top:28px;border-left:4px solid #52b788}
-.resources-card h3{font-size:1.1rem;color:#52b788;margin-bottom:14px;letter-spacing:0.5px}
-.resources-card ul{list-style:none;padding:0}
-.resources-card li{padding:8px 0;border-bottom:1px solid #f0ece4;font-size:0.92rem;color:#3a3a4a}
-.resources-card li:last-child{border-bottom:none}
-.resources-card li strong{color:#52b788}
 .viz{margin:22px 0 8px;padding:18px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
 .viz-title{font-size:0.78rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
 .payoff-table{width:100%;border-collapse:collapse;font-size:0.85rem;background:#fff;border-radius:8px;overflow:hidden}
@@ -77,172 +71,154 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 
 <div class="card">
   <h2>Bayesian Inference</h2>
-  <div class="en">Probability as belief, updated by evidence</div>
-  <div class="subfield">Probability as Belief · Priors and Updating</div>
+  <div class="en">Bayesian Inference</div>
+  <div class="subfield">Probability = degree of belief, updated by evidence</div>
 
   <div class="section insight">
     <span class="label">CORE INSIGHT</span>
-    <p>Probability is not an objective property of the world — it is a <strong>degree of belief</strong>. New evidence shouldn't erase prior belief but reweight it via "prior × likelihood = posterior." Ignoring base rates is the single most systematic error in human intuitive probability — among doctors, judges, and investors alike.</p>
+    <p>Probability isn't an objective property of the world — it's <strong>how strongly you believe something</strong>. New evidence shouldn't erase your old belief; it should reweight it as "prior × likelihood." Ignoring the "base rate" (how common a thing is in the first place) is the systematic error nearly everyone makes — doctors, judges, investors included — when judging probabilities by gut.</p>
   </div>
 
   <div class="section">
-    <span class="label">ORIGIN &amp; MECHANISM</span>
-    <p>Thomas Bayes (1701-1761), a Presbyterian minister, was published posthumously in 1763 by Richard Price ("An Essay towards solving a Problem in the Doctrine of Chances"); Laplace independently rediscovered and extended it (1774) to celestial measurement. For much of the 20th century, frequentists (Fisher, Neyman, Pearson) dismissed Bayesianism as "subjective." Only E. T. Jaynes' <em>Probability Theory: The Logic of Science</em> — recasting Bayesian probability as <strong>extended logic</strong> — plus the 1990s MCMC computational revolution put it back in the mainstream. The formula P(H|D) = P(D|H)·P(H)/P(D) is trivial; the hard part is realizing <strong>every probability is conditional on what you know</strong> — there is no information-free probability.</p>
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>The idea is named after the 18th-century thinker Bayes. The formula itself is simple: <strong>prior (what you believed before) × likelihood (how well the new evidence fits) → posterior (your updated belief)</strong>. The hard part is the easily-forgotten principle: every probability is relative to "the information you already have" — there's no such thing as an information-free probability. Bayesian methods only became mainstream once computation matured in the 1990s.</p>
   </div>
 
   <div class="viz">
-    <div class="viz-title">▸ Rare-disease test: 1% prior, 95/95 accuracy → just 16% posterior</div>
+    <div class="viz-title">▸ Rare-disease test: 1% prevalence, 95% accuracy, yet only 16% of positives are truly sick</div>
     <table class="payoff-table">
-      <tr><th></th><th>Test Positive</th><th>Test Negative</th><th>Total</th></tr>
-      <tr><td class="label">Actually Sick</td><td class="hit">95</td><td>5</td><td>100</td></tr>
-      <tr><td class="label">Actually Healthy</td><td class="reverse">495</td><td>9405</td><td>9900</td></tr>
+      <tr><th></th><th>Tests positive</th><th>Tests negative</th><th>Total</th></tr>
+      <tr><td class="label">Actually sick</td><td class="hit">95</td><td>5</td><td>100</td></tr>
+      <tr><td class="label">Actually healthy</td><td class="reverse">495</td><td>9405</td><td>9900</td></tr>
       <tr><td class="label">Total</td><td>590</td><td>9410</td><td>10000</td></tr>
     </table>
-    <div class="payoff-note">P(sick | positive) = 95 / 590 ≈ <strong>16.1%</strong>. A positive result still means you're most likely healthy — the 1% base rate dominates the 95% accuracy.</div>
+    <div class="payoff-note">Of 590 positives, only 95 are truly sick → about <strong>16%</strong>. The healthy population is so large that even a low false-positive rate produces far more false alarms than real cases.</div>
   </div>
 
   <div class="section">
-    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
-    <p>Casscells, Schoenberger &amp; Grayboys (<em>NEJM</em>, 1978) posed the above puzzle to faculty and students at Harvard Medical School. Only <strong>18%</strong> got an answer near correct; the average estimate was 95%. Physicians' base-rate neglect was no better than the public's. The Sally Clark case (UK 1999): both prosecution and defense treated "P(two SIDS deaths) = P(one)² = 1 in 73,000,000" as evidence of guilt. The Royal Statistical Society publicly protested in 2002 — flawed independence assumptions plus base-rate error jointly produced a wrongful conviction.</p>
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>Someone once posed the "rare-disease test" above to medical-school faculty and students: a disease with 1% prevalence, a test that's 95% accurate — what's the chance a person who tests positive is actually sick? Most blurted out 95%, but the <strong>correct answer is only about 16%</strong> — because the healthy population is so large that false alarms vastly outnumber real cases. Even doctors ignore the base rate. The same error in court (multiplying small probabilities together and treating it as ironclad proof) has even produced wrongful convictions.</p>
   </div>
 
   <div class="section">
-    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
-    <p>In <strong>machine learning</strong>, Bayesian networks, variational inference, conjugate priors, and Bayesian Deep Learning anchor uncertainty modeling; in <strong>cognitive science</strong>, Friston's "free-energy principle" and Clark's "predictive brain" argue the brain is a hierarchical Bayesian inference machine; in <strong>evidence-based medicine</strong>, Bayesian diagnostic reasoning is now standard; in <strong>AI alignment</strong>, RLHF reward modeling and Constitutional AI iterative correction are Bayesian updates in disguise; in <strong>finance</strong>, investors "find religion" after black swan events — really just a violent prior update.</p>
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>machine learning</strong>, most ways of handling uncertainty are Bayesian in spirit; in <strong>cognitive science</strong>, one theory holds the brain itself is a prediction machine doing layered Bayesian inference; in <strong>medicine</strong>, "update the probability of disease after seeing symptoms" is the standard diagnostic mindset; in <strong>investing</strong>, people who "suddenly find religion" after a black swan are really just violently updating a prior.</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT APPLICATION + REFLECTION</span>
-    <p>"That person always procrastinates" is usually base-rate error — every project slips (base rate ~80%); their personal slip rate barely updates anything. Conversely, the optimistic "this launch will be huge" routinely ignores the prior that 90% of industry launches barely ripple. Train the reflex of asking "before I saw this evidence, what was my prior on H? Is the likelihood ratio P(D|H)/P(D|¬H) really 20x or just 2x?" — it kills most hasty conclusions. Same with kids: three wrong problems shouldn't update you to "she's bad at math" — three problems against a semester of hundreds can't move any prior worth holding.</p>
-    <span class="q">▸ Reflection: Take your most recent "I knew it" judgment and write it as P(H|D). What was your prior? Does the likelihood ratio really support that posterior jump?</span>
+    <p>"That person always procrastinates" is almost always a base-rate error — if every project slips (base rate 80%), the handful of times they slipped tells you nothing; conversely, "this new feature will definitely take off" usually ignores the prior that "90% of launches in the industry are unremarkable." Build a habit: before looking at the evidence, ask <strong>"what was my prior belief? Does this evidence raise the probability 2× or 20×?"</strong> — it blocks most hasty conclusions. Same in parenting: three wrong problems shouldn't update you to "she's bad at math" — against the hundreds of problems in a semester, that evidence can't move any prior.</p>
+    <span class="q">▸ Reflection: take your most recent "I knew it all along" judgment and write it in Bayesian form — what was your prior? Was the evidence really strong enough to support that conclusion?</span>
   </div>
 </div>
 
 <div class="card">
   <h2>Monte Carlo Methods</h2>
-  <div class="en">Trading computation for analytical insight</div>
-  <div class="subfield">Random Sampling · Compute Over Cleverness</div>
+  <div class="en">Monte Carlo Methods</div>
+  <div class="subfield">Can't compute it? Simulate it, over and over</div>
 
   <div class="section insight">
     <span class="label">CORE INSIGHT</span>
-    <p>When a problem <strong>can't be solved analytically</strong> but <strong>can be simulated</strong>, repeated random sampling converges to arbitrary precision — turning "thinking" into "number of trials." This dissolves the old equation "complex = unsolvable": many problems once treated as deep math are today just compute problems.</p>
+    <p>When a problem <strong>can't be solved by formula but can be simulated</strong>, enough random sampling yields an approximation to any precision you want — turning "thinking" into "number of computations." This shattered the old notion that "complex = unsolvable": many things once seen as hard math problems are today just a question of compute.</p>
   </div>
 
   <div class="section">
-    <span class="label">ORIGIN &amp; MECHANISM</span>
-    <p>In 1946, Stanislaw Ulam — bedridden, playing solitaire — tried to compute his winning probability, found analysis hopeless but simulation trivial. Back at Los Alamos he and von Neumann ran the first systematic application on ENIAC, simulating neutron diffusion for the hydrogen bomb. Nicholas Metropolis named it (after the Monaco casino). The theoretical backbone is the law of large numbers: <strong>any integral, expectation, or path sum becomes "sample then average."</strong> The Metropolis-Hastings algorithm (1953), Hamiltonian Monte Carlo, sequential Monte Carlo, and MCTS all descend from this idea — using randomness to precisely approximate determinism.</p>
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>Its origin is vivid: a mathematician playing cards while ill wanted to compute the odds of winning a certain layout, found the formula nearly impossible, but realized <strong>simulating many hands and counting</strong> was easy. The principle behind it is the "law of large numbers": turn any sum, average, or area problem into "sample a lot, then take the average." It later grew into a whole family of methods, all sharing one trait — <strong>using randomness to precisely approach a definite answer</strong>.</p>
   </div>
 
   <div class="section">
-    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
-    <p>Estimating π: scatter N uniform points in a 1×1 square; the fraction landing in the inscribed quarter-circle, times 4, gives π. 10⁴ points → ~3.14; 10⁶ → ~3.1416. <strong>Not a line of geometry</strong> — just dice. The same idea now powers exotic derivative pricing beyond Black-Scholes, Bayesian posterior sampling (modern Bayesian inference is basically MCMC), AlphaGo's MCTS (thousands of simulated games per move), and every large language model's token-by-token sampling — your chat with an LLM is essentially shallow Monte Carlo.</p>
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>Estimating π: scatter a huge number of random points in a square, count the fraction landing inside the inscribed circle, multiply by 4, and you get π. Ten thousand points give ~3.14; a million give ~3.1416 — <strong>with no geometry at all, just repeated "dice rolls."</strong> The same idea underpins pricing complex financial products, modern Bayesian computation, the tens of thousands of simulated games behind each of AlphaGo's moves — and even every token a large model emits is essentially one random draw.</p>
   </div>
 
   <div class="section">
-    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
-    <p>In <strong>physics</strong>, quantum Monte Carlo for many-body problems; in <strong>finance</strong>, VaR, CVaR, derivative pricing; in <strong>statistics</strong>, Gibbs sampling, NUTS, and variational inference made modern Bayesian methods tractable; in <strong>game AI</strong>, MCTS is the heart of AlphaGo/MuZero; in <strong>climate science</strong>, ensemble forecasts perturb initial conditions to sample the future distribution; in <strong>drug discovery</strong>, molecular conformational sampling; in <strong>robotics</strong>, particle filters for localization and tracking.</p>
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>physics</strong> it handles many-particle problems; in <strong>finance</strong> it prices derivatives and estimates risk; in <strong>game AI</strong> it's the core of players like AlphaGo; in <strong>climate</strong>, perturbing initial conditions "samples" the many possible futures; in <strong>robotics</strong> it powers localization and tracking.</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT APPLICATION + REFLECTION</span>
-    <p>For complex decisions (change jobs? will the project ship?), the common error is <strong>trying to "calculate" rather than to "sample."</strong> Sketching three or four scenarios and concluding "60% it'll work" is far weaker than simulating 20 concrete execution paths (including extreme edges) and noting which failure modes recur. Taleb calls it "path thinking" — the outcome distribution matters far more than the expected value. Same for parenting: don't make "the perfect plan" — first simulate ten variants of "Wednesday night the kid's sick and you're still on a call at 8 pm." That's where the P95 stress lives. Treating decisions as samplable random processes is one of the highest-leverage transfers from engineering into life.</p>
-    <span class="q">▸ Reflection: For your most recent big decision, can you "sample" 10 concrete paths rather than only computing expectations? Which path most unsettles you? Is it actually in your contingency plan?</span>
+    <p>Facing a complex decision (change jobs? will the project ship on time?), the most common mistake is <strong>chasing "one precise number" instead of "sampling many possibilities."</strong> Sketching three or four scenarios to reassure yourself "60% likely" is far weaker than seriously imagining 20 concrete execution paths (including extreme cases) and seeing which kind of failure recurs. The "distribution" of outcomes usually matters far more than the "average." Parenting plans too — don't make a "perfect plan"; first simulate ten versions of "Wednesday night, the kid is sick, and you're still in a meeting at 8" — that's the real pressure point.</p>
+    <span class="q">▸ Reflection: for a recent important decision, could you "sample" 10 concrete paths instead of just computing an expected value? Which path unsettles you most? Have you prepared a contingency for it?</span>
   </div>
 </div>
 
 <div class="card">
   <h2>Survivorship Bias</h2>
-  <div class="en">The data you can see is selected — the failures are silent</div>
-  <div class="subfield">Selection Bias · Silent Data</div>
+  <div class="en">Survivorship Bias</div>
+  <div class="subfield">Silent failures distort everything you see</div>
 
   <div class="section insight">
     <span class="label">CORE INSIGHT</span>
-    <p>When you only observe "survivors," your conclusions are almost certainly wrong. Failures are silent; what looks like "success factors" may be <strong>noise specific to survivors</strong>, not real causation. The deadliest bias is not in the data itself but in the <strong>data-generating process</strong> — what you see has been filtered by "what samples could reach you."</p>
+    <p>When you only see the "samples that survived," your conclusions are almost guaranteed to be wrong. Failures are silent and can't speak up, so the "success factors" you think you see may just be <strong>random noise on the survivors</strong>, not real causes. The deadliest bias isn't in the data itself — it's in "<strong>what kind of sample even gets to be seen by you</strong>."</p>
   </div>
 
   <div class="section">
-    <span class="label">ORIGIN &amp; MECHANISM</span>
-    <p>The canonical case is Abraham Wald at the WWII Statistical Research Group. The US Air Force wanted to armor returning bombers where bullet holes clustered — wings and tail. Wald reversed it: <strong>armor where the holes are absent</strong> (engines, cockpit) — because planes hit there never returned. An extreme form of selection bias: samples filtered on survival. Generalized: any data conditional on survival overestimates upside and underestimates risk. Berkson's paradox, publication bias, and liquidation bias are all incarnations of the same phenomenon in different domains.</p>
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>The classic WWII case: the military wanted to reinforce returning bombers based on where the bullet holes clustered — naturally, the densest spots. A statistician pointed out it was backwards — <strong>the parts to reinforce were exactly those with the fewest holes (like the engines)</strong>: planes hit there never made it back, so you don't see those holes on the survivors. Any data that "counts only survivors" overestimates the upside and underestimates the risk.</p>
   </div>
 
   <div class="section">
-    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
-    <p>1990s "success literature" uniformly found Fortune-500 CEOs share traits like "wake early, read, persevere" — but the same traits are likely just as common in <strong>bankrupt CEOs</strong>. Phil Rosenzweig's <em>The Halo Effect</em> (2007) showed Jim Collins' "great companies" in <em>Good to Great</em> mostly performed mediocrely or died within five years of publication — <strong>under survivorship sampling, post-hoc attribution is pure narrative</strong>. Hedge-fund median returns look glossy because failing funds liquidate out of the database (Brown, Goetzmann, Ibbotson &amp; Ross 1992 showed "liquidation bias" inflates reported returns by ~3% annually).</p>
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>"Success" books conclude that wealthy CEOs share traits like "early rising, reading, grit" — but those traits may be just as common, or more so, among <strong>bankrupt CEOs</strong>; no one counts the failures. The "great companies" studied in such books often fade into mediocrity within a few years of publication — <strong>after-the-fact attribution, when you only look at survivors, is all just rationalized storytelling</strong>. Hedge funds' average returns look glossy partly because the losers shut down early and dropped out of the dataset.</p>
   </div>
 
   <div class="section">
-    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
-    <p>In <strong>history</strong>, "ancient buildings were all sturdy" — the fragile ones crumbled long ago; in <strong>clinical medicine</strong>, only positive results get published (publication bias), driving the literature's optimism and fueling the replication crisis; in <strong>machine learning</strong>, training data is itself a filtered sample ("offline metrics great, production bad" often originates here); in <strong>migration studies</strong>, "immigrants are harder-working" ignores that "lazy people don't emigrate" is the selection; in <strong>education</strong>, "Harvard graduates earn more" ignores that "being admitted" is the strong signal; in <strong>AI benchmarks</strong>, tuning on public tasks systematically overestimates "in-the-wild" performance.</p>
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>history</strong>, "old buildings were all sturdy" — really, the fragile ones collapsed long ago; in <strong>research</strong>, publishing only positive results makes the literature overly optimistic, a root cause of the "replication crisis"; in <strong>machine learning</strong>, training data is itself a filtered sample ("great offline metrics, crashes in production" often comes from this); in <strong>education</strong>, "elite-school graduates earn high salaries" ignores that "getting admitted" was already a powerful signal.</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT APPLICATION + REFLECTION</span>
-    <p>The trap technologists fall into most is <strong>only studying successful open-source projects, startups, and AI products</strong>, treating their designs as scripture. A debiasing drill: for every success story you read, force yourself to find three failed cases that used the same strategy. If you can't find them, either the failures had no voice, or the "strategy" isn't identifiable — in both cases, distrust the attribution. Same for parenting: before copying "Tsinghua mom shares her kid-raising secrets," ask "where are the moms who used the same method but whose kids didn't get in?" Their silence doesn't mean they don't exist.</p>
-    <span class="q">▸ Reflection: For a "success path" you're currently emulating, can you list three failed cases using the same method? If not, are you following a pattern or following noise?</span>
+    <p>The trap engineers fall into most easily is <strong>studying only successful open-source projects, startups, and AI products</strong> and treating their methods as gospel. An anti-bias drill: for every success story you read, force yourself to find 3 cases that used a similar strategy and failed. If you can't, either the failures are silent or the "strategy" isn't actually identifiable — in both cases you shouldn't trust the attribution. Same in parenting: before following "so-and-so mom's parenting secrets," ask "where are the moms who used the same methods but whose kids didn't do well" — their silence doesn't mean they don't exist.</p>
+    <span class="q">▸ Reflection: a "success path" you're imitating — can you list 3 cases that used the same method and failed? If you can't, are you following a pattern, or following noise?</span>
   </div>
 </div>
 
 <div class="card">
   <h2>Simpson's Paradox</h2>
-  <div class="en">Aggregate flips the sign — confounders decide direction</div>
-  <div class="subfield">Confounding Variables · Gateway to Causal Inference</div>
+  <div class="en">Simpson's Paradox</div>
+  <div class="subfield">Aggregation can flip the conclusion entirely</div>
 
   <div class="section insight">
     <span class="label">CORE INSIGHT</span>
-    <p>A may be better than B in aggregate, yet B may be better than A <strong>in every subgroup</strong> — summation can flip the sign. This means <strong>the direction of a statistical correlation depends on whether you've controlled for the right confounder</strong>. It's not that "data lies"; it's that data without a causal model has no direction — this is the watershed from descriptive statistics into causal inference.</p>
+    <p>Overall, A beats B — yet <strong>split into groups, B can beat A in every single group</strong>. Aggregation can flip the conclusion outright. This means the direction of a correlation depends on whether you've controlled for the right "confounding variable." The data isn't lying — data without a causal judgment simply has no direction. This is the watershed between "describing data" and "understanding cause."</p>
   </div>
 
   <div class="section">
-    <span class="label">ORIGIN &amp; MECHANISM</span>
-    <p>Edward Simpson formalized it in 1951 (Pearson noted a precursor in 1899). The most famous case: 1973 UC Berkeley graduate admissions — men admitted at 44%, women at 35%; superficially, gender discrimination. Bickel, Hammel &amp; O'Connell (<em>Science</em>, 1975), going department by department, found <strong>nearly every department admitted women at rates equal to or higher than men</strong>. The confounder was "choice of department" — women disproportionately applied to humanities, where admit rates were lower for everyone. Pearl's do-calculus gives the rigorous criterion: whether to condition on a variable Z depends on whether Z is a confounder, mediator, or collider — blind stratification and blind aggregation both manufacture paradoxes.</p>
+    <span class="label">BACKGROUND &amp; MECHANISM</span>
+    <p>The most famous case: a university's graduate admissions showed men admitted at a clearly higher rate than women overall — looking like sex discrimination. But <strong>broken down department by department, women's admission rate was no lower than men's in almost every one</strong>. The truth: women applied more to popular departments that were hard to get into. In other words, the hidden variable "which department you applied to" manufactured the overall illusion. Whether or not you control for a variable can yield opposite conclusions.</p>
   </div>
 
   <div class="viz">
-    <div class="viz-title">▸ Simpson reversal: women admitted more in every dept, less overall</div>
+    <div class="viz-title">▸ Simpson reversal: women's admission rate is higher in every department, yet lower overall</div>
     <table class="payoff-table">
-      <tr><th>Dept</th><th>Men apply / admit</th><th>Men rate</th><th>Women apply / admit</th><th>Women rate</th></tr>
-      <tr><td class="label">A (easy admit)</td><td>800 / 480</td><td class="miss">60%</td><td>100 / 70</td><td class="good">70%</td></tr>
-      <tr><td class="label">B (hard admit)</td><td>200 / 40</td><td class="miss">20%</td><td>900 / 225</td><td class="good">25%</td></tr>
+      <tr><th>Dept.</th><th>Men applied / admitted</th><th>Men's rate</th><th>Women applied / admitted</th><th>Women's rate</th></tr>
+      <tr><td class="label">A (easy)</td><td>800 / 480</td><td class="miss">60%</td><td>100 / 70</td><td class="good">70%</td></tr>
+      <tr><td class="label">B (hard)</td><td>200 / 40</td><td class="miss">20%</td><td>900 / 225</td><td class="good">25%</td></tr>
       <tr><td class="label"><strong>Overall</strong></td><td>1000 / 520</td><td class="good">52%</td><td>1000 / 295</td><td class="reverse">29.5%</td></tr>
     </table>
-    <div class="payoff-note">Women win in each department, lose overall — because they cluster in hard-admit Dept B (confounder = choice of department).</div>
+    <div class="payoff-note">Women's rate is higher in every department, yet lower overall — because women concentrated their applications in the hard-to-enter department B (hidden variable = choice of department).</div>
   </div>
 
   <div class="section">
-    <span class="label">COUNTERINTUITIVE EXAMPLE</span>
-    <p>Charig et al. (<em>BMJ</em>, 1986) on kidney-stone treatments A vs B: overall A succeeds 78%, B 83% — B looks better. But stratifying by stone size: <strong>small stones A 93% &gt; B 87%; large stones A 73% &gt; B 69% — A wins regardless of size</strong>. The reason: physicians assigned the harder, larger stones disproportionately to A. The "which treatment is better" answer depends on whether you're asking about <strong>the treatment's causal effect</strong> or about its <strong>marginal performance under the physicians' assignment policy</strong> — two different causal questions on identical data.</p>
+    <span class="label">COUNTER-INTUITIVE EXAMPLE</span>
+    <p>Two kidney-stone treatments, A and B: overall data show B has a higher success rate. But <strong>once you group by stone size, A is better for both large and small stones</strong>. The reason: doctors assigned the harder-to-treat large stones disproportionately to A, dragging down A's overall number. With the same data, the answer to "which treatment is better" depends on whether you're asking "the effect of the treatment itself" or "the average effect given doctors' assignment habits" — two different questions.</p>
   </div>
 
   <div class="section">
-    <span class="label">CROSS-DISCIPLINARY TRANSFER</span>
-    <p>In <strong>causal inference</strong>, Pearl's do-calculus and causal graphs (2011 ACM Turing Award) exist precisely to disentangle this; in <strong>A/B testing</strong>, Simpson reversal is the analyst's most common trap (user-group differences hide the real effect); in <strong>ML fairness</strong>, "the algorithm is more accurate in every subgroup but less overall" (or vice versa); in <strong>epidemiology</strong>, vaccine effectiveness must be stratified by age; in <strong>education</strong>, "this school's admission rate is high" may come entirely from incoming student quality; in <strong>benchmarks</strong>, model A winning every dataset yet losing the aggregate score.</p>
+    <span class="label">CROSS-DOMAIN TRANSFER</span>
+    <p>In <strong>A/B testing</strong>, this is the trap analysts most often fall into — differences between user groups mask the real effect; in <strong>algorithmic fairness</strong>, "higher accuracy in every subgroup yet lower overall" does happen; in <strong>epidemiology</strong>, vaccine effectiveness must be viewed stratified by age; in <strong>education</strong>, "school X has a high college-admission rate" may come entirely from the students it admits, not its teaching.</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT APPLICATION + REFLECTION</span>
-    <p>The biggest trap in data-driven decisions isn't "missing data" — it's <strong>aggregated data</strong>. Team productivity is up 10%, but it may all come from one new high-output member while everyone else declined; DAU is up 20%, but new users may be less engaged than churned users, so apparent growth is actually dilution. For any key metric, immediately ask <strong>"after which stratification does this still hold?"</strong> — this is the gulf between engineers and vanity metrics. Same in parenting: kid finished homework faster this month — real progress or easier problem set? Without proper stratification, every "improvement" judgment may be reversed.</p>
-    <span class="q">▸ Reflection: For a recent "clearly improving / worsening" metric in your team, product, or family, does it hold after stratifying three different ways? Which stratification flips the conclusion?</span>
+    <p>The biggest trap in data-driven decisions often isn't "no data" — it's <strong>looking only at aggregate data</strong>. Team productivity up 10% might be a new high-output member lifting the average while every veteran is actually declining; DAU up 20% might be new users less active than the churned ones — looks like growth, is really dilution. For any key metric, <strong>immediately ask "does this still hold after I group it differently?"</strong> — that's the fundamental difference between an engineer and a "vanity metric." Same in parenting: "the kid did problems faster this month" — real progress, or just easier problems this month?</p>
+    <span class="q">▸ Reflection: a metric in your team, product, or family that recently "clearly improved/worsened" — does it still hold after grouping it 3 different ways? Which grouping flips the conclusion?</span>
   </div>
 </div>
 
-<div class="resources-card">
-  <h3>Further Resources</h3>
-  <ul>
-    <li><strong>📰 Essential:</strong> Bayes &amp; Price (1763) "An Essay towards solving a Problem in the Doctrine of Chances," <em>Phil. Trans.</em> — the original text of Bayes' theorem</li>
-    <li><strong>📖 Classic:</strong> E. T. Jaynes, <em>Probability Theory: The Logic of Science</em> (Cambridge, 2003) — reconstructs probability as extended logic</li>
-    <li><strong>📖 Textbook:</strong> Andrew Gelman et al., <em>Bayesian Data Analysis</em> (3rd ed., 2013) — modern Bayesian standard, with MCMC in practice</li>
-    <li><strong>📰 Paper:</strong> Bickel, Hammel &amp; O'Connell (1975) "Sex Bias in Graduate Admissions: Data from Berkeley," <em>Science</em> 187:398-404 — the most famous public application of Simpson's paradox</li>
-    <li><strong>📖 Causality:</strong> Judea Pearl &amp; Dana Mackenzie, <em>The Book of Why</em> (2018) — accessible companion to why correlation ≠ causation</li>
-    <li><strong>📖 Bias:</strong> Nassim Taleb, <em>Fooled by Randomness</em> (2001) — readable treatment of survivorship bias and luck</li>
-    <li><strong>📖 Monte Carlo:</strong> Christian Robert &amp; George Casella, <em>Monte Carlo Statistical Methods</em> (2nd ed., 2004) — graduate standard, includes MCMC</li>
-    <li><strong>🎥 Video:</strong> 3Blue1Brown "Bayes theorem, the geometry of changing beliefs" (YouTube) — geometric intuition for Bayes</li>
-  </ul>
 </div>
-
-</div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
 </body>
 </html>
