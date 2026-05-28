@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta-Knowledge: Anthropology — Day 14</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#e85a4f 0%,#f7a072 35%,#52b788 70%,#3a86ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e85a4f;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#e85a4f;border:1px solid #f0d2cf}
+.tag.alt{color:#3a86ff;border-color:#d8e0eb}
+.tag.warm{color:#f7a072;border-color:#fbe5d9}
+.tag.green{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #e85a4f}
+.card:nth-of-type(2){border-top-color:#3a86ff}
+.card:nth-of-type(3){border-top-color:#52b788}
+.card:nth-of-type(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#fbe5e2;color:#e85a4f;margin-bottom:18px;letter-spacing:0.5px}
+.card:nth-of-type(2) .subfield{background:#e6eef9;color:#3a86ff}
+.card:nth-of-type(3) .subfield{background:#e3f1e8;color:#52b788}
+.card:nth-of-type(4) .subfield{background:#fbe5d9;color:#f7a072}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#e85a4f;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#fbe5e2;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#e85a4f}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #e85a4f;margin-top:6px}
+.section.bigcat{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072;margin-top:18px}
+.section.bigcat .label{background:#f7a072;color:#fff}
+.section.bigcat p{color:#5a4a3a}
+.section.bigcat .q{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed #f0d2a4;font-style:italic;color:#6b5a3a}
+.viz{margin:22px 0 8px;padding:18px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
+.viz-title{font-size:0.78rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
+.flow{display:flex;flex-direction:column;gap:6px}
+.flow-step{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:8px;border-left:3px solid #3a86ff}
+.flow-num{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#3a86ff;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.78rem}
+.flow-text{font-size:0.86rem;color:#3a3a4a;flex:1}
+.flow-text strong{color:#2a2a3a}
+.flow-arrow{text-align:center;color:#3a86ff;font-size:1.05rem;margin:-2px 0}
+.ring-table{width:100%;border-collapse:collapse;font-size:0.85rem;background:#fff;border-radius:8px;overflow:hidden}
+.ring-table th,.ring-table td{padding:10px 12px;text-align:center;border:1px solid #e8e2d8}
+.ring-table th{background:#e3f1e8;color:#2a7a4a;font-weight:700;font-size:0.78rem;letter-spacing:0.5px}
+.ring-table td.label{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
+.ring-table td.core{background:#e3f1e8;color:#2a7a4a;font-weight:700}
+.ring-table td.cap{background:#fff7f5;color:#e85a4f;font-weight:700}
+.ring-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+  .ring-table th,.ring-table td{padding:6px 4px;font-size:0.74rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>Meta-Knowledge: Anthropology</h1>
+  <div class="meta">May 28, 2026 · Meta Knowledge Daily</div>
+  <div class="day">DAY 14</div>
+  <div class="tags">
+    <span class="tag">Economic Anthropology</span>
+    <span class="tag alt">Symbolic Anthropology</span>
+    <span class="tag green">Evolutionary Anthropology</span>
+    <span class="tag warm">Class &amp; Power</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>Gift Economy</h2>
+  <div class="en">Gift Economy</div>
+  <div class="subfield">Reciprocal obligation · relationship, not settlement</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>A gift is never truly “free,” nor is it pure goodwill. A gift carries a piece of the giver and creates a chain of obligation to reciprocate. The real insight: market exchange produces a <strong>settlement</strong>—cash for goods, and the relationship ends; a gift deliberately leaves the “debt” unpaid, and it is precisely that unsettled balance that keeps two people bound together.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>In <em>The Gift</em> (1925), Mauss identified a triple obligation: <strong>the duty to give, to receive, and to repay</strong>. Refusing a gift is tantamount to a declaration of war, while accepting without repaying costs you status. The key lies in <strong>delay and inequivalence</strong>: repayment should be deferred and slightly off, so the debt sustains the bond. If you hand back the exact cash value on the spot, you are saying “I don't want to owe you—we're even now.” That is an insult, not politeness.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>In the “potlatch” of the Pacific Northwest, chiefs won status by <strong>publicly destroying and giving away</strong> vast wealth—the more you could waste, the higher your prestige. This overturns the intuition that “accumulation equals wealth”: in gift logic, <strong>dispersing wealth is power</strong>. Likewise, the Kula ring sent shell armbands circulating among islands thousands of kilometers apart; the objects had no practical use, and the sole point of their movement was to sustain alliance and renown.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>Evolutionary biology calls it <strong>reciprocal altruism</strong>, extending into reputation-driven “indirect reciprocity”; in psychology it is the powerful “reciprocity principle” of persuasion. Its most modern form lives in the digital world: open-source contributions and knowledge sharing are gift economies at heart, where <strong>reputation is the currency in circulation</strong>—and freemium products skillfully exploit that faint sense of owing someone a favor.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT Application + Question</span>
+    <p>In a professional network, proactive giving (sharing, introducing, answering) accumulates <strong>relationship capital</strong>, not a ledger of transactions. One of the hardest-to-copy moats for an “AI super-individual” is exactly this reputation network that returns value nonlinearly—its logic is the gift, not the invoice. Parenting demands the reverse caution: love and presence are “gifts,” and the moment you use rewards to <strong>trade for</strong> a child's behavior, you demote the gift into a market transaction and erode their intrinsic motivation.</p>
+    <span class="q">▸ Question: Are your deepest relationships built on “settle-on-the-spot” equivalent exchange, or on a series of “unpaid gift debts”?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Liminality</h2>
+  <div class="en">Liminality</div>
+  <div class="subfield">Rites of passage · the plasticity of the in-between</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Every major transition must pass through an in-between zone that “belongs neither to the past nor yet to the future”—the liminal phase. The old identity has died, the new one is not yet born, and the existing rules are suspended. This is chaos, but also the greatest freedom: where structure dissolves, possibility is densest. The pain of transition is not a bug but a feature—<strong>without the disorder of crossing the threshold, a new identity cannot truly take hold.</strong></p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>The study of “rites of passage” breaks every life transition into three stages. The Latin <em>limen</em> means “threshold”: standing on it, you have left the old house but not yet entered the new. The anthropologist Turner found the liminal phase has a distinctive set of properties—identity is stripped away, status is leveled, rules fail, and a strangely equal, intimate sense of “communitas” emerges. Societies invented elaborate rituals precisely to <strong>safely ferry people across</strong> this dangerous vacuum.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ The three-stage structure of a rite of passage</div>
+    <div class="flow">
+      <div class="flow-step"><div class="flow-num">1</div><div class="flow-text"><strong>Separation</strong>: stripped of old identity and daily structure (isolation, fasting, shaving, renaming).</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><div class="flow-num">2</div><div class="flow-text"><strong>Liminal</strong>: a suspended in-between—“nothing yet,” rules void, plasticity highest, and most dangerous.</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><div class="flow-num">3</div><div class="flow-text"><strong>Reincorporation</strong>: re-entering society under a confirmed new identity, re-accepted by the group.</div></div>
+    </div>
+    <div class="ring-note">Skip the middle stage of “disorder” and the transition is just a new title—the identity never actually grows.</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Many cultures' initiation rites <strong>deliberately inflict trauma</strong>—isolation, pain, bodily marking, mock death—because a transition only counts once it is “carved” into the body. Modern society, by contrast, has all but erased clear liminal rituals, yielding “delayed adulthood”: young people no longer know the moment they “became an adult.” Founders feel it too: the stretch between quitting a job and closing funding—when you are “nothing in particular”—is the textbook liminal state, anxious and suspended yet brimming with possibility.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>In physics and complex systems it maps to the <strong>critical point</strong> of a phase transition—a system stuck between two stable states; in neuroscience, psychedelics temporarily lower connectivity in the default mode network (DMN), loosening the self's boundaries—a neural “liminality” and window of plasticity; in organizational change it is the “in-between” where the old process has stopped and the new one is not yet stable.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT Application + Question</span>
+    <p>In the move from “senior engineer” to “AI super-individual,” that suspended, anxious “what am I now?” feeling is not a failure signal but a marker of liminality—exactly the window of highest plasticity, the time to experiment boldly; grabbing back the old identity in a hurry means missing it. Parenting is the same: a child crossing into school or adolescence is passing through a liminal phase, and the job is to <strong>accompany the ferry</strong>, not to lock them into a fixed shape too soon.</p>
+    <span class="q">▸ Question: Are you right now in some liminal phase that is “neither past nor future”? Are you resisting it (rushing back to certainty), or exploiting its high plasticity to experiment?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Dunbar's Number</h2>
+  <div class="en">Dunbar's Number</div>
+  <div class="subfield">The cognitive ceiling on social bandwidth</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>There is a ceiling on the number of stable social relationships a human can maintain—about 150. This is not a matter of personality or effort but the computational ceiling of the neocortex. Beyond it, a group must replace “everyone knows everyone” with <strong>institutions, rules, and hierarchy</strong>. More importantly, your social bandwidth is <strong>layered</strong>: roughly 5 intimates, 15 close friends, 50 good friends, 150 acquaintances—and 5,000 “friends” on social media don't change that number, they only dilute it.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Dunbar compared neocortex size to group size across primates, found them highly correlated, and projected about 150 for humans. Maintaining relationships requires ongoing “social grooming”—monkeys groom each other's fur, while humans use <strong>gossip and small talk as “grooming by voice.”</strong> These relationships nest in concentric circles; each step inward means more intimacy and a steeper maintenance cost, and the moment you stop investing time, the outer rings quietly decay into “a face I recognize.”</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Dunbar's concentric circles of social life</div>
+    <table class="ring-table">
+      <tr><th>Layer</th><th>People</th><th>Relationship</th><th>Upkeep cost</th></tr>
+      <tr><td class="label">Intimate core</td><td class="core">~5</td><td>Trust with anything</td><td class="cap">Very high</td></tr>
+      <tr><td class="label">Close friends</td><td class="core">~15</td><td>Emotional support</td><td class="cap">High</td></tr>
+      <tr><td class="label">Good friends</td><td>~50</td><td>Regular meetups</td><td>Medium</td></tr>
+      <tr><td class="label"><strong>Stable-relationship ceiling</strong></td><td><strong>~150</strong></td><td>Known, with rapport</td><td>—</td></tr>
+      <tr><td class="label">Familiar faces</td><td>~500</td><td>Nodding acquaintance</td><td>Low</td></tr>
+    </table>
+    <div class="ring-note">Technology hugely expands the outer “weak ties” but barely expands the inner “strong ties”—the core 5 and 15 are the scarce resource.</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Many high-performing organizations deliberately keep units under 150: the Gore company (Gore-Tex) splits a plant once it exceeds 150 people; Neolithic villages and certain religious communities also hit their splitting point near 150. Social media lets us “know” thousands, yet research shows the genuinely interactive core still hovers around 150 or fewer—<strong>technology scales the count of weak ties, not the capacity for strong ones.</strong></p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>In management it explains why small teams stay agile, inspiring Amazon's “two-pizza team” design; in network science it maps to the fundamental bandwidth gap between strong and weak ties; in distributed systems it resembles the engineering constraint that every node has a ceiling on connections it can maintain—exceed it and you must introduce layering and coordination protocols.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT Application + Question</span>
+    <p>To become a “super-individual,” the goal is not to stuff your card box with thousands but to cultivate that 150—above all the core 15. AI can manage your weak ties (notes, reminders, archived context), but the “grooming” of strong ties—real presence and investment—cannot be outsourced. Parenting is the same: a child needs a few stable, deep relationships, not a flood of shallow socializing—<strong>quality far outweighs quantity.</strong></p>
+    <span class="q">▸ Question: Who are your “core 15”? Over the past month, did your time actually flow to them, or was it diluted across 500 weak ties?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Cultural Capital &amp; Symbolic Violence</h2>
+  <div class="en">Cultural Capital &amp; Symbolic Violence</div>
+  <div class="subfield">The invisible reproduction of inequality</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Beyond money (economic capital) lies an invisible “cultural capital”—taste, speech, credentials, knowing which fork goes with which course—that is equally power, and that passes inequality down the generations even more covertly. “Symbolic violence” is its sharpest move: the dominated come to endorse the standards of the dominant, recasting structural disadvantage as “I'm just not good or hard-working enough.” <strong>The most efficient power makes people willingly accept the rules of the game—and believe those rules are only natural.</strong></p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Bourdieu distinguished three capitals: economic (money), cultural (knowledge and taste), and social (networks). At the heart of cultural capital is the “habitus”—a system of dispositions absorbed from childhood and internalized into one's every gesture, so that children of a given class “naturally” know how to play the game. The seemingly fairest schools (everyone equal before the exam) thus reward the cultural capital that upper-middle-class families have already transmitted, and <strong>repackage this advantage of birth as “individual talent”</strong>—and so inequality is laundered and reproduced.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>School does not break class structure; it covertly reproduces it: the “exam-savvy, well-mannered” children mostly come from families that already hold cultural capital, and the school merely translates that head start into “ability,” making the outcome look “fair and reasonable.” More counterintuitive still is taste—your preferred music, food, and sport can almost reverse-engineer your origins. When you say “I just love classical music,” <strong>it is often not “you” speaking, but your habitus.</strong></p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>It extends economics' notion of “capital” into human and social capital; in sociology it echoes social capital and institutional isomorphism; in psychology it maps to internalized norms and “stereotype threat.” The newest battleground is algorithms: recommender systems and credit scores <strong>reproduce</strong> existing advantage, while large models favor “standard written language,” often judging marginalized groups' authentic expression as “low quality.”</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT Application + Question</span>
+    <p>The AI era is birthing a new cultural capital: fluency in collaborating with AI—the skill of asking, judgment, taste. It may well become a new invisible threshold that reproduces fresh inequality, and technologists especially should watch for the blind spots in their own habitus. The parenting insight cuts both ways: the greatest inheritance you can give a child may be cultural capital (reading habits, curiosity, expressiveness) rather than money; but treating “our family's taste” as “the only correct one” is itself a form of symbolic violence against the child.</p>
+    <span class="q">▸ Question: In work or social life, which “taken-for-granted” standards are actually a threshold of cultural capital? Have you ever mistaken someone's “not knowing the rules” for “lacking ability”?</span>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
