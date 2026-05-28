@@ -36,12 +36,6 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .section.bigcat .label{background:#f7a072;color:#fff}
 .section.bigcat p{color:#5a4a3a}
 .section.bigcat .q{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed #f0d2a4;font-style:italic;color:#6b5a3a}
-.resources-card{background:#fff;border-radius:14px;padding:24px 26px;margin-top:28px;border-left:4px solid #52b788}
-.resources-card h3{font-size:1.1rem;color:#52b788;margin-bottom:14px;letter-spacing:0.5px}
-.resources-card ul{list-style:none;padding:0}
-.resources-card li{padding:8px 0;border-bottom:1px solid #f0ece4;font-size:0.92rem;color:#3a3a4a}
-.resources-card li:last-child{border-bottom:none}
-.resources-card li strong{color:#52b788}
 .viz{margin:22px 0 8px;padding:18px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
 .viz-title{font-size:0.78rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
 .payoff-table{width:100%;border-collapse:collapse;font-size:0.85rem;background:#fff;border-radius:8px;overflow:hidden}
@@ -78,167 +72,152 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <div class="card">
   <h2>小世界现象</h2>
   <div class="en">Small-World Phenomenon</div>
-  <div class="subfield">高聚集 + 少量长程连接 = 短路径</div>
+  <div class="subfield">邻里紧密 + 少量捷径 = 短路径</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>任何两人/两节点之间平均只需 ~6 步连接，并非人际偶然——只要网络同时具备<strong>高局部聚集</strong>与<strong>极少量长程随机连接</strong>，路径长度就会从 N 量级塌缩到 log N。"小"不是节点少，而是<strong>直径随规模几乎不增长</strong>——这是大脑、电网、社交、互联网的共有拓扑。</p>
+    <p>任何两人之间平均只需约 6 步就能连上，这不是巧合。只要一个网络<strong>邻里关系紧密</strong>，又有<strong>少量"远距离捷径"</strong>，整张网的"直径"就几乎不随规模增长。"小"不是指节点少，而是指<strong>无论网络多大，绕到任何人都很快</strong>——大脑、电网、社交圈、互联网都是这个形状。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>Stanley Milgram 1967 年 "Small World Experiment"：让 Nebraska 居民通过熟人链转寄信件到 Boston 的目标人，平均经过 5.5 个中间人。真正的理论突破是 Duncan Watts &amp; Steven Strogatz 1998 年 <em>Nature</em> 论文 "Collective dynamics of 'small-world' networks"：从规则环开始，<strong>仅以极小概率 p 随机重连边</strong>，聚集系数 C 几乎不变，但平均路径长度 L 已暴跌——存在一大段参数区，网络同时"局部紧密、全局短径"。Backstrom 等 2012 年在 Facebook 7.21 亿用户上测得平均距离 <strong>4.74</strong>；Travers &amp; Milgram 1969 原始实验里能完成传递的链平均长 5.2。</p>
+    <p>1967 年 Milgram 让人通过熟人转寄信件给陌生的目标人，平均经过约 6 个人就送到了。1998 年 Watts 与 Strogatz 给出解释：从一个"人人只认识邻居"的规则网络出发，<strong>只要随机改动极少数连接</strong>，邻里依然紧密，但任意两点的距离会骤降。关键不在于连接多，而在于<strong>有几条跨圈的捷径</strong>。今天 Facebook 上几十亿用户，平均也只隔约 4.7 个人。</p>
   </div>
 
   <div class="viz">
-    <div class="viz-title">▸ Watts-Strogatz 模型：极少量长程连接即触发小世界</div>
+    <div class="viz-title">▸ 极少量捷径，就足以触发"小世界"</div>
     <table class="payoff-table">
-      <tr><th>网络类型</th><th>重连概率 p</th><th>聚集系数 C</th><th>平均路径 L</th><th>性质</th></tr>
-      <tr><td class="label">规则环格</td><td>0</td><td class="good">高 (~0.5)</td><td class="hit">长 (~N/4)</td><td>邻里紧密、地球太大</td></tr>
-      <tr><td class="label"><strong>小世界</strong></td><td>0.001 – 0.1</td><td class="good">高 (~0.4)</td><td class="good">短 (~log N)</td><td><strong>两全其美</strong></td></tr>
-      <tr><td class="label">完全随机图</td><td>1</td><td class="hit">极低</td><td class="good">短</td><td>无邻里结构</td></tr>
+      <tr><th>网络类型</th><th>随机捷径</th><th>邻里紧密度</th><th>平均距离</th><th>性质</th></tr>
+      <tr><td class="label">规则网络</td><td>几乎没有</td><td class="good">高</td><td class="hit">很长</td><td>邻里紧密、绕远路</td></tr>
+      <tr><td class="label"><strong>小世界</strong></td><td>1%–10%</td><td class="good">高</td><td class="good">很短</td><td><strong>两全其美</strong></td></tr>
+      <tr><td class="label">完全随机</td><td>全是</td><td class="hit">极低</td><td class="good">短</td><td>没有邻里结构</td></tr>
     </table>
-    <div class="payoff-note">仅在 1%–10% 的边被重连时，网络已是"小世界"——少数<strong>跨域桥</strong>就能改写整张图的几何。</div>
+    <div class="payoff-note">只要 1%–10% 的连接变成"跨圈捷径"，整张网就进入小世界——少数桥，改写全图的几何。</div>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>线虫 <em>C. elegans</em> 全部 <strong>302 个神经元</strong>的连接组（White et al. 1986）也是小世界——任意两神经元平均 2.65 突触距离。Bassett &amp; Bullmore 2006 年（<em>Neuroscientist</em>）证明人脑功能连接的小世界拓扑是<strong>能耗与整合效率的帕累托最优</strong>：精神分裂症患者的脑网络小世界性下降，自闭症则常呈过度局部聚集。同一拓扑指标穿越尺度——从 C. elegans 到 86 亿神经元的人脑，从 8 个人的朋友圈到 30 亿 Facebook 节点，<strong>几何形状相同</strong>。</p>
+    <p>只有 302 个神经元的线虫，其神经连接也是小世界——任意两个神经元平均 2.6 步可达。从线虫到人脑，从 8 人的朋友圈到几十亿人的社交网，<strong>几何形状是一样的</strong>。人脑保持这种结构，是因为它在"省能量"和"高效整合"之间达到了最优；一些精神疾病恰恰表现为这种结构被破坏。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>流行病学</strong>中 COVID 的"超长距离跳跃 + 本地簇"正是小世界传播形态；在<strong>电网</strong>中 2003 北美大停电沿小世界拓扑级联；在<strong>分布式系统</strong>中 Gossip 协议、Chord DHT 故意构造小世界以保证 O(log N) 查询；在<strong>大脑与意识</strong>中 GWT 全局工作空间理论建立在小世界 + hub 假设之上；在<strong>组织设计</strong>中 Cross &amp; Parker 2004 用小世界指标诊断公司沟通瓶颈；在<strong>语言学</strong>中词共现网络也呈小世界，影响词义习得速度。</p>
+    <p>流行病的"本地聚集 + 远距离跳跃"就是小世界传播；大停电会沿小世界拓扑级联扩散；分布式系统会<strong>故意</strong>构造小世界，来保证查询又快又稳；组织管理里也用它诊断"为什么消息传不到位"的沟通瓶颈。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>团队信息流动慢，多数时候不是"沟通少"而是<strong>缺少跨部门长程边</strong>——加两三个跨域协作关系（不必每天联系），平均消息路径长度可从 ~N 降到 ~log N，决策速度数量级提升。这是<strong>结构性杠杆</strong>：花十分之一的关系成本撬动十倍信息效率。对孩子的社交圈同理：<strong>同质大圈不如带 1–2 个跨群体朋友</strong>——后者带来的是"信息维度"而非"信息量"。Reid Hoffman 把 LinkedIn 早期增长策略明确建立在 Watts-Strogatz 之上：邀请你最远的 2 度熟人，比邀请密友更能撕开新区域。</p>
-    <span class="q">▸ 思考题：列出你工作网络中 3 条最有价值的"长程边"（不在同部门/同领域）——若这 3 条断了，你的信息半径会缩到多大？</span>
+    <p>团队信息流动慢，通常不是"沟通太少"，而是<strong>缺少几条跨部门的捷径</strong>。只要建立两三个跨域协作关系（不必频繁联系），信息传递的路径就能大幅缩短，决策快一个数量级——这是用很小的关系成本，撬动很大的信息效率。对孩子也一样：同质的大圈子，不如有 1–2 个跨群体的朋友——后者带来的是<strong>新视角</strong>，而不只是更多人。</p>
+    <span class="q">▸ 思考题：列出你工作里 3 条最有价值的"跨圈捷径"（不在同部门/同领域）。如果这 3 条断了，你的信息半径会缩到多小？</span>
   </div>
 </div>
 
 <div class="card">
   <h2>无标度网络</h2>
   <div class="en">Scale-Free Networks</div>
-  <div class="subfield">优先连接 · 幂律度分布 · 枢纽必然</div>
+  <div class="subfield">少数枢纽 · 富者愈富 · 既稳健又脆弱</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>多数真实网络的度分布是<strong>幂律 P(k) ∝ k<sup>−γ</sup></strong>，不是钟形——这意味着不存在"典型节点"，也不存在有意义的"平均度"。<strong>枢纽（hub）不是异常，是数学必然</strong>。这一性质同时带来两个相反命运：<strong>对随机故障极度稳健，对针对性攻击极度脆弱</strong>——同一拓扑既无敌又致命。</p>
+    <p>大多数真实网络里，<strong>少数节点连接极多，绝大多数节点连接很少</strong>——这叫幂律分布。它意味着不存在"平均节点"，<strong>"枢纽"是必然出现的</strong>。这种结构有个奇特性质：<strong>随便坏掉一些节点几乎没影响，但精准打掉那几个枢纽就会崩溃</strong>。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>Barabási &amp; Albert 1999 年 <em>Science</em> "Emergence of scaling in random networks" 提出 BA 模型：网络<strong>持续增长 + 优先连接（preferential attachment）</strong>——新节点更倾向连到已经度高的节点。两个简单规则就自发产生 γ≈3 的幂律。"富者愈富"在 Merton 1968 年称为<strong>马太效应</strong>；Yule 1925 在生物分类学、Simon 1955 在文本词频里已有等价模型，但 BA 把它推到网络。注意：Clauset、Shalizi &amp; Newman 2009 <em>SIAM Review</em> 用严格统计检验后指出，许多"幂律"在实证上被夸大——<strong>重尾真实，纯幂律稀有</strong>，多为对数正态或截断幂律。这并不削弱核心结论：异质度分布是常态，hub 普遍存在。</p>
+    <p>1999 年 Barabási 和 Albert 发现一个简单规律：网络在<strong>不断长大</strong>，而且<strong>新成员更愿意连到已经很热门的节点</strong>（"马太效应"，富者愈富）。两条规则，就自动催生出少数超级枢纽。提醒一句：很多被说成"幂律"的分布，其实更像"重尾"——尾巴拖得很长，但未必是严格幂律。不过结论不变：<strong>异质、少数枢纽主导，是常态</strong>。</p>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>Albert、Jeong &amp; Barabási 2000 <em>Nature</em>："Error and attack tolerance of complex networks"。把互联网 AS 拓扑随机敲掉 <strong>5% 节点</strong>，连通性几乎不变；但<strong>定向攻击度最高 5% 节点，网络直径从 ~4 暴涨到 ~28，几乎崩溃</strong>。同样性质让 SARS-CoV-2 在城市间通过 hub 机场（北京、伦敦、纽约）极速扩散，却又让<strong>少数 superspreader 个体贡献 80% 传播</strong>（Lloyd-Smith et al. 2005 <em>Nature</em>）。这是同一硬币两面：hub 同时是稳健性源泉与最大攻击面。</p>
+    <p>把互联网随机敲掉 5% 的节点，几乎不影响连通；但<strong>专挑连接最多的那 5% 节点打掉，整张网就近乎瘫痪</strong>。同样的道理：疫情靠少数枢纽机场在城市间飞速扩散，也常常是<strong>极少数"超级传播者"贡献了大部分传播</strong>。枢纽既是稳健的来源，也是最大的弱点——这是同一枚硬币的两面。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>学术</strong>中 de Solla Price 1965 早在 BA 前 34 年观测到引用网络幂律；在<strong>经济</strong>中 Pareto 1896 财富分布 80/20，公司规模、城市人口（Zipf）皆同；在<strong>蛋白质相互作用网</strong>中度高蛋白删除致命率显著更高（Jeong et al. 2001）；在<strong>语言</strong>中词频 Zipf 律；在<strong>金融</strong>中银行间敞口网络的 systemically important 节点；在<strong>LLM</strong>中训练 token 频率严重幂律，长尾决定泛化能力；在<strong>GitHub</strong>中 star/contributor 分布；在<strong>注意力经济</strong>中创作者收入分布。</p>
+    <p>财富的 80/20 分布、城市人口、论文被引用次数、词频、银行间的风险敞口、创作者的收入——都是同一种"少数通吃"的形状。连大模型训练数据里的词频，也是这种重尾分布，长尾决定了它的泛化能力。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>幂律分布的实践含义是<strong>选择 hub 的边际收益是非线性的</strong>。你<strong>跟随的前 5 个账号/作者</strong>很可能塑造了 80% 的信息食谱——质量控制点其实只有几个。同理，团队中前 1–2 名 super-connector 决定了大部分非正式信息流动——他们生病/离职的影响远大于职位说明所示。AI 时代的注意力分配比"广撒网"指数级更重要：<strong>选对 hub，等同于把自己置于幂律的高度数端</strong>。育儿场景同样：选社区/学校的 hub 老师，远比"多上课"对孩子的视野扩展更具杠杆。</p>
-    <span class="q">▸ 思考题：列出你过去 30 天信息输入的前 5 个来源——它们占你总输入的多少比例？若主动替换其中 1 个为"反方向 hub"，你的世界模型会被改写多少？</span>
+    <p>因为是幂律，<strong>选对枢纽的回报是非线性的</strong>。你关注的前 5 个账号/作者，很可能就决定了你 80% 的信息来源——质量把关其实只有几个关键点。同样，团队里一两个"超级连接者"承担了大部分非正式信息流，他们的去留影响远超职位说明所写。AI 时代，<strong>选对几个枢纽，胜过广撒网</strong>。育儿也是：选对社区或学校里的关键老师，比单纯"多上课"更能打开孩子的视野。</p>
+    <span class="q">▸ 思考题：列出你最近 30 天信息输入的前 5 个来源，它们占你总输入多少？如果主动换掉其中 1 个为"相反立场的枢纽"，你的认知会被改写多少？</span>
   </div>
 </div>
 
 <div class="card">
   <h2>传染动力学</h2>
   <div class="en">Epidemic Dynamics</div>
-  <div class="subfield">R₀ · 群体免疫阈值 · 拓扑改变临界点</div>
+  <div class="subfield">R₀ · 群体免疫阈值 · 临界点是突变</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>一个简单参数<strong> R₀（基本再生数）</strong>决定流行病、思想、产品是<strong>熄灭还是爆发</strong>。R₀ &gt; 1 → 指数增长不可避免；R₀ &lt; 1 → 自我衰减。临界点不是渐变，是<strong>相变</strong>。更深的洞察：<strong>网络拓扑会改变 R₀ 的临界条件</strong>——在无标度网络上几乎不存在传染阈值，任意小的传染力都能持续传播。这就是社交媒体上信息病毒看似"无门槛"的根源。</p>
+    <p>一个数字——<strong>R₀（基本再生数）</strong>——就决定了一场流行病、一个想法、一款产品是<strong>熄灭还是爆发</strong>。R₀ &gt; 1 就指数增长，R₀ &lt; 1 就自动消退。跨过 1 不是渐变，而是<strong>突变</strong>。更关键的是：<strong>网络结构会改变这个临界点</strong>——在有超级枢纽的网络上，几乎没有"门槛"，这就是社交媒体上信息动不动"病毒式传播"的原因。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>Kermack &amp; McKendrick 1927 年 <em>Proc. Royal Society</em> 提出 SIR 模型：人群分 Susceptible / Infected / Recovered 三池，<strong>R₀ = β/γ</strong>（接触感染率 / 康复率）。<strong>群体免疫阈值 = 1 − 1/R₀</strong>。Pastor-Satorras &amp; Vespignani 2001 <em>PRL</em> 证明：在度分布二阶矩发散的无标度网络上，<strong>传染阈值消失</strong>——hub 节点接力使任意小传染概率都能维持流行。这是经典 SIR 在均匀混合假设下完全错过的现象，也是为什么传统疫情模型在网络时代屡屡失效。</p>
+    <p>R₀ 的意思很直白：一个感染者平均会传染给几个人。1927 年的经典模型把人群分成"易感、感染、康复"三类来推演，由此得出<strong>群体免疫阈值 = 1 − 1/R₀</strong>。麻疹 R₀ 高达 15，所以要约 94% 的人有免疫力才挡得住。而在有枢纽的网络上，哪怕单次传染力很弱，枢纽也会一棒接一棒地传下去，所以"几乎没有门槛"。</p>
   </div>
 
   <div class="viz">
-    <div class="viz-title">▸ R₀ 决定群体免疫阈值（H = 1 − 1/R₀）</div>
+    <div class="viz-title">▸ R₀ 越大，需要的群体免疫越高（阈值 = 1 − 1/R₀）</div>
     <table class="payoff-table">
       <tr><th>传染源</th><th>R₀</th><th>群体免疫阈值</th><th>性质</th></tr>
       <tr><td class="label">季节性流感</td><td>1.3</td><td class="good">~23%</td><td>易控</td></tr>
       <tr><td class="label">COVID-19 原始株</td><td>~2.5</td><td class="reverse">~60%</td><td>难控</td></tr>
-      <tr><td class="label">COVID-19 Omicron</td><td>~8–10</td><td class="hit">~88%</td><td>几乎不可阻断</td></tr>
+      <tr><td class="label">COVID-19 Omicron</td><td>~8–10</td><td class="hit">~88%</td><td>几乎挡不住</td></tr>
       <tr><td class="label">麻疹</td><td>~15</td><td class="hit">~94%</td><td>疫苗覆盖必须极高</td></tr>
-      <tr><td class="label">病毒视频（推算）</td><td>1.05–2</td><td>—</td><td>网络无阈值</td></tr>
     </table>
-    <div class="payoff-note">麻疹的 R₀ 高达 15，意味着<strong>每出现一个未免疫者都几乎必然引爆</strong>——这是反疫苗运动后期社区屡次爆发的数学原因。</div>
+    <div class="payoff-note">麻疹 R₀ 高达 15，意味着<strong>每出现一个没免疫的人，几乎必然引爆</strong>——这是为什么疫苗覆盖一旦下降，麻疹立刻卷土重来。</div>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>2008 雷曼倒闭后，银行间敞口网络的"金融 R₀"突破 1：单点违约通过 hub 银行（如 AIG）级联到全球。Haldane &amp; May 2011 <em>Nature</em> "Systemic risk in banking ecosystems" 用流行病模型重写金融监管框架。在<strong>大脑</strong>中，癫痫发作可建模为神经放电的"R₀ &gt; 1 临界态"。在<strong>市场营销</strong>中 Bass 1969 扩散模型本质是 SIR 变体——产品采纳是被"传染"的。最反直觉的是：网络结构而非个体毒性常决定流行——一个 R₀=0.8 的病毒在均匀人群熄灭，在无标度网络（航空+城市）上却可能存活数月。</p>
+    <p>2008 年雷曼倒闭后，银行之间的"金融 R₀"冲过了 1：一家违约，通过几个枢纽银行级联到全球。同一套模型还能描述大脑癫痫发作、产品被"传染"式采纳。最反直觉的是：<strong>决定爆发的常常是网络结构，而不是病毒本身有多强</strong>——一个本该熄灭的弱病毒，在"航空 + 城市"这种网络里能存活好几个月。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>流行病学</strong>中 SIR/SEIR 是公共卫生标准；在<strong>信息扩散</strong>中 Bass 模型与独立级联（IC）/线性阈值（LT）模型预测病毒营销；在<strong>金融监管</strong>中系统重要性（SIFI）评级基于网络传染；在<strong>神经科学</strong>中临界放电（criticality）与癫痫；在<strong>社会运动</strong>中 Granovetter 1978 threshold model 解释"沉默到爆发"突变；在<strong>谣言与假信息</strong>中 Vosoughi、Roy &amp; Aral 2018 <em>Science</em> 实测 Twitter 假信息扩散 R₀ 比真信息高 6 倍；在<strong>组织变革</strong>中 Rogers 1962 创新扩散曲线。</p>
+    <p>同一套逻辑用在：公共卫生防疫、病毒式营销、金融监管（盯住"系统重要"的银行）、社会运动从"沉默"到"爆发"的突变、谣言传播——研究还发现，<strong>假消息往往比真消息传得更快、更广</strong>。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>团队中"加班文化""焦虑情绪""新工具采纳"传播的本质都是 R₀ 问题：<strong>阻断或激活 2–3 个超级传播者，比影响全员有效得多</strong>。新产品/新流程发布如果起步 R₀ &lt; 1，再多投放都只是线性衰减——必须先把<strong>种子节点的传染力</strong>拉过临界。育儿同理：孩子习惯的"传染"主要来自 2–3 个最亲近同伴，而非班级整体——把精力放在识别这 2–3 个节点，比泛泛"换环境"杠杆大一个数量级。在 AI 产品冷启动里同一原理：找到 5 个 R₀ &gt; 1 的种子用户，远比铺一万曝光重要。</p>
-    <span class="q">▸ 思考题：你正在推动的一件事（习惯/产品/共识），R₀ 大约是几？谁是决定它跨过 1 的 2–3 个种子节点？</span>
+    <p>团队里"加班文化""焦虑情绪""新工具普及"，本质都是 R₀ 问题：<strong>激活或阻断两三个"超级传播者"，比影响所有人有效得多</strong>。新产品如果起步 R₀ &lt; 1，投再多曝光也只是线性衰减——必须先把种子节点的传染力拉过临界。育儿同理：孩子的习惯主要被最亲近的 2–3 个伙伴"传染"，识别这几个节点，比泛泛地"换环境"杠杆大得多。</p>
+    <span class="q">▸ 思考题：你正在推动的一件事（习惯/产品/共识），R₀ 大约是几？谁是决定它能否跨过 1 的那 2–3 个种子？</span>
   </div>
 </div>
 
 <div class="card">
   <h2>中介中心性</h2>
   <div class="en">Betweenness Centrality</div>
-  <div class="subfield">结构洞 · 桥接者权力 · 不可替代性</div>
+  <div class="subfield">结构洞 · 桥接者的不可替代性</div>
 
   <div class="section insight">
     <span class="label">核心洞察</span>
-    <p>节点的"权力"不在于它<strong>有多少连接</strong>，而在于<strong>有多少最短路径必须经过它</strong>。中介中心性（betweenness）高的节点占据<strong>结构洞</strong>（structural hole）——它连接了否则不连通的两个群体，垄断跨域信息流。在多数组织里，最高 betweenness 的人不是 CEO 而是<strong>跨域协调者</strong>——他们 PageRank 低但<strong>不可替代</strong>。</p>
+    <p>一个节点的"权力"，不在于它<strong>连了多少人</strong>，而在于<strong>有多少条最短路径必须经过它</strong>。这种节点占据"结构洞"——它把两个本不相通的群体连起来，垄断了跨群体的信息流。在很多公司里，这样的人不是 CEO，而是<strong>跨部门的协调者</strong>：职位不高，却无可替代。</p>
   </div>
 
   <div class="section">
     <span class="label">背景与机制</span>
-    <p>Linton Freeman 1977 <em>Sociometry</em> "A set of measures of centrality based on betweenness" 给出严格定义：节点 v 的 betweenness = Σ<sub>s≠t≠v</sub> σ<sub>st</sub>(v)/σ<sub>st</sub>，即所有节点对之间最短路径经过 v 的比例之和。Granovetter 1973 <em>AJS</em> "The Strength of Weak Ties" 是其社会学前身——弱连接的价值不在数量，而在<strong>它们位于结构洞之上</strong>。Ronald Burt 1992 <em>Structural Holes</em> 把这一思想搬入组织：<strong>跨结构洞的人不必朋友最多，但信息套利空间最大</strong>。Girvan-Newman 2002 <em>PNAS</em> 用 edge betweenness 反过来检测社区——逐步删除高 betweenness 边，网络自然裂成模块。</p>
+    <p>这个指标 1977 年由 Freeman 提出，算法很直观：数一数全网所有"最短路径"里，有多少条要穿过某个节点。它的思想前身是"弱连接的力量"——一个人价值高，常常不是因为朋友多，而是因为他的关系<strong>正好架在两个圈子之间</strong>。社会学家 Burt 把它总结成一句话：<strong>跨结构洞的人不必朋友最多，但信息套利空间最大</strong>。</p>
   </div>
 
   <div class="section">
     <span class="label">反直觉例子</span>
-    <p>Krebs 2002 <em>Connections</em> "Mapping Networks of Terrorist Cells" 用公开信息重建 9/11 劫机网络：度数最高的不是关键人物，<strong>betweenness 最高的 Mohamed Atta 才是协调者</strong>——这一发现重写了反恐情报方法论。Burt 在 Raytheon 工程师网络（2004 <em>AJS</em>）实测：员工 betweenness 与其想法被采纳概率的相关性 r = 0.41，远高于资历或职位。组织管理中常见陷阱是裁员"看似冗余的协调员"——他们 KPI 不亮眼但 betweenness 极高，离开后跨部门项目周期平均增加 30%–60%（Cross &amp; Parker 2004）。<strong>桥接者的价值在他们离开后才显形</strong>。</p>
+    <p>有人用公开信息还原 9/11 劫机网络，发现关键人物不是"朋友最多"的那个，而是<strong>"中介性"最高的协调者</strong>。组织里常见的陷阱，是裁掉"看起来没产出的协调员"——他们 KPI 不亮眼，但很多跨部门信息都靠他们传递，人一走，项目周期明显拉长。<strong>桥接者的价值，往往在他离开之后才显现</strong>。</p>
   </div>
 
   <div class="section">
     <span class="label">跨学科迁移</span>
-    <p>在<strong>蛋白质组学</strong>中 Yu et al. 2007 <em>PLoS Comp Bio</em> 提出"bottleneck proteins"——高 betweenness 蛋白删除致死率高于高度数蛋白；在<strong>交通</strong>中机场 betweenness 与航班取消的级联影响强相关；在<strong>金融</strong>中清算行的系统重要性主要由 betweenness 决定；在<strong>翻译/跨文化</strong>中跨语言中介人的影响力；在<strong>知识图谱与推荐系统</strong>中桥接 item 是新主题发现入口；在<strong>大脑</strong>中"rich-club"+ 高 betweenness 节点构成 connectome 骨架；在<strong>开源协作</strong>中 maintainer 而非贡献者数量决定项目生存。</p>
+    <p>蛋白质网络里的"瓶颈蛋白"、交通枢纽机场、金融清算行、跨语言的中介人、开源项目的维护者——决定系统命运的，常常不是数量最多的节点，而是<strong>位置最关键</strong>的那个。</p>
   </div>
 
   <div class="section bigcat">
     <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>AI 时代职业护城河的真问题不是"我会多少技能"，而是<strong>我在网络里占据什么位置</strong>。技能 hub 容易被 LLM 抹平（任何单点专长都可替代），<strong>betweenness 极难被替代</strong>——AI 可以模仿专家，但无法继承你跨域多年积累的关系结构与上下文翻译能力。最具杠杆的职业举措常常是：刻意在两群本不交流的人/技术栈/部门之间建立可靠桥。这也是育儿的隐性建议——让孩子有 1–2 个完全跨群体的朋友圈，比"扩大同质社群"对其未来机会更具结构杠杆。Burt 称这类位置为<strong>"信息套利者"</strong>，其本质红利不会因技术替代而消失。</p>
-    <span class="q">▸ 思考题：在你的工作网络里，如果你离开 3 个月，哪 2–3 条信息/合作流会断？这些断点就是你目前真实的 betweenness——它在 AI 时代是上升还是下降？</span>
+    <p>AI 时代职业护城河的真问题，不是"我会多少技能"，而是<strong>"我在网络里占什么位置"</strong>。单点技能容易被 AI 抹平，但<strong>"中介位置"极难替代</strong>：AI 能模仿专家，却无法继承你多年积累的跨域关系和上下文翻译能力。最有杠杆的一步，常常是主动在两群本不交流的人/技术/部门之间，架起一座可靠的桥。育儿同理：让孩子有 1–2 个完全跨群体的朋友，比扩大同质圈子更有结构价值。</p>
+    <span class="q">▸ 思考题：如果你离开 3 个月，哪 2–3 条信息或合作流会断？这些断点就是你真正的"中介价值"——它在 AI 时代是涨还是跌？</span>
   </div>
-</div>
-
-<div class="resources-card">
-  <h3>深入资源</h3>
-  <ul>
-    <li><strong>📰 奠基：</strong> Watts &amp; Strogatz (1998) "Collective dynamics of 'small-world' networks," <em>Nature</em> 393:440-442——小世界模型原始论文</li>
-    <li><strong>📰 奠基：</strong> Barabási &amp; Albert (1999) "Emergence of scaling in random networks," <em>Science</em> 286:509-512——无标度网络与优先连接</li>
-    <li><strong>📖 教材：</strong> Albert-László Barabási, <em>Network Science</em>（Cambridge, 2016；网上免费）——领域权威系统教材</li>
-    <li><strong>📖 教材：</strong> Mark Newman, <em>Networks: An Introduction</em>（Oxford, 2nd ed. 2018）——更偏数学物理视角的标准本</li>
-    <li><strong>📰 论文：</strong> Pastor-Satorras &amp; Vespignani (2001) "Epidemic spreading in scale-free networks," <em>Phys. Rev. Lett.</em> 86:3200——网络拓扑改变流行病阈值</li>
-    <li><strong>📖 经典：</strong> Ronald Burt, <em>Structural Holes: The Social Structure of Competition</em>（Harvard, 1992）——结构洞理论奠基</li>
-    <li><strong>📰 论文：</strong> Granovetter (1973) "The Strength of Weak Ties," <em>American Journal of Sociology</em> 78:1360-1380——弱连接 = 桥接者，被引超 7 万次</li>
-    <li><strong>📰 警示：</strong> Clauset, Shalizi &amp; Newman (2009) "Power-law distributions in empirical data," <em>SIAM Review</em> 51:661-703——多数"幂律"被夸大，何为严格检验</li>
-  </ul>
 </div>
 
 </div>
