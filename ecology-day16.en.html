@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Knowledge: Ecology — Day 16</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#e85a4f 0%,#f7a072 35%,#52b788 70%,#3a86ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e85a4f;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#e85a4f;border:1px solid #f0d2cf}
+.tag.alt{color:#3a86ff;border-color:#d8e0eb}
+.tag.warm{color:#f7a072;border-color:#fbe5d9}
+.tag.green{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #e85a4f}
+.card:nth-of-type(2){border-top-color:#3a86ff}
+.card:nth-of-type(3){border-top-color:#52b788}
+.card:nth-of-type(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#fbe5e2;color:#e85a4f;margin-bottom:18px;letter-spacing:0.5px}
+.card:nth-of-type(2) .subfield{background:#e6eef9;color:#3a86ff}
+.card:nth-of-type(3) .subfield{background:#e3f1e8;color:#52b788}
+.card:nth-of-type(4) .subfield{background:#fbe5d9;color:#f7a072}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#e85a4f;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#fbe5e2;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#e85a4f}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #e85a4f;margin-top:6px}
+.section.bigcat{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072;margin-top:18px}
+.section.bigcat .label{background:#f7a072;color:#fff}
+.section.bigcat p{color:#5a4a3a}
+.section.bigcat .q{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed #f0d2a4;font-style:italic;color:#6b5a3a}
+.viz{margin:22px 0 8px;padding:20px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #d6e8dd}
+.viz-title{font-size:0.78rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
+.pyramid{display:flex;flex-direction:column;align-items:center;gap:6px}
+.pyramid-row{display:flex;align-items:center;gap:12px;width:100%;max-width:520px}
+.pyramid-bar{height:36px;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;color:#fff;font-size:0.78rem;font-weight:700;letter-spacing:0.5px;flex-shrink:0}
+.pyramid-label{font-size:0.8rem;color:#3a3a4a;line-height:1.4}
+.pyramid-label strong{color:#2a2a3a;display:block;font-size:0.85rem}
+.pyramid-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
+.cascade{display:flex;flex-direction:column;gap:6px}
+.cascade-step{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:8px;border-left:3px solid #52b788}
+.cascade-num{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#52b788;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.78rem}
+.cascade-text{font-size:0.86rem;color:#3a3a4a;flex:1}
+.cascade-text strong{color:#2a2a3a}
+.cascade-arrow{text-align:center;color:#52b788;font-size:1.05rem;margin:-2px 0}
+.cycle{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cycle-cell{padding:14px;background:#fff;border-radius:10px;border-top:3px solid #f7a072;position:relative}
+.cycle-cell:nth-child(1){border-top-color:#52b788}
+.cycle-cell:nth-child(2){border-top-color:#3a86ff}
+.cycle-cell:nth-child(3){border-top-color:#f7a072}
+.cycle-cell:nth-child(4){border-top-color:#e85a4f}
+.cycle-stage{font-size:0.85rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
+.cycle-stage span{font-size:0.72rem;color:#6b6b7d;font-weight:500;margin-left:6px}
+.cycle-desc{font-size:0.8rem;color:#5a5a6a;line-height:1.55}
+.cycle-flow{text-align:center;margin-top:14px;font-size:0.85rem;color:#f7a072;font-weight:600;letter-spacing:1px}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+  .pyramid-row{flex-direction:column;align-items:flex-start;gap:4px}
+  .pyramid-bar{width:90%!important;max-width:280px}
+  .cycle{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>Meta Knowledge: Ecology</h1>
+  <div class="meta">May 31, 2026 · Meta Knowledge Daily</div>
+  <div class="day">DAY 16</div>
+  <div class="tags">
+    <span class="tag">Community Ecology</span>
+    <span class="tag alt">Energetics</span>
+    <span class="tag green">System Stability</span>
+    <span class="tag warm">Resilience Theory</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>Ecological Niche</h2>
+  <div class="en">Ecological Niche</div>
+  <div class="subfield">Community Ecology · Competitive Exclusion</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>A niche is not "where you live" — it is the full job description of a species across energy, food, time, and space. Gause's competitive exclusion principle: two species with fully overlapping niches cannot coexist long-term — one goes extinct, or they differentiate. Differentiation is not a business strategy; it is a universe-level survival law.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Hutchinson modeled the niche as an n-dimensional hypervolume — temperature, humidity, food type, active hours, perch height… Every additional dimension of difference expands coexistence space exponentially. Two owls share a forest because one is nocturnal, one diurnal — separated in time. African grazers each eat different layers — giraffes the canopy, zebras tall grass, gazelles young shoots — separated in space. A counter-intuitive detail: the fundamental niche (everything you could occupy in theory) is always larger than the realized niche (what's left after competitors block you). Your real space is the part nobody else has sealed off.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counter-intuitive Example</span>
+    <p>Darwin's finches on the Galápagos diverged into 18 species, with beaks ranging from heavy (cracking seeds) to slender (sipping cactus nectar). All finches, almost no direct competition. In the 1977 drought, seeds became larger and harder; only thick-beaked finches survived to breed — within three years the population's average beak depth grew about 0.5mm. The niche isn't a description. It's a chisel.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-disciplinary Transfer</span>
+    <p>In business it's the "blue ocean" — owning a vertical alone beats 5% of a crowded mainstream. The LLM startups thriving today rarely fight giants on general-purpose models; they occupy niche verticals. T-shaped talent in organizations is a two-dimensional niche (depth × breadth). Urban economics explains why New York supports 800 cuisines: high population density itself expands the dimensions along which niches can split.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT Application + Question</span>
+    <p>As an "AI super-individual," your moat = the composite of dimensions others cannot simultaneously hold (distributed-systems experience × LLM craft × parenting-context insight × Chinese community access). Don't fight pure specialists on any single axis — the battle is won on the combination. Same for parenting: help kids find the rarest combination in their own hypervolume early, instead of pushing them onto the over-saturated "standardized top student" track.</p>
+    <span class="q">▸ Question: List your 5 strongest dimensions. Which 3-of-5 combination is held by fewer than 100 people in your city? Is your current output actually standing on that rare combination?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Trophic Levels &amp; Energy Flow</h2>
+  <div class="en">Trophic Levels &amp; Energy Flow</div>
+  <div class="subfield">Energetics · Lindeman's Law</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Each step up a trophic level transmits only about 10% of available energy (Lindeman 1942). That number isn't a convention — it's the second law of thermodynamics projected onto biology. It dictates why food chains are surprisingly short, why apex predators are rare, why large animals must eat low, and why the real planetary cost of meat is astronomical.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Each energy conversion sheds most of its energy as heat (respiration, metabolism, body temperature). Sunlight fixed by plants → eaten by rabbits passes ~10% → eaten by foxes ~1% → eaten by eagles ~0.1%. So every level up, the supportable biomass drops by an order of magnitude — fewer than 4,000 wild tigers globally, while the insects beneath their feet number in the trillions.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Energy Pyramid (~10% retained per level)</div>
+    <div class="pyramid">
+      <div class="pyramid-row"><div class="pyramid-bar" style="width:60px;background:#e85a4f">0.1%</div><div class="pyramid-label"><strong>Apex predators</strong>Eagle, tiger, orca</div></div>
+      <div class="pyramid-row"><div class="pyramid-bar" style="width:120px;background:#f7a072">1%</div><div class="pyramid-label"><strong>Secondary consumers</strong>Fox, snake</div></div>
+      <div class="pyramid-row"><div class="pyramid-bar" style="width:220px;background:#3a86ff">10%</div><div class="pyramid-label"><strong>Primary consumers</strong>Rabbit, locust</div></div>
+      <div class="pyramid-row"><div class="pyramid-bar" style="width:360px;background:#52b788">100%</div><div class="pyramid-label"><strong>Producers</strong>Grass, algae (solar input)</div></div>
+    </div>
+    <div class="pyramid-note">Every additional "middleman" leaves 1/10 of the original energy — ecology's harshest geometric constraint</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counter-intuitive Example</span>
+    <p>The blue whale, the largest animal ever, eats krill directly — skipping intermediate layers, which is why it can reach 30m. The orca is at a higher trophic level but smaller. 1kg of beef takes ~25kg of feed, backed by ~250kg of photosynthetic output — the hidden geographic footprint of eating meat. The "Mediterranean diet" is, energetically, just stepping down to the second trophic level: a 10× efficiency gain.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-disciplinary Transfer</span>
+    <p>Economics' "every layer of the value chain takes a cut" is the trophic model. The organizational law that "information decays through every manager" is the trophic level of information — and gives flat orgs their theoretical basis. In information theory, entropy degrades irreversibly through lossy re-encoding. Even multi-agent LLM chains lose original intent at every prompt-translation step.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT Application + Question</span>
+    <p>How many trophic levels separate you from the critical business signal? Each extra layer attenuates the real signal by an order of magnitude — a CEO's one hour with a customer is worth roughly 100 internal-summary memos. Conversely: your output, retold through one more middle layer, reaches the audience at 10%. With kids: don't relay key signals via "teacher → child → you" — go to the source yourself.</p>
+    <span class="q">▸ Question: Of your 3 most important decisions last week, how many trophic levels removed was the information source? Would going to the first-hand signal change the conclusion?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Keystone Species</h2>
+  <div class="en">Keystone Species</div>
+  <div class="subfield">Community Ecology · Network Stability</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Ecosystem stability does not depend on the most numerous or the largest species — it depends on a few structural keystones. Lose them, the network collapses. The word comes from the stone at the top of an arch: small in volume, holding up the entire structure. Where a system is truly fragile isn't shown by averages — it's shown by where the keystone sits.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Keystone species typically suppress the most competitive sub-dominant, freeing space for weaker species — and thereby preserving diversity. Robert Paine's 1966 experiment on the Washington coast removed the starfish Pisaster by hand. The mussels it had been suppressing exploded, monopolized the rock face, and 15 other species disappeared within two years. One species' exit took a whole community with it.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Yellowstone Trophic Cascade (31 wolves reintroduced, 1995)</div>
+    <div class="cascade">
+      <div class="cascade-step"><div class="cascade-num">1</div><div class="cascade-text">Reintroduce <strong>31 gray wolves</strong> — the first apex predator in 60 years</div></div>
+      <div class="cascade-arrow">↓</div>
+      <div class="cascade-step"><div class="cascade-num">2</div><div class="cascade-text">Elk no longer linger in river valleys → <strong>overgrazing stops</strong></div></div>
+      <div class="cascade-arrow">↓</div>
+      <div class="cascade-step"><div class="cascade-num">3</div><div class="cascade-text">Willow and aspen recover → <strong>beavers return and build dams</strong></div></div>
+      <div class="cascade-arrow">↓</div>
+      <div class="cascade-step"><div class="cascade-num">4</div><div class="cascade-text">Riverbank soil stabilizes → <strong>rivers stop over-meandering</strong>, geography rewritten</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counter-intuitive Example</span>
+    <p>Wolves changed the shape of the river by suppressing elk — a textbook trophic cascade. 31 animals re-sculpted the geography of an entire national park. Similarly: humans hunt sea otters → urchins explode → kelp forests vanish → fish populations collapse. An unassuming animal holds up an ocean. Keystones aren't always apex predators — African elephants topple trees to make grasslands, fig trees feed an entire rainforest through the dry season. They're ecosystem infrastructure.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-disciplinary Transfer</span>
+    <p>In network science it's a high-betweenness node — the bridge connecting two subgraphs; remove it and the graph fragments. In organizations it's the inconspicuous "translator/buffer" through whom all critical signals flow; lose them, and three months later the organization is bleeding. In business it's the keystone firm (Apple App Store, AWS, Visa) — one outage halts an entire ecosystem. Free societies depend on institutional keystones too: independent courts, free press.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT Application + Question</span>
+    <p>Use 1: identify the keystone in your team or family — likely not the loudest, but the one quietly maintaining psychological safety and translating anomalies for everyone. Protect them first. Use 2: to push something forward, find its keystone node — one right collaborator outweighs 50 random connections. For kids: not everything matters equally. Identify the three rare keystones: critical period × critical person × critical experience.</p>
+    <span class="q">▸ Question: Over the past 3 years, which person/event/decision was the keystone of your life? Without it, what would be missing today?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Adaptive Cycle &amp; Ecological Resilience</h2>
+  <div class="en">Adaptive Cycle &amp; Ecological Resilience</div>
+  <div class="subfield">Resilience Theory · Holling's Panarchy</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Ecosystems aren't steady-state machines — they cycle through 4 phases: growth (r) → conservation (K) → release (Ω) → reorganization (α) — then restart. Holling's adaptive cycle overturns the assumption that healthy systems should be permanently stable: the longer a system is "protected," the more fragility it accumulates, and the more violent the eventual release. Forest fires, financial crises, organizational restructurings — these are mandatory Ω phases, not anomalies.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>r phase: rapid expansion, resources open, high diversity, loose connections. K phase: maturity, resources locked up by a few large players, tight connections, high efficiency — but declining resilience. Ω phase: a perturbation (fire, pest, storm) triggers collapse, locked resources are released. α phase: from the rubble, new species and combinations emerge, reorganize. This cycle nests across time-scales (Holling's panarchy): small-scale collapses are the seeds of large-scale innovation.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Holling Adaptive Cycle (4 Phases)</div>
+    <div class="cycle">
+      <div class="cycle-cell"><div class="cycle-stage">Growth <span>r phase</span></div><div class="cycle-desc">Rapid expansion, open resources, high diversity, loose ties — startups, new love, first year on the job</div></div>
+      <div class="cycle-cell"><div class="cycle-stage">Conservation <span>K phase</span></div><div class="cycle-desc">Mature, efficient, resources locked in, tight ties — but resilience declining, fragility accumulating beneath the surface</div></div>
+      <div class="cycle-cell"><div class="cycle-stage">Reorganization <span>α phase</span></div><div class="cycle-desc">New species and combinations emerge from the rubble, seeding the next r — the innovation window</div></div>
+      <div class="cycle-cell"><div class="cycle-stage">Release <span>Ω phase</span></div><div class="cycle-desc">Perturbation triggers collapse; locked resources released — fires, crises, restructurings, layoffs</div></div>
+    </div>
+    <div class="cycle-flow">r → K → Ω → α → r (cyclical, and nested across scales)</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counter-intuitive Example</span>
+    <p>A century of "total fire suppression" in the American West preserved short-term calm but let understory fuel pile up and old trees monopolize space — culminating in the 2020 California megafires (17,000 km² burned in a single year). The reverse: Aboriginal Australians' "cool burning" practice deliberately triggered small Ωs for thousands of years and their ecosystems never experienced catastrophic collapse. The "hygiene hypothesis" in immunology is structurally identical: an over-sanitized childhood is the immune system's fire-suppression policy.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-disciplinary Transfer</span>
+    <p>In economics it's Schumpeter's creative destruction — protective policy delays necessary small recessions and accumulates into major depressions. In business it's the "success trap" — the more you earn, the more your path is locked in; the longer the K, the harsher the Ω. In finance it's the Minsky moment: stability itself breeds instability. The "midlife crisis" in psychology is, at heart, a refusal signal at the K → Ω transition.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT Application + Question</span>
+    <p>Audit your career, your skill stack, your relationship network — which has been in K phase too long (efficient but rigid)? Schedule deliberate small releases: rewrite your skill priorities every year, swap your collaboration ecosystem every two, periodically hand autopilot tasks to AI and force yourself to learn something new. The cost is far lower than a passive collapse. Parenting: don't engineer a no-Ω environment for your child — small adversity is immune training.</p>
+    <span class="q">▸ Question: Which quadrant — r / K / Ω / α — is your life currently in? If K, will you ignite the next small Ω yourself, or wait for it to come?</span>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
