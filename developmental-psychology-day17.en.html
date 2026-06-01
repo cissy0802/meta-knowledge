@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Knowledge: Developmental Psychology — Day 17</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#e85a4f 0%,#f7a072 35%,#52b788 70%,#3a86ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e85a4f;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#e85a4f;border:1px solid #f0d2cf}
+.tag.alt{color:#3a86ff;border-color:#d8e0eb}
+.tag.warm{color:#f7a072;border-color:#fbe5d9}
+.tag.green{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #e85a4f}
+.card:nth-of-type(2){border-top-color:#3a86ff}
+.card:nth-of-type(3){border-top-color:#52b788}
+.card:nth-of-type(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#fbe5e2;color:#e85a4f;margin-bottom:18px;letter-spacing:0.5px}
+.card:nth-of-type(2) .subfield{background:#e6eef9;color:#3a86ff}
+.card:nth-of-type(3) .subfield{background:#e3f1e8;color:#52b788}
+.card:nth-of-type(4) .subfield{background:#fbe5d9;color:#f7a072}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#e85a4f;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#fbe5e2;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#e85a4f}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #e85a4f;margin-top:6px}
+.section.bigcat{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072;margin-top:18px}
+.section.bigcat .label{background:#f7a072;color:#fff}
+.section.bigcat p{color:#5a4a3a}
+.section.bigcat .q{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed #f0d2a4;font-style:italic;color:#6b5a3a}
+.viz{margin:22px 0 8px;padding:20px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
+.viz-title{font-size:0.78rem;color:#e85a4f;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
+.stage-ladder{display:flex;flex-direction:column;gap:8px}
+.stage-row{display:flex;align-items:stretch;background:#fff;border-radius:8px;overflow:hidden;border-left:3px solid #e85a4f}
+.stage-row:nth-child(2){border-left-color:#f7a072}
+.stage-row:nth-child(3){border-left-color:#52b788}
+.stage-row:nth-child(4){border-left-color:#3a86ff}
+.stage-age{flex-shrink:0;width:88px;background:#fbe5e2;color:#e85a4f;font-weight:700;font-size:0.74rem;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.3;padding:8px}
+.stage-body{padding:10px 14px;flex:1}
+.stage-name{font-size:0.9rem;font-weight:700;color:#2a2a3a;margin-bottom:3px}
+.stage-desc{font-size:0.8rem;color:#5a5a6a;line-height:1.5}
+.stage-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
+.attach-grid{display:grid;grid-template-columns:64px 1fr 1fr;gap:0;background:#fff;border-radius:10px;overflow:hidden;border:1px solid #d8e0eb}
+.attach-cell{padding:12px 10px;border:1px solid #e8e2d8;min-height:88px;display:flex;flex-direction:column;justify-content:center}
+.attach-cell.corner{background:#3a86ff;color:#fff;font-weight:700;font-size:0.66rem;text-align:center;min-height:40px;align-items:center;line-height:1.3}
+.attach-cell.header{background:#e6eef9;color:#3a86ff;font-weight:700;text-align:center;font-size:0.78rem;min-height:40px;align-items:center}
+.attach-cell.row-label{background:#f4f1ed;color:#2a2a3a;font-weight:700;font-size:0.74rem;text-align:center;align-items:center}
+.attach-type{font-size:0.9rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
+.attach-desc{font-size:0.76rem;color:#6b6b7d;line-height:1.5}
+.attach-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+  .attach-grid{grid-template-columns:54px 1fr 1fr;font-size:0.78rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>Meta Knowledge: Developmental Psychology</h1>
+  <div class="meta">June 1, 2026 · Meta Knowledge Daily</div>
+  <div class="day">DAY 17</div>
+  <div class="tags">
+    <span class="tag">Cognitive Development</span>
+    <span class="tag alt">Attachment & Emotion</span>
+    <span class="tag green">Motivation Science</span>
+    <span class="tag warm">Evolutionary Psychology</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>Piaget's Cognitive Stages</h2>
+  <div class="en">Piaget's Cognitive Stages</div>
+  <div class="subfield">Developmental Psychology · Constructivism</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>A child is not a "small adult with less knowledge" — they reason with a logic that is qualitatively different from an adult's. Piaget's most disruptive finding: cognitive development is a wholesale restructuring, not a gradual accumulation of facts. When a child gets something wrong, often they don't "not know the answer" — they're reasoning by a different set of world rules.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>A schema updates through two mechanisms: assimilation (cramming new information into the old frame) and accommodation (the old frame forced to rewrite under conflict). Development proceeds through four stages — the sensorimotor stage knows the world through action and builds "object permanence"; the preoperational stage gains symbolic thought but is egocentric and irreversible; the concrete operational stage masters conservation and logic but still needs concrete objects; the formal operational stage finally handles abstract and hypothetical reasoning. The point isn't that ages are exact, but that the order can't be skipped: each stage is scaffolding for the next.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Four Stages: Restructuring Level by Level</div>
+    <div class="stage-ladder">
+      <div class="stage-row"><div class="stage-age">0–2 yrs<br>Sensorimotor</div><div class="stage-body"><div class="stage-name">Action as cognition</div><div class="stage-desc">Knows the world by grasping and sucking; learns "object permanence" — hidden things still exist</div></div></div>
+      <div class="stage-row"><div class="stage-age">2–7 yrs<br>Preoperational</div><div class="stage-body"><div class="stage-name">Symbols appear, but egocentric</div><div class="stage-desc">Uses language and imagination, yet can't take another's view; thought is irreversible, locked to one dimension</div></div></div>
+      <div class="stage-row"><div class="stage-age">7–11 yrs<br>Concrete</div><div class="stage-body"><div class="stage-name">Logic online, still needs "visible"</div><div class="stage-desc">Masters conservation, classification, reversibility — but reasoning still depends on concrete objects</div></div></div>
+      <div class="stage-row"><div class="stage-age">11+ yrs<br>Formal</div><div class="stage-body"><div class="stage-name">Abstract & hypothetical reasoning</div><div class="stage-desc">Handles "if…then," tests variables systematically, thinks in possibilities, not just facts</div></div></div>
+    </div>
+    <div class="stage-note">The order can't be skipped — each stage is scaffolding for the next</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counter-intuitive Example</span>
+    <p>The conservation task: pour the same amount of water from a short wide glass into a tall thin one, and a child under about six insists "the tall one has more." Their attention is locked to a single dimension (height), unable to coordinate height and width at once. This isn't poor counting — the mental operation of "reversibility" hasn't grown in yet. The three-mountains task is the same: young children can't picture "what this scene looks like from the opposite side." Egocentrism isn't selfishness — it's literally being unable yet to occupy another's viewpoint.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-disciplinary Transfer</span>
+    <p>Assimilation and accommodation are almost exactly machine learning's "overfitting vs. retraining" — a model also forces new data into old weights until error compels an architectural update. In the history of science, Kuhn's "paradigm shift" is collective accommodation at the level of a research community. "Double-loop learning" in organizational learning is accommodation too: not just changing the answer, but the assumptions that produced it. Any system where "incremental updates fail and the underlying structure must be overturned" re-enacts Piaget.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT Application + Question</span>
+    <p>When tutoring a child, "I explained it and they still got it wrong" often isn't a failure to listen — their current cognitive structure can't hold it. Force-feeding becomes rote memory; far better to design situations that create "cognitive conflict" and let them accommodate on their own. The rule holds for adults too: being stuck on a problem may not mean you lack information, but that the underlying schema needs rewriting.</p>
+    <span class="q">▸ Question: Your most recent "aha" moment — did it add a piece of knowledge, or overturn an entire old frame? If the latter, what "cognitive conflict" forced the accommodation?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Attachment Theory</h2>
+  <div class="en">Attachment Theory</div>
+  <div class="subfield">Developmental Psychology · Affective Neuroscience</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>The attachment pattern an infant forms with a primary caregiver internalizes into an "internal working model" — a baseline expectation about "whether I'm worthy of love and whether others are reliable." Decades later it still quietly shapes an adult's intimate relationships, leadership style, and even default ways of coping with stress.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Evolution makes infants innately seek a "secure base." Whether the caregiver responds sensitively and consistently determines the attachment type: stable response → secure (learns "the world is trustworthy, I can explore freely"); needs often ignored → avoidant (learns "rely on yourself, don't count on others"); response intermittent → anxious (learns "I must amplify my needs to be seen"); caregiver who is both source of safety and source of fear → disorganized. The Strange Situation experiment uses brief separation and reunion to precisely distinguish these patterns.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Four Attachment Types (Combination of Two Dimensions)</div>
+    <div class="attach-grid">
+      <div class="attach-cell corner">Anxiety↓<br>Avoidance→</div>
+      <div class="attach-cell header">Low Avoidance</div>
+      <div class="attach-cell header">High Avoidance</div>
+      <div class="attach-cell row-label">Low Anxiety</div>
+      <div class="attach-cell"><div class="attach-type">Secure</div><div class="attach-desc">Comfortable with closeness and independence; seeks help under stress</div></div>
+      <div class="attach-cell"><div class="attach-type">Avoidant</div><div class="attach-desc">Suppresses needs, stresses self-reliance; "won't trouble others"</div></div>
+      <div class="attach-cell row-label">High Anxiety</div>
+      <div class="attach-cell"><div class="attach-type">Anxious</div><div class="attach-desc">Craves closeness yet fears abandonment; seeks constant reassurance</div></div>
+      <div class="attach-cell"><div class="attach-type">Disorganized</div><div class="attach-desc">Wants to approach and flee at once; conflicting strategies</div></div>
+    </div>
+    <div class="attach-note">Two dimensions — avoidance (distance) × anxiety (fear of abandonment) — combine into four working models</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counter-intuitive Example</span>
+    <p>The rhesus monkey experiments overturned the behaviorist dogma that "an infant loves its mother only because she provides food." Baby monkeys would go hungry to cling to a soft cloth "mother," lunging at the cold wire "mother" only for the few seconds of feeding — contact comfort itself is an independent, even more fundamental need. Security is not a by-product of milk. This also explains why materially abundant but emotionally absent caregiving still leaves deep insecurity.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-disciplinary Transfer</span>
+    <p>The "secure base" concept transferred directly into organizational behavior — members with psychological safety dare to explore, take risks, and report bad news, sharing the same root as attachment. Leadership research finds "secure leaders" make teams more willing to surface problems. In human-AI interaction design, "predictable, consistent responses" are precisely the mechanism for building user trust: an AI that works intermittently is like an anxious caregiver, leaving people at a loss.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT Application + Question</span>
+    <p>Attachment patterns are malleable — "earned secure" attachment shows that stable relationships in adulthood can still rewrite the working model. As a parent, a child needs not flawless responses but "good enough" and consistent ones — plus repair after a rupture. The real leverage in parenting is repair, not the absence of mistakes. The same logic applies to teams: trust isn't built on never erring, but on reliable repair after errors.</p>
+    <span class="q">▸ Question: Recall how you react in intimate relationships under stress — do you lean toward "handle it alone, don't trouble anyone" (avoidant), or "seek constant reassurance, fear abandonment" (anxious)? Does that pattern have an isomorph in your leadership and collaboration style?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Growth Mindset</h2>
+  <div class="en">Growth Mindset</div>
+  <div class="subfield">Educational Psychology · Motivation Science</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Your underlying belief about "whether ability can change" itself changes the trajectory of that ability. Those who believe intelligence is fixed treat challenge as a threat to the self and avoid it; those who believe ability is malleable treat setbacks as information and double down. The very same failure gets read as two completely different things by the two mindsets.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Mindset determines how you attribute failure. The fixed type attributes failure to "I'm just not capable," then avoids challenge, hides errors, and is humiliated by effort itself ("having to try means you're not smart enough"). The growth type attributes failure to "wrong strategy, not yet mastered," then seeks feedback and invests more. At the neural level, the brain's error-correction signal after a mistake is stronger in growth-oriented individuals — their brains really do "pay more attention" to errors. The key moderating variable: praising "process," not "talent."</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counter-intuitive Example</span>
+    <p>In a classic study, children praised as "you're so smart" later preferred easier tasks, gave up faster on hard ones, and even misreported their scores; children praised as "you worked hard" were more willing to take on harder challenges. A single word choice in praise reversed behavior. An honest caveat: recent large-scale replications show the average effect of growth-mindset interventions is modest, and clearest for disadvantaged students — it's not magic, but a real lever with boundaries.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-disciplinary Transfer</span>
+    <p>It is the flip side of neuroplasticity — growth mindset is essentially "believing the brain changes," which is itself an established scientific fact. In organizations it maps to the "learning organization" and tolerance for failure: high-reliability organizations encourage proactively reporting errors rather than punishing them. It's especially crucial in the AI era: when skill half-lives shorten sharply, binding your identity tightly to "skills you already have" (fixed type) becomes the biggest career risk.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT Application + Question</span>
+    <p>For a child, praise "you tried three different methods" rather than "you're so smart" — anchor value to process, not talent. For yourself as a super-individual: each time a tool or model iteration forces you to "relearn from zero," that discomfort is the fixed mindset protesting; reframe it as "my plasticity is being called on," and relearning shifts from threat to home turf.</p>
+    <span class="q">▸ Question: The last time you avoided a challenge, was the real reason "it had no value," or "fear of exposing that I'm not capable"? If you redefined that potential failure as "a necessary data-collection run," would your choice change?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Evolutionary Mismatch</h2>
+  <div class="en">Evolutionary Mismatch</div>
+  <div class="subfield">Evolutionary Psychology · Maladaptation</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Our bodies and minds were optimized for the Pleistocene hunter-gatherer environment, yet we're dropped into a modern world that transformed within a few centuries. Many of today's "problems" — obesity, anxiety, addiction, myopia — aren't a broken body, but a once-excellent adaptation stuffed into an environment it never anticipated.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Natural selection is extremely slow; cultural and technological change is extremely fast — the speed gap produces "mismatch." A craving for sugar and fat was a lifesaving setting in a food-scarce ancestral world; with sugar now within arm's reach, it becomes a metabolic disaster. High sensitivity to social evaluation once ensured you weren't expelled from the tribe (then nearly equal to death); on social media it's amplified into chronic anxiety. The dopamine reward-prediction system, meant to drive foraging, gets hijacked by carefully engineered apps into infinite scroll.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counter-intuitive Example</span>
+    <p>The explosion of myopia is textbook mismatch. The genes didn't change, but children's daytime outdoor light exposure plummeted — studies show ample outdoor light significantly suppresses excessive eyeball-axis elongation. Adolescent myopia rates exceed 80% in some East Asian cities; that's not a genetic mutation but an environment swapped out within decades. Likewise, "comfort" itself can harm: we evolved a preference for conserving effort (saving calories was a survival edge); in a world that no longer demands physical labor, that preference leads straight to sedentariness and metabolic disease.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-disciplinary Transfer</span>
+    <p>Mismatch is the master frame for understanding modern illness, linking evolutionary medicine, nutrition, and psychology. It has a dark side in product design — "addictive design" deliberately manufactures mismatch, hijacking ancient circuits. Conversely, understanding mismatch guides "environment design": rather than fighting instinct with willpower, reshape the environment so the default option aligns with health (move snacks out of sight, put running shoes by the door). This shares a root with behavioral economics' "nudge."</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT Application + Question</span>
+    <p>As a technologist, you're both a victim of mismatch (infinite feeds hijacking attention) and a potential manufacturer — when building AI products, are you using ancient circuits to manufacture dependence, or helping people align with their long-term interests? For a child, the strongest intervention is usually not lecturing but reshaping the default environment: outdoor time and the physical accessibility of screens beat any verbal rule.</p>
+    <span class="q">▸ Question: Which "I can't resist" in your life is actually an ancient adaptation misfiring in a modern environment? Rather than grinding against it with willpower, which single environmental variable could you reshape to make the right choice the default?</span>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
