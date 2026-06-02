@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Knowledge: Decision Science — Day 18</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#e85a4f 0%,#f7a072 35%,#52b788 70%,#3a86ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e85a4f;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#e85a4f;border:1px solid #f0d2cf}
+.tag.alt{color:#3a86ff;border-color:#d8e0eb}
+.tag.warm{color:#f7a072;border-color:#fbe5d9}
+.tag.green{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #e85a4f}
+.card:nth-of-type(2){border-top-color:#3a86ff}
+.card:nth-of-type(3){border-top-color:#52b788}
+.card:nth-of-type(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#fbe5e2;color:#e85a4f;margin-bottom:18px;letter-spacing:0.5px}
+.card:nth-of-type(2) .subfield{background:#e6eef9;color:#3a86ff}
+.card:nth-of-type(3) .subfield{background:#e3f1e8;color:#52b788}
+.card:nth-of-type(4) .subfield{background:#fbe5d9;color:#f7a072}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#e85a4f;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#fbe5e2;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#e85a4f}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #e85a4f;margin-top:6px}
+.section.bigcat{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072;margin-top:18px}
+.section.bigcat .label{background:#f7a072;color:#fff}
+.section.bigcat p{color:#5a4a3a}
+.section.bigcat .q{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed #f0d2a4;font-style:italic;color:#6b5a3a}
+.viz{margin:22px 0 8px;padding:20px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
+.viz-title{font-size:0.78rem;color:#e85a4f;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
+.dtable{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;font-size:0.86rem}
+.dtable th,.dtable td{padding:10px 8px;text-align:center;border-bottom:1px solid #e8e2d8}
+.dtable th{background:#fbe5e2;color:#e85a4f;font-weight:700;letter-spacing:0.5px}
+.dtable td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
+.dtable td.hl{background:#fff7f5;color:#e85a4f;font-weight:700}
+.dtable.green th{background:#e3f1e8;color:#52b788}
+.dtable.green td.hl{background:#eafaf0;color:#52b788}
+.dtable.warm th{background:#fbe5d9;color:#f7a072}
+.dtable.warm td.hl{background:#fff3e8;color:#e08a3c}
+.dnote{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+  .dtable{font-size:0.74rem}
+  .dtable th,.dtable td{padding:7px 5px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>Meta Knowledge: Decision Science</h1>
+  <div class="meta">June 2, 2026 · Meta Knowledge Daily</div>
+  <div class="day">DAY 18</div>
+  <div class="tags">
+    <span class="tag">Decision Theory</span>
+    <span class="tag alt">Cognitive Psychology</span>
+    <span class="tag green">Decision Analysis</span>
+    <span class="tag warm">Uncertainty</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>Expected Utility Theory</h2>
+  <div class="en">期望效用理论</div>
+  <div class="subfield">Decision Theory · Axiomatization</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Rational choice maximizes expected <em>utility</em>, not expected money — the same dollar amount carries less subjective value the more you already hold. This seemingly technical correction underpins the entire modern decision framework, from insurance to portfolio theory. Yet it carries a time bomb inside it: real humans systematically violate its axioms.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Von Neumann and Morgenstern laid down four axioms (completeness, transitivity, continuity, independence) and proved that if your preferences satisfy them, there must exist a utility function u such that you "ought to" pick the option with the highest expected utility. The concavity of u captures risk aversion — another 1M means far less to someone already worth tens of millions than to someone with nothing. That is exactly why people buy insurance: trading a certain small loss to erase an uncertain catastrophe.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ The Allais Paradox: the same people flip</div>
+    <table class="dtable">
+      <tr><th>Experiment</th><th>Option A / C</th><th>Option B / D</th><th>Majority pick</th></tr>
+      <tr><td class="label-col">First</td><td>1M for sure</td><td>89% get 1M · 10% get 5M · 1% nothing</td><td class="hl">A (play safe)</td></tr>
+      <tr><td class="label-col">Second</td><td>11% get 1M · 89% nothing</td><td>10% get 5M · 90% nothing</td><td class="hl">D (chase upside)</td></tr>
+    </table>
+    <div class="dnote">The two experiments differ only by removing the shared "89% chance of 1M" from both options. Consistency demands the same choice — yet most people flip, violating the independence axiom outright.</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>The St. Petersburg paradox: a gamble with infinite expected payoff, yet no one will pay more than a few dollars to enter — expected money collapses here, and only a logarithmic utility yields a sane bid. Sharper still is the Allais paradox above: the same people reverse preferences across two structurally equivalent choices, declaring that real preferences cannot be represented by any utility function at all. That crack later gave birth to prospect theory.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>Concave utility is diminishing marginal utility, sharing roots with economic marginalism. In reinforcement learning the agent maximizes "expected return," and reward shaping is essentially designing a utility function for the system. In evolutionary biology, "fitness" — what natural selection optimizes — is life's utility; and risk aversion follows rigorously from "going bust means elimination" under multiplicative growth, the heart of the Kelly criterion.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT APPLICATION + PROMPT</span>
+    <p>When you design an AI product's objective function, you are in fact defining "utility" on the system's behalf. Optimize only for expected clicks and it will diverge from the user's long-run utility — and the spot where the independence axiom is shattered by reality is often exactly where a product begins to do harm. Investing is the same: think in utility rather than dollars and you will naturally decline bets that are "positive expected value but might force you off the table."</p>
+    <span class="q">▸ Prompt: In your last major bet, were you optimizing expected money — or did you seriously price out whether the worst case could knock you out of the game?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Heuristics & Biases</h2>
+  <div class="en">启发式与偏误</div>
+  <div class="subfield">Cognitive Psychology · Bounded Rationality</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>The brain doesn't compute the optimum; it runs "good enough" shortcuts — heuristics. Efficient and reliable in ancestral settings, they fail systematically in modern statistical contexts. Bias is not random noise but a predictable, directional distortion. And because it is predictable, it can be both exploited and hedged against.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Simon proposed "bounded rationality": with limited cognitive resources, people satisfice rather than optimize. Kahneman and Tversky distilled three master heuristics — representativeness (substituting similarity for probability, thus ignoring base rates), availability (substituting ease of recall for true frequency), and anchoring-and-adjustment (grabbing a starting number and adjusting insufficiently). The key word is "systematic": the same person leans the same direction in the same kind of situation, so bias can be predicted, engineered, or deliberately corrected.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>The Linda problem: after describing a philosophy graduate concerned with social justice, most people judge "she is a bank teller and active in the feminist movement" more probable than "she is a bank teller" — violating the most basic law of probability, since a conjunction can never be more likely than one of its parts. The anchoring experiment is even more absurd: spin an obviously random wheel, then estimate the share of African nations in the UN — the larger the wheel's number, the higher the estimate. A knowingly irrelevant number still hijacked judgment.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>The opposing camp offers "ecological rationality": those same fast-and-frugal heuristics (like the recognition heuristic) often beat complex models in environments whose information structure matches them. This maps neatly onto the bias-variance tradeoff in machine learning — simple, high-bias models generalize more stably on small samples. And in AI safety, large language models faithfully inherit the human biases in their training data, amplifying cognitive shortcuts into systematic output tendencies.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT APPLICATION + PROMPT</span>
+    <p>As a decision-maker, the practical move isn't "eliminating bias" (nearly impossible) but reshaping the decision environment to hedge it: a base-rate checklist against representativeness, pre-committed criteria against anchoring. The same applies with kids — a child's fear of the dark is usually availability at work: vivid, terrifying imagery overwhelms the true probability, and switching on a nightlight beats any lecture.</p>
+    <span class="q">▸ Prompt: Recall the last time you snap-judged someone or some plan as "solid." Which shortcut did you use? If you'd been forced to write down the relevant base rate first, would the conclusion survive?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Multi-Attribute Decision Making</h2>
+  <div class="en">多属性决策</div>
+  <div class="subfield">Decision Analysis · Operations Research</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Major decisions are almost never one-dimensional. Decomposing the fuzzy agony of "which house, which offer, which hire" into an explicit "attributes × weights" structure tends to beat holistic intuition — not because the arithmetic is precise, but because it forces hidden tradeoffs onto the table.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Score each option on several attributes (salary, growth, commute, culture…), assign weights to the attributes, and take a weighted sum — this is multi-attribute utility theory (MAUT). Its core value lies not in the final number but in the process: it forces you to surface what you actually care about (the weights), how far apart the options truly are (the scores), and breaks the holistic intuition that gets "hijacked" by a single vivid attribute.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Weighted scoring matrix for two offers</div>
+    <table class="dtable green">
+      <tr><th>Attribute (weight)</th><th>Offer A</th><th>Offer B</th></tr>
+      <tr><td class="label-col">Salary ×0.30</td><td>9 → 2.70</td><td>7 → 2.10</td></tr>
+      <tr><td class="label-col">Growth ×0.35</td><td>6 → 2.10</td><td>9 → 3.15</td></tr>
+      <tr><td class="label-col">Commute ×0.15</td><td>8 → 1.20</td><td>5 → 0.75</td></tr>
+      <tr><td class="label-col">Culture ×0.20</td><td>7 → 1.40</td><td>8 → 1.60</td></tr>
+      <tr><td class="label-col">Weighted total</td><td>7.40</td><td class="hl">7.60</td></tr>
+    </table>
+    <div class="dnote">A's high salary is the eye-catcher most likely to "hijack" intuition, but once weights are applied, B wins on growth — the matrix's value is precisely in forcing that hidden tradeoff out.</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Franklin's "moral algebra": faced with a hard call, fold a page in half, list pros on one side and cons on the other, assign each a weight, cancel them out, and see what remains. Counterintuitively, research shows that for extremely complex multi-attribute choices, "understand fully, then let it incubate unconsciously" can be more satisfying than item-by-item calculation — linear models excel at consistency, intuition at integrating many weak cues. The best strategy is often to cross-check the two: when the computed winner and your gut collide, that conflict is exactly where you should dig.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>It is formally identical to machine learning's "weighted sum of features" (linear regression, the perceptron) — attributes are features, weights are parameters; a recommender's ranking is large-scale multi-attribute decision making. In management it's the "decision matrix" and goal-alignment scoring; in ethics, Bentham's felicific calculus (intensity × duration × probability of pleasure) is humanity's earliest attempt at multi-attribute utility.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT APPLICATION + PROMPT</span>
+    <p>When hiring for a senior role or choosing a tech stack, rather than getting stuck on "this one feels better," first get the team to agree on the weights — that step alone dissolves much of the disagreement — then have everyone score independently. But remember: when the matrix's winner makes your stomach drop, don't ignore that signal; it usually points to a hidden weight you never wrote down.</p>
+    <span class="q">▸ Prompt: For your last agonizing choice, if forced to write out attribute weights, which weight was actually your largest — yet one you'd be embarrassed to say out loud?</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Regret Minimization</h2>
+  <div class="en">后悔最小化</div>
+  <div class="subfield">Decision Theory · Online Learning</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>When probabilities simply cannot be estimated — true uncertainty, not quantifiable risk — "maximize expected utility" breaks down. A different criterion surfaces: not the optimum, but the choice you'll regret least afterward. It shifts the anchor of decision from "predicting the future" to "managing how you will look back on this moment."</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Regret = the payoff of the best choice in hindsight − the payoff of what you actually chose. The minimax-regret criterion picks the option whose worst-case regret is smallest. It leans naturally toward robustness and reversibility: preserve optionality, avoid irreversible blunders. In game theory and online learning, "no-regret" learning (such as the CFR algorithm) lets an agent converge to equilibrium through repeated play — the very engine behind top poker AIs.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Regret matrix: pick the row with the smallest max regret</div>
+    <table class="dtable warm">
+      <tr><th>Option ＼ State</th><th>Market takes off</th><th>Market stalls</th><th>Max regret</th></tr>
+      <tr><td class="label-col">Bet on startup</td><td>0</td><td>50</td><td class="hl">50</td></tr>
+      <tr><td class="label-col">Stay at big firm</td><td>60</td><td>0</td><td>60</td></tr>
+    </table>
+    <div class="dnote">Cells show the "missed/lost" regret in each state. By minimax, pick the startup (50 &lt; 60) — the criterion leans toward preserving upside and avoiding irreversible blunders.</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Bezos's "regret minimization framework": deciding whether to quit and start a company, he didn't compute the odds of success but imagined his 80-year-old self looking back — the regret of "never trying" far outweighed "trying and failing." The conclusion was instantly clear. Psychology backs this: over the long run, people almost always regret what they didn't do rather than what they did, because the regret of inaction is boundless and cannot be rationalized away.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>Online learning's no-regret algorithms are the shared bedrock of modern game AI (solving poker via CFR) and online ad auctions; in investing it maps to "avoiding permanent loss of capital before maximizing returns" — Buffett's first rule. In engineering and complex systems it reincarnates as a robust design philosophy of "preserve redundancy and reversibility," kin to antifragility and the "reversible door vs. one-way door" taxonomy of decisions.</p>
+  </div>
+
+  <div class="section bigcat">
+    <span class="label">BIGCAT APPLICATION + PROMPT</span>
+    <p>Facing high-uncertainty technical bets (which AI framework, which lane to enter), don't pretend you can estimate the odds precisely. Ask two questions instead: which choice is reversible even if it's wrong? And which mistake would knock me out permanently? Rule out the irreversible blunders, then experiment boldly in the reversible space — this is precisely the "super-individual's" meta-strategy for hedging uncertainty.</p>
+    <span class="q">▸ Prompt: The thing you're hesitating over — is it a "reversible door" or a "one-way door"? Imagining yourself looking back in ten years, which choice's regret would be harder to swallow?</span>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
