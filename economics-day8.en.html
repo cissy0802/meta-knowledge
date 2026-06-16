@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta-Knowledge Deep Dive: Economic Principles — Day 8</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#e85a4f 0%,#f7a072 35%,#52b788 70%,#3a86ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e85a4f;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#e85a4f;border:1px solid #f0d2cf}
+.tag.alt{color:#3a86ff;border-color:#d8e0eb}
+.tag.warm{color:#f7a072;border-color:#fbe5d9}
+.tag.green{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #e85a4f}
+.card:nth-of-type(2){border-top-color:#3a86ff}
+.card:nth-of-type(3){border-top-color:#52b788}
+.card:nth-of-type(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#fbe5e2;color:#e85a4f;margin-bottom:18px;letter-spacing:0.5px}
+.card:nth-of-type(2) .subfield{background:#e6eef9;color:#3a86ff}
+.card:nth-of-type(3) .subfield{background:#e3f1e8;color:#52b788}
+.card:nth-of-type(4) .subfield{background:#fbe5d9;color:#f7a072}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#e85a4f;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#fbe5e2;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#e85a4f}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #e85a4f;margin-top:6px}
+.section.english{background:#fbe5e2;padding:14px 16px;border-radius:8px;margin-top:18px}
+.section.english p{font-size:0.92rem;color:#3a3a4a;font-style:italic}
+.section.english .label{background:#e85a4f;color:#fff}
+.section.question{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072}
+.section.question .label{background:#f7a072;color:#fff}
+.section.question p{font-style:italic;color:#5a4a3a}
+.resources{font-size:0.92rem;color:#52b788}
+.nav{text-align:center;margin-top:40px;padding:20px}
+.nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
+.nav a:hover{background:#e85a4f;color:#fff}
+.viz{margin:22px 0 8px;padding:20px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
+.viz-title{font-size:0.82rem;color:#e85a4f;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
+.ca-table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;font-size:0.88rem}
+.ca-table th,.ca-table td{padding:12px 10px;text-align:center;border-bottom:1px solid #e8e2d8}
+.ca-table th{background:#e6eef9;color:#3a86ff;font-weight:700;letter-spacing:0.5px}
+.ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
+.ca-table td.highlight{background:#fff7f5;color:#e85a4f;font-weight:700}
+.ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.goods-grid{display:grid;grid-template-columns:60px 1fr 1fr;gap:0;background:#fff;border-radius:10px;overflow:hidden;border:1px solid #d6e8dd}
+.goods-cell{padding:14px 12px;border:1px solid #e8e2d8;display:flex;flex-direction:column;justify-content:center;min-height:90px}
+.goods-cell.header{background:#e3f1e8;color:#52b788;font-weight:700;text-align:center;font-size:0.82rem;min-height:42px;align-items:center}
+.goods-cell.corner{background:#52b788;color:#fff;font-weight:700;font-size:0.75rem;text-align:center;min-height:42px;align-items:center;line-height:1.3}
+.goods-cell.row-label{background:#f4f1ed;color:#2a2a3a;font-weight:700;font-size:0.82rem;text-align:center;align-items:center}
+.goods-type{font-size:0.92rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
+.goods-example{font-size:0.78rem;color:#6b6b7d;line-height:1.5}
+.lemon-viz{display:flex;flex-direction:column;gap:8px}
+.lemon-step{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:8px;border-left:3px solid #f7a072}
+.lemon-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:#f7a072;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.82rem}
+.lemon-text{font-size:0.85rem;color:#3a3a4a;flex:1}
+.lemon-arrow{text-align:center;color:#f7a072;font-size:1.1rem;margin:-4px 0}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+  .goods-grid{grid-template-columns:50px 1fr 1fr;font-size:0.78rem}
+  .ca-table{font-size:0.78rem}
+  .ca-table th,.ca-table td{padding:8px 6px}
+}
+</style>
+</head>
+<body>
+<a href="https://cissy0802.github.io/" style="position:fixed;top:14px;left:14px;font-size:0.82rem;color:inherit;opacity:0.55;text-decoration:none;padding:6px 12px;border:1px solid currentColor;border-radius:20px;z-index:100;backdrop-filter:blur(6px);transition:opacity 0.2s" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.55">← Hub</a>
+
+<div class="container">
+<header>
+  <h1>Meta-Knowledge Deep Dive: Economic Principles</h1>
+  <div class="meta">May 23, 2026 · Meta Knowledge Daily</div>
+  <div class="day">DAY 08</div>
+  <div class="tags">
+    <span class="tag">Microeconomics</span>
+    <span class="tag alt">International Trade</span>
+    <span class="tag green">Public Choice</span>
+    <span class="tag warm">Information Economics</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>Opportunity Cost</h2>
+  <div class="en">Opportunity Cost</div>
+  <div class="subfield">Microeconomics · Decision Theory</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>The real cost of any choice is not the cash you hand over — it is the next-best alternative you give up. Internalize this and you start to see that "free" is almost always a trap, and that being busy is almost always a hidden loss.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>Systematically introduced by the Austrian economist Friedrich von Wieser in <em>Der natürliche Werth</em> (1889), and used by the Menger school to attack the classical "cost = labor input" theory. Later carried forward by Frank Knight and Ronald Coase, the idea became a cornerstone of modern decision science.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Core Mechanism</span>
+    <p>Resources — time, money, attention — are scarce, so choosing A means forgoing B. Rational decisions are not about asking "how much will this earn me?" but "what else could I have done with the same input?" An investment returning 8% looks fine until you realize the S&amp;P 500 returned 15% in the same window — your true opportunity cost is 7 percentage points, and you are effectively losing money.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Sunk cost and opportunity cost are mirror images. In a classic Cornell experiment, skiers who had paid $100 for a lift ticket went out in bad weather; those who got the same ticket for free skipped the day. The first group treated cash already spent as a reason to act, ignoring that the real cost was what else they could be doing with that time. Daniel Kahneman calls this the "cost blind spot."</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Domain Mapping</span>
+    <p>In <strong>evolutionary biology</strong> it appears as the life-history trade-off — energy spent on reproduction cannot be spent on growth. In <strong>computer science</strong> it shows up as CPU scheduling priority. In <strong>cognitive psychology</strong> it maps to Herbert Simon's "attention is currency." In <strong>management</strong> it underlies Andy Grove's "high-leverage activity" — the opportunity cost of CEO time is so steep that a CEO should only do what no one else can.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Practical Application</span>
+    <p><strong>Classic:</strong> grad school vs. working — two years of tuition plus two years of forgone wages plus lost experience can easily total $100K+. <strong>For a super-individual:</strong> every small project you take on should be priced against "what would compounding three years of AI-stack mastery be worth?" The same calculus applies to parenting — an hour with your child is priced at your peak hourly rate, which is precisely why it is precious.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Further Reading</span>
+    <p class="resources">Russ Roberts, <em>How Adam Smith Can Change Your Life</em> | Tim Harford, <em>The Logic of Life</em> | Buchanan, "Cost and Choice" (1969)</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">English Summary</span>
+    <p>Opportunity cost is the value of the next-best alternative foregone. Every "yes" is implicitly a "no" to everything else. The concept exposes the hidden price of time, attention, and capital — and renders "free" almost always misleading.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Reflection</span>
+    <p>What was the highest-opportunity-cost choice you made in the last 30 days? If you had invested that time in your second option instead, where would you be today?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Comparative Advantage</h2>
+  <div class="en">Comparative Advantage</div>
+  <div class="subfield">International Trade · Division of Labor</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Even if you are better than your counterpart at everything, specialization and trade still leave both of you richer. The "do-it-all" performer should focus on what they are <em>relatively</em> best at — a counterintuitive but provable theorem.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>David Ricardo first proved it rigorously in <em>On the Principles of Political Economy and Taxation</em> (1817), using England, Portugal, cloth, and wine. Paul Samuelson called it "the only proposition in all the social sciences which is both true and non-trivial."</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Core Mechanism</span>
+    <p>Specialization is decided not by absolute productivity but by <strong>opportunity cost</strong>. Even if A is better than B at both X and Y, as long as A's edge in X is <em>larger</em>, A should focus on X and let B do Y — both win. This is opportunity cost generalized: do the thing whose forgone alternative is cheapest.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Ricardo's classic example (hours to produce one unit)</div>
+    <table class="ca-table">
+      <tr><th></th><th>Cloth</th><th>Wine</th><th>Opportunity cost (cloth per wine)</th></tr>
+      <tr><td class="label-col">England</td><td>100</td><td>120</td><td class="highlight">1 wine = 1.2 cloth</td></tr>
+      <tr><td class="label-col">Portugal</td><td>90</td><td>80</td><td class="highlight">1 wine = 0.89 cloth</td></tr>
+    </table>
+    <div class="ca-note">Portugal is more efficient at both (absolute advantage), but its opportunity cost of producing wine is lower → Portugal specializes in wine, England in cloth, and both gain.</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>A top-tier lawyer billing $1,000/hour also happens to be the fastest typist in the office. She should still hire an assistant — even one who is 3× slower at $30/hour. Her hour of typing costs $1,000 in forgone legal work; the assistant's three hours cost $90. The "do-it-all CEO" who insists on touching everything is destroying value.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Domain Mapping</span>
+    <p>In <strong>ecology</strong> it appears as niche differentiation — coexisting species survive by using different resources, not by competing head-to-head. In <strong>cognitive science</strong> it maps to Fodor's modular mind. In <strong>AI systems</strong> it is the theoretical backbone of Mixture-of-Experts architectures. In <strong>team design</strong> it is the case for T-shaped specialists collaborating rather than full-stack generalists.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Practical Application</span>
+    <p><strong>Classic:</strong> global supply chains — the US designs the iPhone, China assembles it, Japan and Korea supply chips. No nation does it all. <strong>For a senior technologist:</strong> the biggest trap is "I'll just do it myself." Identify your superlinear zone — the hour where you out-produce others 10×-and outsource or AI-ify everything else. Same in parenting: you do not need to be the best piano teacher; spend your hours on the irreplaceable — presence and values.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Further Reading</span>
+    <p class="resources">Paul Krugman, <em>The Self-Organizing Economy</em> | Ricardo (1817), Ch. 7 | Matt Ridley, <em>The Rational Optimist</em></p>
+  </div>
+
+  <div class="section english">
+    <span class="label">English Summary</span>
+    <p>Comparative advantage shows that mutually beneficial trade exists even when one party is more productive in everything. What matters is the ratio of opportunity costs, not absolute superiority. This is why specialization plus exchange beats autarky — at any scale, from nations to individuals.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Reflection</span>
+    <p>List five things you can do. Which has the lowest forgone cost (i.e., when you do it, what you give up matters least)? Does your current time allocation match that ranking?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Public Goods &amp; Externalities</h2>
+  <div class="en">Public Goods &amp; Externalities</div>
+  <div class="subfield">Public Economics · Market Failure</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Markets only work for "I pay, I get it alone." Once benefits or costs spill onto third parties (externalities), or once free-riders cannot be excluded (public goods), markets must fail — not because of bad morals, but because of structure. Understand this and you see why governments, laws, and ESG exist.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>Externalities were systematized by Arthur Pigou in <em>The Economics of Welfare</em> (1920), which proposed the "Pigouvian tax." Public goods were defined by Paul Samuelson in 1954 by their non-excludability and non-rivalry. Elinor Ostrom won the 2009 Nobel for showing how community-governed commons can avoid the false choice between market and state.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Core Mechanism</span>
+    <p>An externality exists when costs or benefits of a private decision are not fully borne by the decider. Factory pollution: cost lands on downstream residents. Vaccination: benefit lands on the unvaccinated. With negative externalities, markets over-supply (too much pollution); with positive ones, they under-supply (too little basic research). Pigou's fix: use taxes and subsidies to internalize the spillover.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Four types of goods (Samuelson)</div>
+    <div class="goods-grid">
+      <div class="goods-cell corner">↓Excl.<br>Rival→</div>
+      <div class="goods-cell header">High rivalry</div>
+      <div class="goods-cell header">Low rivalry</div>
+      <div class="goods-cell row-label">Excludable</div>
+      <div class="goods-cell">
+        <div class="goods-type">Private goods</div>
+        <div class="goods-example">Bread, clothing<br>markets supply well</div>
+      </div>
+      <div class="goods-cell">
+        <div class="goods-type">Club goods</div>
+        <div class="goods-example">Paid Netflix, toll roads<br>the paywall world</div>
+      </div>
+      <div class="goods-cell row-label">Non-excludable</div>
+      <div class="goods-cell">
+        <div class="goods-type">Common-pool resources</div>
+        <div class="goods-example">Fisheries, aquifers<br>prone to "tragedy"</div>
+      </div>
+      <div class="goods-cell">
+        <div class="goods-type">Pure public goods</div>
+        <div class="goods-example">Defense, lighthouses, knowledge<br>markets must fail</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Open-source software is the great victory of pure public goods. The Linux kernel is freely usable by anyone — classical theory predicts zero supply, yet it is one of Earth's most critical infrastructures. Eric Raymond's <em>The Cathedral and the Bazaar</em> explains why: reputation incentives, modular collaboration, near-zero marginal cost let public goods emerge bottom-up in the digital era. Ostrom found the same pattern in Nepalese irrigation systems — communities can write rules that head off the tragedy.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Domain Mapping</span>
+    <p>In <strong>evolutionary biology</strong> it is the cooperation problem — why altruism stably exists (Hamilton's rule, reciprocal altruism). In <strong>climate science and policy</strong> it is the coordination problem for global public goods (why the Paris Agreement is hard). In <strong>organizations</strong> it is team free-riding. In the <strong>AI era</strong> it is data externality — your data trained the model; you got no royalty.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Practical Application</span>
+    <p><strong>Classic:</strong> carbon taxes and tobacco taxes are modern Pigovian moves. <strong>For leaders:</strong> watch for organizational externalities — one team's short-term KPI win may quietly destroy long-term value for another (think sales pushing inventory at the expense of customer success). <strong>Parenting:</strong> screen time is a negative externality — your kid gets the iPad now, but the cost in attention decay shows up five years later. House rules are the internalization mechanism.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Further Reading</span>
+    <p class="resources">Elinor Ostrom, <em>Governing the Commons</em> (essential) | Mariana Mazzucato, <em>The Value of Everything</em> | Hardin (1968), "The Tragedy of the Commons"</p>
+  </div>
+
+  <div class="section english">
+    <span class="label">English Summary</span>
+    <p>Markets fail when costs or benefits spill onto non-participants (externalities) or when goods cannot exclude free-riders (public goods). The fix is to internalize spillovers via taxes, property rights, or — as Ostrom showed — community-designed rules. The framework explains why pollution persists and why basic research is underfunded everywhere.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Reflection</span>
+    <p>In your organization or family, what externalities are currently unpriced? Who bears the cost? If you were the rule-designer, which mechanism — pricing, rules, property rights — would you use to internalize them?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Information Asymmetry</h2>
+  <div class="en">Information Asymmetry</div>
+  <div class="subfield">Information Economics · Market Design</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>When two sides of a trade know different things, the market is not merely imperfect — it can collapse entirely. This is why used cars are absurdly cheap, why insurers demand medical exams, why good companies publish audited financials, and why dating relies so heavily on signals. A huge slice of how the world is built exists to defeat information asymmetry.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">History &amp; Origin</span>
+    <p>George Akerlof formalized it in "The Market for Lemons" (1970). The paper was rejected by three top journals — too trivial, too obviously wrong — before being published in the QJE. Akerlof, Spence, and Stiglitz shared the 2001 Nobel for the framework.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Core Mechanism</span>
+    <p>Two canonical problems. <strong>Adverse selection</strong> (asymmetry before trade): the seller knows the car's condition, the buyer doesn't. The buyer only pays the average price, good owners exit, and the market is left with lemons until it collapses. <strong>Moral hazard</strong> (asymmetry after trade): full insurance makes you drive more recklessly because someone else absorbs the loss. Fixes: signals (degrees, warranties), screening (medicals, stress interviews), incentive-compatible contracts (performance bonuses, deductibles).</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ How the lemons market collapses (Akerlof 1970)</div>
+    <div class="lemon-viz">
+      <div class="lemon-step"><div class="lemon-num">1</div><div class="lemon-text">Half the cars are good ($10k value), half are lemons ($4k). Buyers cannot tell them apart.</div></div>
+      <div class="lemon-arrow">↓</div>
+      <div class="lemon-step"><div class="lemon-num">2</div><div class="lemon-text">Buyers offer only the expected price, $7k.</div></div>
+      <div class="lemon-arrow">↓</div>
+      <div class="lemon-step"><div class="lemon-num">3</div><div class="lemon-text">Good owners refuse $7k (it's below true value) and exit the market.</div></div>
+      <div class="lemon-arrow">↓</div>
+      <div class="lemon-step"><div class="lemon-num">4</div><div class="lemon-text">Only lemons remain. Buyers wise up and offer $4k → no one will sell good cars → market collapses.</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Michael Spence's signaling theory: much of education's economic value may come not from what you learned, but from what surviving four years of high-intensity work <em>signals</em> — ability and grit. This explains why drop-out founders (Gates, Jobs) are so admired: they substituted a stronger signal — startup success — for the diploma signal. The AI era is now disrupting all of this: when GPT can write the essay, the degree signal deflates.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Domain Mapping</span>
+    <p>In <strong>evolutionary biology</strong> it is the Zahavi handicap principle — the peacock's tail is a credible health signal precisely because it is costly. In <strong>distributed systems</strong> it is Byzantine fault tolerance — reaching consensus among untrusted nodes. In <strong>AI alignment</strong> it is mechanism design — how to keep an AI trustworthy when you cannot see its real objective. In <strong>social media</strong> it is signal inflation — when everyone posts curated lives, the signal stops working.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Practical Application</span>
+    <p><strong>Classic:</strong> the entire insurance toolkit (deductibles, coinsurance, medicals) is built to defeat moral hazard and adverse selection. <strong>For investors:</strong> be wary of companies whose insiders are selling — they are on the long side of the information gap. <strong>Hiring senior roles:</strong> over-reliance on résumés gets adversely selected by polished candidates; structured case interviews screen far better. <strong>Parenting:</strong> "I finished my homework" is textbook information asymmetry — design mechanisms (spot checks vs. trust-based autonomy) rather than relying on a verbal report.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Further Reading</span>
+    <p class="resources">Akerlof &amp; Shiller, <em>Phishing for Phools</em> | Akerlof (1970), "The Market for Lemons" | Tim Harford, <em>The Undercover Economist</em></p>
+  </div>
+
+  <div class="section english">
+    <span class="label">English Summary</span>
+    <p>When one party knows more than the other, markets can collapse (adverse selection) or actors take hidden risks (moral hazard). Signals, screening, and incentive-compatible contracts are evolved responses. Information asymmetry is why warranties exist, why insurance requires medicals, and why "free" lunches usually aren't.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Reflection</span>
+    <p>In your most recent important decision (hire, partnership, investment, purchase), were you the informed party or the uninformed one? What signals or screens did you use to fight the asymmetry — and did they work?</p>
+  </div>
+</div>
+
+<div class="nav"><a href="index.en.html">← Back to Index</a></div>
+</div>
+<script src="https://cissy0802.github.io/comments.js" defer></script>
+<script src="https://cissy0802.github.io/index-button.js" defer></script>
+<script src="https://cissy0802.github.io/search.js" defer></script>
+<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+</body>
+</html>
