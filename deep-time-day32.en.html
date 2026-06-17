@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Knowledge: Deep Time — Day 32</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#e85a4f 0%,#f7a072 35%,#52b788 70%,#3a86ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e85a4f;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#e85a4f;border:1px solid #f0d2cf}
+.tag.alt{color:#3a86ff;border-color:#d8e0eb}
+.tag.warm{color:#f7a072;border-color:#fbe5d9}
+.tag.green{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #e85a4f}
+.card:nth-of-type(2){border-top-color:#3a86ff}
+.card:nth-of-type(3){border-top-color:#52b788}
+.card:nth-of-type(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#fbe5e2;color:#e85a4f;margin-bottom:18px;letter-spacing:0.5px}
+.card:nth-of-type(2) .subfield{background:#e6eef9;color:#3a86ff}
+.card:nth-of-type(3) .subfield{background:#e3f1e8;color:#52b788}
+.card:nth-of-type(4) .subfield{background:#fbe5d9;color:#f7a072}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#e85a4f;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#fbe5e2;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#e85a4f}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #e85a4f;margin-top:6px}
+.section.question{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072}
+.section.question .label{background:#f7a072;color:#fff}
+.section.question p{font-style:italic;color:#5a4a3a}
+.nav{text-align:center;margin-top:40px;padding:20px}
+.nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
+.nav a:hover{background:#e85a4f;color:#fff}
+.viz{margin:22px 0 8px;padding:20px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #d8e0eb}
+.viz-title{font-size:0.82rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
+.viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
+.clock{display:flex;flex-direction:column;gap:6px}
+.clock-row{display:flex;align-items:center;gap:12px;padding:9px 12px;background:#fff;border-radius:8px;border-left:3px solid #52b788}
+.clock-row.peak{border-left-color:#e85a4f;background:#fff7f5}
+.clock-time{flex-shrink:0;width:74px;font-weight:700;color:#3a86ff;font-size:0.86rem;font-variant-numeric:tabular-nums}
+.clock-row.peak .clock-time{color:#e85a4f}
+.clock-text{font-size:0.86rem;color:#3a3a4a;flex:1}
+.ext-table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;font-size:0.84rem}
+.ext-table th,.ext-table td{padding:10px 8px;text-align:center;border-bottom:1px solid #e8e2d8}
+.ext-table th{background:#e3f1e8;color:#52b788;font-weight:700}
+.ext-table td.evt{text-align:left;font-weight:600;color:#2a2a3a}
+.ext-table td.loss{color:#e85a4f;font-weight:700}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+  .ext-table{font-size:0.74rem}
+  .ext-table th,.ext-table td{padding:7px 4px}
+  .clock-time{width:64px;font-size:0.78rem}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+  <h1>Meta Knowledge: Deep Time</h1>
+  <div class="meta">June 17, 2026 · Meta Knowledge Daily</div>
+  <div class="day">DAY 32</div>
+  <div class="tags">
+    <span class="tag">Geology</span>
+    <span class="tag alt">Geophysics</span>
+    <span class="tag green">Paleontology</span>
+    <span class="tag warm">Cognitive Science</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>Plate Tectonics</h2>
+  <div class="en">板块构造</div>
+  <div class="subfield">Geophysics · Tectonics</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>The "solid ground" beneath your feet — seemingly the most permanent thing there is — is actually the youngest, most changeable part of the entire planet. No patch of seafloor is older than about 200 million years: it is born daily at mid-ocean ridges and swallowed back into the mantle at trenches. This single theory united phenomena once treated as unrelated — earthquakes, volcanoes, mountain-building, deep-sea trenches — into one mechanism: the surface is a thin, floating, flowing crust in constant recycling.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Slow convection in the mantle works like a conveyor belt: magma wells up at mid-ocean ridges, forming new seafloor and pushing the plates apart; at subduction zones, old, cold plates sink back and are recycled. Plate boundaries thus come in three kinds — divergent (new crust), convergent (subduction or collision), and transform (sliding, e.g. the San Andreas Fault). The rigid lithosphere rides on a semi-fluid asthenosphere: the whole looks rock-solid, yet the base flows at a few centimeters a year — about the rate your fingernails grow.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Continental drift was mocked by the mainstream for decades, because no one could explain "what force could push continents." The vindication came from measuring the magnetic orientation of seafloor iron ore: postwar seafloor mapping revealed symmetric magnetic stripes flanking the mid-ocean ridges, faithfully recording repeated reversals of Earth's magnetic field — direct evidence that the seafloor is continuously spreading. A rejected hypothesis was cleared by the magnetization of rocks on the ocean floor. Another twist: the Himalayas are still rising, and you can find marine fossils atop Everest — that summit was once seabed, hoisted nearly 9 km into the sky by the collision of the Indian plate.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>This is the geological version of "an appearance of stability sustained by constant flow underneath." In biology, your skin, bones, and gut lining are perpetually dying off and rebuilding — "the same you" is really a conveyor belt of matter. In economics it maps to Schumpeter's creative destruction: old industries are "subducted" and recycled while new ones emerge at the boundaries. In systems theory it separates static stability from dynamic equilibrium — truly enduring systems are never motionless; they hold their form through constant replacement.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Application for BigCat</span>
+    <p>A tech stack or organization that looks "very stable" is often mid-tectonic-shift. Surface calm frequently means not the absence of stress but stress quietly accumulating at the boundaries, destined to release abruptly as an "earthquake." It pays to deliberately locate the "subduction zones" of your system — the seams between old and new architecture, the friction points of shifting people or responsibilities. That is where stress truly concentrates, far more deserving of monitoring than the seemingly solid interior.</p>
+  </div>
+  <div class="section question">
+    <span class="label">Question</span>
+    <p>In your team or system, which patch of "most solid ground" is actually the youngest and most volatile? Along which boundary is stress quietly building right now, while your attention sits on the calm interior?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Geologic Time &amp; Isotopic Dating</h2>
+  <div class="en">地质年代与同位素测年</div>
+  <div class="subfield">Geochemistry · Chronology</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Humans can say precisely that a rock is "4.4 billion years old" thanks to radioactive decay — a clock that never stops and is unmoved by temperature or pressure. It is precisely this clock that pushed Earth's age from the few thousand years once assumed to about 4.6 billion. It was one of the great blows to human self-importance in the history of science: the entire span of our existence is only the final tick on that clock.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Radioactive isotopes decay at a fixed half-life: the rate at which parent turns to daughter is constant and independent of the environment. Measure the parent-to-daughter ratio in a rock and you can read off how long it has been "locked" until now. Different half-lives suit different ranges — carbon-14's half-life is about 5,730 years, good only for organic material within roughly 50,000 years; uranium-238's is about 4.5 billion years, able to date rocks billions of years old. Choosing the right clock is everything: carbon-14 finds nothing in dinosaur fossils, because it decayed away long ago.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Decay is genuinely random — when any single atom will decay is utterly unpredictable; yet the statistical behavior of vast numbers of atoms is precise enough to serve as a clock. From "individually pure randomness" emerges "collectively pure certainty," which defies intuition by itself. A famous case: in the 19th century the physics authority Lord Kelvin used Earth's cooling rate to rigorously calculate that the planet was only twenty or thirty million years old, and on that basis doubted that Darwin's evolution had enough time. He was wildly wrong — because he didn't know that radioactive decay deep inside the Earth keeps supplying heat. Even the most rigorous calculation loses to an unknown mechanism left out of the model.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>"Random individuals → a determined whole" is the shared core of statistical mechanics, actuarial science, and the law of large numbers — you can't predict when any one person will have an accident, yet you can price an entire population precisely. Half-life-style exponential decay also recurs in drug metabolism, the forgetting curve, and capacitor discharge. And the "measure the parent-daughter ratio to infer elapsed time" idea was borrowed by linguistics — estimating when two languages diverged from the replacement rate of core vocabulary, by logic identical to isotopic dating.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Application for BigCat</span>
+    <p>Any process that "decays at a constant rate" is both a clock and a ruler. User retention, the shelf life of skills and knowledge, the accumulation of technical debt — once you can identify its "half-life," what was once mere intuition becomes quantifiable and comparable. It is especially worth distinguishing which of your knowledge is "carbon-14" (frameworks and APIs that go stale in a few years) and which is "uranium-238" (foundational principles still valid in decades).</p>
+  </div>
+  <div class="section question">
+    <span class="label">Question</span>
+    <p>For your most core skills, what is the half-life of each, in years? Did last year's learning go mostly into "carbon-14" that decays away in a few years, or into "uranium-238" still valid in decades?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>The Big Five Mass Extinctions</h2>
+  <div class="en">五次大灭绝</div>
+  <div class="subfield">Paleontology · Macroevolution</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>The history of life is not a smooth, gradual ascent but a sequence repeatedly punctuated by catastrophic, near-zeroing "resets." More counterintuitive still: each mass extinction is not only destruction but the trigger for innovation — it was precisely the exit of the dinosaurs that handed the stage to mammals, and ultimately to us. Of all species that have ever lived on Earth, more than 99% are extinct — extinction is the norm, persistence the exception.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ The Five Mass Extinctions of the Phanerozoic</div>
+    <table class="ext-table">
+      <tr><th>Event</th><th>Time ago</th><th>Marine species lost</th><th>Leading cause</th></tr>
+      <tr><td class="evt">End-Ordovician</td><td>~445 Myr</td><td class="loss">~85%</td><td>Rapid glaciation, sea-level drop</td></tr>
+      <tr><td class="evt">Late Devonian</td><td>~370 Myr</td><td class="loss">~75%</td><td>Prolonged ocean anoxia</td></tr>
+      <tr><td class="evt">End-Permian</td><td>~252 Myr</td><td class="loss">~96%</td><td>Siberian Traps supervolcanism</td></tr>
+      <tr><td class="evt">End-Triassic</td><td>~201 Myr</td><td class="loss">~80%</td><td>Volcanism &amp; climate upheaval</td></tr>
+      <tr><td class="evt">End-Cretaceous</td><td>~66 Myr</td><td class="loss">~76%</td><td>Asteroid impact (dinosaurs exit)</td></tr>
+    </table>
+    <div class="viz-note">The End-Permian "Great Dying" was the worst known, erasing ~96% of marine species</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Mass extinctions are usually triggered by rapid, planet-wide environmental upheaval: asteroid impact, supervolcanic eruption, ocean anoxia, abrupt cooling or warming. The real killer is often not the magnitude of the change but its <strong>rate</strong> — when the environment shifts faster than species can adapt or migrate, even huge populations cannot adjust in time. Equally large changes that unfolded more slowly in geologic history could be absorbed by life; it was precisely "too fast" that let the End-Permian wipe out about 96% of marine species.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Dinosaurs ruled the Earth for about 160 million years, while humans have existed for only some 300,000 — compress Earth's history into a single year, and humans arrive only minutes before midnight on December 31. Consider the detective work too: the first hard evidence of the asteroid impact was a globally distributed, razor-thin anomaly of iridium — extremely rare in the crust, yet enriched in meteorites. A chemical clue hidden in strata worldwide cracked a case spanning tens of millions of years.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>"Rate decides survival" is a general law: in finance a slow decline can be digested, but a flash crash is lethal; in organizations and ecosystems, anything whose change outpaces the capacity to adapt collapses, almost regardless of the absolute size of the shock. And "adaptive radiation after a mass extinction" — vacated niches igniting an explosion of new species — maps onto the startup wave that follows a technological paradigm shift: each platform-level "extinction" (mobile internet, the arrival of LLMs) clears out the old niches, and a Cambrian-style burst of new species follows immediately.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Application for BigCat</span>
+    <p>An industry's "mass extinction" never really kills off change itself; it kills the players who can't adapt fast enough. At the same time, every platform-level extinction opens up a host of new niches — crisis is opportunity in disguise. Facing a shock like LLMs, it is worth repeatedly asking: am I standing in the "extinction zone" (old niches being cleared out) or the "radiation zone" (new niches just opening)? The answer decides whether to defend your ground or migrate.</p>
+  </div>
+  <div class="section question">
+    <span class="label">Question</span>
+    <p>What was the last "mass extinction" in your field? Which niches did it clear, and who did it give rise to? From which direction is the next "asteroid" most likely to come — and are you standing in the extinction zone or the radiation zone?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>The Sense of Deep Time</h2>
+  <div class="en">深时尺度感</div>
+  <div class="subfield">Cognitive Science · Scale Intuition</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Human intuition evolved for the scale of decades; faced with the "deep time" of millions and billions of years, the brain simply fails. This scale-blindness is the root of many major misjudgments — from underestimating climate change to taking "the Earth is stable" at face value. Mastering deep time is not a gift but a deliberately trained, counterintuitive cognitive skill: learning to "translate" magnitudes beyond a human lifespan into something the mind can grasp.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ 4.6 Billion Years of Earth Compressed into 24 Hours</div>
+    <div class="clock">
+      <div class="clock-row"><span class="clock-time">00:00</span><span class="clock-text">Earth forms</span></div>
+      <div class="clock-row"><span class="clock-time">04:00</span><span class="clock-text">Earliest life (single cells) appears</span></div>
+      <div class="clock-row"><span class="clock-time">21:00</span><span class="clock-text">Complex multicellular life arrives</span></div>
+      <div class="clock-row"><span class="clock-time">21:10</span><span class="clock-text">Cambrian explosion</span></div>
+      <div class="clock-row"><span class="clock-time">22:50</span><span class="clock-text">Dinosaurs appear</span></div>
+      <div class="clock-row"><span class="clock-time">23:40</span><span class="clock-text">Asteroid impact, dinosaurs exit</span></div>
+      <div class="clock-row peak"><span class="clock-time">23:59:59</span><span class="clock-text">All of human civilization, crammed into the final ~1 second</span></div>
+    </div>
+    <div class="viz-note">The entire history we call "long" is just the last tick in Earth's single day</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>The brain perceives magnitude logarithmically, not linearly, and has no direct feel for events beyond a lifetime of experience. We treat "our great-great-grandfather" as ancient, yet on a geological scale that is an instant. To grasp deep time at all, we can only lean on analogical scaffolding — compress 4.6 billion years into a day, a year, or an arm's length, dropping the abstract numbers onto a scale the body can sense. Without the scaffolding, "a million years" and "a billion years" are intuitively almost the same blurry "a very long time."</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Picture Earth's history as the span of your outstretched arms; a single light pass of a nail file across the tip of the farthest finger erases all of human history. Another judgment ruined by deep-time blindness: we intuitively feel coal and oil are "inexhaustible," but they are a one-time deposit of hundreds of millions of years of carbon fixed by life, and humans are burning them up in a few centuries — at roughly a million times the rate they formed. Deep-time blindness leads us to mistake a one-time inheritance for a renewable flow.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>Scale-blindness is a universal cognitive defect: it makes us underestimate exponential growth (the early days of a pandemic, compounding), misjudge the long-tail risk of tiny probabilities, and feel equally numb to the nanometer and the light-year. In investing it causes double blindness — to long-run compounding and to tail risk. In product work it leads people to overlook "slow variables" — brand, debt, trust — things that show no daily change yet quietly compound or collapse over deep time. The essence of deep-time training is mastering "scale translation," a general-purpose skill.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Application for BigCat</span>
+    <p>AI's capability curve, compounding, technical debt, a child's growth — all are battlegrounds where deep-time intuition fails. Deliberately doing "scale translation" (what does this growth rate become in ten years? what happens if this slow variable accumulates for twenty?) lets you see the inflection points others miss to scale-blindness. The same holds for a child: the deep-time compounding of slow variables like reading and habits far outweighs any one-off short-term tutoring — it just shows no daily change, which is exactly why it is so easily ignored.</p>
+  </div>
+  <div class="section question">
+    <span class="label">Question</span>
+    <p>Which "slow variable" in your life is quietly compounding or decaying on a deep-time scale, ignored because it shows no daily change? If you "translated" its twenty-year accumulation to today, what different choice would you make right now?</p>
+  </div>
+</div>
+
+<div class="nav"><a href="index.en.html">← Back to Index</a></div>
+</div>
+</body>
+</html>
