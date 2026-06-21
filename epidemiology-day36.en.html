@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Knowledge: Epidemiology — Day 36</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#e85a4f 0%,#f7a072 35%,#52b788 70%,#3a86ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e85a4f;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#e85a4f;border:1px solid #f0d2cf}
+.tag.alt{color:#3a86ff;border-color:#d8e0eb}
+.tag.warm{color:#f7a072;border-color:#fbe5d9}
+.tag.green{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #e85a4f}
+.card:nth-of-type(2){border-top-color:#3a86ff}
+.card:nth-of-type(3){border-top-color:#52b788}
+.card:nth-of-type(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#fbe5e2;color:#e85a4f;margin-bottom:18px;letter-spacing:0.5px}
+.card:nth-of-type(2) .subfield{background:#e6eef9;color:#3a86ff}
+.card:nth-of-type(3) .subfield{background:#e3f1e8;color:#52b788}
+.card:nth-of-type(4) .subfield{background:#fbe5d9;color:#f7a072}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#e85a4f;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#fbe5e2;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#e85a4f}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #e85a4f;margin-top:6px}
+.section.question{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072}
+.section.question .label{background:#f7a072;color:#fff}
+.section.question p{font-style:italic;color:#5a4a3a}
+.nav{text-align:center;margin-top:40px;padding:20px}
+.nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
+.nav a:hover{background:#e85a4f;color:#fff}
+.viz{margin:22px 0 8px;padding:20px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
+.viz-title{font-size:0.82rem;color:#e85a4f;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
+.ca-table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;font-size:0.88rem}
+.ca-table th,.ca-table td{padding:12px 10px;text-align:center;border-bottom:1px solid #e8e2d8}
+.ca-table th{background:#e6eef9;color:#3a86ff;font-weight:700;letter-spacing:0.5px}
+.ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
+.ca-table td.highlight{background:#fff7f5;color:#e85a4f;font-weight:700}
+.ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.dag{display:flex;flex-direction:column;align-items:center;gap:6px}
+.dag-node{background:#fff;border:1.5px solid #52b788;border-radius:10px;padding:10px 16px;text-align:center;font-weight:700;font-size:0.9rem;color:#2a2a3a;line-height:1.4}
+.dag-node span{font-size:0.74rem;font-weight:500;color:#6b6b7d}
+.dag-node.conf{border-color:#e85a4f;background:#fff7f5}
+.dag-arrows{display:flex;gap:80px;color:#52b788;font-size:0.78rem;font-weight:700}
+.dag-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center}
+.dag-link{font-size:0.78rem;color:#e85a4f;font-weight:700;font-style:italic}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+  .ca-table{font-size:0.78rem}
+  .ca-table th,.ca-table td{padding:8px 6px}
+  .dag-arrows{gap:40px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>Meta Knowledge: Epidemiology</h1>
+  <div class="meta">June 21, 2026 · Meta Knowledge Daily</div>
+  <div class="day">DAY 36</div>
+  <div class="tags">
+    <span class="tag">Epidemiology</span>
+    <span class="tag alt">Transmission Dynamics</span>
+    <span class="tag green">Causal Inference</span>
+    <span class="tag warm">Public Health</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>Basic Reproduction Number R0</h2>
+  <div class="en">Basic Reproduction Number</div>
+  <div class="subfield">Transmission Dynamics · Critical Threshold</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>Whether an infectious disease takes off, how many people must be immune to stop it, and what fraction of the population it ultimately infects are nearly all decided by one number: R0 — the average number of people each infected person passes the disease to in a fully susceptible population. R0=1 is a phase-transition line: below it, outbreaks die out on their own; above it, they explode exponentially. More counterintuitively, R0 is not an intrinsic property of the pathogen — it is a product of pathogen × behavior × environment. The same disease yields two entirely different numbers in a crowded city versus a sparse countryside.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>R0 is roughly the transmission probability per contact × contacts per unit time × duration of infectiousness. Move any of these three dials and R0 shifts: masks lower the first, lockdowns the second, early isolation the third. Once an outbreak unfolds, what actually governs it is the effective reproduction number Rt — as susceptibles are depleted and interventions kick in, Rt slides down from R0. When Rt drops below 1, each generation of cases fails to fully replace itself, and the chain breaks. The entire goal of control, in essence, is to pin Rt firmly below 1.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>R0 measures only "how fast it spreads" and says nothing about "how badly it sickens." Measles has an R0 of 12–18, among the most transmissible diseases known, yet its fatality rate is not high; Ebola's R0 is only about 2, yet it is far more deadly. This explains a public-health paradox: SARS in 2003 was relatively cleanly stamped out precisely because it was "symptoms first, transmission second" — people became infectious only after symptoms appeared, so isolation could sever the chain. COVID was hard to contain because it transmitted before symptoms emerged. With the same R0, controllability can differ enormously. What decides whether a disease can be contained is often not R0 itself, but the timing of the infectious window relative to symptom onset.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>The R0=1 line is the phase-transition and bifurcation point of complex systems — the subcritical state self-decays, the supercritical state runs away exponentially, with no buffer in between. In network science the threshold also depends on structure: in scale-free networks with "super-spreaders," the critical threshold is pulled toward zero, and a few high-degree nodes can ignite the whole system. The same mathematics describes the spread of rumors and viral marketing — a product's "viral coefficient" k is R0 in growth form, and only k&gt;1 snowballs. Financial-risk cascades and open-source forks obey the same critical logic.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">BigCat Application</span>
+    <p>Translating anything that spreads exponentially into an R0 sharpens decisions. A product's viral coefficient, a failure cascading across microservices, technical debt creeping through a codebase — each has its own R0, and you can turn only those three dials: transmission probability (the "infection" rate per contact), contact rate (how densely things are coupled/fanned out), and infectious period (how long a problem is exposed before it's cut off). What usually decides the outcome is the third: shortening "time from detection to isolation" is an order of magnitude cheaper than firefighting after the fact.</p>
+  </div>
+  <div class="section question">
+    <span class="label">Reflection</span>
+    <p>In a system you own, the most recent "cascading" spread — failure, growth, or culture — which dial pushed its R0 up? If you could turn only one to drive it below 1, would you pick transmission probability, contact rate, or infectious period?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Herd Immunity Threshold</h2>
+  <div class="en">Herd Immunity Threshold</div>
+  <div class="subfield">Population Immunity · Emergent Property</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>You don't have to make everyone immune to protect everyone. Once the immune fraction crosses a critical value, transmission chains are repeatedly snapped, and even those who aren't immune are shielded by a "wall of immunity" — even if they themselves have no defenses. This is a property that simply doesn't exist in any individual; it emerges only at the population level. And the height of that wall is set by R0: threshold = 1 − 1/R0. The higher R0, the closer the required immune fraction creeps toward 100%.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>The number of people each case actually infects equals R0 times the fraction of the population still susceptible, s. When the immune fraction is high enough to push s below 1/R0, the realized number drops under 1 and the outbreak can't sustain itself. Immune people do more than protect themselves — they act like "pulled" transmission nodes, leaving the pathogen no continuous foothold across the population network. So the few who cannot be vaccinated (infants, the immunocompromised) are also indirectly protected. This is precisely the public value vaccination creates beyond the individual.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Higher R0 means a taller immunity wall</div>
+    <table class="ca-table">
+      <tr><th>Disease</th><th>R0 (approx.)</th><th>Herd Threshold 1−1/R0</th></tr>
+      <tr><td class="label-col">Measles</td><td>12–18</td><td class="highlight">92%–95%</td></tr>
+      <tr><td class="label-col">Pertussis</td><td>12–17</td><td class="highlight">92%–94%</td></tr>
+      <tr><td class="label-col">COVID (ancestral)</td><td>~3</td><td>~67%</td></tr>
+      <tr><td class="label-col">Ebola</td><td>~2</td><td>~50%</td></tr>
+      <tr><td class="label-col">Seasonal flu</td><td>1–2</td><td>0–50%</td></tr>
+    </table>
+    <div class="ca-note">Measles's 95% threshold means a coverage drop of just a few percentage points can ignite an outbreak — a highly non-linear tipping point</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Herd immunity carries a built-in "free-rider" trap. Once enough people are vaccinated, the unvaccinated are safe too — so from pure individual rationality, the optimal move is "let others get the shot and free-ride on that tiny risk." If everyone reasons this way, coverage slides below threshold and the outbreak returns. This is the public-goods and positive-externality problem of economics: the benefit of immunity spills over to others, while the cost and risk of the shot fall on the individual alone. Measles's high 95% threshold makes it especially fragile — just 5% opting out through free-riding or hesitancy can breach the wall, and the collapse is sudden and non-linear, not a gradual decline.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>This critical line is called the percolation threshold in physics — randomly "remove nodes" from a network, and past a certain fraction the spanning giant cluster abruptly disintegrates and transmission can no longer travel. In social movements it is "critical mass": a new norm or habit self-sustains only once adopted by more than a critical fraction, otherwise it's dragged back to the old equilibrium. In distributed systems it is quorum — only a majority of nodes can lock in consensus. The shared deep structure: connectivity has a sudden tipping point, not a linear gradient.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">BigCat Application</span>
+    <p>Driving a team to adopt a new practice (writing tests, security patches, code-review norms) is building a "cultural immunity wall." Before crossing the critical fraction, early adopters bear the cost alone and are often pushed back by old habits; once past the tipping point, the norm starts to self-reinforce, and it's the non-compliers who look out of place. Key insight: don't expect linear progress — aim to break through that critical fraction in a concentrated push. Likewise, if patch coverage stalls below threshold, the whole system remains exposed to a single "outbreak."</p>
+  </div>
+  <div class="section question">
+    <span class="label">Reflection</span>
+    <p>For a habit you want to root in your organization, roughly what's its current "vaccination rate"? Has it crossed the self-sustaining tipping point, or is it still propped up by a few and liable to regress at any moment?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Confounding &amp; Causation</h2>
+  <div class="en">Confounding &amp; Causation</div>
+  <div class="subfield">Causal Inference · Bias</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>"Correlation isn't causation" is so deadly because a third variable you never saw — a confounder — can nudge two utterly unrelated things at once, conjuring a tight spurious correlation, and can even flip the true direction of cause and effect. The whole craft of epidemiology is squeezing trustworthy causation out of contaminated observational data in a world where experiments are often impossible. Behind that craft sits a humbling recognition: the vast majority of associations the eye perceives are not causal.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>A confounder C influences both the "exposure" X and the "outcome" Y, so a non-causal association appears between X and Y. The weapons against it: randomization (assign people to groups at random, severing the path "C decides who is exposed" — the core power of an RCT), stratification, regression adjustment, matching. But there's an iron rule: you can only adjust for measured confounders; unmeasured ones leave you helpless. More subtly, you must distinguish three roles — a confounder (must adjust), a mediator (lies on the causal path, must not adjust, or you erase the real effect), and a collider (adjusting for it actually injects bias). Adjust for the wrong one and you're worse off than not adjusting at all.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ How a confounder forges a correlation</div>
+    <div class="dag">
+      <div class="dag-node conf">Family socioeconomic status<br><span>confounder C</span></div>
+      <div class="dag-arrows"><span>↙ causes</span><span>↘ causes</span></div>
+      <div class="dag-row">
+        <div class="dag-node">Eats breakfast<br><span>exposure X</span></div>
+        <div class="dag-link">⇠ looks like X→Y, but is an illusion ⇢</div>
+        <div class="dag-node">Good grades<br><span>outcome Y</span></div>
+      </div>
+    </div>
+    <div class="ca-note">C pushes up both X and Y, creating the illusion that "breakfast causes good grades"; adjust for C and the association may shrink sharply or vanish</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>The most famous wreck is hormone replacement therapy. Large observational studies once showed that postmenopausal women on hormone therapy had less heart disease, and medicine widely recommended it on that basis. But later large randomized controlled trials reached the opposite conclusion: hormone therapy in fact raised cardiovascular risk. Where did the difference come from? Women who took hormone therapy were already healthier, of higher socioeconomic status, and more health-conscious — it was this "healthy user bias," not the hormones, that manufactured the "heart-protecting" illusion. Only randomization, by breaking the confounding, surfaced the truth. That reversal rewrote clinical guidelines and became the most expensive lesson in "observed correlation ≠ causation."</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>This is the essence of Simpson's paradox — an association reversing after stratification is exactly confounding at work. In machine learning it's called "shortcut learning" or spurious correlation: a model treats the grassy background of a photo as a feature of "cow," because in the training data cows always stand on grass — the background is the confounder, and the model collapses the moment the scene changes. It's also the fundamental reason A/B tests must randomize: randomization is humanity's strongest invented tool for wiping out unknown confounders in bulk. Economists, in turn, use instrumental variables and natural experiments to approach causation where randomization is impossible.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">BigCat Application</span>
+    <p>The deepest pit in data-driven decisions is buried here. "Users who used the new feature retain better" — almost certainly confounded: already-active users both love trying new things and tend to retain; the feature may not be the cause. "Teams using our AI tools are more productive" likewise — it may just be that strong teams are more willing to try new tools. The only reliable fix is to manufacture randomness: A/B experiments, holdout control groups, rather than drawing conclusions from observed correlations. Making "is this correlation or causation?" the default interrogation of every data conclusion blocks the great majority of self-deception.</p>
+  </div>
+  <div class="section question">
+    <span class="label">Reflection</span>
+    <p>Recall a recent judgment you made from data — "because A, therefore B." Is there a third variable you didn't control that might be driving both A and B at once? To falsify it, what randomized control could you design?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Disease Surveillance</h2>
+  <div class="en">Disease Surveillance</div>
+  <div class="subfield">Public Health · Early Warning</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>The first line of defense against an infectious disease is neither vaccine nor drug, but the ability to "see" — a surveillance network that catches anomalies at the earliest stage of exponential growth. In an exponential process, time is everything: detecting a week earlier can cut control costs by an order of magnitude. Surveillance is, at its core, a race between our lagging perception and the pathogen's exponential speed — and since human intuition systematically underestimates exponentials, we start that race already behind.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Surveillance splits into passive (waiting for clinicians to report) and active (sentinel hospitals, population sampling, wastewater testing, symptom search). A system is judged on several dimensions: timeliness, sensitivity, specificity, representativeness. Two difficulties dominate. First, the "under-reporting pyramid" — confirmed cases are just the tip of the iceberg, with a mass of unseen, untested infections beneath. Second, reporting delay compounded by exponential growth: the number you see today is really the echo of an outbreak generation one or two weeks ago; by the time the data "looks bad," the real scale has already multiplied several-fold. The value of syndromic surveillance and sentinel networks lies in compressing that lag as much as possible.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Wastewater surveillance can detect a rising pathogen concentration days to a week before clinical cases appear — because infected people often start shedding the pathogen into the sewers before they seek care, even before symptoms. During COVID, wastewater signals consistently led the confirmed-case curve in many places, becoming a precious leading indicator. Another counterintuitive point: the more testing you do, the higher "confirmed cases" naturally climb, which can manufacture the illusion of a "worsening outbreak" — the very act of measuring changes the number measured. So judging the true trend means looking at test positivity and hospitalizations, metrics less swayed by testing volume, rather than absolute case counts. The early loss of control in SARS and COVID was largely caused by surveillance lag: a two-week blind spot in exponential growth is enough to miss the entire window for control.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>This is observability in distributed systems — the whole point of monitoring and alerting is to catch the signal early in the exponential phase of a cascading failure, not to do a postmortem after the system has fully collapsed. The under-reporting pyramid maps to "user-reported incidents are only the tip; beneath lies a mass of silent affected requests"; wastewater surveillance maps to leading indicators (a faint uptick in error rate or queue depth). Information theory supplies the underlying language: signal-to-noise ratio, sampling rate, detection timeliness. One iron rule runs through every field — facing any exponential process, the lag of perception is enemy number one.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">BigCat Application</span>
+    <p>Designing production monitoring as if it were disease surveillance instantly upgrades your thinking. SLOs and alerts are your sentinel network; they should sound before a failure spreads exponentially, not after users (the clinical cases) flood in with complaints. Ask yourself: do I have a "leading indicator" that twitches before the collapse becomes visible? Or only lagging indicators that tell me once the iceberg has already surfaced? The most valuable is often a single low-latency probe that, like a "wastewater signal," leads user-perceived symptoms.</p>
+  </div>
+  <div class="section question">
+    <span class="label">Reflection</span>
+    <p>When your system (or team, or product) goes wrong, do you get a week's warning from leading indicators, or only learn of it after "clinical cases" — user complaints — arrive? Which metric could become your "wastewater surveillance"?</p>
+  </div>
+</div>
+
+<div class="nav"><a href="index.en.html">← Back to Index</a></div>
+</div>
+</body>
+</html>
