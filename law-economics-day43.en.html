@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Knowledge: Economic Analysis of Law — Day 43</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#e85a4f 0%,#f7a072 35%,#52b788 70%,#3a86ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e85a4f;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#e85a4f;border:1px solid #f0d2cf}
+.tag.alt{color:#3a86ff;border-color:#d8e0eb}
+.tag.warm{color:#f7a072;border-color:#fbe5d9}
+.tag.green{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #e85a4f}
+.card:nth-of-type(2){border-top-color:#3a86ff}
+.card:nth-of-type(3){border-top-color:#52b788}
+.card:nth-of-type(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#fbe5e2;color:#e85a4f;margin-bottom:18px;letter-spacing:0.5px}
+.card:nth-of-type(2) .subfield{background:#e6eef9;color:#3a86ff}
+.card:nth-of-type(3) .subfield{background:#e3f1e8;color:#52b788}
+.card:nth-of-type(4) .subfield{background:#fbe5d9;color:#f7a072}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#e85a4f;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#fbe5e2;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#e85a4f}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #e85a4f;margin-top:6px}
+.section.question{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072}
+.section.question .label{background:#f7a072;color:#fff}
+.section.question p{font-style:italic;color:#5a4a3a}
+.viz{margin:22px 0 8px;padding:20px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
+.viz-title{font-size:0.82rem;color:#e85a4f;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
+.ca-table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;font-size:0.88rem}
+.ca-table th,.ca-table td{padding:11px 10px;text-align:center;border-bottom:1px solid #e8e2d8}
+.ca-table th{background:#e6eef9;color:#3a86ff;font-weight:700;letter-spacing:0.5px}
+.ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
+.ca-table td.highlight{background:#fff7f5;color:#e85a4f;font-weight:700}
+.ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.goods-grid{display:grid;grid-template-columns:96px 1fr 1fr;gap:0;background:#fff;border-radius:10px;overflow:hidden;border:1px solid #d6e8dd}
+.goods-cell{padding:14px 12px;border:1px solid #e8e2d8;display:flex;flex-direction:column;justify-content:center;min-height:104px}
+.goods-cell.header{background:#e6eef9;color:#3a86ff;font-weight:700;text-align:center;font-size:0.82rem;min-height:42px;align-items:center}
+.goods-cell.corner{background:#3a86ff;color:#fff;font-weight:700;font-size:0.7rem;text-align:center;min-height:42px;align-items:center;line-height:1.3}
+.goods-cell.row-label{background:#f4f1ed;color:#2a2a3a;font-weight:700;font-size:0.78rem;text-align:center;align-items:center}
+.goods-type{font-size:0.9rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
+.goods-example{font-size:0.78rem;color:#6b6b7d;line-height:1.5}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+  .goods-grid{grid-template-columns:74px 1fr 1fr;font-size:0.78rem}
+  .ca-table{font-size:0.78rem}
+  .ca-table th,.ca-table td{padding:8px 6px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>Meta Knowledge: Economic Analysis of Law</h1>
+  <div class="meta">June 28, 2026 · Meta Knowledge Daily</div>
+  <div class="day">DAY 43</div>
+  <div class="tags">
+    <span class="tag">Law &amp; Economics</span>
+    <span class="tag alt">Institutional Economics</span>
+    <span class="tag green">Public Choice</span>
+    <span class="tag warm">Property Theory</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>Coase Theorem</h2>
+  <div class="en">科斯定理</div>
+  <div class="subfield">Law &amp; Economics · Property Theory</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>For externalities like pollution, the standard answer used to be "have the government tax the polluter." Coase proved something counterintuitive: as long as property rights are clear and bargaining is costless, it makes no difference who the law assigns the right to — both sides will negotiate their way to the same efficient outcome. The real insight isn't "it doesn't matter who gets the right" but its mirror image — in reality transaction costs are never zero, so how the law allocates rights directly determines social efficiency. The role of law thereby shifts from "punishing wrongdoers" to "minimizing transaction costs."</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Coase first exposes an overlooked fact: externalities are <strong>reciprocal</strong> — a factory polluting a river harms the fishermen, but forcibly shutting the factory harms the factory. The question shouldn't be "who is right" but "which arrangement creates more total value." In a zero-transaction-cost world the initial assignment is irrelevant: like water flowing downhill, the market shifts the right to whoever values it most, and the outcome is always efficient. But the real world is full of bargaining costs, information costs, holdout extortion, and free-riding. Once transaction costs are high enough to block negotiation, the initial allocation gets "locked in" and can no longer be corrected by trade. So the law's wise move is to pre-assign the right to the party most likely to use it efficiently, or who can avoid the harm at lowest cost.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ Train sparks igniting crops: same result either way</div>
+    <table class="ca-table">
+      <tr><th>Legal rule</th><th>Actual action after bargaining</th><th>Efficient?</th></tr>
+      <tr><td class="label-col">Railway liable</td><td>Railway fits a spark guard ($50) rather than pay crop damage ($100)</td><td class="highlight">✓</td></tr>
+      <tr><td class="label-col">Farmer bears loss</td><td>Farmer pays railway to fit the guard ($50) rather than absorb the loss ($100)</td><td class="highlight">✓</td></tr>
+    </table>
+    <div class="ca-note">Guard $50 &lt; crop loss $100 &lt; shutdown $1000. Whoever gets the right, the lowest-cost option (the guard) always wins — provided the two sides can bargain costlessly</div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Coase (1991 Nobel laureate) cited an English case of train sparks igniting trackside crops: intuitively you'd ban the sparks, but if a guard costs $50, crop loss is $100, and shutting the line costs $1000, fitting the guard is plainly most efficient — and whether the law makes the railway pay or the farmer bear the loss, the market converges on it. More subversive is the bees story: economists long used orchard pollination as the textbook case of an "un-priceable externality," until Steven Cheung's 1973 fieldwork in Washington State found that growers and beekeepers had long used contracts to precisely trade pollination and nectar rights — the "un-internalizable" externality had been internalized by the market decades earlier.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>In <strong>distributed systems</strong>, the efficiency of resolving resource and lock conflicts hinges on "coordination cost" — the technical incarnation of transaction cost; in <strong>multi-agent AI</strong>, mechanism design lets agents "trade" their way to a global optimum; in <strong>biology</strong>, symbiosis is essentially a property-rights trade between species (the cleaner-fish/host "contract"); and Coase himself, in "The Nature of the Firm," gives the deepest transfer — firms exist precisely because market transaction costs are too high, so they internalize transactions into hierarchical commands. Markets and firms are two ends of the same transaction-cost scale.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">For BigCat</span>
+    <p>When two teams fight over the same compute or headcount, rather than have a manager rule on "who gets it," first ask: who creates more value with it? And is the coordination cost between them so high they can't trade on their own? If coordination cost is low, an internal "trading" or swap mechanism often beats administrative allocation — you only need to set the initial right clearly and let them negotiate the rest.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question</span>
+    <p>The last resource conflict you settled by "administrative ruling" — would it have turned out better if you'd given both sides a clear initial right and let them bargain? What exactly is the "transaction cost" that's really blocking their negotiation?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Property Rules &amp; Liability Rules</h2>
+  <div class="en">财产规则与责任规则</div>
+  <div class="subfield">Tort Law · Remedy Design</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>The same "right" can be protected by the law in two ways, with wildly different effects. <strong>Property rule</strong>: no one can take it without your consent — to get it, they must negotiate a price, and you have veto power. <strong>Liability rule</strong>: someone may take it without your consent, but must afterward pay you an "objectively assessed price." Grasp the logic of choosing between these two modes of protection and you understand why some rights are sacrosanct while others can be "seized first, paid for later."</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>The choice, again, turns on transaction costs. When they're low and the parties can easily bargain, use a <strong>property rule</strong> — let the market price it and respect the holder's subjective valuation. When they're high and negotiation is near-impossible or hostage to holdouts, use a <strong>liability rule</strong> — let a court or third party price it objectively, forcing past the impasse. Your house is protected by a property rule: a developer who wants it must make an offer, and you can refuse. But the government taking land for a highway uses a liability rule (eminent domain) — you can't refuse, but you get statutory compensation, because a road must be negotiated with thousands of households and any single holdout could extort the whole project. There's a third class, <strong>inalienability rules</strong>: some rights you can't even sell yourself (organs, votes, personal liberty), protecting deeper social values.</p>
+  </div>
+
+  <div class="viz">
+    <div class="viz-title">▸ The Calabresi–Melamed Four Quadrants</div>
+    <div class="goods-grid">
+      <div class="goods-cell corner">Who holds ↓<br>How protected →</div>
+      <div class="goods-cell header">Property rule</div>
+      <div class="goods-cell header">Liability rule</div>
+      <div class="goods-cell row-label">Victim<br>holds</div>
+      <div class="goods-cell">
+        <div class="goods-type">Consent first</div>
+        <div class="goods-example">Want to pollute? Buy out the victim's right; they can refuse (injunction)</div>
+      </div>
+      <div class="goods-cell">
+        <div class="goods-type">Pay and continue</div>
+        <div class="goods-example">May keep harming, but must pay statutory damages (Boomer case)</div>
+      </div>
+      <div class="goods-cell row-label">Injurer<br>holds</div>
+      <div class="goods-cell">
+        <div class="goods-type">Buy the stop</div>
+        <div class="goods-example">Victim must pay to make the injurer stop</div>
+      </div>
+      <div class="goods-cell">
+        <div class="goods-type">Compensate, then stop</div>
+        <div class="goods-example">Victim can force a stop but must compensate (Spur case)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>The framework reveals a counterintuitive possibility: the law can "rule in your favor yet let the other side keep harming you — as long as they pay." New York's 1970 Boomer v. Atlantic Cement is exactly this: the court found the cement plant's dust violated the neighbors' rights and, under a property rule, should have ordered the plant shut — but the judge didn't, because the social cost of closing a regional anchor employer was too great, so it ordered the plant to pay "permanent damages" and keep operating. That is protecting a right via a liability rule: the right is confirmed, but cashed out in money rather than a veto.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>In <strong>data and privacy</strong>, whether personal data gets a property rule (use requires authorization) or a liability rule (usable but compensable) is the heart of today's AI training-data disputes; in <strong>product design</strong>, "on by default + opt-out" is essentially liability-rule thinking; in <strong>animal behavior</strong>, the "prior-possessor advantage" in territorial disputes is a low-cost property-rule substitute; in <strong>contract law</strong>, agreeing on liquidated damages downgrades "you must perform" from a property rule to a liability rule.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">For BigCat</span>
+    <p>In architecture or product decisions, deliberately distinguish two kinds of boundary: which are "property-rule boundaries" — never to be touched without consent, like core user privacy or write access to production; and which are "liability-rule boundaries" — act first, compensate if something breaks, like canary releases or one-click-rollback experiments. Make every boundary a property rule and the team can't move; make every one a liability rule and disaster is only a matter of time. The art of design is putting the knife in the right place.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question</span>
+    <p>In your system or team, which boundary has been mis-set as a property rule (meant to be flexible, yet jamming everyone), and which as a liability rule (meant to be untouchable, yet casually breached and patched after the fact)?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>The Origins of Law</h2>
+  <div class="en">法律的起源</div>
+  <div class="subfield">Comparative Law · Institutional Economics</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>How developed a country's capital markets are today, and how strong its property protection is, can be partly predicted by a single "legal gene" inherited centuries ago: whether it took on English common law or Continental civil law. Law is never a neutral tool — its tradition quietly locks a society's economic destiny along a historical path. This is among the most striking evidence for institutional path dependence.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>A body of comparative research systematically compared dozens of countries and found a robust pattern: common-law systems (Britain and its former colonies) tend to give investors and creditors stronger protection, a more independent judiciary, and more developed capital markets; civil-law systems (especially the French family) lean more on state regulation, with relatively weaker property protection. The root lies in how each "grows": common law evolves slowly through individual precedents handed down by dispersed judges, making it naturally closer to markets and better at constraining government; civil law is designed top-down by central legislators as codified statute, emphasizing state control. Colonial history transplanted this "legal gene" worldwide, and it still shapes national trajectories. (The theory is contested — critics note that culture, geography, and other confounds aren't ruled out — but that "legal traditions have durable economic consequences" is now consensus.)</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>Hayek offers a deeper insight: common law — "accumulated through precedent, designed by no one" — is a kind of <strong>spontaneous order</strong>. Like language and market prices, it is the product of human action but not of human design. This explains a counterintuitive phenomenon: trying to rationally design an entire legal system at once with a "perfect code" often handles real-world complexity worse than law grown slowly over centuries of cases. Legal wisdom is dispersed across countless concrete cases, beyond any central legislator's full grasp — strikingly parallel to AI, where capability emerges from data rather than being hard-coded by rules.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>In <strong>software engineering</strong>, top-down "grand design" architecture vs. a bottom-up evolved codebase maps neatly onto civil law vs. common law; in <strong>complex systems</strong>, spontaneous order is the canonical case of emergence; in <strong>evolutionary biology</strong>, the genome is like a "case library" — the accumulated encoding of historical trial-and-error, not a rationally designed blueprint; in <strong>large models</strong>, capability emerges from a vast corpus of data "precedents" and likewise can't be exhaustively hand-coded as explicit rules.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">For BigCat</span>
+    <p>When setting team rules, distinguish what calls for "statute" — hard-coded mandatory norms like safety red lines and coding standards — from what calls for "case law" — letting the team form conventions through specific cases first, then codifying once mature. Trying to "codify" every process in a new venture's early days is often the very source of rigidity: much wisdom can only grow out of cases, and legislating too early kills it.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question</span>
+    <p>Your team's most effective rule — was it "designed," or did it "grow" out of practice and get ratified afterward? Could some of today's mess actually be something that should be left to form a convention first, where you legislated too early?</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Regulatory Capture</h2>
+  <div class="en">监管俘获</div>
+  <div class="subfield">Public Choice · Political Economy</div>
+
+  <div class="section insight">
+    <span class="label">Core Insight</span>
+    <p>The point of a regulator is to have the government, on behalf of the public, rein in business. But George Stigler revealed a disquieting regularity: regulators are often "captured" by the very industry they regulate, becoming tools that protect incumbents and shut out challengers. Regulation is not "the public interest incarnate" — it is itself a market that can be fought over.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Mechanism</span>
+    <p>Stigler used pure economic logic to explain why capture is nearly inevitable: the <strong>benefits of regulation are highly concentrated</strong> on a few firms (one licensing barrier can be worth billions), while the <strong>costs are extremely diffuse</strong> across hundreds of millions of consumers (each paying a little more). So industry has both strong motive and ample resources to lobby and shape regulation, even feeding talent directly into agencies (the revolving door); consumers, through "rational apathy" — that small loss isn't worth fighting over — almost never organize. This is the direct corollary of the logic of collective action: small, concentrated interest groups beat large, diffuse publics. So regulation is repeatedly used to raise entry barriers, limit competition, and entrench incumbents — protecting the industry while appearing to protect the public.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Counterintuitive Example</span>
+    <p>New York's taxi medallion is the textbook case: regulation meant to ensure taxi safety ended up freezing the number of medallions, and one was bid above $1 million by 2013 — that wealth went entirely to incumbent owners, paid for by new drivers shut out and riders charged more, until Uber routed around the rules and medallion values collapsed. More counterintuitive still: regulated industries often fiercely oppose deregulation — because the regulation is their moat. Before US airlines and trucking were deregulated, it was the incumbent giants who fought hardest to keep the rules.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">Cross-Disciplinary Transfer</span>
+    <p>In <strong>platform economics</strong>, large platforms often embrace regulation, because high compliance costs crush smaller rivals and the regulation becomes a moat; in <strong>AI governance</strong>, when leading labs loudly call for "stricter regulation," watch for a hidden capture motive; in <strong>ecology</strong>, this is "niche lock-in" — early arrivers alter the environment and raise the barrier for latecomers; inside <strong>organizations</strong>, process and approval regimes are likewise used by vested-interest departments to entrench power.</p>
+  </div>
+
+  <div class="section">
+    <span class="label">For BigCat</span>
+    <p>As a technologist who follows AI policy, when industry giants proactively call for "stricter AI regulation," apply the capture lens and ask one more layer: will this regulation mainly raise compliance barriers for new founders, while barely troubling giants already sitting on vast resources? Regulation that genuinely serves the public interest should lower, not raise, the barrier to competition — that's the litmus test for whether it serves the public or the private.</p>
+  </div>
+
+  <div class="section question">
+    <span class="label">Question</span>
+    <p>In a field you know well, which rule flying the banner of "safety / quality" actually ends up protecting incumbents and blocking challengers? If you redesigned it, how would you keep its legitimate purpose without letting it become a moat?</p>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
