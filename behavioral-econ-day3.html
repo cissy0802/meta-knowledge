@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>元知识详解：行为经济学 — Day 3</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -47,229 +48,187 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <body>
 <div class="container">
 <header>
-  <h1>元知识详解：行为经济学</h1>
-  <div class="meta">2026 年 5 月 20 日 · Meta Knowledge Daily</div>
-  <div class="day">DAY 03</div>
-  <div class="tags">
-    <span class="tag">行为经济学</span>
-    <span class="tag alt">认知心理学</span>
-    <span class="tag">决策科学</span>
-    <span class="tag alt">金融市场</span>
-  </div>
+<h1 data-tts="64f817456863afcd">元知识详解：行为经济学</h1>
+<div class="meta">2026 年 5 月 20 日 · Meta Knowledge Daily</div>
+<div class="day">DAY 03</div>
+<div class="tags">
+<span class="tag">行为经济学</span>
+<span class="tag alt">认知心理学</span>
+<span class="tag">决策科学</span>
+<span class="tag alt">金融市场</span>
+</div>
 </header>
-
 <div class="card">
-  <h2>前景理论</h2>
-  <div class="en">Prospect Theory · Kahneman &amp; Tversky, 1979</div>
-  <span class="subfield">风险下的选择</span>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>人不是按"财富的最终状态"做决策，而是按"相对于某个参照点的得失"。损失带来的痛苦约是同等收益快感的 2-2.5 倍——这一条直接推翻了 250 年的期望效用理论根基，让经济学从"理性人"假设掉头走向心理学。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">历史与提出者</span>
-    <p>Daniel Kahneman 与 Amos Tversky 于 1979 年发表于 <em>Econometrica</em> 的 "Prospect Theory: An Analysis of Decision under Risk"，是社会科学引用最多的论文之一。1992 年的修订版本 <em>Cumulative Prospect Theory</em> 解决了原版数学上的不一致。Kahneman 凭此获 2002 年诺贝尔经济学奖（Tversky 已于 1996 年去世）。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">核心机制</span>
-    <p>三大支柱：(1) <strong>参照依赖</strong>——价值函数以参照点为原点，而不是绝对财富；(2) <strong>损失厌恶</strong>——价值函数在损失侧比收益侧更陡，斜率比约 2.25:1；(3) <strong>概率权重扭曲</strong>——人会高估小概率（买彩票、买保险）、低估中高概率。结果是一条 S 形价值曲线 + 倒 S 形概率权重曲线，能精准预测"在收益域风险规避、损失域风险偏好"的反转现象。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>亚洲疾病问题（Tversky &amp; Kahneman 1981）：同样的政策，"600 人中确保救活 200 人" vs. "600 人中有 1/3 概率全救、2/3 概率全死"。两者期望值相同。但当用"救活"措辞，72% 选确定方案；用"死亡"措辞，78% 选博一把方案。同一群人、同一事实、不同参照点——选择完全反转。这是"框架效应"的源头实验。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p><strong>金融市场</strong>：处置效应（disposition effect）——投资者卖盈利股太早、亏损股太晚，是损失厌恶在交易中的直接投影（Shefrin &amp; Statman 1985）。<strong>谈判学</strong>：开价即设锚，等于强制对方的参照点，决定了"让步空间"在对方心理上是收益还是损失。<strong>强化学习</strong>：现代 RLHF 的损失函数其实隐含非对称惩罚——惩罚有害输出的权重远大于奖励有益输出，与损失厌恶同构。<strong>产品设计</strong>：免费试用结束时用户更不愿"放弃已拥有"，所以转化率远高于直接付费购买。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">生活应用</span>
-    <p>经典：保险与彩票能在同一人身上共存，正是因为人在极小概率上对损失（火灾）和收益（中奖）都过度反应。BigCat 场景：投资决策中，回避亏损头寸的冲动会让你把烂资产留到底——纪律性的做法是把"留着" 重新定义为"今天用现价重新买入"，强行换参照点；育儿中表扬"努力的过程"（提升参照点）比表扬"聪明的结果"（一旦失败即损失）更稳健，这与 Dweck 的成长型心态同根同源。</p>
-  </div>
-
-  <div class="section resources">
-    <span class="label" style="color:#52b788;background:#e8f3ec">深入资源</span>
-    <p>Kahneman, <em>Thinking, Fast and Slow</em>（2011）第 26-32 章；Richard Thaler, <em>Misbehaving</em>（2015）讲述 Prospect Theory 如何被经济学界从拒绝到接受的全过程。</p>
-  </div>
-
-  <div class="section english">
-    <span class="label">ENGLISH</span>
-    <p>Prospect Theory replaces expected utility's "absolute wealth" with reference-dependent gains and losses. Losses loom roughly 2× larger than equivalent gains, and people overweight rare events. The S-shaped value function explains framing reversals that classical rationality cannot.</p>
-  </div>
-
-  <div class="section question">
-    <span class="label">思考题</span>
-    <p>你最近一次拒绝某个看似合理的机会，是因为对它"未来的潜在损失"做了过度加权，还是因为它真的期望值为负？如何分辨？</p>
-  </div>
+<h2 data-tts="dd2474d9076c10e2">前景理论</h2>
+<div class="en">Prospect Theory · Kahneman &amp; Tversky, 1979</div>
+<span class="subfield">风险下的选择</span>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>人不是按"财富的最终状态"做决策，而是按"相对于某个参照点的得失"。损失带来的痛苦约是同等收益快感的 2-2.5 倍——这一条直接推翻了 250 年的期望效用理论根基，让经济学从"理性人"假设掉头走向心理学。</p>
 </div>
-
+<div class="section">
+<span class="label">历史与提出者</span>
+<p>Daniel Kahneman 与 Amos Tversky 于 1979 年发表于 <em>Econometrica</em> 的 "Prospect Theory: An Analysis of Decision under Risk"，是社会科学引用最多的论文之一。1992 年的修订版本 <em>Cumulative Prospect Theory</em> 解决了原版数学上的不一致。Kahneman 凭此获 2002 年诺贝尔经济学奖（Tversky 已于 1996 年去世）。</p>
+</div>
+<div class="section">
+<span class="label">核心机制</span>
+<p>三大支柱：(1) <strong>参照依赖</strong>——价值函数以参照点为原点，而不是绝对财富；(2) <strong>损失厌恶</strong>——价值函数在损失侧比收益侧更陡，斜率比约 2.25:1；(3) <strong>概率权重扭曲</strong>——人会高估小概率（买彩票、买保险）、低估中高概率。结果是一条 S 形价值曲线 + 倒 S 形概率权重曲线，能精准预测"在收益域风险规避、损失域风险偏好"的反转现象。</p>
+</div>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>亚洲疾病问题（Tversky &amp; Kahneman 1981）：同样的政策，"600 人中确保救活 200 人" vs. "600 人中有 1/3 概率全救、2/3 概率全死"。两者期望值相同。但当用"救活"措辞，72% 选确定方案；用"死亡"措辞，78% 选博一把方案。同一群人、同一事实、不同参照点——选择完全反转。这是"框架效应"的源头实验。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p><strong>金融市场</strong>：处置效应（disposition effect）——投资者卖盈利股太早、亏损股太晚，是损失厌恶在交易中的直接投影（Shefrin &amp; Statman 1985）。<strong>谈判学</strong>：开价即设锚，等于强制对方的参照点，决定了"让步空间"在对方心理上是收益还是损失。<strong>强化学习</strong>：现代 RLHF 的损失函数其实隐含非对称惩罚——惩罚有害输出的权重远大于奖励有益输出，与损失厌恶同构。<strong>产品设计</strong>：免费试用结束时用户更不愿"放弃已拥有"，所以转化率远高于直接付费购买。</p>
+</div>
+<div class="section">
+<span class="label">生活应用</span>
+<p>经典：保险与彩票能在同一人身上共存，正是因为人在极小概率上对损失（火灾）和收益（中奖）都过度反应。BigCat 场景：投资决策中，回避亏损头寸的冲动会让你把烂资产留到底——纪律性的做法是把"留着" 重新定义为"今天用现价重新买入"，强行换参照点；育儿中表扬"努力的过程"（提升参照点）比表扬"聪明的结果"（一旦失败即损失）更稳健，这与 Dweck 的成长型心态同根同源。</p>
+</div>
+<div class="section resources">
+<span class="label" style="color:#52b788;background:#e8f3ec">深入资源</span>
+<p>Kahneman, <em>Thinking, Fast and Slow</em>（2011）第 26-32 章；Richard Thaler, <em>Misbehaving</em>（2015）讲述 Prospect Theory 如何被经济学界从拒绝到接受的全过程。</p>
+</div>
+<div class="section english">
+<span class="label">ENGLISH</span>
+<p>Prospect Theory replaces expected utility's "absolute wealth" with reference-dependent gains and losses. Losses loom roughly 2× larger than equivalent gains, and people overweight rare events. The S-shaped value function explains framing reversals that classical rationality cannot.</p>
+</div>
+<div class="section question">
+<span class="label">思考题</span>
+<p>你最近一次拒绝某个看似合理的机会，是因为对它"未来的潜在损失"做了过度加权，还是因为它真的期望值为负？如何分辨？</p>
+</div>
+</div>
 <div class="card">
-  <h2>可得性启发式</h2>
-  <div class="en">Availability Heuristic</div>
-  <span class="subfield">判断偏误</span>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>人估计"某件事发生的概率"，其实在估计"这件事多容易从记忆中被想起来"。媒体、情绪、近因效应都会污染这个量度——所以你害怕的多半不是真正最危险的，而是最容易被回忆起来的。这条原理重塑了风险沟通、新闻学、AI 训练数据偏见的全部讨论。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">历史与提出者</span>
-    <p>Tversky &amp; Kahneman, "Availability: A Heuristic for Judging Frequency and Probability"，<em>Cognitive Psychology</em> 5 (1973)。这是他们提出的三大启发式之一（与代表性、锚定并列）。Paul Slovic 等人随后将其扩展到"风险感知"领域，奠定了现代风险沟通学（Slovic, <em>The Perception of Risk</em>, 2000）。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">核心机制</span>
-    <p>大脑没有"事件频率计数器"，它用"提取流畅度"（retrieval fluency）作为代理。三个放大器：(1) <strong>生动性</strong>——一架飞机失事比五百次车祸更可视化；(2) <strong>近因</strong>——上周读到的事件比五年前的同类事件权重高；(3) <strong>情绪显著性</strong>——能引发恐惧或愤怒的事件提取更快。元认知失败的关键：人不会校正"为什么这件事我容易想起来"，直接把流畅度等同于真实频率。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>Lichtenstein 等（1978）让受试者估计 41 种死因的相对频率：龙卷风被估计的死亡数比哮喘高 4 倍——实际上哮喘致死人数是龙卷风的 20 倍。被闪电劈死被估计的比天花致死多——而天花当时每年仍有数千例。更黑色幽默的是：在媒体大量报道鲨鱼袭击后，海滨城市游客明显下降，但同年因避海改自驾出游导致的车祸死亡，远多于鲨鱼袭击的总死亡数（Sunstein 引述）。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p><strong>政治学</strong>：恐怖主义对公共政策的影响远超其实际死亡率，因为每次袭击都"上头条"——Cass Sunstein 称之为"概率忽视"（probability neglect）。<strong>AI/LLM</strong>：模型对训练数据中"过表示"的内容产生过度自信，本质是机器版可得性启发——大语言模型对著名 bug 的修复建议更熟练，对长尾问题反而错得离谱。<strong>医学诊断</strong>：医生刚遇见一个罕见病案例后，未来几周对同病的诊断概率系统性升高。<strong>投资</strong>：黑天鹅事件后，VIX 系统性高估短期波动——这是市场层面的可得性启发。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">生活应用</span>
-    <p>经典：买彩票的高峰永远在大奖头条之后。BigCat 场景：审阅简历或投资项目时，刚否决过一个"看起来像 X"的失败案例，会让你接下来几天对所有像 X 的项目产生系统性偏低估值——对策是设置"决策日志"+ 强制延迟决策一周；育儿中，孩子做了一件让你印象深刻的"坏事"，会让你接下来几天对他整体评价偏负——用"30 天行为统计"替代"昨天的印象"。</p>
-  </div>
-
-  <div class="section resources">
-    <span class="label" style="color:#52b788;background:#e8f3ec">深入资源</span>
-    <p>Cass Sunstein, <em>Laws of Fear</em>（2005）系统讨论可得性如何扭曲公共政策；Hans Rosling, <em>Factfulness</em>（2018）提供大量"你以为很糟其实改善了"的反可得性数据。</p>
-  </div>
-
-  <div class="section english">
-    <span class="label">ENGLISH</span>
-    <p>The availability heuristic substitutes "how easily can I recall an instance" for "how frequent is this event." Vividness, recency, and emotional salience inflate perceived probability — which is why we fear plane crashes more than cars, and terrorism more than diabetes.</p>
-  </div>
-
-  <div class="section question">
-    <span class="label">思考题</span>
-    <p>你最近一次"凭直觉"对市场或人做出的判断，其底层证据是真实的基础概率，还是你过去 72 小时刷到的内容？</p>
-  </div>
+<h2 data-tts="716f1cfd049c1241">可得性启发式</h2>
+<div class="en">Availability Heuristic</div>
+<span class="subfield">判断偏误</span>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>人估计"某件事发生的概率"，其实在估计"这件事多容易从记忆中被想起来"。媒体、情绪、近因效应都会污染这个量度——所以你害怕的多半不是真正最危险的，而是最容易被回忆起来的。这条原理重塑了风险沟通、新闻学、AI 训练数据偏见的全部讨论。</p>
 </div>
-
+<div class="section">
+<span class="label">历史与提出者</span>
+<p>Tversky &amp; Kahneman, "Availability: A Heuristic for Judging Frequency and Probability"，<em>Cognitive Psychology</em> 5 (1973)。这是他们提出的三大启发式之一（与代表性、锚定并列）。Paul Slovic 等人随后将其扩展到"风险感知"领域，奠定了现代风险沟通学（Slovic, <em>The Perception of Risk</em>, 2000）。</p>
+</div>
+<div class="section">
+<span class="label">核心机制</span>
+<p>大脑没有"事件频率计数器"，它用"提取流畅度"（retrieval fluency）作为代理。三个放大器：(1) <strong>生动性</strong>——一架飞机失事比五百次车祸更可视化；(2) <strong>近因</strong>——上周读到的事件比五年前的同类事件权重高；(3) <strong>情绪显著性</strong>——能引发恐惧或愤怒的事件提取更快。元认知失败的关键：人不会校正"为什么这件事我容易想起来"，直接把流畅度等同于真实频率。</p>
+</div>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>Lichtenstein 等（1978）让受试者估计 41 种死因的相对频率：龙卷风被估计的死亡数比哮喘高 4 倍——实际上哮喘致死人数是龙卷风的 20 倍。被闪电劈死被估计的比天花致死多——而天花当时每年仍有数千例。更黑色幽默的是：在媒体大量报道鲨鱼袭击后，海滨城市游客明显下降，但同年因避海改自驾出游导致的车祸死亡，远多于鲨鱼袭击的总死亡数（Sunstein 引述）。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p><strong>政治学</strong>：恐怖主义对公共政策的影响远超其实际死亡率，因为每次袭击都"上头条"——Cass Sunstein 称之为"概率忽视"（probability neglect）。<strong>AI/LLM</strong>：模型对训练数据中"过表示"的内容产生过度自信，本质是机器版可得性启发——大语言模型对著名 bug 的修复建议更熟练，对长尾问题反而错得离谱。<strong>医学诊断</strong>：医生刚遇见一个罕见病案例后，未来几周对同病的诊断概率系统性升高。<strong>投资</strong>：黑天鹅事件后，VIX 系统性高估短期波动——这是市场层面的可得性启发。</p>
+</div>
+<div class="section">
+<span class="label">生活应用</span>
+<p>经典：买彩票的高峰永远在大奖头条之后。BigCat 场景：审阅简历或投资项目时，刚否决过一个"看起来像 X"的失败案例，会让你接下来几天对所有像 X 的项目产生系统性偏低估值——对策是设置"决策日志"+ 强制延迟决策一周；育儿中，孩子做了一件让你印象深刻的"坏事"，会让你接下来几天对他整体评价偏负——用"30 天行为统计"替代"昨天的印象"。</p>
+</div>
+<div class="section resources">
+<span class="label" style="color:#52b788;background:#e8f3ec">深入资源</span>
+<p>Cass Sunstein, <em>Laws of Fear</em>（2005）系统讨论可得性如何扭曲公共政策；Hans Rosling, <em>Factfulness</em>（2018）提供大量"你以为很糟其实改善了"的反可得性数据。</p>
+</div>
+<div class="section english">
+<span class="label">ENGLISH</span>
+<p>The availability heuristic substitutes "how easily can I recall an instance" for "how frequent is this event." Vividness, recency, and emotional salience inflate perceived probability — which is why we fear plane crashes more than cars, and terrorism more than diabetes.</p>
+</div>
+<div class="section question">
+<span class="label">思考题</span>
+<p>你最近一次"凭直觉"对市场或人做出的判断，其底层证据是真实的基础概率，还是你过去 72 小时刷到的内容？</p>
+</div>
+</div>
 <div class="card">
-  <h2>禀赋效应</h2>
-  <div class="en">Endowment Effect</div>
-  <span class="subfield">所有权与估值</span>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>"拥有"本身就改变了一件东西在你眼中的价值——通常会翻倍。这不仅推翻了"市场价格 = 个体效用聚合"的古典假设，还解释了为什么旧物难以处置、为什么投资组合迁延、为什么改革如此之难——一切既得利益本质上都被损失厌恶的引力锁住。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">历史与提出者</span>
-    <p>Richard Thaler 在 1980 年的 "Toward a Positive Theory of Consumer Choice" 首次命名。最经典的实证由 Kahneman, Knetsch &amp; Thaler 在 1990 年发表于 <em>Journal of Political Economy</em>，用康奈尔大学的咖啡杯实验确立。Thaler 因将这些发现整合为完整的行为经济学体系，于 2017 年获诺贝尔经济学奖。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">核心机制</span>
-    <p>禀赋效应是损失厌恶在"交易"维度上的投影。一旦物品被你"占有"，参照点立刻平移到"有它的状态"——卖掉=损失，所以卖方报价（WTA, willingness-to-accept）系统性地高于买方报价（WTP, willingness-to-pay）。fMRI 研究（Knutson et al. 2008）显示"被要求卖出"激活的是脑岛——同一区域处理身体疼痛和厌恶。所有权不是观念，是身体反应。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>咖啡杯实验：随机给一半学生发咖啡杯（约 6 美元零售价），另一半空手。然后让两组自由交易。古典理论预测约 50% 会换手（因为偏好随机）。实际结果：交易率仅约 15%。拥有杯子的人平均索价 5.78 美元，没杯子的人愿付 2.21 美元——仅 30 分钟前的"随机分发"，已使估值产生 2.5 倍差距。后续 Hossain &amp; List 在中国工厂的现场实验显示，"奖金先发后扣"比"达标后给"的激励效果高 30%——禀赋效应可被组织设计反向利用。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p><strong>法律经济学</strong>：科斯定理假设"产权初始分配不影响最终效率"——禀赋效应直接证伪了这一点，初始分配会粘住。<strong>政治学</strong>：现状偏好（status quo bias）是禀赋效应在制度层面的形式——改革减税容易，改革福利削减极难。<strong>产品增长</strong>：免费试用、个性化设置、累积积分都是在制造"虚拟禀赋"，把你的损失厌恶设为防止流失的护城河。<strong>谈判</strong>：让对方先口头描述"如果你已经拥有 X 会怎样"，能瞬间抬升对方对 X 的估值。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">生活应用</span>
-    <p>经典：试驾过的车更难拒绝销售；二手商品平台上卖家定价系统性高于市场，是禀赋效应集体显形。BigCat 场景：组合中那只"鸡肋"股或那个"鸡肋"业务部门，被你留着不是因为它有未来，而是因为你已经拥有它——做"零基预算"练习：假设你今天用现金重建组合，还会买它吗？育儿场景：孩子对自己堆的乐高、画的画的执着，是禀赋效应在童年的纯净版本——尊重它，但用"展示墙轮换制"教会他取舍。</p>
-  </div>
-
-  <div class="section resources">
-    <span class="label" style="color:#52b788;background:#e8f3ec">深入资源</span>
-    <p>Thaler &amp; Sunstein, <em>Nudge</em>（2008）展示如何用默认选项 + 禀赋效应推动公共政策；Dan Ariely, <em>Predictably Irrational</em>（2008）有"为什么我们高估自己的东西"专章。</p>
-  </div>
-
-  <div class="section english">
-    <span class="label">ENGLISH</span>
-    <p>The endowment effect: people demand far more to give up an object than they would pay to acquire it. Mere ownership shifts the reference point, turning sale into loss. It breaks the Coase theorem's neutrality assumption and underlies status quo bias in politics, business, and personal life.</p>
-  </div>
-
-  <div class="section question">
-    <span class="label">思考题</span>
-    <p>列出你正在"持有"但若今天从零开始绝不会买入的三样东西（资产、关系、习惯）。是什么阻止你把它们换成现金或精力？</p>
-  </div>
+<h2 data-tts="cc213d8490f48457">禀赋效应</h2>
+<div class="en">Endowment Effect</div>
+<span class="subfield">所有权与估值</span>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>"拥有"本身就改变了一件东西在你眼中的价值——通常会翻倍。这不仅推翻了"市场价格 = 个体效用聚合"的古典假设，还解释了为什么旧物难以处置、为什么投资组合迁延、为什么改革如此之难——一切既得利益本质上都被损失厌恶的引力锁住。</p>
 </div>
-
+<div class="section">
+<span class="label">历史与提出者</span>
+<p>Richard Thaler 在 1980 年的 "Toward a Positive Theory of Consumer Choice" 首次命名。最经典的实证由 Kahneman, Knetsch &amp; Thaler 在 1990 年发表于 <em>Journal of Political Economy</em>，用康奈尔大学的咖啡杯实验确立。Thaler 因将这些发现整合为完整的行为经济学体系，于 2017 年获诺贝尔经济学奖。</p>
+</div>
+<div class="section">
+<span class="label">核心机制</span>
+<p>禀赋效应是损失厌恶在"交易"维度上的投影。一旦物品被你"占有"，参照点立刻平移到"有它的状态"——卖掉=损失，所以卖方报价（WTA, willingness-to-accept）系统性地高于买方报价（WTP, willingness-to-pay）。fMRI 研究（Knutson et al. 2008）显示"被要求卖出"激活的是脑岛——同一区域处理身体疼痛和厌恶。所有权不是观念，是身体反应。</p>
+</div>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>咖啡杯实验：随机给一半学生发咖啡杯（约 6 美元零售价），另一半空手。然后让两组自由交易。古典理论预测约 50% 会换手（因为偏好随机）。实际结果：交易率仅约 15%。拥有杯子的人平均索价 5.78 美元，没杯子的人愿付 2.21 美元——仅 30 分钟前的"随机分发"，已使估值产生 2.5 倍差距。后续 Hossain &amp; List 在中国工厂的现场实验显示，"奖金先发后扣"比"达标后给"的激励效果高 30%——禀赋效应可被组织设计反向利用。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p><strong>法律经济学</strong>：科斯定理假设"产权初始分配不影响最终效率"——禀赋效应直接证伪了这一点，初始分配会粘住。<strong>政治学</strong>：现状偏好（status quo bias）是禀赋效应在制度层面的形式——改革减税容易，改革福利削减极难。<strong>产品增长</strong>：免费试用、个性化设置、累积积分都是在制造"虚拟禀赋"，把你的损失厌恶设为防止流失的护城河。<strong>谈判</strong>：让对方先口头描述"如果你已经拥有 X 会怎样"，能瞬间抬升对方对 X 的估值。</p>
+</div>
+<div class="section">
+<span class="label">生活应用</span>
+<p>经典：试驾过的车更难拒绝销售；二手商品平台上卖家定价系统性高于市场，是禀赋效应集体显形。BigCat 场景：组合中那只"鸡肋"股或那个"鸡肋"业务部门，被你留着不是因为它有未来，而是因为你已经拥有它——做"零基预算"练习：假设你今天用现金重建组合，还会买它吗？育儿场景：孩子对自己堆的乐高、画的画的执着，是禀赋效应在童年的纯净版本——尊重它，但用"展示墙轮换制"教会他取舍。</p>
+</div>
+<div class="section resources">
+<span class="label" style="color:#52b788;background:#e8f3ec">深入资源</span>
+<p>Thaler &amp; Sunstein, <em>Nudge</em>（2008）展示如何用默认选项 + 禀赋效应推动公共政策；Dan Ariely, <em>Predictably Irrational</em>（2008）有"为什么我们高估自己的东西"专章。</p>
+</div>
+<div class="section english">
+<span class="label">ENGLISH</span>
+<p>The endowment effect: people demand far more to give up an object than they would pay to acquire it. Mere ownership shifts the reference point, turning sale into loss. It breaks the Coase theorem's neutrality assumption and underlies status quo bias in politics, business, and personal life.</p>
+</div>
+<div class="section question">
+<span class="label">思考题</span>
+<p>列出你正在"持有"但若今天从零开始绝不会买入的三样东西（资产、关系、习惯）。是什么阻止你把它们换成现金或精力？</p>
+</div>
+</div>
 <div class="card">
-  <h2>双曲贴现</h2>
-  <div class="en">Hyperbolic Discounting</div>
-  <span class="subfield">跨时偏好</span>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>人对"未来"的折扣不是平滑指数衰减，而是近端陡峭、远端平缓的双曲线。结果是：你今天的"我"会出卖明天的"我"——拖延、暴饮暴食、过度消费不是意志薄弱，而是大脑对"现在"的过度加权所致。这条规律重塑了储蓄政策、退休金设计、戒瘾治疗、AI 长程规划的底层逻辑。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">历史与提出者</span>
-    <p>实验心理学家 Richard Herrnstein（1961）在鸽子实验中首次发现非指数贴现。George Ainslie（<em>Picoeconomics</em>, 1992）系统化为"双曲贴现 + 内部多自我"框架。David Laibson 在 1997 年的 <em>QJE</em> 论文 "Golden Eggs and Hyperbolic Discounting" 引入 β-δ 模型（准双曲贴现），使其能直接嵌入主流经济学的储蓄模型。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">核心机制</span>
-    <p>指数贴现：折扣率与时间距离无关——昨天的你和今天的你对"一年后 vs. 一年零一天后"的偏好相同。双曲贴现：折扣率本身随时间衰减——你愿意为"今天 10 元 vs. 明天 11 元"选今天，但同一个你会为"一年后 10 元 vs. 一年零一天后 11 元"选后者。结果是"偏好反转"——计划时理智，临场时屈服。神经层面，腹内侧前额叶代表"长期我"，伏隔核代表"即时奖赏我"（McClure et al. 2004, <em>Science</em>），两者在 fMRI 中实时博弈。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>Ariely &amp; Wertenbroch（2002）让 MIT 学生提交三篇论文。三组：(A) 学期末统一交；(B) 自选三个截止日；(C) 强制等距截止日。古典理论预测 A 组分数最高（最灵活）。结果反转：C 组质量与按时率显著最高，A 组最差——学生愿意主动放弃自由，因为他们"知道未来的自己不可靠"。这是"自我承诺装置"（commitment device）的实验源头。另一震撼数据：401(k) 自动注册改"加入"为"退出"，参与率从 30% 跳到 90% 以上——同一群人，同一权益，仅默认翻转（Madrian &amp; Shea 2001）。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p><strong>公共政策</strong>：行为助推（Nudge Unit）整套工具的底层逻辑——把"未来的我"借的力，用默认选项、自动续费、强制冷静期固化为制度。<strong>AI 强化学习</strong>：折扣因子 γ 的选择就是机器版"耐心"，γ 过低 → 短视策略；γ 过高 → 学习信号稀疏——这与人类的多自我冲突同构。<strong>临床医学</strong>：戒毒治疗中的"应急管理"（contingency management）用即时小额奖励战胜远期健康收益，成功率是说教式干预的 2-3 倍。<strong>金融</strong>：青年储蓄不足并非收入问题，而是双曲贴现 + 复利反直觉的叠加。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">生活应用</span>
-    <p>经典：自动扣款健身房比临时付费续约率高 5 倍——你在做出决定的那个理智时刻把未来的自己锁定。BigCat 场景：作为同时管理多个长期项目的资深人士，最高杠杆的不是"提高执行力"，而是搭建"承诺设施"——日历预约 + 公开承诺 + 默认选项 + 自动扣款，让"未来的你"无需意志力即可执行；育儿场景中，孩子拖延作业不是道德问题，是双曲贴现在低成熟前额叶上的常态显现——番茄钟 + 即时小奖励远比"以后会感谢爸妈"有效。投资中，定投本质上是把"今天的纪律"机械化为"未来无需重新决策"。</p>
-  </div>
-
-  <div class="section resources">
-    <span class="label" style="color:#52b788;background:#e8f3ec">深入资源</span>
-    <p>George Ainslie, <em>Breakdown of Will</em>（2001）从"内部讨价还价"视角看意志力；Dan Ariely, <em>Predictably Irrational</em>（2008）的"延迟满足"章；Thaler &amp; Benartzi 的 "Save More Tomorrow" 项目报告是政策应用的范本。</p>
-  </div>
-
-  <div class="section english">
-    <span class="label">ENGLISH</span>
-    <p>Hyperbolic discounting: humans devalue future rewards far more steeply in the near term than later, producing preference reversals over time. We are not single rational agents but a chain of selves bargaining across time — which is why commitment devices, defaults, and automatic enrollment beat willpower.</p>
-  </div>
-
-  <div class="section question">
-    <span class="label">思考题</span>
-    <p>你今年立下却已破功的目标，是缺意志力，还是缺一个能在"现在的你"叛变前就锁死"未来的你"的承诺装置？</p>
-  </div>
+<h2 data-tts="698e3e442ee457cb">双曲贴现</h2>
+<div class="en">Hyperbolic Discounting</div>
+<span class="subfield">跨时偏好</span>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>人对"未来"的折扣不是平滑指数衰减，而是近端陡峭、远端平缓的双曲线。结果是：你今天的"我"会出卖明天的"我"——拖延、暴饮暴食、过度消费不是意志薄弱，而是大脑对"现在"的过度加权所致。这条规律重塑了储蓄政策、退休金设计、戒瘾治疗、AI 长程规划的底层逻辑。</p>
 </div>
-
+<div class="section">
+<span class="label">历史与提出者</span>
+<p>实验心理学家 Richard Herrnstein（1961）在鸽子实验中首次发现非指数贴现。George Ainslie（<em>Picoeconomics</em>, 1992）系统化为"双曲贴现 + 内部多自我"框架。David Laibson 在 1997 年的 <em>QJE</em> 论文 "Golden Eggs and Hyperbolic Discounting" 引入 β-δ 模型（准双曲贴现），使其能直接嵌入主流经济学的储蓄模型。</p>
+</div>
+<div class="section">
+<span class="label">核心机制</span>
+<p>指数贴现：折扣率与时间距离无关——昨天的你和今天的你对"一年后 vs. 一年零一天后"的偏好相同。双曲贴现：折扣率本身随时间衰减——你愿意为"今天 10 元 vs. 明天 11 元"选今天，但同一个你会为"一年后 10 元 vs. 一年零一天后 11 元"选后者。结果是"偏好反转"——计划时理智，临场时屈服。神经层面，腹内侧前额叶代表"长期我"，伏隔核代表"即时奖赏我"（McClure et al. 2004, <em>Science</em>），两者在 fMRI 中实时博弈。</p>
+</div>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>Ariely &amp; Wertenbroch（2002）让 MIT 学生提交三篇论文。三组：(A) 学期末统一交；(B) 自选三个截止日；(C) 强制等距截止日。古典理论预测 A 组分数最高（最灵活）。结果反转：C 组质量与按时率显著最高，A 组最差——学生愿意主动放弃自由，因为他们"知道未来的自己不可靠"。这是"自我承诺装置"（commitment device）的实验源头。另一震撼数据：401(k) 自动注册改"加入"为"退出"，参与率从 30% 跳到 90% 以上——同一群人，同一权益，仅默认翻转（Madrian &amp; Shea 2001）。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p><strong>公共政策</strong>：行为助推（Nudge Unit）整套工具的底层逻辑——把"未来的我"借的力，用默认选项、自动续费、强制冷静期固化为制度。<strong>AI 强化学习</strong>：折扣因子 γ 的选择就是机器版"耐心"，γ 过低 → 短视策略；γ 过高 → 学习信号稀疏——这与人类的多自我冲突同构。<strong>临床医学</strong>：戒毒治疗中的"应急管理"（contingency management）用即时小额奖励战胜远期健康收益，成功率是说教式干预的 2-3 倍。<strong>金融</strong>：青年储蓄不足并非收入问题，而是双曲贴现 + 复利反直觉的叠加。</p>
+</div>
+<div class="section">
+<span class="label">生活应用</span>
+<p>经典：自动扣款健身房比临时付费续约率高 5 倍——你在做出决定的那个理智时刻把未来的自己锁定。BigCat 场景：作为同时管理多个长期项目的资深人士，最高杠杆的不是"提高执行力"，而是搭建"承诺设施"——日历预约 + 公开承诺 + 默认选项 + 自动扣款，让"未来的你"无需意志力即可执行；育儿场景中，孩子拖延作业不是道德问题，是双曲贴现在低成熟前额叶上的常态显现——番茄钟 + 即时小奖励远比"以后会感谢爸妈"有效。投资中，定投本质上是把"今天的纪律"机械化为"未来无需重新决策"。</p>
+</div>
+<div class="section resources">
+<span class="label" style="color:#52b788;background:#e8f3ec">深入资源</span>
+<p>George Ainslie, <em>Breakdown of Will</em>（2001）从"内部讨价还价"视角看意志力；Dan Ariely, <em>Predictably Irrational</em>（2008）的"延迟满足"章；Thaler &amp; Benartzi 的 "Save More Tomorrow" 项目报告是政策应用的范本。</p>
+</div>
+<div class="section english">
+<span class="label">ENGLISH</span>
+<p>Hyperbolic discounting: humans devalue future rewards far more steeply in the near term than later, producing preference reversals over time. We are not single rational agents but a chain of selves bargaining across time — which is why commitment devices, defaults, and automatic enrollment beat willpower.</p>
+</div>
+<div class="section question">
+<span class="label">思考题</span>
+<p>你今年立下却已破功的目标，是缺意志力，还是缺一个能在"现在的你"叛变前就锁死"未来的你"的承诺装置？</p>
+</div>
+</div>
 <div class="nav">
-  <a href="index.html">← 返回每日元知识</a>
+<a href="index.html">← 返回每日元知识</a>
 </div>
-
 </div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+<script defer="" src="https://cissy0802.github.io/comments.js"></script>
+<script defer="" src="https://cissy0802.github.io/search.js"></script>
+<script defer="" src="https://cissy0802.github.io/index-button.js"></script>
+<script defer="" src="https://cissy0802.github.io/i18n-tts.js"></script>
 </body>
 </html>
