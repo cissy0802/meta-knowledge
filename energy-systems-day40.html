@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>元知识详解：能源系统 — Day 40</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -55,174 +56,148 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <body>
 <div class="container">
 <header>
-  <h1>元知识详解：能源系统</h1>
-  <div class="meta">2026 年 6 月 25 日 · Meta Knowledge Daily</div>
-  <div class="day">DAY 40</div>
-  <div class="tags">
-    <span class="tag">能源物理</span>
-    <span class="tag alt">净能量分析</span>
-    <span class="tag green">电力系统</span>
-    <span class="tag warm">储能技术</span>
-  </div>
+<h1 data-tts="85c1448d11101a5e">元知识详解：能源系统</h1>
+<div class="meta">2026 年 6 月 25 日 · Meta Knowledge Daily</div>
+<div class="day">DAY 40</div>
+<div class="tags">
+<span class="tag">能源物理</span>
+<span class="tag alt">净能量分析</span>
+<span class="tag green">电力系统</span>
+<span class="tag warm">储能技术</span>
+</div>
 </header>
-
 <div class="card">
-  <h2>能量密度阶梯</h2>
-  <div class="en">The Energy Density Ladder</div>
-  <div class="subfield">能源物理 · 工程约束</div>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>文明能做什么，往往不取决于它用了多少能量，而取决于它能调用的能量「密度」——每公斤、每升装得下多少能量。密度决定了什么能飞、什么能跑、什么只能固定发电。这也是为什么航空至今离不开化石燃料：没有任何电池接近航空煤油的能量密度。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">机制</span>
-    <p>能量密度有两个维度：每公斤多少能量（质量密度）和每升多少能量（体积密度）。从柴火到煤、到油气、再到核燃料，是一条不断攀升的密度阶梯。每上一个台阶，承载同样能量所需的重量和体积骤降，于是解锁新的应用形态——煤让蒸汽机上路，石油的高密度才让飞行成为可能。</p>
-  </div>
-
-  <div class="viz">
-    <div class="viz-title">▸ 能量密度阶梯（每公斤可释放的能量）</div>
-    <table class="ca-table">
-      <tr><th>燃料</th><th>质量能量密度</th><th>相对汽油</th></tr>
-      <tr><td class="label-col">锂离子电池</td><td>约 0.5 MJ/kg</td><td class="highlight">约 1/90</td></tr>
-      <tr><td class="label-col">木柴</td><td>约 16 MJ/kg</td><td>约 1/3</td></tr>
-      <tr><td class="label-col">煤</td><td>约 24 MJ/kg</td><td>约 1/2</td></tr>
-      <tr><td class="label-col">汽油 / 柴油</td><td>约 46 MJ/kg</td><td>1×（基准）</td></tr>
-      <tr><td class="label-col">铀-235（裂变）</td><td>约 8000 万 MJ/kg</td><td class="highlight">约 170 万×</td></tr>
-    </table>
-    <div class="ca-note">同样存一度电的能量，锂电池要比汽油重几十倍——这就是电动车可行、电动洲际客机仍是难题的根源</div>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>铀的能量密度比煤高约两百万倍——一颗高尔夫球大小的铀块，理论上足够供一个人一生的全部能量。而电池正相反：要让一架客机靠电池飞越大洋，电池的重量会超过飞机本身。同样的能量需求，电动车能容忍重量惩罚，飞机不能——这一条物理约束，就决定了能源转型在不同行业的难易天差地别。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p>在<strong>生物学</strong>里，脂肪是动物的高密度燃料（约 37 MJ/kg），糖原是低密度快取——这正是长途迁徙的鸟类储脂而非储糖的原因。在<strong>信息论</strong>里对应「信息密度」：同样的带宽，压缩率决定能传多少。在<strong>计算</strong>里则是「算力密度」——每瓦特、每平方毫米能做多少运算，决定了什么能塞进手机、什么只能放进数据中心。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">BigCat 应用</span>
-    <p>模型部署也有自己的能量密度阶梯：同样的智能水平，参数量与显存占用决定它能跑在云端、边缘还是终端。把一个能力蒸馏进更小的模型，本质就是提升它的「智能密度」——让原本只能在数据中心运行的能力下沉到手机里。每一次量化、蒸馏、剪枝，都是在这条阶梯上往上爬一格，解锁新的部署形态。</p>
-  </div>
-  <div class="section question">
-    <span class="label">思考题</span>
-    <p>你手上有哪个能力，正因为「密度不够」（太大、太贵、太慢）只能固定部署？如果它的密度提升一个数量级，会解锁什么今天根本做不到的形态？</p>
-  </div>
+<h2 data-tts="f4b15715908833cb">能量密度阶梯</h2>
+<div class="en">The Energy Density Ladder</div>
+<div class="subfield">能源物理 · 工程约束</div>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>文明能做什么，往往不取决于它用了多少能量，而取决于它能调用的能量「密度」——每公斤、每升装得下多少能量。密度决定了什么能飞、什么能跑、什么只能固定发电。这也是为什么航空至今离不开化石燃料：没有任何电池接近航空煤油的能量密度。</p>
 </div>
-
+<div class="section">
+<span class="label">机制</span>
+<p>能量密度有两个维度：每公斤多少能量（质量密度）和每升多少能量（体积密度）。从柴火到煤、到油气、再到核燃料，是一条不断攀升的密度阶梯。每上一个台阶，承载同样能量所需的重量和体积骤降，于是解锁新的应用形态——煤让蒸汽机上路，石油的高密度才让飞行成为可能。</p>
+</div>
+<div class="viz">
+<div class="viz-title">▸ 能量密度阶梯（每公斤可释放的能量）</div>
+<table class="ca-table">
+<tr><th>燃料</th><th>质量能量密度</th><th>相对汽油</th></tr>
+<tr><td class="label-col">锂离子电池</td><td>约 0.5 MJ/kg</td><td class="highlight">约 1/90</td></tr>
+<tr><td class="label-col">木柴</td><td>约 16 MJ/kg</td><td>约 1/3</td></tr>
+<tr><td class="label-col">煤</td><td>约 24 MJ/kg</td><td>约 1/2</td></tr>
+<tr><td class="label-col">汽油 / 柴油</td><td>约 46 MJ/kg</td><td>1×（基准）</td></tr>
+<tr><td class="label-col">铀-235（裂变）</td><td>约 8000 万 MJ/kg</td><td class="highlight">约 170 万×</td></tr>
+</table>
+<div class="ca-note">同样存一度电的能量，锂电池要比汽油重几十倍——这就是电动车可行、电动洲际客机仍是难题的根源</div>
+</div>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>铀的能量密度比煤高约两百万倍——一颗高尔夫球大小的铀块，理论上足够供一个人一生的全部能量。而电池正相反：要让一架客机靠电池飞越大洋，电池的重量会超过飞机本身。同样的能量需求，电动车能容忍重量惩罚，飞机不能——这一条物理约束，就决定了能源转型在不同行业的难易天差地别。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p>在<strong>生物学</strong>里，脂肪是动物的高密度燃料（约 37 MJ/kg），糖原是低密度快取——这正是长途迁徙的鸟类储脂而非储糖的原因。在<strong>信息论</strong>里对应「信息密度」：同样的带宽，压缩率决定能传多少。在<strong>计算</strong>里则是「算力密度」——每瓦特、每平方毫米能做多少运算，决定了什么能塞进手机、什么只能放进数据中心。</p>
+</div>
+<div class="section">
+<span class="label">BigCat 应用</span>
+<p>模型部署也有自己的能量密度阶梯：同样的智能水平，参数量与显存占用决定它能跑在云端、边缘还是终端。把一个能力蒸馏进更小的模型，本质就是提升它的「智能密度」——让原本只能在数据中心运行的能力下沉到手机里。每一次量化、蒸馏、剪枝，都是在这条阶梯上往上爬一格，解锁新的部署形态。</p>
+</div>
+<div class="section question">
+<span class="label">思考题</span>
+<p>你手上有哪个能力，正因为「密度不够」（太大、太贵、太慢）只能固定部署？如果它的密度提升一个数量级，会解锁什么今天根本做不到的形态？</p>
+</div>
+</div>
 <div class="card">
-  <h2>能量回报率</h2>
-  <div class="en">Energy Return on Investment (EROI)</div>
-  <div class="subfield">净能量分析 · 系统生态学</div>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>决定一种能源能否养活文明的，不是它的储量有多大，而是「投入一份能量能采回几份」。这个比值叫 EROI。一旦它低于某个临界值，无论储量多惊人，这种能源都撑不起复杂社会——因为剩下的净能量，已经不够养活能源行业之外的一切。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">机制</span>
-    <p>EROI＝获得的能量÷为获得它而投入的能量。早期中东的喷油井 EROI 高达约 100∶1——投一桶采回上百桶；而深海、页岩、油砂越采越深，比值一路跌到 10∶1 甚至更低。文明真正可支配的是「净能量」——总能量减去能源行业自身的消耗。EROI 越低，越多人力物力被锁在「为获取能源而获取能源」上，留给教育、医疗、艺术的余量就越薄。研究估计，维持现代社会大约需要 EROI 在 7–10∶1 以上。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>一种能源可以「净产出为正」却仍让社会变穷。某种生物燃料 EROI 哪怕是 1.3∶1，它确实净产能，但要供养整个社会，几乎所有劳动力都得投在能源生产上——如同一个农业社会里九成五的人务农，剩下的五成撑不起任何文明上层。历史上每一次能量盈余的跃升（薪柴→煤→石油），都对应着能从土地里解放出来的人口比例跃升，进而对应城市、分工与知识阶层的兴起。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p>在<strong>经济学</strong>里这是「剩余产品」的能量版——社会复杂度的上限由净盈余决定。在<strong>生物学</strong>里对应觅食的净能量收益：若狮子每次捕猎消耗的能量逼近捕获的能量，就会饿死，这反过来决定了捕食者的领地大小与行为节律。在<strong>投资</strong>里它就是扣除成本后的真实回报率——毛收益再高，若成本更高，规模越大亏越多。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">BigCat 应用</span>
-    <p>任何工具与流程都有它的 EROI：用它省下的时间，减去搭建、维护、调试它的时间。很多自动化看似「产出为正」，维护成本却吃掉了大半收益，净盈余薄到撑不起推广。一个 AI 工作流如果 EROI 只有 1.2，意味着你的精力大部分耗在喂养这个流程本身，而非用它创造价值——它在产能，也在拖累你。</p>
-  </div>
-  <div class="section question">
-    <span class="label">思考题</span>
-    <p>你最依赖的那个自动化或工具，把维护和调试的隐性成本算进去后，真实 EROI 是多少？有没有哪个「看起来很酷」的流程，其实净盈余薄到根本不值得维护？</p>
-  </div>
+<h2 data-tts="b7ab86bc7dbc5dcc">能量回报率</h2>
+<div class="en">Energy Return on Investment (EROI)</div>
+<div class="subfield">净能量分析 · 系统生态学</div>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>决定一种能源能否养活文明的，不是它的储量有多大，而是「投入一份能量能采回几份」。这个比值叫 EROI。一旦它低于某个临界值，无论储量多惊人，这种能源都撑不起复杂社会——因为剩下的净能量，已经不够养活能源行业之外的一切。</p>
 </div>
-
+<div class="section">
+<span class="label">机制</span>
+<p>EROI＝获得的能量÷为获得它而投入的能量。早期中东的喷油井 EROI 高达约 100∶1——投一桶采回上百桶；而深海、页岩、油砂越采越深，比值一路跌到 10∶1 甚至更低。文明真正可支配的是「净能量」——总能量减去能源行业自身的消耗。EROI 越低，越多人力物力被锁在「为获取能源而获取能源」上，留给教育、医疗、艺术的余量就越薄。研究估计，维持现代社会大约需要 EROI 在 7–10∶1 以上。</p>
+</div>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>一种能源可以「净产出为正」却仍让社会变穷。某种生物燃料 EROI 哪怕是 1.3∶1，它确实净产能，但要供养整个社会，几乎所有劳动力都得投在能源生产上——如同一个农业社会里九成五的人务农，剩下的五成撑不起任何文明上层。历史上每一次能量盈余的跃升（薪柴→煤→石油），都对应着能从土地里解放出来的人口比例跃升，进而对应城市、分工与知识阶层的兴起。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p>在<strong>经济学</strong>里这是「剩余产品」的能量版——社会复杂度的上限由净盈余决定。在<strong>生物学</strong>里对应觅食的净能量收益：若狮子每次捕猎消耗的能量逼近捕获的能量，就会饿死，这反过来决定了捕食者的领地大小与行为节律。在<strong>投资</strong>里它就是扣除成本后的真实回报率——毛收益再高，若成本更高，规模越大亏越多。</p>
+</div>
+<div class="section">
+<span class="label">BigCat 应用</span>
+<p>任何工具与流程都有它的 EROI：用它省下的时间，减去搭建、维护、调试它的时间。很多自动化看似「产出为正」，维护成本却吃掉了大半收益，净盈余薄到撑不起推广。一个 AI 工作流如果 EROI 只有 1.2，意味着你的精力大部分耗在喂养这个流程本身，而非用它创造价值——它在产能，也在拖累你。</p>
+</div>
+<div class="section question">
+<span class="label">思考题</span>
+<p>你最依赖的那个自动化或工具，把维护和调试的隐性成本算进去后，真实 EROI 是多少？有没有哪个「看起来很酷」的流程，其实净盈余薄到根本不值得维护？</p>
+</div>
+</div>
 <div class="card">
-  <h2>电网平衡难题</h2>
-  <div class="en">The Grid Balancing Problem</div>
-  <div class="subfield">电力系统 · 实时同步</div>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>电网是人类建造的最大、最严苛的实时系统：发电量必须时时刻刻精确等于用电量，误差以秒、以毫赫兹计。电几乎无法大规模储存，所以「发」和「用」必须永远同步。这个看不见的平衡约束，几乎单独决定了能源转型的真正难度。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">机制</span>
-    <p>电网频率（50/60 赫兹）就是供需平衡的实时仪表：用电超过发电，频率下降；反之上升。偏离太多，设备保护性跳闸，连锁成大停电。传统电网靠可调度的火电、水电「跟随负荷」——需求一涨就多烧一点。但风能光伏是「不可调度」的：它们看天吃饭，不听需求指挥。可再生比例越高，电网越难靠「调发电」来匹配「用电」。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>加州出现过著名的「鸭子曲线」：正午光伏满发，电力多到批发电价跌成负数——发电方倒贴钱求人用电；可傍晚太阳一落、用电高峰又来，电网得在几小时内拉起巨量备用电源。结果反直觉：可再生装得越多，反而越需要灵活的火电随时待命兜底，整体减排往往不如装机增长那么乐观。德国的弃风弃光、负电价、对邻国电网的依赖，都是同一个平衡难题的不同侧面。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p>这是<strong>分布式系统</strong>里的「实时一致性」问题——没有缓冲（库存）的系统必须强同步，任何延迟都会直接传导为故障。在<strong>生物学</strong>里对应血糖、体温的稳态调节：身体也是一张必须实时平衡产能与耗能的「电网」，胰岛素就是它的「调频」机制。在<strong>供应链</strong>里则是零库存的准时制——效率最高，抗扰动最差。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">BigCat 应用</span>
-    <p>高并发服务本身就是一张电网：请求（负荷）实时波动，处理能力（发电）必须跟随，缓冲不够就会「频率崩溃」——延迟飙升、雪崩。自动扩缩容是「调度电源」，限流、降级、队列则是给这张没有库存的电网装上缓冲。可再生能源的间歇性，恰如流量的突发性：你无法控制它何时到来，只能在系统侧把波动吸收掉。</p>
-  </div>
-  <div class="section question">
-    <span class="label">思考题</span>
-    <p>你的系统里哪一段是「无法储存、必须实时平衡」的？当供给（算力）和需求（流量）失同步时，你更习惯靠「多发电」（扩容）还是靠「装缓冲」（队列、降级）兜底——哪一种更接近问题的本质？</p>
-  </div>
+<h2 data-tts="c082c0b965b67657">电网平衡难题</h2>
+<div class="en">The Grid Balancing Problem</div>
+<div class="subfield">电力系统 · 实时同步</div>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>电网是人类建造的最大、最严苛的实时系统：发电量必须时时刻刻精确等于用电量，误差以秒、以毫赫兹计。电几乎无法大规模储存，所以「发」和「用」必须永远同步。这个看不见的平衡约束，几乎单独决定了能源转型的真正难度。</p>
 </div>
-
+<div class="section">
+<span class="label">机制</span>
+<p>电网频率（50/60 赫兹）就是供需平衡的实时仪表：用电超过发电，频率下降；反之上升。偏离太多，设备保护性跳闸，连锁成大停电。传统电网靠可调度的火电、水电「跟随负荷」——需求一涨就多烧一点。但风能光伏是「不可调度」的：它们看天吃饭，不听需求指挥。可再生比例越高，电网越难靠「调发电」来匹配「用电」。</p>
+</div>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>加州出现过著名的「鸭子曲线」：正午光伏满发，电力多到批发电价跌成负数——发电方倒贴钱求人用电；可傍晚太阳一落、用电高峰又来，电网得在几小时内拉起巨量备用电源。结果反直觉：可再生装得越多，反而越需要灵活的火电随时待命兜底，整体减排往往不如装机增长那么乐观。德国的弃风弃光、负电价、对邻国电网的依赖，都是同一个平衡难题的不同侧面。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p>这是<strong>分布式系统</strong>里的「实时一致性」问题——没有缓冲（库存）的系统必须强同步，任何延迟都会直接传导为故障。在<strong>生物学</strong>里对应血糖、体温的稳态调节：身体也是一张必须实时平衡产能与耗能的「电网」，胰岛素就是它的「调频」机制。在<strong>供应链</strong>里则是零库存的准时制——效率最高，抗扰动最差。</p>
+</div>
+<div class="section">
+<span class="label">BigCat 应用</span>
+<p>高并发服务本身就是一张电网：请求（负荷）实时波动，处理能力（发电）必须跟随，缓冲不够就会「频率崩溃」——延迟飙升、雪崩。自动扩缩容是「调度电源」，限流、降级、队列则是给这张没有库存的电网装上缓冲。可再生能源的间歇性，恰如流量的突发性：你无法控制它何时到来，只能在系统侧把波动吸收掉。</p>
+</div>
+<div class="section question">
+<span class="label">思考题</span>
+<p>你的系统里哪一段是「无法储存、必须实时平衡」的？当供给（算力）和需求（流量）失同步时，你更习惯靠「多发电」（扩容）还是靠「装缓冲」（队列、降级）兜底——哪一种更接近问题的本质？</p>
+</div>
+</div>
 <div class="card">
-  <h2>储能瓶颈</h2>
-  <div class="en">The Energy Storage Bottleneck</div>
-  <div class="subfield">储能技术 · 时间尺度</div>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>能源转型的真正瓶颈不在发电，而在存储。发电已经足够便宜，难的是把「此刻多余的能量」搬到几小时、甚至几个月后再用。秒、小时、季节，是三个完全不同的技术世界，而最关键的「跨季节储能」至今几乎没有经济上可行的解。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">机制</span>
-    <p>储能要同时满足容量、功率、时长、成本、寿命多个维度，而它们彼此冲突。锂电池适合「几小时」尺度，但要存下一整个冬天的电，电池的成本和自放电使它完全不可行；抽水蓄能受地形限制；氢能来回转换要损耗一半以上。没有任何单一技术能跨越从秒到季节的全部尺度——这是物理与经济的双重约束。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>化石燃料的隐藏优势，恰恰是它本身就是储能：一桶油就是几千万年阳光压缩成的、能近乎无损存放几十年的能量罐。我们过去从不需要单独的「储能」行业，因为燃料即库存。转向风光，等于把一个「自带仓库」的系统换成「没有仓库」的系统——发电问题解决了，仓库问题才刚刚暴露。这也是为什么「可再生比化石便宜」的新闻常常误导：发电成本，和「全天候可靠供电」的成本，是两回事。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p>在<strong>计算机体系结构</strong>里这就是「存储层级」——寄存器、内存、磁盘，没有一种介质能同时又快又大又便宜，于是用分层来逼近。在<strong>生物学</strong>里对应能量储存的层级：ATP 管即时、糖原管小时、脂肪管长期，身体用多种介质分管不同时间尺度。在<strong>金融</strong>里则是流动性管理——活期、定期、长期资产的配置，本质是为不同时间尺度的支出备好对应的库存。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">BigCat 应用</span>
-    <p>缓存设计就是一场储能博弈：内存缓存快但贵且易失，本地磁盘、对象存储则慢而廉、可长存——对应不同的时间尺度与成本。没有一层能通吃，于是你分级缓存。推理里的 KV cache、向量库、冷热数据分层，都是同一个问题：把「算一次很贵」的结果存起来跨时间复用，而存多久、存多快、存多贵之间，永远在权衡。</p>
-  </div>
-  <div class="section question">
-    <span class="label">思考题</span>
-    <p>在你的系统里，有没有一个被忽视的「跨季节储能」问题——某种昂贵的计算结果或状态，本该被长期复用，却因为没有合适的「仓库」而被反复重算？</p>
-  </div>
+<h2 data-tts="412f6b05e3c3f9a2">储能瓶颈</h2>
+<div class="en">The Energy Storage Bottleneck</div>
+<div class="subfield">储能技术 · 时间尺度</div>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>能源转型的真正瓶颈不在发电，而在存储。发电已经足够便宜，难的是把「此刻多余的能量」搬到几小时、甚至几个月后再用。秒、小时、季节，是三个完全不同的技术世界，而最关键的「跨季节储能」至今几乎没有经济上可行的解。</p>
 </div>
-
+<div class="section">
+<span class="label">机制</span>
+<p>储能要同时满足容量、功率、时长、成本、寿命多个维度，而它们彼此冲突。锂电池适合「几小时」尺度，但要存下一整个冬天的电，电池的成本和自放电使它完全不可行；抽水蓄能受地形限制；氢能来回转换要损耗一半以上。没有任何单一技术能跨越从秒到季节的全部尺度——这是物理与经济的双重约束。</p>
 </div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>化石燃料的隐藏优势，恰恰是它本身就是储能：一桶油就是几千万年阳光压缩成的、能近乎无损存放几十年的能量罐。我们过去从不需要单独的「储能」行业，因为燃料即库存。转向风光，等于把一个「自带仓库」的系统换成「没有仓库」的系统——发电问题解决了，仓库问题才刚刚暴露。这也是为什么「可再生比化石便宜」的新闻常常误导：发电成本，和「全天候可靠供电」的成本，是两回事。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p>在<strong>计算机体系结构</strong>里这就是「存储层级」——寄存器、内存、磁盘，没有一种介质能同时又快又大又便宜，于是用分层来逼近。在<strong>生物学</strong>里对应能量储存的层级：ATP 管即时、糖原管小时、脂肪管长期，身体用多种介质分管不同时间尺度。在<strong>金融</strong>里则是流动性管理——活期、定期、长期资产的配置，本质是为不同时间尺度的支出备好对应的库存。</p>
+</div>
+<div class="section">
+<span class="label">BigCat 应用</span>
+<p>缓存设计就是一场储能博弈：内存缓存快但贵且易失，本地磁盘、对象存储则慢而廉、可长存——对应不同的时间尺度与成本。没有一层能通吃，于是你分级缓存。推理里的 KV cache、向量库、冷热数据分层，都是同一个问题：把「算一次很贵」的结果存起来跨时间复用，而存多久、存多快、存多贵之间，永远在权衡。</p>
+</div>
+<div class="section question">
+<span class="label">思考题</span>
+<p>在你的系统里，有没有一个被忽视的「跨季节储能」问题——某种昂贵的计算结果或状态，本该被长期复用，却因为没有合适的「仓库」而被反复重算？</p>
+</div>
+</div>
+</div>
+<script defer="" src="https://cissy0802.github.io/comments.js"></script>
+<script defer="" src="https://cissy0802.github.io/search.js"></script>
+<script defer="" src="https://cissy0802.github.io/index-button.js"></script>
+<script defer="" src="https://cissy0802.github.io/i18n-tts.js"></script>
 </body>
 </html>
