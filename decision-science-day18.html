@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>元知识详解：决策科学 — Day 18</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -60,182 +61,154 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <body>
 <div class="container">
 <header>
-  <h1>元知识详解：决策科学</h1>
-  <div class="meta">2026 年 6 月 2 日 · Meta Knowledge Daily</div>
-  <div class="day">DAY 18</div>
-  <div class="tags">
-    <span class="tag">决策理论</span>
-    <span class="tag alt">认知心理学</span>
-    <span class="tag green">决策分析</span>
-    <span class="tag warm">不确定性</span>
-  </div>
+<h1 data-tts="80379cca26ae65bd">元知识详解：决策科学</h1>
+<div class="meta">2026 年 6 月 2 日 · Meta Knowledge Daily</div>
+<div class="day">DAY 18</div>
+<div class="tags">
+<span class="tag">决策理论</span>
+<span class="tag alt">认知心理学</span>
+<span class="tag green">决策分析</span>
+<span class="tag warm">不确定性</span>
+</div>
 </header>
-
 <div class="card">
-  <h2>期望效用理论</h2>
-  <div class="en">Expected Utility Theory</div>
-  <div class="subfield">决策理论 · 公理化</div>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>理性决策追求的不是期望金钱最大，而是期望"效用"最大——同样一笔钱，对你的主观价值随你已拥有的量递减。这个看似技术性的修正奠定了从保险到投资组合的整个现代决策框架；但它内含一颗定时炸弹：真实的人类系统性地违反它的公理。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">机制</span>
-    <p>冯·诺依曼与摩根斯坦给出四条公理（完备性、传递性、连续性、独立性），并证明：只要你的偏好满足这些公理，就一定存在一个效用函数 u，使你"应当"选择期望效用最高的方案。效用函数的凹性（concave）刻画了风险厌恶——再多 100 万，对已有千万者的边际效用远小于对一无所有者。这恰好解释了人为何愿意买保险：用一笔确定的小损失，换掉一个不确定的大灾难。</p>
-  </div>
-
-  <div class="viz">
-    <div class="viz-title">▸ 阿莱悖论：同一批人，前后偏好翻转</div>
-    <table class="dtable">
-      <tr><th>实验</th><th>方案 A / C</th><th>方案 B / D</th><th>多数选择</th></tr>
-      <tr><td class="label-col">实验一</td><td>确定拿 100 万</td><td>89% 拿100万 · 10% 拿500万 · 1% 全无</td><td class="hl">选 A（求稳）</td></tr>
-      <tr><td class="label-col">实验二</td><td>11% 拿100万 · 89% 全无</td><td>10% 拿500万 · 90% 全无</td><td class="hl">选 D（博大）</td></tr>
-    </table>
-    <div class="dnote">两实验只是同时删去两选项里那"89% 拿100万"的共同部分——理性应保持一致，多数人却翻转，直接违反独立性公理</div>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>圣彼得堡悖论：一个期望收益为无穷大的赌局，却没人愿出超过几十块买入——期望金钱在此彻底失效，唯有对数效用才给出合理出价。更尖锐的是上图的阿莱悖论：同一批人在两个结构等价的选择中系统性地反转偏好，等于宣告真实偏好无法被任何效用函数表示。这道裂缝后来直接催生了前景理论。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p>凹效用即边际效用递减，与经济学的边际主义同源。在强化学习中，agent 最大化的正是"期望回报"，而奖励塑形（reward shaping）本质就是在替系统设计一个效用函数。在进化生物学里，被自然选择优化的"适应度"就是生命的效用；而对风险的厌恶可由乘性增长下"破产即出局"严格导出——这正是凯利判据的内核。</p>
-  </div>
-
-  <div class="section bigcat">
-    <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>设计 AI 产品的目标函数时，你其实是在替系统定义"效用"。若只优化点击的期望值，它就会与用户的长期效用背离——独立性公理被现实击穿之处，往往正是产品开始作恶之处。投资同理：按效用而非金额思考，你自然会拒绝那些"期望为正、却可能让你被迫离场"的下注。</p>
-    <span class="q">▸ 思考题：你最近一次重大下注，优化的是期望金钱，还是认真算过"最坏情形会不会让你被踢出牌桌"？</span>
-  </div>
+<h2 data-tts="b4a90bad10c17e9a">期望效用理论</h2>
+<div class="en">Expected Utility Theory</div>
+<div class="subfield">决策理论 · 公理化</div>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>理性决策追求的不是期望金钱最大，而是期望"效用"最大——同样一笔钱，对你的主观价值随你已拥有的量递减。这个看似技术性的修正奠定了从保险到投资组合的整个现代决策框架；但它内含一颗定时炸弹：真实的人类系统性地违反它的公理。</p>
 </div>
-
+<div class="section">
+<span class="label">机制</span>
+<p>冯·诺依曼与摩根斯坦给出四条公理（完备性、传递性、连续性、独立性），并证明：只要你的偏好满足这些公理，就一定存在一个效用函数 u，使你"应当"选择期望效用最高的方案。效用函数的凹性（concave）刻画了风险厌恶——再多 100 万，对已有千万者的边际效用远小于对一无所有者。这恰好解释了人为何愿意买保险：用一笔确定的小损失，换掉一个不确定的大灾难。</p>
+</div>
+<div class="viz">
+<div class="viz-title">▸ 阿莱悖论：同一批人，前后偏好翻转</div>
+<table class="dtable">
+<tr><th>实验</th><th>方案 A / C</th><th>方案 B / D</th><th>多数选择</th></tr>
+<tr><td class="label-col">实验一</td><td>确定拿 100 万</td><td>89% 拿100万 · 10% 拿500万 · 1% 全无</td><td class="hl">选 A（求稳）</td></tr>
+<tr><td class="label-col">实验二</td><td>11% 拿100万 · 89% 全无</td><td>10% 拿500万 · 90% 全无</td><td class="hl">选 D（博大）</td></tr>
+</table>
+<div class="dnote">两实验只是同时删去两选项里那"89% 拿100万"的共同部分——理性应保持一致，多数人却翻转，直接违反独立性公理</div>
+</div>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>圣彼得堡悖论：一个期望收益为无穷大的赌局，却没人愿出超过几十块买入——期望金钱在此彻底失效，唯有对数效用才给出合理出价。更尖锐的是上图的阿莱悖论：同一批人在两个结构等价的选择中系统性地反转偏好，等于宣告真实偏好无法被任何效用函数表示。这道裂缝后来直接催生了前景理论。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p>凹效用即边际效用递减，与经济学的边际主义同源。在强化学习中，agent 最大化的正是"期望回报"，而奖励塑形（reward shaping）本质就是在替系统设计一个效用函数。在进化生物学里，被自然选择优化的"适应度"就是生命的效用；而对风险的厌恶可由乘性增长下"破产即出局"严格导出——这正是凯利判据的内核。</p>
+</div>
+<div class="section bigcat">
+<span class="label">BIGCAT 应用 + 思考题</span>
+<p>设计 AI 产品的目标函数时，你其实是在替系统定义"效用"。若只优化点击的期望值，它就会与用户的长期效用背离——独立性公理被现实击穿之处，往往正是产品开始作恶之处。投资同理：按效用而非金额思考，你自然会拒绝那些"期望为正、却可能让你被迫离场"的下注。</p>
+<span class="q">▸ 思考题：你最近一次重大下注，优化的是期望金钱，还是认真算过"最坏情形会不会让你被踢出牌桌"？</span>
+</div>
+</div>
 <div class="card">
-  <h2>启发式与偏误</h2>
-  <div class="en">Heuristics & Biases</div>
-  <div class="subfield">认知心理学 · 有限理性</div>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>大脑不做最优计算，而用"够用就好"的捷径（启发式）。这些捷径在祖先环境中高效可靠，却在现代统计情境中系统性出错——偏误不是随机噪声，而是可预测的、有方向的扭曲。正因可预测，它既能被人利用，也能被人对冲。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">机制</span>
-    <p>西蒙提出"有限理性"：认知资源有限，人是在"满足"（satisfice）而非最优化。卡尼曼与特沃斯基进一步归纳出三大启发式——代表性（用相似度替代概率，从而忽略基率）、可得性（用回忆的难易替代真实频率）、锚定与调整（先抓一个数当起点，随后调整不足）。要害在"系统性"：同一个人在同类情境会一致地偏向同一方向，于是偏误可被预测、被设计、也可被针对性纠正。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>琳达问题：描述一位关心社会正义的哲学系毕业生后，多数人判定"她是银行出纳且活跃于女权运动"比"她是银行出纳"更可能——这违反了最基本的概率定律，合取永远不会比单一事件更可能。锚定实验更荒诞：让人先转一个明显随机的轮盘，再估计非洲国家在联合国的占比，轮盘数字越大，估计就越高。一个明知毫不相干的数字，仍劫持了判断。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p>它的对立面是另一派提出的"生态理性"：同样的"快速节俭"启发式（如再认启发式），在信息结构与之匹配的环境里常常打败复杂模型。这与机器学习的"偏差-方差权衡"高度同构——简单模型偏差高，却在小样本下泛化更稳。而在 AI 安全领域，大语言模型也忠实继承了训练语料里的人类偏误，把认知捷径放大成了系统性输出倾向。</p>
-  </div>
-
-  <div class="section bigcat">
-    <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>作为决策者，最实用的不是"消除偏误"（几乎不可能），而是改造"决策环境"去对冲它：用一份基率清单对抗代表性，用预先承诺的评判标准对抗锚定。带孩子时也一样——孩子"怕黑"往往是可得性启发式作祟：鲜活的恐怖想象压过了真实概率，讲道理不如开一盏小灯改变环境。</p>
-    <span class="q">▸ 思考题：回想你上一次飞快判断"这个人/这个方案靠谱"，你用的是哪条捷径？若强制自己先写下相关基率，结论还成立吗？</span>
-  </div>
+<h2 data-tts="2e7b5f10d9d2f23d">启发式与偏误</h2>
+<div class="en">Heuristics &amp; Biases</div>
+<div class="subfield">认知心理学 · 有限理性</div>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>大脑不做最优计算，而用"够用就好"的捷径（启发式）。这些捷径在祖先环境中高效可靠，却在现代统计情境中系统性出错——偏误不是随机噪声，而是可预测的、有方向的扭曲。正因可预测，它既能被人利用，也能被人对冲。</p>
 </div>
-
+<div class="section">
+<span class="label">机制</span>
+<p>西蒙提出"有限理性"：认知资源有限，人是在"满足"（satisfice）而非最优化。卡尼曼与特沃斯基进一步归纳出三大启发式——代表性（用相似度替代概率，从而忽略基率）、可得性（用回忆的难易替代真实频率）、锚定与调整（先抓一个数当起点，随后调整不足）。要害在"系统性"：同一个人在同类情境会一致地偏向同一方向，于是偏误可被预测、被设计、也可被针对性纠正。</p>
+</div>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>琳达问题：描述一位关心社会正义的哲学系毕业生后，多数人判定"她是银行出纳且活跃于女权运动"比"她是银行出纳"更可能——这违反了最基本的概率定律，合取永远不会比单一事件更可能。锚定实验更荒诞：让人先转一个明显随机的轮盘，再估计非洲国家在联合国的占比，轮盘数字越大，估计就越高。一个明知毫不相干的数字，仍劫持了判断。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p>它的对立面是另一派提出的"生态理性"：同样的"快速节俭"启发式（如再认启发式），在信息结构与之匹配的环境里常常打败复杂模型。这与机器学习的"偏差-方差权衡"高度同构——简单模型偏差高，却在小样本下泛化更稳。而在 AI 安全领域，大语言模型也忠实继承了训练语料里的人类偏误，把认知捷径放大成了系统性输出倾向。</p>
+</div>
+<div class="section bigcat">
+<span class="label">BIGCAT 应用 + 思考题</span>
+<p>作为决策者，最实用的不是"消除偏误"（几乎不可能），而是改造"决策环境"去对冲它：用一份基率清单对抗代表性，用预先承诺的评判标准对抗锚定。带孩子时也一样——孩子"怕黑"往往是可得性启发式作祟：鲜活的恐怖想象压过了真实概率，讲道理不如开一盏小灯改变环境。</p>
+<span class="q">▸ 思考题：回想你上一次飞快判断"这个人/这个方案靠谱"，你用的是哪条捷径？若强制自己先写下相关基率，结论还成立吗？</span>
+</div>
+</div>
 <div class="card">
-  <h2>多属性决策</h2>
-  <div class="en">Multi-Attribute Decision Making</div>
-  <div class="subfield">决策分析 · 运筹学</div>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>重大决策几乎从不是单维的。把"买哪套房、选哪个 offer、招哪个人"这类模糊纠结，拆解成"属性 × 权重"的显式结构，往往比凭整体直觉更可靠——不是因为算得多准，而是因为它强迫你把隐藏的权衡摆上台面。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">机制</span>
-    <p>给每个选项在多个属性（薪资、成长、通勤、文化……）上打分，为属性赋予权重，加权求和得到总分，这就是多属性效用理论（MAUT）。它的核心价值不在最后那个数字，而在过程本身：它逼你暴露出你真正在乎什么（权重）、各选项的真实差距有多大（分数），并打破"被某个鲜明属性单独绑架"的整体直觉。</p>
-  </div>
-
-  <div class="viz">
-    <div class="viz-title">▸ 两个 Offer 的加权评分矩阵</div>
-    <table class="dtable green">
-      <tr><th>属性（权重）</th><th>Offer A</th><th>Offer B</th></tr>
-      <tr><td class="label-col">薪资 ×0.30</td><td>9 → 2.70</td><td>7 → 2.10</td></tr>
-      <tr><td class="label-col">成长 ×0.35</td><td>6 → 2.10</td><td>9 → 3.15</td></tr>
-      <tr><td class="label-col">通勤 ×0.15</td><td>8 → 1.20</td><td>5 → 0.75</td></tr>
-      <tr><td class="label-col">文化 ×0.20</td><td>7 → 1.40</td><td>8 → 1.60</td></tr>
-      <tr><td class="label-col">加权总分</td><td>7.40</td><td class="hl">7.60</td></tr>
-    </table>
-    <div class="dnote">A 的高薪资最抢眼、最易"绑架"直觉，但把权重摊平后，B 因成长性反超——矩阵的价值正在于把这个隐藏权衡逼出来</div>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>富兰克林的"道德代数"：遇到难题，把纸对折，一边列赞成、一边列反对，给每条估个分量，两边相消后看剩下什么。但反直觉的是，研究显示对极复杂的多属性选择，"先充分理解、再让潜意识酝酿"有时比逐条死算更令人满意——线性模型擅长保持一致，直觉擅长整合海量弱线索。最佳策略常是两者交叉验证：当算出来的结果和直觉打架，那个分歧点恰恰是你最该深挖之处。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p>它与机器学习的"加权特征求和"（线性回归、感知机）在形式上完全同构——属性即特征，权重即参数；推荐系统的排序本质就是一次大规模的多属性决策。在管理学里它是"决策矩阵"与目标对齐评分；在伦理学，边沁的功利计算（快乐的强度 × 持续 × 概率）正是人类最早的多属性效用尝试。</p>
-  </div>
-
-  <div class="section bigcat">
-    <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>招聘资深岗或选技术栈时，与其陷在"感觉这个更好"，不如先与团队就权重达成共识——这一步本身就消解了大量分歧——再各自独立打分。但要记住：当矩阵算出的赢家让你"心里咯噔一下"，别忽视那个信号，它往往指向一个你没写进矩阵的隐藏权重。</p>
-    <span class="q">▸ 思考题：你上一个纠结的选择，若被迫写出属性权重，哪一个权重你其实最大、却羞于明说？</span>
-  </div>
+<h2 data-tts="3d42427ebdddc3f3">多属性决策</h2>
+<div class="en">Multi-Attribute Decision Making</div>
+<div class="subfield">决策分析 · 运筹学</div>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>重大决策几乎从不是单维的。把"买哪套房、选哪个 offer、招哪个人"这类模糊纠结，拆解成"属性 × 权重"的显式结构，往往比凭整体直觉更可靠——不是因为算得多准，而是因为它强迫你把隐藏的权衡摆上台面。</p>
 </div>
-
+<div class="section">
+<span class="label">机制</span>
+<p>给每个选项在多个属性（薪资、成长、通勤、文化……）上打分，为属性赋予权重，加权求和得到总分，这就是多属性效用理论（MAUT）。它的核心价值不在最后那个数字，而在过程本身：它逼你暴露出你真正在乎什么（权重）、各选项的真实差距有多大（分数），并打破"被某个鲜明属性单独绑架"的整体直觉。</p>
+</div>
+<div class="viz">
+<div class="viz-title">▸ 两个 Offer 的加权评分矩阵</div>
+<table class="dtable green">
+<tr><th>属性（权重）</th><th>Offer A</th><th>Offer B</th></tr>
+<tr><td class="label-col">薪资 ×0.30</td><td>9 → 2.70</td><td>7 → 2.10</td></tr>
+<tr><td class="label-col">成长 ×0.35</td><td>6 → 2.10</td><td>9 → 3.15</td></tr>
+<tr><td class="label-col">通勤 ×0.15</td><td>8 → 1.20</td><td>5 → 0.75</td></tr>
+<tr><td class="label-col">文化 ×0.20</td><td>7 → 1.40</td><td>8 → 1.60</td></tr>
+<tr><td class="label-col">加权总分</td><td>7.40</td><td class="hl">7.60</td></tr>
+</table>
+<div class="dnote">A 的高薪资最抢眼、最易"绑架"直觉，但把权重摊平后，B 因成长性反超——矩阵的价值正在于把这个隐藏权衡逼出来</div>
+</div>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>富兰克林的"道德代数"：遇到难题，把纸对折，一边列赞成、一边列反对，给每条估个分量，两边相消后看剩下什么。但反直觉的是，研究显示对极复杂的多属性选择，"先充分理解、再让潜意识酝酿"有时比逐条死算更令人满意——线性模型擅长保持一致，直觉擅长整合海量弱线索。最佳策略常是两者交叉验证：当算出来的结果和直觉打架，那个分歧点恰恰是你最该深挖之处。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p>它与机器学习的"加权特征求和"（线性回归、感知机）在形式上完全同构——属性即特征，权重即参数；推荐系统的排序本质就是一次大规模的多属性决策。在管理学里它是"决策矩阵"与目标对齐评分；在伦理学，边沁的功利计算（快乐的强度 × 持续 × 概率）正是人类最早的多属性效用尝试。</p>
+</div>
+<div class="section bigcat">
+<span class="label">BIGCAT 应用 + 思考题</span>
+<p>招聘资深岗或选技术栈时，与其陷在"感觉这个更好"，不如先与团队就权重达成共识——这一步本身就消解了大量分歧——再各自独立打分。但要记住：当矩阵算出的赢家让你"心里咯噔一下"，别忽视那个信号，它往往指向一个你没写进矩阵的隐藏权重。</p>
+<span class="q">▸ 思考题：你上一个纠结的选择，若被迫写出属性权重，哪一个权重你其实最大、却羞于明说？</span>
+</div>
+</div>
 <div class="card">
-  <h2>后悔最小化</h2>
-  <div class="en">Regret Minimization</div>
-  <div class="subfield">决策理论 · 在线学习</div>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>当概率根本无法估计——是真正的不确定性，而非可量化的风险——"最大化期望效用"就失灵了。这时另一套准则浮现：不求最优，但求事后"最不后悔"。它把决策的锚点，从"预测未来"换成了"管理你将如何回望此刻"。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">机制</span>
-    <p>后悔 = 事后最优选择的收益 − 你实际选择的收益。"最小化最大后悔"（minimax regret）准则，挑选的是"最坏情况下后悔也最小"的方案。它天然偏向稳健与可逆：保留选择权、避免不可挽回的大错。在博弈论与在线学习里，"无悔学习"（no-regret，如 CFR 算法）让 agent 在反复博弈中收敛到均衡——这正是顶级扑克 AI 的核心引擎。</p>
-  </div>
-
-  <div class="viz">
-    <div class="viz-title">▸ 后悔矩阵：选"最大后悔最小"的一行</div>
-    <table class="dtable warm">
-      <tr><th>方案＼情形</th><th>市场起飞</th><th>市场遇冷</th><th>最大后悔</th></tr>
-      <tr><td class="label-col">押注创业</td><td>0</td><td>50</td><td class="hl">50</td></tr>
-      <tr><td class="label-col">留在大厂</td><td>60</td><td>0</td><td>60</td></tr>
-    </table>
-    <div class="dnote">表中是各情形下"少赚/多赔"的后悔值。按 minimax 准则选创业（50 &lt; 60）——准则天然偏向保留上行空间、回避不可逆的大错</div>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>贝索斯的"后悔最小化框架"：决定要不要离职创业时，他没去算成功概率，而是想象 80 岁的自己回望——"没去试"的后悔，远大于"试了却失败"。结论瞬间清晰。心理学也佐证：拉长时间看，人们后悔的几乎总是"没做的事"而非"做错的事"，因为未行动的遗憾没有边界，也无法被事后合理化掉。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p>在线学习的无悔算法，是现代博弈 AI（用 CFR 求解扑克）与在线广告竞价的共同基石；在投资中，它对应"避免永久性资本损失优先于追求最大收益"——巴菲特的第一法则。在工程与复杂系统里，它又化身为"保留冗余与可逆性"的稳健设计哲学，与反脆弱、与"可逆的门 vs 单向门"的决策分类同源。</p>
-  </div>
-
-  <div class="section bigcat">
-    <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>面对高不确定的技术押注（押哪个 AI 框架、进哪条赛道），别假装能算准概率。先问两个问题：哪个选择即使错了也可逆？哪个错误会让我永久出局？把不可逆的大错排除掉，再在可逆的空间里大胆试错——这恰是"超级个体"对冲不确定性的元策略。</p>
-    <span class="q">▸ 思考题：你正在犹豫的那件事，是"可逆的门"还是"单向门"？想象十年后回望，哪个选择的后悔会更难消化？</span>
-  </div>
+<h2 data-tts="38a3e92a192b49da">后悔最小化</h2>
+<div class="en">Regret Minimization</div>
+<div class="subfield">决策理论 · 在线学习</div>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>当概率根本无法估计——是真正的不确定性，而非可量化的风险——"最大化期望效用"就失灵了。这时另一套准则浮现：不求最优，但求事后"最不后悔"。它把决策的锚点，从"预测未来"换成了"管理你将如何回望此刻"。</p>
 </div>
-
+<div class="section">
+<span class="label">机制</span>
+<p>后悔 = 事后最优选择的收益 − 你实际选择的收益。"最小化最大后悔"（minimax regret）准则，挑选的是"最坏情况下后悔也最小"的方案。它天然偏向稳健与可逆：保留选择权、避免不可挽回的大错。在博弈论与在线学习里，"无悔学习"（no-regret，如 CFR 算法）让 agent 在反复博弈中收敛到均衡——这正是顶级扑克 AI 的核心引擎。</p>
 </div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+<div class="viz">
+<div class="viz-title">▸ 后悔矩阵：选"最大后悔最小"的一行</div>
+<table class="dtable warm">
+<tr><th>方案＼情形</th><th>市场起飞</th><th>市场遇冷</th><th>最大后悔</th></tr>
+<tr><td class="label-col">押注创业</td><td>0</td><td>50</td><td class="hl">50</td></tr>
+<tr><td class="label-col">留在大厂</td><td>60</td><td>0</td><td>60</td></tr>
+</table>
+<div class="dnote">表中是各情形下"少赚/多赔"的后悔值。按 minimax 准则选创业（50 &lt; 60）——准则天然偏向保留上行空间、回避不可逆的大错</div>
+</div>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>贝索斯的"后悔最小化框架"：决定要不要离职创业时，他没去算成功概率，而是想象 80 岁的自己回望——"没去试"的后悔，远大于"试了却失败"。结论瞬间清晰。心理学也佐证：拉长时间看，人们后悔的几乎总是"没做的事"而非"做错的事"，因为未行动的遗憾没有边界，也无法被事后合理化掉。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p>在线学习的无悔算法，是现代博弈 AI（用 CFR 求解扑克）与在线广告竞价的共同基石；在投资中，它对应"避免永久性资本损失优先于追求最大收益"——巴菲特的第一法则。在工程与复杂系统里，它又化身为"保留冗余与可逆性"的稳健设计哲学，与反脆弱、与"可逆的门 vs 单向门"的决策分类同源。</p>
+</div>
+<div class="section bigcat">
+<span class="label">BIGCAT 应用 + 思考题</span>
+<p>面对高不确定的技术押注（押哪个 AI 框架、进哪条赛道），别假装能算准概率。先问两个问题：哪个选择即使错了也可逆？哪个错误会让我永久出局？把不可逆的大错排除掉，再在可逆的空间里大胆试错——这恰是"超级个体"对冲不确定性的元策略。</p>
+<span class="q">▸ 思考题：你正在犹豫的那件事，是"可逆的门"还是"单向门"？想象十年后回望，哪个选择的后悔会更难消化？</span>
+</div>
+</div>
+</div>
+<script defer="" src="https://cissy0802.github.io/comments.js"></script>
+<script defer="" src="https://cissy0802.github.io/search.js"></script>
+<script defer="" src="https://cissy0802.github.io/index-button.js"></script>
+<script defer="" src="https://cissy0802.github.io/i18n-tts.js"></script>
 </body>
 </html>

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>元知识详解：博弈论 — Day 11</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -56,159 +57,133 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <body>
 <div class="container">
 <header>
-  <h1>元知识详解：博弈论</h1>
-  <div class="meta">2026 年 5 月 25 日 · Meta Knowledge Daily</div>
-  <div class="day">DAY 11</div>
-  <div class="tags">
-    <span class="tag">博弈论</span>
-    <span class="tag alt">数学经济学</span>
-    <span class="tag green">演化生物学</span>
-    <span class="tag warm">机制与制度设计</span>
-  </div>
+<h1 data-tts="ec38cef1874af4b0">元知识详解：博弈论</h1>
+<div class="meta">2026 年 5 月 25 日 · Meta Knowledge Daily</div>
+<div class="day">DAY 11</div>
+<div class="tags">
+<span class="tag">博弈论</span>
+<span class="tag alt">数学经济学</span>
+<span class="tag green">演化生物学</span>
+<span class="tag warm">机制与制度设计</span>
+</div>
 </header>
-
 <div class="card">
-  <h2>纳什均衡</h2>
-  <div class="en">Nash Equilibrium</div>
-  <div class="subfield">没人有动力先打破的稳定点</div>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>"理性"不是"做对自己最好的事"，而是<strong>"在所有人都按当前预测行动时，自己没有单方面改变策略的动机"</strong>。均衡未必最优——它只是"没人有动力先打破"。许多社会困境（军备竞赛、价格战、过度加班）正是稳定的纳什均衡：人人都想退出，却没人敢先退。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">背景与机制</span>
-    <p>1950 年 Nash 证明：任何博弈都至少存在一个这样的"稳定点"——没有人能靠单方面改变策略让自己变得更好。在他之前，人们只会算"你死我活"的零和博弈；Nash 把它推广到一切非合作博弈，奠定了现代经济学的微观基础。要点是：<strong>均衡并不预测"谁会赢"，它只描述一种"所有人的预期都被彼此验证"的自洽状态</strong>。</p>
-  </div>
-
-  <div class="viz">
-    <div class="viz-title">▸ 囚徒困境：唯一均衡 ≠ 双方最好的结果</div>
-    <table class="payoff-table">
-      <tr><th></th><th>B 合作</th><th>B 背叛</th></tr>
-      <tr><td class="label">A 合作</td><td class="pareto">−1, −1</td><td>−10, 0</td></tr>
-      <tr><td class="label">A 背叛</td><td>0, −10</td><td class="nash">−5, −5</td></tr>
-    </table>
-    <div class="payoff-note">红色 = 唯一的纳什均衡（双方背叛）；绿色 = 对双方都更好的结果（双方合作）。各自的理性，把两人推向了更差的结局。</div>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>Braess 悖论：在拥堵的路网里<strong>新修一条捷径</strong>，结果所有人的通行时间反而变长了。因为每个司机都各自选"对自己最快"的路，重新形成了一个更糟的均衡。现实中，纽约、首尔都曾通过<strong>关闭某些道路</strong>反而缩短了平均通勤——拆掉一个选项，竟把整个系统推向了更好的均衡。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p>在<strong>生物学</strong>里它表现为"进化稳定策略"（见第三张卡）；在<strong>AI</strong>里，GAN 就是生成器与鉴别器在互相博弈中找均衡，AlphaGo 的自我对弈也是在搜索均衡；在<strong>冷战</strong>中，"相互确保毁灭"就是一个谁也不敢先动的稳定均衡；在<strong>广告竞价</strong>里，搜索引擎的拍卖结果也是一种均衡。</p>
-  </div>
-
-  <div class="section bigcat">
-    <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>团队里"过度承诺 → 延期 → 再过度承诺"是典型的纳什均衡：每个人都知道估算偏乐观，但谁先给保守估计，谁就先被边缘化。要打破它，靠的不是号召大家"诚实一点"，而是<strong>改变收益</strong>——比如公开记录"估算 vs 实际"，让准确性变成一种被看见的稀缺能力。育儿同理：孩子和家长卡在"催促 → 拖延"的稳定均衡里，讲道理没用，改变规则（用自然后果代替催促）才能让均衡松动。</p>
-    <span class="q">▸ 思考题：你团队或家庭里最让人疲惫的那个"反复拉锯"，本质是哪种纳什均衡？要破局，需要改动哪一格的收益？</span>
-  </div>
+<h2 data-tts="d11b9418ffb40b08">纳什均衡</h2>
+<div class="en">Nash Equilibrium</div>
+<div class="subfield">没人有动力先打破的稳定点</div>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>"理性"不是"做对自己最好的事"，而是<strong>"在所有人都按当前预测行动时，自己没有单方面改变策略的动机"</strong>。均衡未必最优——它只是"没人有动力先打破"。许多社会困境（军备竞赛、价格战、过度加班）正是稳定的纳什均衡：人人都想退出，却没人敢先退。</p>
 </div>
-
+<div class="section">
+<span class="label">背景与机制</span>
+<p>1950 年 Nash 证明：任何博弈都至少存在一个这样的"稳定点"——没有人能靠单方面改变策略让自己变得更好。在他之前，人们只会算"你死我活"的零和博弈；Nash 把它推广到一切非合作博弈，奠定了现代经济学的微观基础。要点是：<strong>均衡并不预测"谁会赢"，它只描述一种"所有人的预期都被彼此验证"的自洽状态</strong>。</p>
+</div>
+<div class="viz">
+<div class="viz-title">▸ 囚徒困境：唯一均衡 ≠ 双方最好的结果</div>
+<table class="payoff-table">
+<tr><th></th><th>B 合作</th><th>B 背叛</th></tr>
+<tr><td class="label">A 合作</td><td class="pareto">−1, −1</td><td>−10, 0</td></tr>
+<tr><td class="label">A 背叛</td><td>0, −10</td><td class="nash">−5, −5</td></tr>
+</table>
+<div class="payoff-note">红色 = 唯一的纳什均衡（双方背叛）；绿色 = 对双方都更好的结果（双方合作）。各自的理性，把两人推向了更差的结局。</div>
+</div>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>Braess 悖论：在拥堵的路网里<strong>新修一条捷径</strong>，结果所有人的通行时间反而变长了。因为每个司机都各自选"对自己最快"的路，重新形成了一个更糟的均衡。现实中，纽约、首尔都曾通过<strong>关闭某些道路</strong>反而缩短了平均通勤——拆掉一个选项，竟把整个系统推向了更好的均衡。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p>在<strong>生物学</strong>里它表现为"进化稳定策略"（见第三张卡）；在<strong>AI</strong>里，GAN 就是生成器与鉴别器在互相博弈中找均衡，AlphaGo 的自我对弈也是在搜索均衡；在<strong>冷战</strong>中，"相互确保毁灭"就是一个谁也不敢先动的稳定均衡；在<strong>广告竞价</strong>里，搜索引擎的拍卖结果也是一种均衡。</p>
+</div>
+<div class="section bigcat">
+<span class="label">BIGCAT 应用 + 思考题</span>
+<p>团队里"过度承诺 → 延期 → 再过度承诺"是典型的纳什均衡：每个人都知道估算偏乐观，但谁先给保守估计，谁就先被边缘化。要打破它，靠的不是号召大家"诚实一点"，而是<strong>改变收益</strong>——比如公开记录"估算 vs 实际"，让准确性变成一种被看见的稀缺能力。育儿同理：孩子和家长卡在"催促 → 拖延"的稳定均衡里，讲道理没用，改变规则（用自然后果代替催促）才能让均衡松动。</p>
+<span class="q">▸ 思考题：你团队或家庭里最让人疲惫的那个"反复拉锯"，本质是哪种纳什均衡？要破局，需要改动哪一格的收益？</span>
+</div>
+</div>
 <div class="card">
-  <h2>重复博弈与合作演化</h2>
-  <div class="en">Repeated Games &amp; Evolution of Cooperation</div>
-  <div class="subfield">合作如何在自利者之间涌现</div>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>一次性博弈里，"背叛"是理性的；但如果博弈会无限重复、而且未来足够重要，那么<strong>合作本身就能成为均衡</strong>——不需要任何道德、契约或第三方执法。文明、信任、声誉、长期关系，本质上都是把短期博弈嵌进了长期结构。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">背景与机制</span>
-    <p>理论上，只要博弈不断重复，合作、半合作、轮流占便宜……几乎任何结果都能稳定下来。最有名的实验是一场"重复囚徒困境"竞赛：夺冠的竟是一个只有 4 行的简单策略——<strong>"一报还一报"</strong>（Tit-for-Tat）。它的取胜之道是：先释放善意、被背叛就立刻回敬、对方一合作就既往不咎、而且规则透明易懂。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>一战堑壕里出现过"你不打我、我也不打你"的奇特默契：对峙的双方士兵会在固定时段朝天放枪，圣诞节甚至一起庆祝。原因很简单——<strong>同一批人长期对峙，就把战争变成了重复博弈</strong>，于是合作自发涌现。军方的破解之道恰恰是<strong>不断轮换部队、强制夜袭</strong>，人为把"长期博弈"打回"一次性博弈"，合作就崩了。结构决定行为，远比宣传口号有效。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p>在<strong>商业</strong>里，长期供应链关系和一次性砍价完全不同；在<strong>区块链</strong>里，质押—罚没机制把"作恶 = 永久损失押金"，硬把参与者拉进重复博弈；在<strong>外交</strong>里，单方面持续示好可以诱发对方回报；在<strong>日常</strong>里，靠声誉维持的口碑系统（评分、点评）就是把每一次交易都嵌进了长期博弈。</p>
-  </div>
-
-  <div class="section bigcat">
-    <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>判断"对方会不会坑我"，比凭直觉更靠谱的问法是：<strong>这是一次性博弈，还是重复博弈？</strong>陌生的网约车司机几乎没有动机欺诈，因为评分系统把每一单都接进了长期声誉；而员工离职前的最后一次绩效谈判，则是典型的一次性博弈，要据此调整预期。在团队里，把"每次都是临时拼凑"的项目，改成"成员有连续记录的常驻团队"，往往不靠制度就直接提升了合作——结构比说教强一个量级。</p>
-    <span class="q">▸ 思考题：你当前哪段重要关系，结构上其实是一次性博弈，你却按长期关系在投入？反过来，哪段你本该用长期心态，却被当成了一次性？</span>
-  </div>
+<h2 data-tts="b69bc88453c8c58d">重复博弈与合作演化</h2>
+<div class="en">Repeated Games &amp; Evolution of Cooperation</div>
+<div class="subfield">合作如何在自利者之间涌现</div>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>一次性博弈里，"背叛"是理性的；但如果博弈会无限重复、而且未来足够重要，那么<strong>合作本身就能成为均衡</strong>——不需要任何道德、契约或第三方执法。文明、信任、声誉、长期关系，本质上都是把短期博弈嵌进了长期结构。</p>
 </div>
-
+<div class="section">
+<span class="label">背景与机制</span>
+<p>理论上，只要博弈不断重复，合作、半合作、轮流占便宜……几乎任何结果都能稳定下来。最有名的实验是一场"重复囚徒困境"竞赛：夺冠的竟是一个只有 4 行的简单策略——<strong>"一报还一报"</strong>（Tit-for-Tat）。它的取胜之道是：先释放善意、被背叛就立刻回敬、对方一合作就既往不咎、而且规则透明易懂。</p>
+</div>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>一战堑壕里出现过"你不打我、我也不打你"的奇特默契：对峙的双方士兵会在固定时段朝天放枪，圣诞节甚至一起庆祝。原因很简单——<strong>同一批人长期对峙，就把战争变成了重复博弈</strong>，于是合作自发涌现。军方的破解之道恰恰是<strong>不断轮换部队、强制夜袭</strong>，人为把"长期博弈"打回"一次性博弈"，合作就崩了。结构决定行为，远比宣传口号有效。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p>在<strong>商业</strong>里，长期供应链关系和一次性砍价完全不同；在<strong>区块链</strong>里，质押—罚没机制把"作恶 = 永久损失押金"，硬把参与者拉进重复博弈；在<strong>外交</strong>里，单方面持续示好可以诱发对方回报；在<strong>日常</strong>里，靠声誉维持的口碑系统（评分、点评）就是把每一次交易都嵌进了长期博弈。</p>
+</div>
+<div class="section bigcat">
+<span class="label">BIGCAT 应用 + 思考题</span>
+<p>判断"对方会不会坑我"，比凭直觉更靠谱的问法是：<strong>这是一次性博弈，还是重复博弈？</strong>陌生的网约车司机几乎没有动机欺诈，因为评分系统把每一单都接进了长期声誉；而员工离职前的最后一次绩效谈判，则是典型的一次性博弈，要据此调整预期。在团队里，把"每次都是临时拼凑"的项目，改成"成员有连续记录的常驻团队"，往往不靠制度就直接提升了合作——结构比说教强一个量级。</p>
+<span class="q">▸ 思考题：你当前哪段重要关系，结构上其实是一次性博弈，你却按长期关系在投入？反过来，哪段你本该用长期心态，却被当成了一次性？</span>
+</div>
+</div>
 <div class="card">
-  <h2>进化稳定策略</h2>
-  <div class="en">Evolutionarily Stable Strategy (ESS)</div>
-  <div class="subfield">无需"理性"，只需"复制成功者"</div>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>不需要任何人懂"理性"，只要"成功者会被复制"，整个群体照样会收敛到博弈的均衡。基因、文化、企业策略都在玩博弈，却没有谁真的懂博弈论。<strong>"均衡"是选择压力的产物，不是脑子想出来的</strong>。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">背景与机制</span>
-    <p>一个策略是"进化稳定"的，意思是：当几乎所有个体都采用它时，<strong>任何想"入侵"的新策略都占不到便宜、活不下来</strong>。它比普通的纳什均衡更严格——不仅要求"没人想偏离"，还要求"能扛住小扰动"。动态地看，哪个策略当下更成功，它在群体里的占比就会越涨越快，最终收敛到这个稳定点。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>"鹰鸽博弈"假设打架的代价高于食物的价值：群体最终既不会全是好斗的"鹰"（互相伤害太亏），也不会全是退让的"鸽"（鸽群里冒出一只鹰就通吃），而是<strong>稳定在某个混合比例上</strong>。这解释了为什么动物冲突大多是虚张声势的仪式（吼叫、对峙）而非真打。同一逻辑也解释了为什么<strong>性别比总是趋近 1:1</strong>——哪种性别稀少，生它就更"划算"，于是比例被自动拉回来。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p>在<strong>文化</strong>里它解释了"随大流"和"学成功者"两种习惯为何能长期共存；在<strong>AI</strong>里，多智能体的自我对弈也收敛到这种稳定策略；在<strong>商业</strong>里，颠覆性突破常来自非主流玩家——因为大公司"探索 vs 守成"的比例本身就是一种稳定均衡；在<strong>医学</strong>里，它解释了为什么停药后耐药细菌不会马上消失。</p>
-  </div>
-
-  <div class="section bigcat">
-    <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>个人的职业选择常被这种直觉误导：当所有人都涌向"看起来最优"的赛道时，拥挤会把它的回报压低，反而是少数走"次优"路径的人拿到高回报。AI 时代尤其如此——"全员转去做某个热门技能"绝不可能是稳定策略，能被快速复制的技能，价值会迅速衰减。对"AI 超级个体"而言，真正的问题不是"现在哪个技能最火"，而是"<strong>哪种组合，在所有人都跟进之后依然稳固</strong>"——通常是难以模仿的跨域组合：深度技术 × 行业洞察 × 表达／教学能力。</p>
-    <span class="q">▸ 思考题：你当前最受欢迎的那项能力，在"周围人都拥有它"的群体里还有优势吗？什么样的组合，是只属于你的稳定策略？</span>
-  </div>
+<h2 data-tts="a596cacad033753d">进化稳定策略</h2>
+<div class="en">Evolutionarily Stable Strategy (ESS)</div>
+<div class="subfield">无需"理性"，只需"复制成功者"</div>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>不需要任何人懂"理性"，只要"成功者会被复制"，整个群体照样会收敛到博弈的均衡。基因、文化、企业策略都在玩博弈，却没有谁真的懂博弈论。<strong>"均衡"是选择压力的产物，不是脑子想出来的</strong>。</p>
 </div>
-
+<div class="section">
+<span class="label">背景与机制</span>
+<p>一个策略是"进化稳定"的，意思是：当几乎所有个体都采用它时，<strong>任何想"入侵"的新策略都占不到便宜、活不下来</strong>。它比普通的纳什均衡更严格——不仅要求"没人想偏离"，还要求"能扛住小扰动"。动态地看，哪个策略当下更成功，它在群体里的占比就会越涨越快，最终收敛到这个稳定点。</p>
+</div>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>"鹰鸽博弈"假设打架的代价高于食物的价值：群体最终既不会全是好斗的"鹰"（互相伤害太亏），也不会全是退让的"鸽"（鸽群里冒出一只鹰就通吃），而是<strong>稳定在某个混合比例上</strong>。这解释了为什么动物冲突大多是虚张声势的仪式（吼叫、对峙）而非真打。同一逻辑也解释了为什么<strong>性别比总是趋近 1:1</strong>——哪种性别稀少，生它就更"划算"，于是比例被自动拉回来。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p>在<strong>文化</strong>里它解释了"随大流"和"学成功者"两种习惯为何能长期共存；在<strong>AI</strong>里，多智能体的自我对弈也收敛到这种稳定策略；在<strong>商业</strong>里，颠覆性突破常来自非主流玩家——因为大公司"探索 vs 守成"的比例本身就是一种稳定均衡；在<strong>医学</strong>里，它解释了为什么停药后耐药细菌不会马上消失。</p>
+</div>
+<div class="section bigcat">
+<span class="label">BIGCAT 应用 + 思考题</span>
+<p>个人的职业选择常被这种直觉误导：当所有人都涌向"看起来最优"的赛道时，拥挤会把它的回报压低，反而是少数走"次优"路径的人拿到高回报。AI 时代尤其如此——"全员转去做某个热门技能"绝不可能是稳定策略，能被快速复制的技能，价值会迅速衰减。对"AI 超级个体"而言，真正的问题不是"现在哪个技能最火"，而是"<strong>哪种组合，在所有人都跟进之后依然稳固</strong>"——通常是难以模仿的跨域组合：深度技术 × 行业洞察 × 表达／教学能力。</p>
+<span class="q">▸ 思考题：你当前最受欢迎的那项能力，在"周围人都拥有它"的群体里还有优势吗？什么样的组合，是只属于你的稳定策略？</span>
+</div>
+</div>
 <div class="card">
-  <h2>机制设计</h2>
-  <div class="en">Mechanism Design</div>
-  <div class="subfield">逆向博弈论 · 把社会工程变成设计</div>
-
-  <div class="section insight">
-    <span class="label">核心洞察</span>
-    <p>常规博弈论问"给定规则，大家会怎么做"；机制设计反过来问"<strong>我想要某个结果，该设计什么规则</strong>"。它是"逆向博弈论"——明知道每个人都会钻空子、而且大家都知道彼此在钻空子，却依然能设计出让人<strong>说真话最划算、整体效率最高</strong>的规则。这是制度工程的圣杯。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">背景与机制</span>
-    <p>两块基石：一是任何理想结果，都能用一套"诚实表达真实意愿最划算"的规则来实现；二是"激励相容"——让参与者的最优策略恰好就是说实话。经典例子是<strong>"次价拍卖"：出价最高者中标，但只需付第二高的价格</strong>。这样一来，无论抬价还是压价都只会让自己更糟，于是"如实出价"成了最优策略。今天的广告竞价大多基于这个原理。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">反直觉例子</span>
-    <p>有一条著名定理证明：当候选人超过 3 个时，<strong>没有任何投票规则能完全杜绝"策略性投票"</strong>（弃保、含泪投次选等）。也就是说，"完美公平的民主投票"在数学上根本不存在——我们只能在各种各样"不完美"的规则里，挑一个"最不坏"的。这把一个政治难题，还原成了机制设计本身的根本局限。</p>
-  </div>
-
-  <div class="section">
-    <span class="label">跨学科迁移</span>
-    <p>在<strong>资源分配</strong>里，有算法能稳定地完成"配对"（用于医学生与医院、学生与学校的匹配）；在<strong>区块链</strong>里，奖惩规则被设计成"作恶不划算"；在<strong>组织</strong>里，"挑战性目标但不硬绑奖金"的设计，正是为了防止大家故意把目标定低；在<strong>气候</strong>里，碳定价和排放交易也是机制设计的工程化应用。</p>
-  </div>
-
-  <div class="section bigcat">
-    <span class="label">BIGCAT 应用 + 思考题</span>
-    <p>带团队、做产品、定奖励，本质都是机制设计。最常见的错误是把"KPI 设计"等同于"机制设计"——只想"我要什么"，却不问"<strong>参与者会怎么钻这个 KPI 的空子</strong>"。客服按通话量考核 → 员工会飞快挂断；研发按代码行数考核 → 代码越写越臃肿。每设一个激励，都要反问：如果我是个又聪明又只顾自己的人，把这个指标刷到最高的最省事办法是什么？它和我真正想要的一致吗？孩子也一样：奖励"做了多少题"会催生应付式刷题，奖励"把一道难题讲懂给别人"才让学习本身变成最优策略。</p>
-    <span class="q">▸ 思考题：你正在用的某个激励机制（KPI、积分、奖金、家规），如果交给一个绝顶聪明又只顾自己的人去最大化，会冒出什么"完美却荒谬"的结果？</span>
-  </div>
+<h2 data-tts="41650d6c0871b358">机制设计</h2>
+<div class="en">Mechanism Design</div>
+<div class="subfield">逆向博弈论 · 把社会工程变成设计</div>
+<div class="section insight">
+<span class="label">核心洞察</span>
+<p>常规博弈论问"给定规则，大家会怎么做"；机制设计反过来问"<strong>我想要某个结果，该设计什么规则</strong>"。它是"逆向博弈论"——明知道每个人都会钻空子、而且大家都知道彼此在钻空子，却依然能设计出让人<strong>说真话最划算、整体效率最高</strong>的规则。这是制度工程的圣杯。</p>
 </div>
-
+<div class="section">
+<span class="label">背景与机制</span>
+<p>两块基石：一是任何理想结果，都能用一套"诚实表达真实意愿最划算"的规则来实现；二是"激励相容"——让参与者的最优策略恰好就是说实话。经典例子是<strong>"次价拍卖"：出价最高者中标，但只需付第二高的价格</strong>。这样一来，无论抬价还是压价都只会让自己更糟，于是"如实出价"成了最优策略。今天的广告竞价大多基于这个原理。</p>
 </div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+<div class="section">
+<span class="label">反直觉例子</span>
+<p>有一条著名定理证明：当候选人超过 3 个时，<strong>没有任何投票规则能完全杜绝"策略性投票"</strong>（弃保、含泪投次选等）。也就是说，"完美公平的民主投票"在数学上根本不存在——我们只能在各种各样"不完美"的规则里，挑一个"最不坏"的。这把一个政治难题，还原成了机制设计本身的根本局限。</p>
+</div>
+<div class="section">
+<span class="label">跨学科迁移</span>
+<p>在<strong>资源分配</strong>里，有算法能稳定地完成"配对"（用于医学生与医院、学生与学校的匹配）；在<strong>区块链</strong>里，奖惩规则被设计成"作恶不划算"；在<strong>组织</strong>里，"挑战性目标但不硬绑奖金"的设计，正是为了防止大家故意把目标定低；在<strong>气候</strong>里，碳定价和排放交易也是机制设计的工程化应用。</p>
+</div>
+<div class="section bigcat">
+<span class="label">BIGCAT 应用 + 思考题</span>
+<p>带团队、做产品、定奖励，本质都是机制设计。最常见的错误是把"KPI 设计"等同于"机制设计"——只想"我要什么"，却不问"<strong>参与者会怎么钻这个 KPI 的空子</strong>"。客服按通话量考核 → 员工会飞快挂断；研发按代码行数考核 → 代码越写越臃肿。每设一个激励，都要反问：如果我是个又聪明又只顾自己的人，把这个指标刷到最高的最省事办法是什么？它和我真正想要的一致吗？孩子也一样：奖励"做了多少题"会催生应付式刷题，奖励"把一道难题讲懂给别人"才让学习本身变成最优策略。</p>
+<span class="q">▸ 思考题：你正在用的某个激励机制（KPI、积分、奖金、家规），如果交给一个绝顶聪明又只顾自己的人去最大化，会冒出什么"完美却荒谬"的结果？</span>
+</div>
+</div>
+</div>
+<script defer="" src="https://cissy0802.github.io/comments.js"></script>
+<script defer="" src="https://cissy0802.github.io/search.js"></script>
+<script defer="" src="https://cissy0802.github.io/index-button.js"></script>
+<script defer="" src="https://cissy0802.github.io/i18n-tts.js"></script>
 </body>
 </html>
