@@ -77,9 +77,12 @@ for F in $NEW_FILES; do
     grep -q "$F" index.html || { echo "ERROR: index.html does not reference $F"; exit 1; }
   fi
 
-  # Forbidden hardcoded scripts (auto-injected by GitHub Action)
+  # Shared scripts: now REQUIRED in each page (per CLAUDE.md) so the
+  # inject-comments Action's idempotent `grep -q` skips them and makes no
+  # extra bot commit. Only fail on genuine DUPLICATES (script tag >1 time).
   for s in comments.js search.js index-button.js i18n-tts.js; do
-    grep -q "$s" "$F" && { echo "ERROR: $F hardcodes $s (auto-injected, will duplicate)"; exit 1; }
+    n=$(grep -c "$s" "$F")
+    [ "$n" -gt 1 ] && { echo "ERROR: $F includes $s $n times (duplicate, will double-load)"; exit 1; }
   done
   grep -q "← Hub" "$F" && echo "WARN: $F hardcodes ← Hub button (will be deduped, consider removing)"
 
