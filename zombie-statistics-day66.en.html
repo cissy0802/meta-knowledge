@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meta-Knowledge: Zombie Statistics — Day 66</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"SF Pro Display","Noto Sans SC","Segoe UI",Roboto,sans-serif;background:#f4f1ed;color:#2a2a3a;line-height:1.75}
+.container{max-width:820px;margin:0 auto;padding:24px 20px 60px}
+header{text-align:center;padding:48px 0 32px;border-bottom:1px solid #e8e2d8;margin-bottom:36px}
+header h1{font-size:1.9rem;font-weight:800;letter-spacing:1px;background:linear-gradient(135deg,#e85a4f 0%,#f7a072 35%,#52b788 70%,#3a86ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header .meta{margin-top:10px;font-size:0.95rem;color:#6b6b7d}
+header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e85a4f;color:#fff;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:1px}
+.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tag{font-size:0.78rem;padding:3px 10px;border-radius:12px;background:#fff;color:#e85a4f;border:1px solid #f0d2cf}
+.tag.alt{color:#3a86ff;border-color:#d8e0eb}
+.tag.warm{color:#f7a072;border-color:#fbe5d9}
+.tag.green{color:#52b788;border-color:#d6e8dd}
+.card{background:#fff;border-radius:14px;padding:28px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-top:4px solid #e85a4f}
+.card:nth-of-type(2){border-top-color:#3a86ff}
+.card:nth-of-type(3){border-top-color:#52b788}
+.card:nth-of-type(4){border-top-color:#f7a072}
+.card h2{font-size:1.35rem;color:#2a2a3a;margin-bottom:4px}
+.card .en{font-size:0.95rem;color:#6b6b7d;font-style:italic;margin-bottom:6px}
+.card .subfield{display:inline-block;font-size:0.72rem;padding:2px 8px;border-radius:10px;background:#fbe5e2;color:#e85a4f;margin-bottom:18px;letter-spacing:0.5px}
+.card:nth-of-type(2) .subfield{background:#e6eef9;color:#3a86ff}
+.card:nth-of-type(3) .subfield{background:#e3f1e8;color:#52b788}
+.card:nth-of-type(4) .subfield{background:#fbe5d9;color:#f7a072}
+.section{margin-top:16px}
+.section .label{display:inline-block;font-size:0.8rem;font-weight:700;color:#e85a4f;letter-spacing:1px;margin-bottom:6px;padding:2px 10px;background:#fbe5e2;border-radius:4px}
+.section p{font-size:0.97rem;color:#3a3a4a}
+.section.insight .label{color:#fff;background:#e85a4f}
+.section.insight p{font-size:1.02rem;font-weight:500;color:#2a2a3a;padding-left:12px;border-left:3px solid #e85a4f;margin-top:6px}
+.section.question{background:#fef9f0;padding:14px 16px;border-radius:8px;border-left:3px solid #f7a072}
+.section.question .label{background:#f7a072;color:#fff}
+.section.question p{font-style:italic;color:#5a4a3a}
+.viz{margin:22px 0 8px;padding:20px;background:linear-gradient(135deg,#fff7f5 0%,#f0f4f8 100%);border-radius:12px;border:1px dashed #f0d2cf}
+.viz-title{font-size:0.82rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
+.chain{display:flex;flex-direction:column;gap:10px}
+.chain-step{display:flex;align-items:flex-start;gap:12px;background:#fff;border-radius:10px;padding:12px 14px;border-left:4px solid #3a86ff}
+.chain-step:nth-child(1){border-left-color:#52b788}
+.chain-step:nth-child(2){border-left-color:#f7a072}
+.chain-step:nth-child(3){border-left-color:#e85a4f}
+.chain-step:nth-child(4){border-left-color:#6b6b7d}
+.chain-n{flex:none;width:24px;height:24px;border-radius:50%;background:#3a86ff;color:#fff;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.chain-step:nth-child(1) .chain-n{background:#52b788}
+.chain-step:nth-child(2) .chain-n{background:#f7a072}
+.chain-step:nth-child(3) .chain-n{background:#e85a4f}
+.chain-step:nth-child(4) .chain-n{background:#6b6b7d}
+.chain-t{font-size:0.9rem}
+.chain-t strong{color:#2a2a3a}
+.chain-t span{color:#6b6b7d;font-size:0.84rem}
+.viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
+.nav{text-align:center;margin-top:40px;padding:20px}
+@media(max-width:600px){
+  header h1{font-size:1.4rem}
+  .card{padding:22px 18px}
+  .card h2{font-size:1.15rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>Meta-Knowledge: Zombie Statistics</h1>
+<div class="meta">July 22, 2026 · Cross-Disciplinary Core Concepts</div>
+<div class="day">Day 66</div>
+<div class="tags">
+<span class="tag">Metascience</span>
+<span class="tag alt">Citation Networks</span>
+<span class="tag green">Epistemology</span>
+<span class="tag warm">Information Literacy</span>
+</div>
+</header>
+
+<div class="card">
+<h2>Citation-Manufactured Authority</h2>
+<div class="en">How a Claim Gets Its Credibility</div>
+<div class="subfield">Citation Distortion · Evidence Decoupled from Authority</div>
+<div class="section insight">
+<span class="label">Core Insight</span>
+<p>The more a claim is cited, the more credible it looks. But here is the counterintuitive fact: the number of citations and the actual evidence behind a claim can be completely decoupled. Authority is often something the citation network <em>grows</em> on its own — sustained not by how much data supports it, but by how many people have repeated it. You think you're trusting the evidence; you're really trusting the density of the retelling.</p>
+</div>
+<div class="section">
+<span class="label">Mechanism</span>
+<p>Three channels can amplify razor-thin evidence into what looks like rock-solid consensus. <strong>Bias</strong>: cite the supporting studies, ignore the contradicting ones, so the literature looks one-sided. <strong>Amplification</strong>: reviews cite reviews, layer upon layer, and no one goes back to read the original data — second-hand becomes first-hand. <strong>Invention</strong>: cite a paper that contains no such data, or even contradicts the claim, as "support," turning what was a hypothesis into settled fact. Stack the three, and a mere conjecture can acquire near-axiomatic status in the literature.</p>
+</div>
+<div class="section">
+<span class="label">Counterintuitive Example</span>
+<p>A 2009 study in the <em>British Medical Journal</em> performed a "citation-network autopsy" on a widely accepted claim in biomedicine: 242 papers and 675 citations woven into one web. Trace the citations back to their origin, and only a tiny handful of papers actually contained supporting experimental data; a large share of the "supporting" citations either held no data at all or pointed the opposite way. The entire consensus was held up almost entirely by citations propping up other citations — not by the evidence underneath. Numeric authority can be hollow.</p>
+</div>
+<div class="section">
+<span class="label">Cross-Disciplinary Transfer</span>
+<p>Software dependencies are isomorphic: when you trust a third-party package, you're really trusting what it imports, and what that imports — any hollow link in the transitive trust chain is invisible to you. In machine learning, training a model on model-generated data lets errors reinforce themselves through "self-citation," eventually growing into a confident hallucination. Even a stretch of legacy code no one dares touch often draws its "authority" not from having been verified, but from having been depended on so long that no one goes back to check whether it's right.</p>
+</div>
+<div class="section">
+<span class="label">For BigCat</span>
+<p>The most dangerous sentence in a technical decision is "the industry best practice is to do it this way." Next time you hear "everyone does it like this" or "community consensus," dig one layer down: is that consensus backed by a few first-hand benchmarks and one real load test, or by a ring of blog posts citing each other, none of whose authors ever ran the numbers? Keep "how many people say it" and "how much evidence there is" on separate ledgers.</p>
+</div>
+<div class="section question">
+<span class="label">Question</span>
+<p>Take one technical tenet your team now treats as default. If you were forced to defend it using only first-hand evidence — not "others say so too" — how many cards would you still hold?</p>
+</div>
+</div>
+
+<div class="card">
+<h2>Factualization</h2>
+<div class="en">How a Guess Becomes a Fact</div>
+<div class="subfield">Transmission Decay · Stripping the Qualifiers</div>
+<div class="section insight">
+<span class="label">Core Insight</span>
+<p>A number turns from "someone's rough guess" into "an established fact" not because anyone verified it, but because every retelling quietly strips away its qualifiers — the uncertainty, the definition, the source. Qualifiers are a number's immune system; strip them off, and it becomes an invulnerable "fact."</p>
+</div>
+<div class="section">
+<span class="label">Mechanism</span>
+<p>It's a four-step decay chain, and every step makes the number harder and falser. First someone offers a <strong>rough estimate</strong>, hedged with caveats. In retelling, the "roughly" and "unscientific estimate" get deleted — <strong>factualization</strong>. A naked number needs authority, so it's assigned a <strong>source</strong> that never actually said it. Finally, even when someone performs an "autopsy" and disproves it, the number has long since broken free of the original text and circulates on its own — the autopsy report can never catch up.</p>
+</div>
+<div class="section">
+<span class="label">Counterintuitive Example</span>
+<p>"70% of change efforts fail" — one of the most-quoted mantras in management. Trace it to its nearest source, and you find a self-limiting line in a 1993 business-reengineering classic: "Our <em>unscientific estimate</em> is that as many as 50 to 70 percent of reengineering efforts <em>fail to achieve the dramatic results they intended</em>." Note two things: the authors explicitly call it unscientific, and they say "fail to achieve dramatic results" — not the same as "fail." Over three decades, "unscientific" was cut, "dramatic results" was swapped for "fail," and fabricated attributions to authoritative studies were bolted on. In 2011 a scholar published a formal "autopsy" in a journal, concluding the number rests on no reliable evidence whatsoever — yet it still opens countless slide decks today.</p>
+</div>
+<div class="viz">
+<div class="viz-title">▸ The Four-Step Decay of a Number</div>
+<div class="chain">
+<div class="chain-step"><div class="chain-n">1</div><div class="chain-t"><strong>Rough estimate</strong>　"Our unscientific estimate is 50–70% fail to reach dramatic results"<br/><span>Born with qualifiers: uncertain · defined · sourced</span></div></div>
+<div class="chain-step"><div class="chain-n">2</div><div class="chain-t"><strong>Factualization</strong>　"70% of change efforts fail"<br/><span>Drop "unscientific"; swap "fell short" for "fail"</span></div></div>
+<div class="chain-step"><div class="chain-n">3</div><div class="chain-t"><strong>Invented source</strong>　"Per a well-known study, 70% fail"<br/><span>A naked number gets a source that never said it</span></div></div>
+<div class="chain-step"><div class="chain-n">4</div><div class="chain-t"><strong>Survives its autopsy</strong>　Debunked in the literature → still on slide one<br/><span>Detached from the original; correction can't catch up</span></div></div>
+</div>
+<div class="viz-note">Every hop makes the number harder and falser — the first thing dropped is always the uncertainty, the definition, the source</div>
+</div>
+<div class="section">
+<span class="label">Cross-Disciplinary Transfer</span>
+<p>This is lossy compression. Information theory says every retelling must discard something, and the first thing discarded is the metadata — error bars, sample size, the boundaries of the definition — because it's "hard to say." A news headline stripping qualifiers is the same move: the body says "may, under specific conditions," the headline keeps only "does." Distributed systems face it too: after a datum passes through several hops, its lineage (where it came from, on what definition) is the first casualty, and downstream you get a bare value with no context.</p>
+</div>
+<div class="section">
+<span class="label">For BigCat</span>
+<p>Before you cite any "X% of teams / projects / users…" in a report or proposal, run a "qualifier checkup": did the original say "roughly" or "under certain conditions"? Are you quietly reading "fell short of expectations" as "failed"? Trace the line you want to quote back to its source, and you'll often find it far more modest than you remembered.</p>
+</div>
+<div class="section question">
+<span class="label">Question</span>
+<p>The number you last used to "settle the matter" in a decision — if it were required to travel with its error margin, its definition, and its first-hand source attached, would it still dare stand in front of the conclusion?</p>
+</div>
+</div>
+
+<div class="card">
+<h2>Zombie Statistics</h2>
+<div class="en">Why Debunking Doesn't Kill Them</div>
+<div class="subfield">Continued Influence · Narrative &gt; Evidence</div>
+<div class="section insight">
+<span class="label">Core Insight</span>
+<p>A number thoroughly disproven often keeps right on living — that's a "zombie statistic." The reason is plain: it serves a <strong>narrative need</strong>, not a need for truth. As long as the story still wants it as a hook, disproving evidence can't kill it. A number survives not by being true, but by being useful.</p>
+</div>
+<div class="section">
+<span class="label">Mechanism</span>
+<p>Debunking is inherently a weak signal: it arrives late, spreads narrowly, and is dreadful to tell ("there's actually no reliable data" grips far less than a punchy percentage). The original number, meanwhile, is round, dramatic, and useful — all natural transmission advantages. Worse still is the psychological "continued influence effect": once a person accepts a claim, it keeps shaping their later judgments even after they're corrected to their face. Deleting a piece of information is far harder than implanting it.</p>
+</div>
+<div class="section">
+<span class="label">Counterintuitive Example</span>
+<p>"We only use 10% of our brains" — neuroscience demolished it long ago (imaging shows every brain region gets used over the course of a day; there is no vast, permanently dormant reserve), yet it remains one of the most stubborn popular claims, because it's perfect for self-help, sci-fi, and advertising: 90% still to unlock, how tempting. "You must drink 8 glasses of water a day" is the same — trace it to the earliest recommendation in the 1940s and the original had a second half: "most of this quantity is already contained in the foods we eat." The first half became law; the inconvenient second half was thrown into the dustbin of history. Trivial to disprove; impossible to kill.</p>
+</div>
+<div class="section">
+<span class="label">Cross-Disciplinary Transfer</span>
+<p>The epidemiological lens fits well: a rumor behaves like a pathogen and a correction like a vaccine — the trouble is the vaccination rate is too low and comes too late to stop an outbreak already spreading. Marketing exploits the same law in reverse: a "useful but untrue" line routinely out-transmits a "true but tedious" one. In any narrative-driven system, "useful" carries more weight than "true."</p>
+</div>
+<div class="section">
+<span class="label">For BigCat</span>
+<p>When you want to correct a mistaken belief in a child or a team, "debunking" alone will almost certainly fail — you've left a hole where a story was, without filling it. What actually works is offering an equally tellable, equally useful <strong>replacement narrative</strong> to take its place, not merely announcing the old one is wrong. The mind dislikes a vacuum; give it no new story, and it retrieves the old one.</p>
+</div>
+<div class="section question">
+<span class="label">Question</span>
+<p>The last time you corrected someone's mistaken claim, did you hand them a "that's wrong," or a new story — more useful, more memorable — good enough to replace it?</p>
+</div>
+</div>
+
+<div class="card">
+<h2>A Provenance Habit</h2>
+<div class="en">Tracing a Number to Its Source</div>
+<div class="subfield">Three Gates · Calibrating Your Intake</div>
+<div class="section insight">
+<span class="label">Core Insight</span>
+<p>Fighting zombie statistics isn't about "more skepticism" — blanket suspicion is both exhausting and unsustainable. What works is a fixed routine: any number that makes your fingers itch to forward it or write it into a report first passes three gates — <strong>trace to the source, check the definition, ask who's selling</strong>. Turn screening from an attitude into a process.</p>
+</div>
+<div class="section">
+<span class="label">Mechanism</span>
+<p><strong>Trace to the source</strong>: follow the citations back to the original paper and see what it actually measured, on how large a sample, under what conditions. <strong>Check the definition</strong>: how exactly is "failure," "adoption," or "growth" defined, and what's the denominator — change the operational definition of the same phenomenon and the answer can shift by an order of magnitude. <strong>Ask who's selling</strong>: who's spreading this number, and what do they sell with it (cui bono — who benefits). If it fails any one gate, demote it to "unverified" and keep it out of your conclusion.</p>
+</div>
+<div class="section">
+<span class="label">Counterintuitive Example</span>
+<p>Numbers that can't pass the three gates tend to share a face: a round integer (exactly 70%), no denominator, no time window, and a vague "studies show" for a source rather than a named one. Conversely, numbers that hold up usually drag a string of "tedious" qualifiers behind them and read anything but catchy. So a practical heuristic: the clean, tidy number that perfectly supports the conclusion you wanted and is oh-so-shareable is precisely the one to stop and check first — it's too useful, useful to the point of suspicious.</p>
+</div>
+<div class="section">
+<span class="label">Cross-Disciplinary Transfer</span>
+<p>This habit has mature counterparts in engineering: distributed systems speak of "data lineage," where every value can be traced to how it was computed; software supply chains use a "bill of materials" (SBOM) that demands you account for where each component came from; science pushes "preregistration plus open raw data," institutionalizing exactly "trace to the source, check the definition." Information literacy is just moving those engineering disciplines inside your own head.</p>
+</div>
+<div class="section">
+<span class="label">For BigCat</span>
+<p>This dovetails with the calibrator Day 65 built for "I've got it" — now install one for your information intake too: any number destined for a decision, a report, or even a message to your child passes the three gates before use. It also previews the next stop: Day 66 was about a number's <em>origins</em> (where it came from); "Ask About the Ruler First" will be about a number's <em>scale</em> (how it was actually measured) — the same question, measured with a different ruler, can yield two wildly different answers.</p>
+</div>
+<div class="section question">
+<span class="label">Question</span>
+<p>The key number you last wrote into a report or decision — if you forced it right now through "trace to the source, check the definition, ask who's selling," how many of the three gates would it survive?</p>
+</div>
+</div>
+
+<div class="nav"></div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body>
+</html>
