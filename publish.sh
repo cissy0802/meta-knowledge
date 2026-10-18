@@ -101,6 +101,18 @@ for F in $NEW_FILES; do
     echo "       Use 「」 / 『』 or HTML entity &quot;"
     exit 1
   fi
+
+  # Ten takeaways exactly 10 (2026-10-17). Only brand-new pages (never
+  # committed): pages published before the rule don't have this section, and
+  # a later touch-up of an old page must not trip on it.
+  if ! git ls-files --error-unmatch "$F" >/dev/null 2>&1; then
+    TK=$(python3 -c 'import sys,re;h=sys.stdin.read();m=re.search(r"<ol class=\"takeaways\">(.*?)</ol>",h,re.S);print(len(re.findall(r"<li[ >]",m.group(1))) if m else -1)' < "$F")
+    if [ "$TK" -ne 10 ]; then
+      [ "$TK" -lt 0 ] && echo "ERROR: $F has no <ol class=\"takeaways\"> (the 十条要点 section)." \
+                      || echo "ERROR: $F has $TK takeaways; it must be exactly 10."
+      exit 1
+    fi
+  fi
 done
 
 # ---------- Duplicate N check (across same KIND, both lang variants) ----------
