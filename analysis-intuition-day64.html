@@ -45,7 +45,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table td.diag{color:#e85a4f;font-weight:800}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -193,6 +200,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你手上最棘手的那个问题，是不是一直卡在「时域」硬算？有没有一组变换、一个视角，能把它旋转到某个「频域」——让原本纠缠的东西彼此正交、独立、可分而治之？找到那把变换的钥匙，往往比更努力地求解更关键。</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>ε-δ 语言不提无穷小，把「无限趋近」改写成一句承诺：误差 ε 要求再小，总能找到范围 δ 来兑现。</li>
+<li>处处连续却处处不可导的魏尔斯特拉斯曲线，推翻了「连续曲线大多光滑」的直觉，逼出了分析的严格化。</li>
+<li>比较两个无穷集合的大小靠一一配对，所以偶数、整数和分数其实一样多，都是可数无穷。</li>
+<li>康托尔的对角线论证逐位改动清单中每个数，造出一个不在清单里的新实数，证明实数不可数。</li>
+<li>能被命名或写出程序的数只有可数个，而实数不可数，所以几乎所有实数都无法被有限语言描述。</li>
+<li>停机问题不可解用的是同一种对角线论证：程序只有可数个，问题却有不可数个，多数问题无算法可解。</li>
+<li>黎曼积分按定义域切竖条，勒贝格积分改为按值域切，因而能算出狄利克雷函数的积分为 0。</li>
+<li>巴拿赫—塔斯基悖论把一个实心球切成 5 块拼成两个同样的球，破绽在于这些块是没有体积的不可测集。</li>
+<li>柯尔莫哥洛夫把概率论建在测度论上：随机事件是可测集，概率是总质量为 1 的测度。</li>
+<li>傅里叶分解把任何信号拆成正弦波之和；叠出方波时跳变处约 9% 的过冲永远消不掉，即吉布斯现象。</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

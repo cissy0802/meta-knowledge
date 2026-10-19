@@ -37,7 +37,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .section.question .label{background:#f7a072;color:#fff}
 .section.question p{font-style:italic;color:#5a4a3a}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -172,6 +179,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你是否在某处，正偷偷指望着一颗「能一次性证明整个系统都正确」的银弹？如果它在数学上根本不存在，那你的信心，又该建立在怎样一组「局部确定性」的拼合之上？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>形式逻辑把推理从内容中剥离，一个论证是否有效只取决于它的形式骨架。</li>
+<li>实质蕴含 P→Q 只在 P 真而 Q 假时为假，所以假前提能推出任何结论。</li>
+<li>谓词逻辑引入量词 ∀ 和 ∃，量词顺序一旦对调，命题的意思就完全不同。</li>
+<li>沃森选择题显示人不擅长纯形式推理，换成饮酒年龄的情境后正确率才大幅上升。</li>
+<li>「所有节点都健康」的否定是「存在一个节点不健康」，德摩根定律是拆解布尔条件的工具。</li>
+<li>归纳法、反证法、构造法是三种主力证明方法，循环不变量本质上就是一次归纳证明。</li>
+<li>非构造性存在证明只说明对象存在却不给出它，这引发了直觉主义与经典数学之争。</li>
+<li>说谎者悖论和罗素悖论同属自指结构，系统一旦能谈论自己，悖论就随之出现。</li>
+<li>康托尔用对角线法证明实数比自然数多，同一手法后来被哥德尔和图灵用来证明不可能性定理。</li>
+<li>哥德尔不完全性定理说，足以表达算术的自洽系统必有真而不可证的命题，也无法自证自洽。</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

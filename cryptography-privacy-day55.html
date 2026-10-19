@@ -42,7 +42,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -206,6 +213,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>过去一周，有多少你以为「自己想做」的事，其实是某个排序或推送替你选好的？哪一个数字习惯，若换成由你付费、它不采集你的数据，你反而更愿意用？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>公钥加密让素未谋面、从未共享秘密的双方，也能在被窃听的公开信道上保密通信，这在 1976 年前被认为不可能。</li>
+<li>公钥加密的核心是陷门单向函数：正着算极易、反着算极难，只有握有私钥这道陷门的人能轻松反推。</li>
+<li>RSA 的安全建立在大数分解很难这一未被证明的假设上，所以密码学的安全是破解代价高到不值得，而非不可能破解。</li>
+<li>一台足够大、能跑 Shor 算法的量子计算机，可能让依赖大数分解的现行加密一夜失效。</li>
+<li>零知识证明能让验证者确信你知道某个秘密，却不泄露秘密本身的任何信息，把证明与透露彻底拆开。</li>
+<li>在阿里巴巴洞穴里，不会咒语的证明者每轮只有一半概率蒙对，重复 20 轮后蒙混过关的概率低于百万分之一。</li>
+<li>zk-SNARK 把零知识证明工程化，让区块链能验证交易合法、余额充足，却不暴露交易双方和金额。</li>
+<li>差分隐私往统计结果注入校准噪声，让查询结果在库中有你与没你时几乎无法区分；参数 ε 越小越隐私，结果也越不准。</li>
+<li>删掉姓名的去标识化数据并不安全，几条看似无害的信息一组合就能唯一锁定个人；美国 2020 年人口普查已采用差分隐私。</li>
+<li>监控资本主义把用户行为留下的数据尾气当原料，加工成预测产品卖给广告商，最终走向规模化地轻推和修改人的行为。</li>
+</ol>
 </div>
 <div class="nav">
 <a href="index.html">← 返回目录</a>

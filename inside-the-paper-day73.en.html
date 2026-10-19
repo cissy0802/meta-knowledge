@@ -49,11 +49,18 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .coda ol{margin:10px 0 12px 22px;font-size:0.95rem;color:#3a3a4a}
 .coda li{margin-bottom:3px}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
   .coda{padding:20px 18px}
+  .tk{padding:20px 18px}
 }
 </style>
 </head>
@@ -232,6 +239,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question</span>
 <p>The last time your team said a change "drove" a metric improvement, was the mechanism articulated? If it wasn't, are you willing to rewrite "drove" as "correlated with"?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>A paper's abstract is not a faithful summary of its results: one study's abstract reports about +0.1% while its first table shows -0.62%.</li>
+<li>Abstract distortion has three sources: nobody checks abstract against tables, cleaner wording gets rewarded, and compression drops conditions first.</li>
+<li>Systematic audits of medical journals keep finding that a sizable share of peer-reviewed papers have abstracts that do not match their results.</li>
+<li>Numbers often change between a working paper and the published version, such as 15% becoming 11%, usually without any notice.</li>
+<li>In version drift the old working-paper number tends to travel further, because it came earlier, got louder coverage and was bigger.</li>
+<li>A number having a citable source is not the same as it being the current version, and an authoritative source makes skipping the check easier.</li>
+<li>The spread across a family of proxy measures is itself information: small spread means a robust result, large spread means the metric choice drives it.</li>
+<li>An equal-weighted composite is a constructed number, not a measurement; normalizing by standard deviation turns the same data from a quarter into a sixth.</li>
+<li>Disclosing every analysis does not prevent misreading; the headline must use a pre-declared metric, which is why preregistration locks the primary outcome.</li>
+<li>Publication often strips the working paper's mechanism section, leaving a clean reduced-form association that readers then read as causal.</li>
+</ol>
 </div>
 <div class="coda">
 <h3>A four-step check before a number enters a decision</h3>

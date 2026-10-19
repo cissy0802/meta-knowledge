@@ -54,7 +54,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .chain-t span{color:#6b6b7d;font-size:0.84rem}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -205,6 +212,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Citation counts can come completely apart from the evidence behind them: authority often grows out of the citation network itself, from sheer density of retelling.</li>
+<li>Citation distortion runs through three channels: bias cites only supportive work, amplification stacks reviews on reviews, and invention cites a paper that lacks the data at all.</li>
+<li>A 2009 BMJ study dissected 242 papers and 675 citations; only a handful of them actually contained supporting experimental data.</li>
+<li>A rough guess becomes an accepted fact not through verification but because every retelling strips its qualifiers: uncertainty, definitions and source.</li>
+<li>Factualization is a four-step decay chain: a rough estimate, qualifiers dropped, a false source attached, and continued circulation even after debunking.</li>
+<li>The claim that 70% of change efforts fail traces to a 1993 reengineering book's unscientific estimate that 50 to 70% fell short of dramatic results.</li>
+<li>Zombie statistics survive debunking because they serve a narrative need rather than a need for truth: numbers live by being useful, not by being true.</li>
+<li>Debunkings arrive late, travel less and are hard to tell; through the continued influence effect, a corrected claim still shapes later judgments.</li>
+<li>The myth that we use 10% of our brains was refuted by neuroscience, and the eight-glasses rule lost half its original advice, yet both persist because they make good stories.</li>
+<li>Fighting zombie statistics takes a fixed routine, not vague skepticism: before using any number, trace it to the primary source, check the definition and ask who is selling it.</li>
+</ol>
+</div>
 <div class="nav"></div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

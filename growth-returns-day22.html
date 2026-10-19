@@ -54,7 +54,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .s4{background:#b7e4c7;color:#1b4332;flex:34}
 .s5{background:#d8f3dc;color:#1b4332;flex:16}
 .chasm{font-size:0.74rem;color:#e85a4f;text-align:center;margin-top:8px;font-weight:600}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -237,6 +244,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>回想你最近一次「越贵反而越想要」的购买——你买的究竟是那件东西的用途，还是它让别人看到你拥有它这件事？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>指数增长的定义是增量正比于当前存量：增长率作用在不断变大的基数上，增加的部分也越来越多。</li>
+<li>72 法则：用 72 除以增长率就得到翻倍所需期数，增长率 7% 约 10 期翻倍，10% 约 7 期。</li>
+<li>指数过程的大部分变化挤在最后一段：睡莲每天翻倍、第 48 天铺满湖面，第 47 天才铺满一半。</li>
+<li>收益递增反转了边际收益递减：学习曲线、网络效应和规模经济让领先者越来越领先，最终赢家通吃。</li>
+<li>收益递增的系统有多重可能的均衡，落在哪一个取决于早期微小的偶然差异，一旦锁定，更优方案也难撼动。</li>
+<li>QWERTY 键盘战胜效率更高的 Dvorak 布局说明，胜出的常常不是最好的，而是最早达到临界规模的。</li>
+<li>现实中的增长最终都是 S 曲线：缓慢启动、急速爆发，再因资源或市场耗尽逼近饱和而趋平。</li>
+<li>创新扩散中，早期采用者与早期大众之间横着一道鸿沟，多数新事物死在这里，跨过它要先积累临界质量。</li>
+<li>颠覆性新技术初期常比旧技术差，却改进得更快；柯达握有数码相机早期专利，仍因困在到顶的胶片曲线而错失转身。</li>
+<li>韦布伦商品违背需求定律：高价本身是显示财力与地位的信号，所以越贵越有人想要。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

@@ -49,7 +49,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .rung-text{font-size:0.83rem;color:#3a3a4a;flex:1}
 .rung-scale{flex-shrink:0;font-size:0.74rem;color:#e85a4f;font-weight:700;text-align:right;width:88px}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -197,6 +204,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>面对一个你无法直接打开的黑箱（他人的真实动机、模型的内部、市场的情绪），你能设计出哪一种「凌星观测」——一个可测量的、规律性的外部扰动——来间接测出它？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>宇宙尺度靠一座距离阶梯测出：三角视差、造父变星、Ia 型超新星、哈勃定律，每一级都由下面一级校准。</li>
+<li>距离阶梯底层的误差会逐级放大：哈勃最初算出的膨胀率因造父变星校准有误，偏了约七倍。</li>
+<li>哈勃张力：距离阶梯测出的宇宙膨胀率约 73 km/s/Mpc，宇宙微波背景反推约 67，两者都精密却无法调和。</li>
+<li>费米悖论的骨架是时间不对称：银河系约一百亿年，殖民全星系只需几百万年，宇宙却一片寂静。</li>
+<li>大过滤器假说认为从死物到星际文明有一步极难跨过；若这道过滤器在前方，技术文明大多会自我了结。</li>
+<li>在火星上发现生命反而是坏消息：生命越容易出现，大过滤器就越可能横在人类前方而不是身后。</li>
+<li>能用已知物理描述的可见物质只占宇宙约 5%，其余 95% 是只能靠引力推断、本质未知的暗物质与暗能量。</li>
+<li>暗物质的证据来自星系外缘恒星转得过快和引力透镜；它不发光也不遮光，对光完全透明。</li>
+<li>1990 年代两个团队观测遥远的 Ia 型超新星，本想测宇宙膨胀减速，却发现膨胀在加速，由此发现暗能量。</li>
+<li>系外行星靠间接法探测：凌星法测出行星半径，视向速度法测出质量，合起来能算出密度、分辨岩石与气态。</li>
+</ol>
 </div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

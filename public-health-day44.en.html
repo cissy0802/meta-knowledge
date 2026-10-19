@@ -43,7 +43,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
 .ca-table td.highlight{background:#f0faf4;color:#52b788;font-weight:700}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -214,6 +221,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
     <span class="label">Question</span>
     <p>In some cross-organization collaboration you're part of, who is the "weakest link"? Does the current mechanism encourage every party to expose its weaknesses and problems early, or does it punish candor and reward concealment?</p>
   </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Social determinants of health: income, education, housing, sense of control and social status shape population health far more than medical care does.</li>
+<li>The health gradient means health declines step by step down the social ladder, as chronic stress from low status raises cortisol and wears down the heart and immune system.</li>
+<li>A British civil-service study found that among white-collar staff with the same free healthcare, the lowest grade had nearly three times the top grade's heart-disease death rate.</li>
+<li>Roseto's residents ate fatty food and smoked yet had far less heart disease than neighboring towns, until their tight community broke apart and the rate caught up.</li>
+<li>Vaccine hesitancy is a problem of trust and psychology, not missing knowledge, so piling on scientific facts often fails and can even trigger a backfire effect.</li>
+<li>Omission bias makes people fear harm caused by acting more than harm caused by not acting, so skipping a vaccine feels safer even when it is far riskier.</li>
+<li>Britain's 1970s whooping-cough vaccine scare cut coverage from 81% to 31% and was followed by three major epidemics, doing far more harm than the feared vaccine.</li>
+<li>Nudges change health behavior at population scale without force, lectures or money, simply by rearranging defaults, ordering and small bits of friction.</li>
+<li>Opt-out Austria has about 99% organ-donation consent versus about 12% in opt-in Germany; there is no neutral choice architecture, only a choice of direction.</li>
+<li>Global immunity is a weakest-link public good whose level is set by the least-protected country, which is why vaccine nationalism ends up hurting rich nations too.</li>
+</ol>
 </div>
 
 </div>

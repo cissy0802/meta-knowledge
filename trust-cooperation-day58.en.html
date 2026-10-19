@@ -47,11 +47,18 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .recip .diagram .obs{color:#52b788}
 .recip .cap{font-size:0.8rem;color:#6b6b7d;line-height:1.5;margin-top:10px}
 .recip-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
   .recip-wrap{grid-template-columns:1fr}
+  .tk{padding:20px 18px}
 }
 </style>
 </head>
@@ -199,6 +206,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">REFLECTION</span>
 <p>Pick a cooperation you're currently sustaining (a team, a collaboration network, a community) and examine the four parameters one by one — scale, length of the future, information transparency, punishment mechanism. Which is closest to its critical line right now? If it goes first, which signal would you notice it from earliest?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Cooperation can evolve among purely selfish individuals, driven not by altruism genes but by two mundane conditions: repeated encounters and memory.</li>
+<li>Tit-for-tat, the classic strategy for direct reciprocity, opens with goodwill, retaliates against betrayal, and holds a grudge for only one round.</li>
+<li>The shadow of the future is the probability w of meeting again; when w is large enough, cooperating pays better than defecting and inviting lasting retaliation.</li>
+<li>Indirect reciprocity runs on reputation and holds when the probability q that others know your reputation exceeds the cost-to-benefit ratio c/b.</li>
+<li>The spontaneous truces in the World War I trenches show cooperation rests on meeting again tomorrow; commanders broke them with frequent rotations and ordered raids.</li>
+<li>Reputation compresses a long history of behavior into a portable signal, and it requires observable actions, reliable information flow, and identities that are hard to reset.</li>
+<li>The 11th-century Maghribi Jewish traders sustained long-distance agency trade without courts, through a network that collectively blacklisted any cheating agent.</li>
+<li>Institutional trust replaces personal acquaintance with third-party guarantees such as law, contracts, money, and certification, letting trust scale to millions of strangers.</li>
+<li>The paradox of institutional trust is that a corrupted institution fails systemically, as when paper money drops to nothing overnight during hyperinflation.</li>
+<li>Cooperation collapses when one of four parameters crosses a threshold: group size, a shortening future, noisy information, or absent punishment, often as a sudden phase transition.</li>
+</ol>
 </div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

@@ -91,7 +91,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .pa-issue{padding:10px 12px;background:#fff7f5;border-radius:8px;border-left:3px solid #f7a072}
 .pa-issue-title{font-size:0.78rem;font-weight:700;color:#c93f33;margin-bottom:4px}
 .pa-issue-body{font-size:0.74rem;color:#5a4a3a;line-height:1.5}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -431,6 +438,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Organizational ambidexterity means doing two contradictory things at once: exploiting current capabilities for today's profit while exploring the businesses that may replace them.</li>
+<li>March (1991) showed that the standardization and reuse of experience that make organizations efficient also kill exploration, so pure exploiters win the short term and lose the long run.</li>
+<li>Structural ambidexterity puts exploration and exploitation in separate units bridged by senior leadership, and the more volatile the environment, the larger the explore share should be.</li>
+<li>Greenleaf proposed servant leadership in 1970: a leader is a servant first, and real authority comes from the voluntary followership of those served.</li>
+<li>Servant leadership lifts performance through three mechanisms: psychological safety, activated intrinsic motivation, and top talent self-selecting into the team.</li>
+<li>High reliability organizations such as carriers, nuclear plants, and air traffic control succeed not by eliminating error but by making weak signals impossible to ignore.</li>
+<li>Of Weick and Sutcliffe's five HRO principles, the first three build sensitivity that prevents failure and the last two build resilience for fast recovery.</li>
+<li>The HRO principle that breaks most sharply with bureaucracy is deference to expertise: in a crisis, authority flows to whoever knows most, not to rank.</li>
+<li>The principal-agent problem arises from misaligned goals plus information asymmetry, so agency cost is structural: hiring good people cannot fix it, only mechanism design can reduce it.</li>
+<li>Stock options were meant to align CEOs with shareholders, yet they bred short-termism aimed at pumping the stock price, a textbook case of Goodhart's Law.</li>
+</ol>
+</div>
 <div class="nav"><a href="index.en.html">← Back to Index</a></div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

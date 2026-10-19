@@ -44,10 +44,17 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-legend i{width:22px;height:0;border-top-width:3px;border-top-style:solid;display:inline-block}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
+  .tk{padding:20px 18px}
 }
 </style>
 </head>
@@ -202,6 +209,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你上一次因为新证据而主动调低自己某个技术判断的概率，是什么时候？如果想不起来，那到底是你一贯英明，还是你在把「坚持立场」误当成了「有判断力」？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>校准的标准不是单次预测说没说对，而是你说「70% 会发生」的那些事里，是否真有约七成发生。</li>
+<li>把预测按置信度分箱画成校准曲线，多数人的曲线塌在对角线下方，这是过度自信的指纹。</li>
+<li>天气预报员是校准最好的职业之一，因为他们每天都拿到无可推诿的反馈；上电视的名嘴则往往越出名预测越差。</li>
+<li>深度神经网络同样过度自信，工程上要用温度缩放等置信度校准方法把概率压回真实频率。</li>
+<li>布莱尔评分把报出的概率与结果（1 或 0）之差平方后取平均，分数越低越好，对「自信地错」罚得极狠。</li>
+<li>好预测既要校准又要有分辨力：永远报 50% 的人可以完美校准，却不提供任何可用于决策的信息。</li>
+<li>参考类预测先找同类事件的基率作为起点，再用眼前证据温和微调，顺序不能颠倒。</li>
+<li>规划谬误让人几乎总是低估工期、成本和风险：一个估计两年编完教材的团队，最终用了八年。</li>
+<li>在大型预测锦标赛里，经过训练和记分的业余爱好者，准确度比能读机密简报的情报分析员高出约三成。</li>
+<li>超级预测者的习惯是拆解问题、主动找反证、用参考类锚定起点，并随新信息频繁小幅更新概率。</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

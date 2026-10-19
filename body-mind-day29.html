@@ -53,7 +53,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ladder-step.bot{border-left-color:#3a86ff}
 .ladder-label{flex-shrink:0;width:118px;font-weight:700;font-size:0.85rem;color:#2a2a3a;line-height:1.3}
 .ladder-desc{font-size:0.84rem;color:#3a3a4a;flex:1}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -207,6 +214,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>回想最近一次「怎么讲道理对方都听不进去」的对话（与同事或孩子）：对方当时可能处于哪种生理状态？如果你先去降低威胁信号、而非加强论证，结果会不会不同？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>迷走神经约八成纤维是身体到大脑方向的感觉纤维，它更像一条向上汇报的遥测线，而不是控制线。</li>
+<li>心率变异性（HRV）是迷走张力的窗口：张力高，身体在应激后能更快把唤醒按下去。</li>
+<li>迷走神经还掌管胆碱能抗炎通路，直接给免疫系统的炎症反应踩刹车。</li>
+<li>迷走神经刺激植入物已获批治疗难治性癫痫和难治性抑郁，说明身体到大脑的上行通道很关键。</li>
+<li>肠和脑之间至少有四条通道并行：迷走神经、免疫信号、微生物代谢物和内分泌。</li>
+<li>人体九成以上的血清素在肠道合成，它不直接进入大脑，而是通过本地神经和迷走传入间接影响中枢。</li>
+<li>在小鼠身上，把胆怯品系的肠道菌群移植给大胆品系，受体也会变胆怯，但人类的因果链还需谨慎看待。</li>
+<li>内感受是大脑读取心跳、呼吸等身体内部信号的能力，岛叶是核心枢纽，情绪常是大脑给这些信号贴的标签。</li>
+<li>同一份生理唤醒本身是模糊的，吊桥实验中男性把摇晃引起的心跳加速错误归因成了心动。</li>
+<li>多迷走神经理论把自主神经看成安全、危险、生命威胁三层逐级回退的系统，临床有用，但进化与解剖主张仍有争议。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

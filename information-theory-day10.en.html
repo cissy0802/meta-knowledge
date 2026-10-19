@@ -43,7 +43,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .channel-box.noise{border-color:#e85a4f;color:#e85a4f;background:#fff7f5}
 .channel-arrow{color:#6b6b7d;font-weight:700}
 .channel-note{font-size:0.75rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -211,6 +218,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Shannon entropy measures uncertainty removed: the more predictable a message, the less information it carries; the more surprising, the more.</li>
+<li>Entropy peaks when all outcomes are equally likely and hardest to guess, and drops to zero when the outcome is certain.</li>
+<li>An English letter seems to need about 4.7 bits, but because of its many regularities, real information is only about 1 bit per letter.</li>
+<li>Natural language is highly compressible, which is the root reason large language models can predict the next word so accurately.</li>
+<li>Mutual information measures how much knowing Y reduces uncertainty about X; it needs no straight-line relationship, so it is more general than correlation.</li>
+<li>If X is uniform on −1 to 1 and Y = X², their correlation is exactly zero yet mutual information is high: zero correlation is not independence.</li>
+<li>Shannon proved that as long as the transmission rate stays below channel capacity, some code exists that drives the error rate toward zero.</li>
+<li>Channel capacity doubles with bandwidth but grows only slightly when signal-to-noise ratio doubles, which is why 5G fights for wider spectrum.</li>
+<li>Kolmogorov complexity defines an object's information as the length of the shortest program that generates it, so the digits of pi are actually simple.</li>
+<li>Kolmogorov complexity cannot be computed, yet it gives Occam's razor a rigorous form: learning means finding the shortest explanation of the data.</li>
+</ol>
+</div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>
 <script src="https://hub.cissychen.com/search.js" defer></script>

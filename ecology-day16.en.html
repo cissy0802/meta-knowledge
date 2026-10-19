@@ -60,7 +60,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .cycle-stage span{font-size:0.72rem;color:#6b6b7d;font-weight:500;margin-left:6px}
 .cycle-desc{font-size:0.8rem;color:#5a5a6a;line-height:1.55}
 .cycle-flow{text-align:center;margin-top:14px;font-size:0.85rem;color:#f7a072;font-weight:600;letter-spacing:1px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -247,6 +254,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>An ecological niche is a species' full job description across food, time, space and other dimensions, not just where it lives.</li>
+<li>Gause's competitive exclusion principle: two species with completely overlapping niches cannot coexist for long; one goes extinct or they diverge.</li>
+<li>Hutchinson described the niche as an n-dimensional hypervolume; the more dimensions species separate on, the more room they have to coexist.</li>
+<li>The fundamental niche is everything a species could occupy in theory; the realized niche, squeezed by competitors, is always smaller.</li>
+<li>After the 1977 Galápagos drought hardened the seeds, thick-beaked Darwin's finches survived and the population's average beak size grew.</li>
+<li>Only about 10% of energy passes up each trophic level, most lost as heat, which is why food chains are short and top predators rare.</li>
+<li>Blue whales eat krill directly, skipping intermediate trophic levels, which lets them grow huge; eating meat costs far more energy than eating plants.</li>
+<li>A keystone species, like an arch's keystone, holds a community together: when Paine removed sea stars, mussels took over the rock and many species vanished.</li>
+<li>Reintroducing gray wolves to Yellowstone from 1995 stopped elk overgrazing the valleys, letting willows recover and beavers return: a trophic cascade.</li>
+<li>Holling's adaptive cycle sees ecosystems looping through growth, conservation, release and reorganization; suppressing small disturbances invites a bigger collapse.</li>
+</ol>
+</div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>
 <script src="https://hub.cissychen.com/search.js" defer></script>

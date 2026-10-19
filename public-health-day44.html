@@ -44,7 +44,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
 .ca-table td.highlight{background:#f0faf4;color:#52b788;font-weight:700}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -190,6 +197,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>在你参与的某个跨组织协作里，谁是那个「最弱环节」？现在的机制，是在鼓励各方尽早暴露自己的薄弱与问题，还是在惩罚坦诚、奖励隐瞒？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>健康的社会决定因素指出：收入、教育、住房、掌控感和社会地位对人群健康的影响，远大于医疗服务本身。</li>
+<li>健康梯度指健康沿社会地位连续递减，地位低带来的慢性压力会长期抬高皮质醇，侵蚀心血管与免疫系统。</li>
+<li>英国一项公务员健康研究发现，同享免费医疗的白领中，最低职级者的心脏病死亡率近乎最高层的三倍。</li>
+<li>罗塞托小镇居民高脂饮食又吸烟，心脏病率却远低于邻镇；社区联结瓦解后，发病率便追平了周围。</li>
+<li>疫苗犹豫主要是信任和心理问题而非知识缺口，单纯补充科学事实往往无效，甚至会引发逆火效应。</li>
+<li>省略偏误让人更怕主动行为造成的伤害，所以即使不接种的风险高得多，不作为在心理上也显得更安全。</li>
+<li>1970 年代英国百日咳疫苗恐慌让接种率从 81% 跌到 31%，随后发生三次大流行，伤害远超所恐惧之物。</li>
+<li>助推不靠强制、说教或金钱奖惩，只调整默认选项、摆放顺序和一点摩擦，就能在人群尺度改变健康行为。</li>
+<li>默认捐献的奥地利器官捐献同意率约 99%，默认不捐的德国约 12%；没有中立的选择架构，只能选往哪推。</li>
+<li>全球免疫是最弱环节公共品，安全水平由防控最薄弱的国家决定，因此疫苗民族主义最终会反伤富国。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

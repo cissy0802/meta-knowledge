@@ -45,7 +45,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .euler-table td.chi{background:#eef4fb;color:#3a86ff;font-weight:700}
 .euler-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -193,6 +200,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question to Ponder</span>
 <p>That batch of high-dimensional data on your desk — you have probably only ever asked it "how many classes should this split into." Have you asked "what shape is it" — does it have holes, does it have loops, and to what scale must you zoom before those structures stably exist? Reframed this way, branches your clustering never saw may surface.</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Topology is "rubber-sheet geometry": stretching, squeezing and twisting are allowed, tearing and gluing are not; shapes that deform into each other this way are homeomorphic.</li>
+<li>Homeomorphism is judged by properties deformation cannot change, such as the number of pieces and holes, which is why a coffee mug and a donut, each with one hole, are the same shape.</li>
+<li>Euler's formula V−E+F=2 holds for every convex polyhedron, and that 2 is the Euler characteristic of the sphere, unchanged however the sphere is subdivided.</li>
+<li>The Euler characteristic and the number of holes (genus g) are tied by χ = 2 − 2g: 2 for a sphere, 0 for a donut, −2 for a two-holed pretzel.</li>
+<li>A soccer ball with three seams at every vertex and only pentagons and hexagons must have exactly 12 pentagons, a count forced by the sphere's χ = 2.</li>
+<li>The precise, impurity-proof conductance integers of the quantum Hall effect are topological invariants, and the 2016 Nobel Prize in Physics honored this topological view of matter.</li>
+<li>The Möbius strip has one side and one edge, the simplest non-orientable surface; cutting it down the middle yields a single longer loop, not two.</li>
+<li>Knot theory uses knot invariants such as the Jones polynomial to decide whether two knots can be untangled into each other; different invariants make it impossible.</li>
+<li>The topological winding of DNA during replication cannot be undone by rotation alone, so cells use topoisomerases to cut, untangle and rejoin the strands.</li>
+<li>Persistent homology in topological data analysis grows a ball around each point; components, loops and cavities that live long are real structure, short-lived ones are noise.</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

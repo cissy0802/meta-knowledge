@@ -47,11 +47,18 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .recip .diagram .obs{color:#52b788}
 .recip .cap{font-size:0.8rem;color:#6b6b7d;line-height:1.5;margin-top:10px}
 .recip-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
   .recip-wrap{grid-template-columns:1fr}
+  .tk{padding:20px 18px}
 }
 </style>
 </head>
@@ -199,6 +206,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>挑一个你正在维系的合作（团队、协作网络、社区），逐一审视这四个参数——规模、未来长度、信息透明度、惩罚机制——哪一个此刻最接近临界线？如果它先崩，你会最先从哪个信号上察觉？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>自私个体之间也能演化出合作，靠的不是利他基因，而是重复相遇与记忆这两个平凡条件。</li>
+<li>直接互惠的经典策略「一报还一报」先释放善意、被背叛就报复，但只记恨一次。</li>
+<li>「未来的阴影」即再次相遇的概率 w，w 足够大时合作比背叛更划算，背叛会招来对方的长期报复。</li>
+<li>间接互惠靠声誉传播运作，成立条件是别人知道你声誉的概率 q 大于助人成本与收益之比 c/b。</li>
+<li>一战西线堑壕的自发停火说明，合作靠的是「明天还得见」，指挥部靠频繁调防和强制突袭来打破它。</li>
+<li>声誉把漫长的过去行为压缩成可传播的信号，其成立需要行为可观测、信息可靠传播、身份难以重置。</li>
+<li>11 世纪马格里布犹太商人靠集体拉黑欺诈者的信息网络，不靠法庭就支撑起了跨海代理贸易。</li>
+<li>制度性信任用法律、合同、货币、认证等第三方担保替代人际了解，让信任能扩展到千百万陌生人之间。</li>
+<li>制度性信任的悖论在于：制度一旦腐坏，崩塌是系统性的，货币在恶性通胀中可一夜归零就是例子。</li>
+<li>合作崩溃常由四个参数越界触发：群体过大、未来变短、信息噪声、惩罚缺位，且往往是相变式的雪崩。</li>
+</ol>
 </div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

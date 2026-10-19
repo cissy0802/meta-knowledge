@@ -60,7 +60,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .dag-rule.bad{color:#e85a4f}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -240,6 +247,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你负责的系统里，最近有没有一次「只影响了一部分、而非全部」的变更或故障？如果有，它是不是一个被你白白浪费掉的、本可用来干净估计因果的天然实验？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>因果阶梯分三级：关联是看见，干预是动手，反事实是想象同一个体在平行世界里会怎样。</li>
+<li>低层的数据再多也回答不了高层的问题，想往上爬一级，必须额外注入一张因果假设图。</li>
+<li>气压计读数与暴风雨高度相关，但用手拨低指针不会招来暴风雨，真正的原因是大气压。</li>
+<li>今天的机器学习几乎都停在关联这一级，A/B 测试则靠随机化把系统抬到干预这一级。</li>
+<li>混杂因子是同时推动 X 和 Y 的共因，它制造的虚假相关看起来和真因果一模一样。</li>
+<li>在因果图上，混杂是一条后门路径 X←Z→Y，固定住 Z 再做比较就能把后门堵上。</li>
+<li>观测研究曾显示激素替代疗法能护心，2002 年的大型随机对照试验却发现它升高心脏病风险。</li>
+<li>对撞因子是 X 和 Y 的共果，按它分层或只看被筛过的样本，会凭空造出一段本不存在的假相关。</li>
+<li>do-演算是一组数学规则：给定因果图，判断哪些干预问题能纯靠观测数据算出，以及该控制谁、别碰谁。</li>
+<li>做不了实验时可借自然实验：越战征兵按生日抽签，等于替研究者做了一次随机分组。</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

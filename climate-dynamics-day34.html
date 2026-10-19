@@ -47,7 +47,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
 .ca-table td.highlight{background:#fff7f5;color:#e85a4f;font-weight:700}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -195,6 +202,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你正逼近的哪个阈值，是带迟滞的「单行道」——越过去就回不来，或回来的代价高到无法承受？你为它留的安全裕度，是按「触发阈值」算的，还是按那个严苛得多的「恢复阈值」算的？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>地球的大沙漠集中在南北纬 30 度附近，这是大气环流这台热机的几何结果，不是巧合。</li>
+<li>哈德里环流的闭合环是：赤道空气受热上升成雨，高空流向约 30 度处下沉增温变干，再沿地表回流赤道。</li>
+<li>信风并非地球自转直接吹出来的，而是科里奥利力把回流赤道的地表气流偏转所致。</li>
+<li>全球变暖下，哈德里环流的下沉支向极地扩张，把副热带干旱带推向原本半湿润的地区。</li>
+<li>冰雪反射八九成阳光，深色海面只反射约一成；冰融露出深色地表、吸热再融更多冰，这就是冰-反照率正反馈。</li>
+<li>冰-反照率反馈在两极最强，是北极升温速度达全球平均两到四倍的主要原因。</li>
+<li>约七亿年前的雪球地球靠火山喷出的二氧化碳在大气中长期累积，才借温室效应融穿冰壳。</li>
+<li>碳循环分快慢两套：快循环靠光合、呼吸和海气交换，慢循环靠火山排放与岩石风化，后者是百万年尺度的恒温器。</li>
+<li>燃烧化石燃料把慢循环封存的碳在两百年内倒回快循环，清账要靠岩石风化，需数万到数十万年。</li>
+<li>气候临界点带迟滞：越过阈值后系统跳到新稳态，退回原来水平也回不去，亚马逊约 20%–25% 毁林率就可能是这样的阈值。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

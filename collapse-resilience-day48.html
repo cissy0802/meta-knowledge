@@ -46,7 +46,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-legend span{display:inline-flex;align-items:center;gap:6px}
 .dot{width:12px;height:12px;border-radius:50%;display:inline-block}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -201,6 +208,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>回看你最近一次故障复盘：那个被广泛接受的「根因」叙事，是数据本身指向的，还是你的观测盲区替你写好的？如果换一套埋点，同一次事故会被讲成完全不同的故事吗？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>骨骼证据显示，早期农人比同期采集者更矮、更病、劳作更多，农业并不是一次单纯的升级。</li>
+<li>农业是一个正反馈棘轮：余粮推高人口，人口又逼人种更多地，人群从此再也退不回采集。</li>
+<li>农业提高的是一片土地能养活的人口总数，而不是每个人的生活质量：它让人变多，而非变好。</li>
+<li>两河流域的楔形文字源自记数用的黏土筹码，文字最初是为记账发明的，而不是为了写诗。</li>
+<li>乌鲁克最早的一批泥板压倒性地是谷物、牲口和口粮等行政记录，叙事文学约五百年后才出现。</li>
+<li>文字把记忆外置成可搬运、可核对、可累积的物体，为法律、官僚、契约与科学打下地基。</li>
+<li>塔恩特认为社会靠增加复杂性解决问题，而复杂性的边际收益递减，终有一天社会养不起它。</li>
+<li>按塔恩特模型，越过收益递减的拐点后，一次冲击就可能让崩溃成为退回低复杂度的理性瘦身。</li>
+<li>罗马帝国扩张停下后靠货币贬值、加税和扩充官僚续命，瓦解后某些行省农民的生活反而回升。</li>
+<li>考古上的崩溃常只是精英标志物消失：玛雅后裔至今数以百万计，复活节岛生态自杀说也遭严重质疑。</li>
+</ol>
 </div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

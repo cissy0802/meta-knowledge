@@ -44,7 +44,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-legend i{width:12px;height:12px;border-radius:50%;display:inline-block}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -217,6 +224,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question</span>
 <p>The single most important number on your team (cost, latency, retention) — has a second person ever computed it through a fully independent path? If it were in fact wrong, how long until anyone noticed: a week, a year, or never?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Falsifiability means a theory is as scientific as the outcomes it forbids, not as the outcomes it can explain.</li>
+<li>The 1919 eclipse became a landmark because relativity staked a light-bending figure of about 1.75 arcseconds in advance, double the Newtonian value.</li>
+<li>When observation contradicts prediction, the instrument or an auxiliary assumption may be at fault, so falsification adjusts a whole web of theory rather than delivering one fatal blow.</li>
+<li>A p-value below 0.05 only says that, if there were no effect, data this extreme would appear less than 5% of the time; it does not mean a 95% chance the conclusion is true.</li>
+<li>Researcher degrees of freedom are analytic forks such as dropping outliers, choosing covariates and deciding when to stop, and together they can push false positives above 60%.</li>
+<li>When 29 teams analyzed the same data on players' skin tone and red cards, twenty found a significant effect and nine did not, purely because of analytic choices.</li>
+<li>Significance only says whether an effect exists, while effect size says how large it is, and only effect size can guide decisions or be compared across studies.</li>
+<li>The trouble with underpowered studies is not too few findings but systematically inflated estimates among those that squeak through, a pattern called the winner's curse.</li>
+<li>After large drug trials were required to preregister, the share reporting that the drug worked fell from about 57% to 8%, because primary outcomes could no longer be changed after the fact.</li>
+<li>Organized skepticism holds that science is reliable because of redundant error-correcting layers such as publication, replication, rival checking and retraction, not because scientists are more honest.</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

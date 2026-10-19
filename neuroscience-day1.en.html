@@ -37,7 +37,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -262,6 +269,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Predictive processing holds that the brain constantly generates predictions about the world, and lower levels pass upward only the prediction errors that do not match.</li>
+<li>Predictive processing treats attention as tuning the precision weights of prediction errors, and uses one framework to explain perception, motor control and learning.</li>
+<li>In the McGurk effect, people hear /ba/ while watching lips say /ga/, and most report hearing /da/: a visual prior rewrites hearing.</li>
+<li>The default mode network is a set of brain regions that grows more active when we are off-task, handling self-reflection, memory, imagining the future and modeling other minds.</li>
+<li>The default mode network rises as the task-positive network falls; in major depression it stays overactive and hard to switch off, showing up as rumination.</li>
+<li>Psychedelics break down the default mode network, and the more its connectivity drops, the stronger the ego dissolution that subjects report.</li>
+<li>Neuroplasticity is the brain's lifelong rewiring of its own structure through experience; Hebb proposed in 1949 that neurons firing together strengthen their connection.</li>
+<li>London taxi drivers have a noticeably larger posterior hippocampus than other people, growing with years on the job, a classic case of adult plasticity.</li>
+<li>Mirror neurons fire both when you perform an action and when you watch someone else perform it; Rizzolatti's team found them in macaque motor cortex in 1992.</li>
+<li>The mirror neuron effect is real but its explanatory power was oversold; the current consensus is that empathy likely relies on several systems working together.</li>
+</ol>
+</div>
 <div class="nav">
   <a href="index.en.html">&larr; Back to Index</a>
 </div>

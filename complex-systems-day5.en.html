@@ -38,7 +38,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#3a
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#3a86ff;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #3a86ff;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#3a86ff;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -263,6 +270,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#3a
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Emergence means new properties that appear once a system passes a certain scale; they do not exist in the parts and cannot be derived from local rules alone.</li>
+<li>Anderson's 1972 paper "More Is Different" argued that every scale has its own laws, challenging the reductionist belief that knowing the elementary particles means knowing everything.</li>
+<li>Weak emergence can in principle be derived from the micro level, but only by simulation; strong emergence involves downward causation and remains philosophically contested.</li>
+<li>In the Schelling segregation model, agents with only mild same-color preferences quickly produce large segregated clusters, showing that macro outcomes need not reflect individual intent.</li>
+<li>Self-organized criticality describes systems that drift to the edge of collapse without any outside tuning, where a tiny disturbance can trigger an avalanche of any size.</li>
+<li>In Bak's sandpile model, stress builds slowly and releases suddenly, avalanche sizes follow a power law, and rare catastrophes are the normal state of criticality rather than anomalies.</li>
+<li>Suppressing small forest fires for decades lets fuel pile up until fires escalate into system-wide blazes, a counterintuitive policy lesson of self-organized criticality.</li>
+<li>In a power-law distribution extremes are routine: with an exponent below 2 the mean diverges, below 3 the variance diverges, so the average stops being informative.</li>
+<li>Preferential attachment, criticality, threshold cascades and multiplicative processes can all generate power laws, though many claimed power laws are really lognormal distributions.</li>
+<li>A fitness landscape maps every possible configuration onto a rugged terrain; evolution, learning and optimization are hill-climbing, greedy ascent stalls on local peaks, and crossing valleys takes drift, recombination or deliberate exploration.</li>
+</ol>
+</div>
 <div class="nav">
   <a href="index.en.html">&larr; Back to Meta Knowledge</a>
 </div>

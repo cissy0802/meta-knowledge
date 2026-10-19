@@ -46,7 +46,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table td.win{color:#52b788;font-weight:800}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -192,6 +199,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question</span>
 <p>The thing you're most certain you've "mastered" right now — if you tested yourself on it this instant, with no prompts and after a delay, how big a bet would you place? Is your confidence worthy of one real retrieval test?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Performance is how well you do right now; learning is a durable change that lasts and transfers, and the two can move in opposite directions.</li>
+<li>Learning can't be observed on the spot; you can only infer it from retention and transfer once the scaffolding is gone and time has passed.</li>
+<li>In a classic motor-learning study, blocked practice looked smoother in training, but random practice won decisively on a test ten days later.</li>
+<li>Overfitting in machine learning is the same pattern: training loss keeps falling while validation loss turns back up.</li>
+<li>The illusion of fluency: the brain uses how easily material is processed to estimate how well it's known, and that shortcut misleads systematically.</li>
+<li>Rereading, highlighting and watching worked solutions feel fluent but leave little behind; effortful recall, self-testing and errors strengthen retrieval.</li>
+<li>In a 2019 Harvard physics comparison, active-learning students learned more on objective tests yet felt they learned less and preferred the polished lecture.</li>
+<li>Desirable difficulties such as spacing, interleaving and self-testing deepen learning only if they demand the right processing and stay within reach.</li>
+<li>Students who interleaved math problems made more errors and disliked the method, yet won on the final test: comfort is an inverse signal of effectiveness.</li>
+<li>Calibrate "I've got it" by delaying self-judgment and using unprompted retrieval as the yardstick: if you can pull it out, you've learned it.</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

@@ -47,7 +47,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a}
 .ca-table td.highlight{background:#fff7f5;color:#e85a4f;font-weight:600}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -195,6 +202,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你的组织里，有没有某套「免疫机制」（某个流程、风控或审查）已经从防御外敌，悄悄变成了攻击自身创新的自身免疫病？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>免疫由两套系统叠成：先天免疫几分钟内启动、快而通用，适应免疫要几天、慢却特异并能记忆。</li>
+<li>先天免疫靠模式识别，用少数几种受体认出一大类病原共有的保守分子特征，无需学习即可开火。</li>
+<li>适应免疫靠基因重组：B 细胞和 T 细胞随机拼接基因片段，生成上亿种受体，再克隆扩增匹配的那一种。</li>
+<li>先天免疫是适应免疫的点火开关：树突细胞要先呈递抗原并附上危险信号，T 细胞才会行动。</li>
+<li>免疫记忆来自少数长寿命记忆细胞，可存活数十年，让二次响应从数天压缩到数小时。</li>
+<li>亲和力成熟靠体细胞突变加选择，让记忆 B 细胞产生的抗体一轮比一轮精准，是体内的达尔文式微进化。</li>
+<li>1846 年法罗群岛麻疹疫情中，65 年前得过麻疹的老人全部免疫；麻疹本身却会擦除免疫记忆两三年。</li>
+<li>疫苗让免疫系统在没有真实危险时演习一遍，用灭活病原、抗原蛋白或 mRNA 预先建立记忆。</li>
+<li>群体免疫让未接种者也受保护，但接种率一旦跌破阈值，这张保护网就会骤然崩塌。</li>
+<li>免疫耐受是后天学会忽略自己：胸腺淘汰自反应 T 细胞，调节性 T 细胞压制漏网者，失灵即自身免疫病。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

@@ -50,7 +50,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .sr-seg{height:3px;background:#cdd8e6;position:relative;display:flex;align-items:center;justify-content:center}
 .sr-seg span{position:absolute;top:6px;font-size:0.72rem;color:#3a86ff;white-space:nowrap}
 .s1{flex:1}.s2{flex:2}.s3{flex:3.5}.s4{flex:5}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -209,6 +216,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你掌握得最扎实的那个领域原理，最近一次成功把它迁移到一个完全不同的领域，是什么时候？如果想不起来，你拥有的也许是深度，却还不是可迁移的智慧。</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>维果茨基提出的最近发展区，指学习者独自做不到、但借助他人或工具能做到的那一窄带能力区间。</li>
+<li>教学的关键是在最近发展区里搭「脚手架」，给出恰到好处的提示与支撑，再随能力提升逐步撤掉。</li>
+<li>「两个标准差问题」发现，接受一对一辅导的学生，成绩可比普通课堂学生高出约两个标准差。</li>
+<li>遗忘曲线显示记忆痕迹近似指数衰减；间隔重复在临界点复习，每次成功提取后间隔可逐步拉长。</li>
+<li>越是费力才提取出来的记忆，提取成功后的增益越大，所以学习中的难度本身就是养分。</li>
+<li>同样时间里反复自测比反复阅读更能保住长期记忆，重读带来的熟悉感常是冒充掌握的流畅性错觉。</li>
+<li>双重编码理论认为，信息同时进入言语和表象两套系统，就多了一条独立的提取路径，记忆更稳。</li>
+<li>图文必须互补整合才能减轻工作记忆负担；无关的诱人细节会损害学习，自己动手画图则效果更好。</li>
+<li>脱离情境死记硬背得来的往往是惰性知识，考试时调得出，面对真实问题却用不上。</li>
+<li>远迁移要剥离表面特征、看见深层结构；射线治肿瘤实验中，读过同构故事者仅约三成能自发迁移。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

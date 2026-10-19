@@ -60,7 +60,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .dag-rule.bad{color:#e85a4f}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -244,6 +251,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question</span>
 <p>In the system you own, was there recently a change or outage that hit "only some, not all"? If so, was it a natural experiment you let go to waste — one you could have used to estimate a causal effect cleanly?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>The ladder of causation has three rungs: association is seeing, intervention is doing, and counterfactuals imagine a parallel world for the same individual.</li>
+<li>No amount of lower-rung data can answer a higher-rung question; climbing a rung requires injecting an explicit causal graph.</li>
+<li>Barometer readings correlate strongly with storms, but pushing the needle down by hand brings no storm, because atmospheric pressure is the real cause.</li>
+<li>Today's machine learning lives almost entirely on the association rung, while A/B testing uses randomization to lift a system to the intervention rung.</li>
+<li>A confounder is a common cause that drives both X and Y, producing a spurious correlation that looks exactly like real causation.</li>
+<li>In a causal graph, confounding is a backdoor path X ← Z → Y, and holding Z fixed while comparing closes that backdoor.</li>
+<li>Observational studies once suggested hormone replacement therapy protected the heart, but a large randomized trial in 2002 found it raised heart-disease risk.</li>
+<li>A collider is a common effect of X and Y, and stratifying on it or studying only filtered survivors manufactures a correlation that does not exist.</li>
+<li>do-calculus is a set of rules that, given a causal graph, decides which intervention questions observational data can answer and what to control for or leave alone.</li>
+<li>When experiments are impossible, natural experiments help: the Vietnam draft lottery assigned men by birthday, effectively randomizing them for researchers.</li>
+</ol>
 </div>
 
 <div class="nav"></div>

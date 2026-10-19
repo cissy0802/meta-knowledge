@@ -54,7 +54,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .m-type{font-size:0.9rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
 .m-desc{font-size:0.76rem;color:#6b6b7d;line-height:1.5}
 .m-cell.best .m-type{color:#52b788}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -229,6 +236,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>在你当前的时间与资源分配里，「探索」占多大比例？它是被你主动圈出来保护的，还是总在被那些看起来更紧急的「利用型」任务一点点吃掉？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>OKR 用目标回答「要去哪」，用可量化、可证伪的关键结果回答「凭什么算到了」，以此解决协作对齐。</li>
+<li>OKR 源自安迪·格鲁夫在英特尔的实践，生效靠两条设计：目标与薪酬脱钩，以及全员可见的透明。</li>
+<li>OKR 平均达成度逼近 100% 说明目标太保守，谷歌把 0.6–0.7 视为理想区间。</li>
+<li>指标一旦挂钩薪酬就会被刷分，触发古德哈特定律：当指标变成目标，它就不再是好指标。</li>
+<li>RACI 把每件事拆成执行、担责、咨询、知会四种角色，最锋利的原则是最终担责者必须有且仅有一个。</li>
+<li>组织失灵常源于责任弥散：担责者有多个会互相推诿而瘫痪，担责者缺位则出事时无人认领。</li>
+<li>旁观者效应表明在场的人越多，个人出手的概率越低；把任务抄送整个群，往往等于没人负责。</li>
+<li>高绩效团队的头号预测因子是心理安全感：成员敢暴露无知、承认错误、提出异议而不怕被羞辱。</li>
+<li>埃德蒙森发现好团队上报的错误更多，因为心理安全感让坏消息能流到有能力解决它的人手里。</li>
+<li>双元组织把探索单元在结构上独立、配自己的指标与文化，高层共享战略意图，避免新业务被现有业务的引力绞杀。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

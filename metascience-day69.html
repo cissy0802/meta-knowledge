@@ -44,7 +44,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-legend i{width:12px;height:12px;border-radius:50%;display:inline-block}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -217,6 +224,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你团队最重要的那个数字（成本、延迟、留存），有没有第二个人用完全独立的路径算过一遍？如果它其实是错的，多久会被发现——一周，一年，还是永远不会？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>可证伪性的标准是：一个理论有多科学，取决于它禁止多少结果，而不是它能解释多少。</li>
+<li>1919 年日食观测成为标志，是因为相对论事先押上约 1.75 角秒的星光偏折，牛顿式计算只给出一半。</li>
+<li>观测与预言不符时，错的也可能是仪器或辅助假设，所以证伪是整张理论网络的调整，而非一击致命。</li>
+<li>p 值小于 0.05 只表示：假如效应不存在，看到如此极端数据的概率不到 5%，并非结论有 95% 的概率为真。</li>
+<li>研究者自由度指剔异常值、选控制变量、决定何时停止等分析岔口，组合起来能把假阳性率推到六成以上。</li>
+<li>29 个团队分析同一份球员肤色与红牌数据，二十个得出显著、九个不显著，分歧全部来自分析选择。</li>
+<li>显著性只回答效应有没有，效应量回答效应有多大，只有效应量能拿去做决策和跨研究比较。</li>
+<li>低功效研究的问题不是发现太少，而是侥幸过筛的估计值系统性偏大，这叫赢家的诅咒。</li>
+<li>大型药物试验被强制预注册后，报告「药物有效」的比例从约 57% 降到 8%，因为不能再事后调整主要终点。</li>
+<li>组织化的怀疑：科学的可靠性来自公开、复现、竞争性验证和撤稿等层层冗余的纠错机制，而非科学家个人更诚实。</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

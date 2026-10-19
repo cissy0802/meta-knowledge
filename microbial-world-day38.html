@@ -54,7 +54,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .qs-state.silent .t{color:#8a8a9a}
 .qs-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;color:#52b788;font-weight:700;font-size:0.82rem;min-width:78px}
 .qs-arrow .big{font-size:1.4rem}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -228,6 +235,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你正在「施压」的某个系统（封禁策略、考核指标、对齐训练），究竟是在消除你不想要的行为，还是在悄悄筛选出更擅长躲过你检测的版本？如果是后者，你该加大压力，还是换一套规则？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>人体是由人类细胞和数十万亿微生物共同组成的生态系统，「自我」的边界延伸到整个共生网络。</li>
+<li>肠道菌群把人体消化不了的膳食纤维分解成短链脂肪酸，为肠壁供能、抑制炎症并调节免疫。</li>
+<li>菌群通过代谢物、免疫信号和迷走神经与大脑双向沟通，这条通路被称为「肠-脑轴」。</li>
+<li>无菌小鼠接受菌群移植后，肥胖和怯懦等表型会随之转移；粪菌移植治愈艰难梭菌肠炎的比例超过九成。</li>
+<li>水平基因转移让基因在毫无亲缘关系的物种之间横向流动，使生命之树的底部更像一张网。</li>
+<li>细菌横向获取基因有三条路：转化吸收游离 DNA，转导靠噬菌体搬运，接合经菌毛整段传递质粒。</li>
+<li>生物膜是细菌用自分泌黏液包裹成的「城市」，膜内细菌对抗生素的抵抗力可高出上千倍。</li>
+<li>群体感应让细菌在信号分子浓度越过阈值时同步切换为集体行动，是一种没有中央指挥的分布式投票。</li>
+<li>持留菌并无耐药突变，而是进入近乎休眠的状态躲过抗生素，药效过后苏醒重建群落，导致感染复发。</li>
+<li>抗生素不创造耐药而是筛选耐药，剂量不足或疗程不全最危险，等于替耐药菌清除竞争者、培育超级细菌。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

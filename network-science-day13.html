@@ -48,7 +48,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .payoff-table td.good{background:#e3f1e8;color:#2a7a4a;font-weight:700}
 .payoff-table td.reverse{background:#fef0d9;color:#b56b00;font-weight:700}
 .payoff-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -193,6 +200,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <p>AI 时代职业护城河的真问题，不是"我会多少技能"，而是<strong>"我在网络里占什么位置"</strong>。单点技能容易被 AI 抹平，但<strong>"中介位置"极难替代</strong>：AI 能模仿专家，却无法继承你多年积累的跨域关系和上下文翻译能力。最有杠杆的一步，常常是主动在两群本不交流的人/技术/部门之间，架起一座可靠的桥。育儿同理：让孩子有 1–2 个完全跨群体的朋友，比扩大同质圈子更有结构价值。</p>
 <span class="q">▸ 思考题：如果你离开 3 个月，哪 2–3 条信息或合作流会断？这些断点就是你真正的"中介价值"——它在 AI 时代是涨还是跌？</span>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>小世界网络的特点是邻里紧密加少量跨圈捷径，网络再大，任意两点之间的平均距离也很短。</li>
+<li>1967 年 Milgram 的转信实验发现，信件平均经过约 6 个人就能送到陌生的目标人手里。</li>
+<li>Watts 与 Strogatz 在 1998 年证明，只需随机改动极少数连接，规则网络的平均距离就会骤降。</li>
+<li>无标度网络里少数枢纽连接极多、大多数节点连接很少，不存在所谓的“平均节点”。</li>
+<li>Barabási 和 Albert 在 1999 年指出，网络增长加上新节点偏爱热门节点，会自动催生超级枢纽。</li>
+<li>无标度网络随机坏掉一些节点几乎没影响，精准打掉少数枢纽却会让整张网近乎瘫痪。</li>
+<li>基本再生数 R₀ 大于 1 时传播指数增长、小于 1 时自动消退，跨过 1 是突变而不是渐变。</li>
+<li>群体免疫阈值等于 1 − 1/R₀；麻疹的 R₀ 约为 15，需要约 94% 的人有免疫力才挡得住。</li>
+<li>在有超级枢纽的网络上传播几乎没有门槛，决定爆发的常常是网络结构，而不是病毒本身有多强。</li>
+<li>中介中心性衡量有多少条最短路径必须经过某个节点，跨结构洞的桥接者职位不高却难以替代。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

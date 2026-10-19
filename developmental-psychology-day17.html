@@ -57,7 +57,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .attach-type{font-size:0.9rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
 .attach-desc{font-size:0.76rem;color:#6b6b7d;line-height:1.5}
 .attach-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -206,6 +213,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <p>作为技术人，你既是错配的受害者（无限信息流劫持注意力），也可能是制造者——构建 AI 产品时，你是在利用古老回路制造依赖，还是在帮人对齐长期利益？对孩子，最强的干预往往不是说教，而是改造默认环境：户外时间、屏幕的物理可及性，比任何口头规则都更有效。</p>
 <span class="q">▸ 思考题：你生活中哪一个"忍不住"，其实是一套古老适应在现代环境里的误触发？与其用意志力硬扛，你能改造哪一个环境变量，让正确的选择变成默认？</span>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>皮亚杰认为，认知图式靠两种机制更新：同化把新信息塞进旧框架，顺应则在冲突逼迫下改写框架本身。</li>
+<li>皮亚杰的四个阶段依次是感知运动、前运算、具体运算和形式运算，具体年龄不必精确，但顺序不可跳跃。</li>
+<li>守恒实验里，约六岁前的孩子坚信倒进高瘦杯的水更多，原因是可逆性这一心智操作还没长出来。</li>
+<li>依恋理论认为，婴儿与照料者的依恋会内化成内部工作模型，几十年后仍影响亲密关系和应对压力的方式。</li>
+<li>照料者回应稳定一致养出安全型依恋，需求常被忽视养出回避型，回应时有时无养出焦虑型。</li>
+<li>恒河猴实验中，小猴宁可挨饿也趴在绒布“母亲”身上，说明情感接触是独立于食物的基础需求。</li>
+<li>心态决定失败的归因：固定型心态把失败读成“我不行”而回避挑战，成长型心态把失败读成“策略不对”而加倍投入。</li>
+<li>经典研究发现，被夸“聪明”的孩子更爱选简单任务、更快放弃，被夸“努力”的孩子更愿挑战难题。</li>
+<li>大规模重复研究显示，成长型心态干预的平均效应较小，对处境不利的学生更明显，是真实但有边界的杠杆。</li>
+<li>进化错配指为狩猎采集环境优化的身心被放进剧变的现代世界，嗜糖成灾、社交焦虑和近视爆发都是例子。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

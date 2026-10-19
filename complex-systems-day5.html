@@ -39,7 +39,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#3a
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#3a86ff;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #3a86ff;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#3a86ff;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -222,6 +229,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#3a
 <span class="label">思考题</span>
 <p>你的事业/家庭/健康——这三个维度上，哪一个你已经爬到了一个不错的局部峰，但因恐惧下山的代价而错过更高峰？如果今年只能为其中一个主动"下山一次"，你选哪个？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>涌现指系统跨过某个规模后出现的新属性，它在单元层级并不存在，也无法仅凭局部规则倒推出来。</li>
+<li>Anderson 1972 年的《More Is Different》主张每个尺度都有自己的规律，挑战了「懂了基本粒子就懂了一切」的还原论。</li>
+<li>弱涌现原则上可以从微观推出，但只能靠模拟；强涌现涉及宏观对微观的向下因果，至今仍有哲学争议。</li>
+<li>Schelling 隔离模型中，每个个体只有温和的同色偏好，整体却会迅速演化出大片隔离区，宏观结果不等于个体意图。</li>
+<li>自组织临界性指系统无需外部调参就会自发走到崩塌边缘，此时微小扰动可能引发任意规模的雪崩。</li>
+<li>Bak 的沙堆模型显示，压力缓慢累积、瞬间释放，雪崩规模服从幂律，偶发的巨灾是临界态的常态而非异常。</li>
+<li>长期压制小规模森林火灾会让可燃物越积越多，反而让火灾升级为系统级大火，这是自组织临界性的反直觉政策含义。</li>
+<li>幂律分布中极端事件是常态：指数小于 2 时均值发散，小于 3 时方差发散，平均数因此失去信息量。</li>
+<li>优先连接、临界点、阈值级联和乘性过程都能生成幂律，但不少声称是幂律的数据其实是对数正态分布。</li>
+<li>适应性景观把所有可能配置画成多峰地形，演化、学习和优化都像爬山，贪婪爬山只能停在局部最优；跨越山谷要靠漂变、重组或刻意探索。</li>
+</ol>
 </div>
 <div class="nav">
 <a href="index.html">← 返回元知识</a>

@@ -82,7 +82,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#7b
 .interp-title.mw{color:#52b788}
 .interp-text{font-size:0.82rem;color:#6b6b7d;line-height:1.6}
 .interp-icon{font-size:1.4rem;margin-bottom:8px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -396,6 +403,22 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#7b
     <span class="label">A Question to Sit With</span>
     <p>If "measurement creates a branch rather than reveals an existing truth" is closer to how reality works, what is your everyday act of "making a decision" really doing — uncovering what you already wanted, or bringing into existence a "you" that did not exist before? How would each view change how you make your next important choice?</p>
   </div>
+</div>
+
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Superposition is not classical ignorance about which state holds; before measurement the system simply has no definite value.</li>
+<li>A superposition is built from complex amplitudes with phases, which can cancel or reinforce each other and so produce interference.</li>
+<li>By the Born rule, an outcome's probability is the squared magnitude of its amplitude, and n qubits need 2ⁿ complex numbers to describe.</li>
+<li>Decoherence couples a system to its environment and leaks phase information, turning superposition into a classical mixture we never see in everyday objects.</li>
+<li>An entangled state cannot be split into separate states for each particle: the pair has only joint properties, not individual ones.</li>
+<li>Bell's inequality caps correlations from local hidden variables at 2, quantum mechanics predicts 2√2, and experiments side with quantum mechanics.</li>
+<li>Entangled correlations are perfect, yet each side's measurement results are completely random, so entanglement cannot send signals faster than light.</li>
+<li>The uncertainty relation Δx·Δp ≥ ℏ/2 comes from position and momentum operators not commuting, not from instruments disturbing the particle.</li>
+<li>Atoms do not collapse because an electron squeezed closer to the nucleus gains momentum, so energy bottoms out near the Bohr radius.</li>
+<li>The measurement problem asks how linear evolution yields single outcomes: Copenhagen accepts collapse, while Everett's Many-Worlds lets the universe branch.</li>
+</ol>
 </div>
 
 <div class="nav">

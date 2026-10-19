@@ -56,7 +56,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .attach-type{font-size:0.9rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
 .attach-desc{font-size:0.76rem;color:#6b6b7d;line-height:1.5}
 .attach-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -233,6 +240,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Piaget held that cognitive schemas update in two ways: assimilation fits new information into an old framework, while accommodation rewrites the framework when conflict forces it.</li>
+<li>Piaget's four stages run sensorimotor, preoperational, concrete operational, formal operational; the exact ages matter less than the fact that no stage can be skipped.</li>
+<li>In the conservation task, children under about six insist the taller, thinner glass holds more water, because the mental operation of reversibility has not yet developed.</li>
+<li>Attachment theory holds that an infant's bond with caregivers becomes an internal working model that shapes intimate relationships and stress responses decades later.</li>
+<li>Consistently responsive caregiving produces secure attachment, routinely ignored needs produce avoidant attachment, and on-and-off responsiveness produces anxious attachment.</li>
+<li>In the rhesus monkey experiments, infants clung to a soft cloth "mother" even when hungry, showing that contact comfort is a basic need independent of food.</li>
+<li>Mindset shapes how failure is explained: a fixed mindset reads it as "I'm just not good enough" and avoids challenges, a growth mindset reads it as "wrong strategy" and invests more.</li>
+<li>In a classic study, children praised for being smart chose easier tasks and gave up sooner, while children praised for effort sought out harder problems.</li>
+<li>Large-scale replications show growth mindset interventions have small average effects, larger for disadvantaged students: a real lever, but a bounded one.</li>
+<li>Evolutionary mismatch means bodies and minds tuned for hunter-gatherer life now live in a rapidly changed world, as sugar cravings, social anxiety and the myopia surge show.</li>
+</ol>
+</div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>
 <script src="https://hub.cissychen.com/search.js" defer></script>

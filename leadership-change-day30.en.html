@@ -53,7 +53,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .m-type{font-size:0.9rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
 .m-desc{font-size:0.76rem;color:#6b6b7d;line-height:1.5}
 .m-cell.best .m-type{color:#52b788}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -257,6 +264,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>OKRs pair an objective that says where to go with measurable, falsifiable key results that say what counts as getting there.</li>
+<li>OKRs came from Andy Grove at Intel and work because of two design choices: decoupling goals from pay, and full transparency.</li>
+<li>Average OKR attainment near 100% signals goals set too safely; Google treats 0.6 to 0.7 as the ideal range.</li>
+<li>Once a metric is tied to pay it gets gamed, triggering Goodhart's law: a measure that becomes a target stops being a good measure.</li>
+<li>RACI splits every task into Responsible, Accountable, Consulted and Informed, and insists there be exactly one Accountable person.</li>
+<li>Organizations often fail through diffused responsibility: several accountable owners stall each other, and no owner means nobody claims the failure.</li>
+<li>The bystander effect shows that the more people present, the less likely any one acts; copying a whole group on a task often means no one owns it.</li>
+<li>The top predictor of high-performing teams is psychological safety: members can admit ignorance, own mistakes and dissent without fear of humiliation.</li>
+<li>Amy Edmondson found that better hospital teams reported more errors, because psychological safety lets bad news reach the people able to fix it.</li>
+<li>An ambidextrous organization gives exploration units their own structure, metrics and culture under a shared top-level strategy, so the core business cannot starve them.</li>
+</ol>
+</div>
 <div class="nav"><a href="index.en.html">← Back to Index</a></div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

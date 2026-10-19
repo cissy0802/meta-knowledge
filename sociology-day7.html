@@ -72,7 +72,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .cap-name{font-size:0.92rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
 .cap-en{font-size:0.72rem;color:#6b6b7d;font-style:italic;margin-bottom:8px}
 .cap-text{font-size:0.78rem;color:#3a3a4a;line-height:1.55;text-align:left}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -359,6 +366,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>清点你所在组织（或自己作为"个人组织"）当前最重要的 5 项实践——它们各自属于哪一种同形？哪些其实是合法性符号、可以被解构？如果只保留真正驱动结果的实践，你的"组织"会与同行差异化多少？这种差异化是机会还是风险？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>社会资本是嵌入关系网络的信任、信息与人情，Bourdieu 把它与经济资本、文化资本并列为可相互兑换的资本。</li>
+<li>2022 年一项基于 7,200 万 Facebook 用户的研究发现，跨阶层友谊比例是低收入儿童向上流动的最强预测因子。</li>
+<li>Granovetter 发现，找到新工作的线索多半来自偶尔见面的熟人，而非经常见面的密友，这就是弱连接优势。</li>
+<li>连接两个子网络的“桥”几乎都是弱连接，因为强连接的双方往往共享朋友，新信息因此靠弱连接跨群体流动。</li>
+<li>2022 年 LinkedIn 的大规模随机实验因果性地证实了弱连接优势，效果在中等强度连接和数字化行业中最明显。</li>
+<li>Merton 的自我实现预言指错误的情境定义引发行为、让错误信念成真，银行挤兑和教师期望效应都是例子。</li>
+<li>自我实现预言是正反馈回路：信念改变行为，行为引发他人反应，反应再“验证”信念；存款保险能切断它。</li>
+<li>制度同形理论认为，组织越来越像，是为了在不确定环境中获得合法性，而不是因为这些做法效率最高。</li>
+<li>同形有三种机制：监管带来的强制同形、不确定时抄成功者的模仿同形、专业群体传播的规范同形。</li>
+<li>一项实践成为行业标配后，常从效率工具退化为合法性符号：晚采用全面质量管理（TQM）的医院几乎没得到绩效改善。</li>
+</ol>
 </div>
 <div class="nav">
 <a href="index.html">← 返回首页</a>

@@ -47,11 +47,18 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .bw-stage{margin-top:8px;font-size:0.74rem;color:#6b6b7d;text-align:center;line-height:1.3}
 .bw-val{font-size:0.8rem;font-weight:700;color:#e85a4f;margin-bottom:4px}
 .bw-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:14px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
   .bw-stage{font-size:0.64rem}
+  .tk{padding:20px 18px}
 }
 </style>
 </head>
@@ -193,6 +200,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你的调用链里，哪一段是「零库存」的——没有缓冲、没有背压、一慢就传导？如果终端一个微小的波动逆流而上，它会被某个环节吸收，还是被层层放大成雪崩？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>二十世纪中叶的绿色革命靠矮秆高产品种、合成氮肥和灌溉让粮食产量成倍增长，避开了马尔萨斯式饥荒。</li>
+<li>绿色革命的本质是一笔交易：农业从太阳能驱动改成了化石能源驱动，高产建立在持续买单的工业投入上。</li>
+<li>把化肥、机械、运输和加工都算进去，现代工业化食物体系每产出 1 卡路里食物约要消耗 10 卡路里化石能源。</li>
+<li>哈伯-博世法固氮消耗全球约百分之一到二的能源，却支撑着地球上将近一半人口的口粮。</li>
+<li>土壤是活的生态系统：植物把约三分之一的光合产物分泌给根际微生物，换取养分释放、抗病和保水。</li>
+<li>过度耕作和化肥会短路植物与微生物的交换，短期增产，长期耗竭有机质，让土壤对投入「上瘾」。</li>
+<li>土壤健康是支撑产量的慢变量：形成一厘米表土要数百年，而工业农业让表土流失快上几十倍。</li>
+<li>单一栽培用遗传同质换效率，也删掉了多样性这份免费保险：能攻破一株的病害，就能横扫整片田。</li>
+<li>1845 年爱尔兰马铃薯晚疫病和今天卡文迪什香蕉面临的 TR4 真菌，演的是同一套单一栽培崩盘的逻辑。</li>
+<li>准时制把食物供应链的库存压到近零，信息延迟又让终端小波动沿链放大成上游数倍订单，这就是鞭梢效应。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

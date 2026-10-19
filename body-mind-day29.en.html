@@ -52,7 +52,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ladder-step.bot{border-left-color:#3a86ff}
 .ladder-label{flex-shrink:0;width:118px;font-weight:700;font-size:0.85rem;color:#2a2a3a;line-height:1.3}
 .ladder-desc{font-size:0.84rem;color:#3a3a4a;flex:1}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -235,6 +242,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>About 80% of vagal fibers carry sensory signals from body to brain, so the vagus is more a telemetry line than a control line.</li>
+<li>Heart rate variability (HRV) is a window onto vagal tone: higher tone means the body brings arousal back down faster after stress.</li>
+<li>The vagus nerve also runs the cholinergic anti-inflammatory pathway, putting a direct brake on the immune system's inflammatory response.</li>
+<li>Vagus nerve stimulation implants are approved for drug-resistant epilepsy and treatment-resistant depression, showing how much the body-to-brain channel matters.</li>
+<li>Gut and brain talk through at least four parallel channels: the vagus nerve, immune signals, microbial metabolites, and hormones.</li>
+<li>Over 90% of the body's serotonin is made in the gut; it does not enter the brain but acts indirectly through local nerves and vagal afferents.</li>
+<li>In mice, transplanting gut microbes from a timid strain into a bold strain makes the recipients more timid, though causal chains in humans remain uncertain.</li>
+<li>Interoception is the brain's reading of internal signals like heartbeat and breathing, centered on the insula; emotions are often labels the brain puts on those signals.</li>
+<li>Physiological arousal is ambiguous on its own: in the suspension bridge experiment, men misattributed a fear-driven racing heart to attraction.</li>
+<li>Polyvagal theory pictures the autonomic system as three tiers (safety, danger, life threat) that step down in turn; it is clinically useful, but its evolutionary and anatomical claims are disputed.</li>
+</ol>
+</div>
 <div class="nav"><a href="index.en.html">← Back to Index</a></div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

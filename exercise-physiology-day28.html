@@ -47,7 +47,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .bar-name{flex-shrink:0;width:128px;font-size:0.82rem;color:#2a2a3a;font-weight:600;text-align:right;line-height:1.3}
 .bar-track{flex:1;background:#f4f1ed;border-radius:6px;height:26px;overflow:hidden}
 .bar-fill{height:100%;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:0.74rem;color:#fff;font-weight:700;min-width:34px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -204,6 +211,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你是否把运动放在「有空再说」的成本项里？如果它其实是你最高产出时段的前置投资，你的日程表里第一个该改的是哪一格？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>最大摄氧量（VO₂max）是身体每分钟摄取、运输并利用氧气的上限，也是可改变指标里预测寿命最强的一个。</li>
+<li>VO₂max 由氧气供应链最窄的一环决定：心脏泵血、血液携氧、毛细血管密度和肌肉线粒体，哪一环是瓶颈就锁死上限。</li>
+<li>高强度间歇训练提升 VO₂max 效率高，关键不在总运动量，而在逼近上限的累计时长。</li>
+<li>一项超过 12 万人的队列研究里，体能最差组的全因死亡风险约是最强组的 5 倍，且没有出现「练过头」的拐点。</li>
+<li>肌肉蛋白合成是阈值开关：每餐需约 25–40 克优质蛋白、越过亮氨酸阈值激活 mTOR，低于无效，远高于也不多长。</li>
+<li>同样的蛋白总量，每 3 小时吃 20 克的净合成高于每 6 小时 40 克或每 1.5 小时 10 克；老年人因合成抗性每餐需约 40 克。</li>
+<li>几乎每个细胞都有自己的昼夜节律，下丘脑视交叉上核的主钟靠光线对时，外周钟主要靠进食和活动时间校准。</li>
+<li>主钟与外周钟错位，比如白天不见光、深夜还进食，会让代谢指令打架；同样的食物，进食窗口提前就能改善血糖和血压。</li>
+<li>运动推高脑源性神经营养因子 BDNF，肌肉收缩释放的鸢尾素、组织蛋白酶 B 和乳酸等信号会刺激大脑表达它。</li>
+<li>一项老年人研究中，规律有氧运动让海马体体积增大约 2%，相当于逆转一到两年的年龄性萎缩，对照组则继续缩小。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

@@ -53,7 +53,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ext-table th{background:#e3f1e8;color:#52b788;font-weight:700}
 .ext-table td.evt{text-align:left;font-weight:600;color:#2a2a3a}
 .ext-table td.loss{color:#e85a4f;font-weight:700}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -216,6 +223,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你生活里有哪个「慢变量」正以深时尺度悄悄复利或恶化，却因为每天看不出变化而被你忽视？如果把它的二十年累积效应「翻译」到今天，你今天会做出什么不同的选择？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>板块构造理论说明，看似恒久的大地其实最年轻：海底岩石没有一处超过约 2 亿年。</li>
+<li>地幔对流像传送带，在洋中脊生成新海底，在俯冲带把老板块回收进地幔。</li>
+<li>大陆漂移说被嘲笑几十年，最终由洋中脊两侧对称的海底磁条带证明海底在扩张。</li>
+<li>同位素测年靠恒定的半衰期：测出岩石中母、子同位素比例，就能反推它的年龄。</li>
+<li>测年要挑对时钟：碳 14 只能测约 5 万年内的有机物，铀 238 能测数十亿年的岩石。</li>
+<li>开尔文用地球冷却速率算出地球只有两三千万岁，错在不知道放射性衰变在持续供热。</li>
+<li>生命史被五次大灭绝反复打断，其中二叠纪末最惨烈，约 96% 的海洋物种消失。</li>
+<li>大灭绝的真正杀手往往是环境变化的速率：变化快过物种适应和迁移，种群就来不及调整。</li>
+<li>白垩纪末小行星撞击的最初铁证，是全球地层中一层极薄的铱异常，而铱在陨石中富集。</li>
+<li>人脑为几十年尺度进化，面对深时会失灵，只能借压缩成一天或一臂长的类比来把握。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

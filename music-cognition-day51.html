@@ -42,7 +42,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -192,6 +199,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你的团队有没有一件「毫无实用价值、却让大家觉得是一伙人」的共同仪式？如果没有，协作的信任地基究竟靠什么支撑？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>节奏夹带是大脑提前预测下一拍，把内部神经振荡的相位锁定到外部节奏上，而不是听到鼓点再反应。</li>
+<li>负平均异步：人跟拍时手指平均比真实拍点早几十毫秒落下，说明大脑在预测而不是追赶。</li>
+<li>抽掉一下鼓点留出静默，运动区仍会在该有拍点的时刻放电，说明节拍已内化成内部模型。</li>
+<li>能随节奏起舞的物种几乎都是发声学习者，如鹦鹉 Snowball、鲸类和人类，黑猩猩却几乎做不到。</li>
+<li>大脑习得音乐体系的统计规律并不断预测下一个音，音乐的快感来自预期与预期被打破之间的博弈。</li>
+<li>预测误差与愉悦呈倒 U 形的 Wundt 曲线：太可预测显得无聊，太意外像噪音，快感落在中间的甜区。</li>
+<li>听音乐起鸡皮疙瘩时，多巴胺先在期待阶段于尾状核释放，高潮时才轮到伏隔核，悬置感更能驱动奖赏。</li>
+<li>音乐经由脑干反射、节奏夹带、习得联想和预期机制等并行通路唤起情绪，多数绕过语言和理性。</li>
+<li>音乐快感缺失者听力和其他愉悦反应都正常，唯独对音乐无感，说明音乐到愉悦是一条可单独切断的通路。</li>
+<li>音乐普世的适应论认为它靠集体同步释放内啡肽、增强信任来联结群体，跨文化听众仅凭声音就能辨出歌曲功能。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

@@ -46,7 +46,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a}
 .ca-table td.highlight{background:#fff7f5;color:#e85a4f;font-weight:600}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -220,6 +227,22 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
     <span class="label">Question</span>
     <p>In your organization, has some "immune mechanism" — a process, a risk control, a review — quietly shifted from defending against outside enemies to an autoimmune disease attacking your own innovation?</p>
   </div>
+</div>
+
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Immunity is two systems stacked together: innate immunity starts in minutes and is fast and generic, while adaptive immunity takes days but is specific and remembers.</li>
+<li>Innate immunity works by pattern recognition, using a handful of receptors to spot conserved molecular features shared by whole classes of pathogens, with no learning required.</li>
+<li>Adaptive immunity relies on gene recombination: B and T cells randomly splice gene segments into hundreds of millions of receptors, then clonally expand whichever one matches.</li>
+<li>Innate immunity is the ignition switch for adaptive immunity: dendritic cells must present the antigen along with a danger signal before T cells will act.</li>
+<li>Immune memory rests on a small set of long-lived memory cells that can survive for decades and cut a second response from days to hours.</li>
+<li>Affinity maturation uses somatic mutation plus selection to make memory B cells' antibodies more precise each round, a Darwinian micro-evolution inside the body.</li>
+<li>In the 1846 Faroe Islands measles outbreak, everyone who had had measles 65 years earlier was immune, yet measles itself can erase immune memory for two to three years.</li>
+<li>A vaccine lets the immune system rehearse without real danger, using inactivated pathogens, antigen proteins or mRNA to build memory in advance.</li>
+<li>Herd immunity protects even the unvaccinated, but once coverage falls below a threshold the whole safety net can collapse abruptly.</li>
+<li>Self-tolerance is learned, not innate: the thymus eliminates self-reactive T cells and regulatory T cells suppress the rest; when this fails, autoimmune disease follows.</li>
+</ol>
 </div>
 
 <div class="nav"><a href="index.en.html">← Back to Index</a></div>

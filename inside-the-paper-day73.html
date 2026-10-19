@@ -49,11 +49,18 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .coda ol{margin:10px 0 12px 22px;font-size:0.95rem;color:#3a3a4a}
 .coda li{margin-bottom:3px}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
   .coda{padding:20px 18px}
+  .tk{padding:20px 18px}
 }
 </style>
 </head>
@@ -232,6 +239,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你团队上一次说「某个改动带来了指标提升」，机制说清楚了吗？如果说不清，你愿意把它改写成「相关」而不是「带来」吗？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>论文摘要不是正文结果的忠实压缩：有研究的摘要写删除效应约 +0.1%，第一张表却是 -0.62%，符号相反。</li>
+<li>摘要失真来自三股力：摘要与表格无人逐格核对，措辞越干净越被奖励，压缩时条件和限定词先掉。</li>
+<li>对医学期刊的系统抽查反复发现，相当比例通过同行评议的论文摘要与正文结果对不上。</li>
+<li>工作稿与发表版之间数字会被改动，例如 15% 改成 11%，作者通常不加任何声明。</li>
+<li>版本漂移中，旧的工作稿版本往往传得更广，因为它出现得更早、报道更响、数字也更大。</li>
+<li>「这个数字有出处」和「这个数字是当前版本」是两件事，出处越权威越容易让人省掉核对。</li>
+<li>一族代理度量的散布本身是信息：散布小说明结论稳健，散布大说明结论主要由口径决定。</li>
+<li>等权平均出的合成指标是构造物而非测量，改用标准差归一化，同一批数字就从四分之一变成六分之一。</li>
+<li>公开全部分析不足以防止误读，还需要主结论只用事先声明的口径，这正是预注册锁定主要结局的道理。</li>
+<li>发表流程常删掉工作稿里的机制章节，只留约简式关联，读者反而更容易把它读成因果。</li>
+</ol>
 </div>
 <div class="coda">
 <h3>读论文的四步核对链</h3>

@@ -47,7 +47,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .pa-state{font-size:0.9rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
 .pa-desc{font-size:0.78rem;color:#6b6b7d;line-height:1.5}
 .pa-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -199,6 +206,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你的自动化流程上一次「差点出事、却被救回」是什么时候？那次靠的是谁或什么？如果哪天那个救场者不在场，系统还扛得住吗？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>佩罗的正常事故理论认为，在某些系统里重大事故是系统的正常属性，再小心的操作者也无法根除。</li>
+<li>交互复杂性让人看不懂系统真实状态，紧密耦合让故障来不及叫停，两者叠加使小故障级联成灾。</li>
+<li>为安全增加的冗余本身会抬高复杂性，可能引入新的失效路径，所以降险要靠降复杂、松耦合来改结构。</li>
+<li>1979 年三里岛核事故没有单个大错，阀门卡开、指示灯被标签挡住和操作员的误判交织成了灾难。</li>
+<li>塔勒布所说的黑天鹅极稀有、事前无从预测；灰犀牛则概率高、征兆明显，却被系统性地忽视。</li>
+<li>人对突发新奇的刺激过度反应，对缓慢确定的威胁却严重钝化，许多可预防的危机因此被事后称作黑天鹅。</li>
+<li>瑞士奶酪模型把每层防御比作带孔的奶酪片，灾难发生在多层防线的漏洞某一刻恰好贯通对齐之时。</li>
+<li>效率压力会让系统漂移到失效边界：每次走捷径却没出事，都在削减安全裕度并强化冒进。</li>
+<li>1986 年挑战者号失事前，O 型密封圈低温失效早已知晓，多次侥幸发射让人把没出事误当成了安全。</li>
+<li>韧性工程把安全看作系统在意外中持续适应的能力，而自动化的讽刺会削弱人在意外时接管的本事。</li>
+</ol>
 </div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

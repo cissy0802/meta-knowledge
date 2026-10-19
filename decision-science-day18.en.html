@@ -48,7 +48,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .dtable.warm th{background:#fbe5d9;color:#f7a072}
 .dtable.warm td.hl{background:#fff3e8;color:#e08a3c}
 .dnote{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -228,6 +235,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Von Neumann and Morgenstern's expected utility theory holds that rational choice maximizes expected utility, not expected money.</li>
+<li>Utility functions are concave: each extra dollar is worth less the more you already have, which is why people pay a small certain cost for insurance against a large uncertain disaster.</li>
+<li>In the Allais paradox, the same people reverse their preferences across two structurally equivalent choices, violating the independence axiom and opening the crack that later produced prospect theory.</li>
+<li>Simon's bounded rationality says that people with limited cognitive resources satisfice rather than optimize, leaning on mental shortcuts called heuristics.</li>
+<li>Kahneman and Tversky identified three core heuristics: representativeness, availability, and anchoring-and-adjustment, which substitute similarity, ease of recall, and a starting number for real judgment.</li>
+<li>Biases produced by heuristics are not random noise but directional, predictable distortions, so they can be exploited and also hedged against.</li>
+<li>In the Linda problem, most people rate "bank teller active in the feminist movement" as likelier than "bank teller," breaking the rule that a conjunction is never more probable than its parts.</li>
+<li>Multi-attribute utility theory scores options on weighted attributes and sums them; its value lies less in the final number than in forcing hidden weights and trade-offs into the open.</li>
+<li>When a weighted decision matrix and your gut disagree, the point of disagreement is worth digging into, because it often reveals a hidden weight the matrix left out.</li>
+<li>When probabilities cannot be estimated, the minimax regret rule picks the option whose worst-case regret is smallest, favoring options that stay reversible and avoid irreversible blunders.</li>
+</ol>
+</div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>
 <script src="https://hub.cissychen.com/search.js" defer></script>

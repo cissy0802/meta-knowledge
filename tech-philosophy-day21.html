@@ -51,7 +51,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .tetrad-cell.c2{border-top:3px solid #3a86ff}.tetrad-cell.c2 .t-head{color:#3a86ff}
 .tetrad-cell.c3{border-top:3px solid #52b788}.tetrad-cell.c3 .t-head{color:#52b788}
 .tetrad-cell.c4{border-top:3px solid #f7a072}.tetrad-cell.c4 .t-head{color:#f7a072}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -216,6 +223,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你设计的系统里，有没有哪条「为了效率」而硬性锁死的规则，实际上剥夺了本该属于人的判断空间与例外权？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>「媒介即讯息」：真正重塑社会的不是媒介承载的内容，而是媒介本身带来的尺度、速度与连接方式。</li>
+<li>每种媒介都是人某种感官或能力的延伸，它会悄悄改变人感知与组织世界的比例。</li>
+<li>媒介效应是环境性的、无形的，正因为无形才最难察觉和抵抗，就像鱼最后才发现水。</li>
+<li>媒介四定律问四件事：它提升了什么、让什么过时、再现了什么旧事物、推到极致会逆转成什么。</li>
+<li>印刷术不只是让复制书更快，还催生了统一的民族语言、个体内心与隐私观念以及现代科学方法。</li>
+<li>可供性是环境提供给特定行动者的行动可能性，是两者之间的关系，而不是物体的固有属性。</li>
+<li>「诺曼门」说明人反复用错时，错的往往不是人，而是设计发出了错误的可供性信号。</li>
+<li>黑箱社会的核心是可见性不对称：算法对你一清二楚，你却看不见也无法质询它的裁决逻辑。</li>
+<li>算法黑箱有技术层和制度层两层，以商业机密为名拒绝公开的制度黑箱常常才是真正的问题。</li>
+<li>「代码即法律」：算法治理把规则写进系统架构，从事后惩罚转向事前阻止，也消灭了裁量与例外。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

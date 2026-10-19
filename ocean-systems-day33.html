@@ -46,7 +46,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table th{background:#e6eef9;color:#3a86ff;font-weight:700;letter-spacing:0.5px}
 .ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
 .ca-table td.highlight{background:#fff7f5;color:#e85a4f;font-weight:700}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -194,6 +201,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你最近一次「本地」故障或意外，真正的源头，是不是一处遥远而看似无关的「海温异常」？你的系统里还埋着哪些跨边界的隐性耦合，正等着某次扰动把它们同步点燃？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>温盐环流是由海水温度和盐度造成的密度差驱动的全球洋流传送带，走完一圈约需一千年。</li>
+<li>北大西洋高纬的海水被冷却、结冰析出盐分后又冷又咸，大规模下沉成深层水，这是温盐环流的发动机。</li>
+<li>大量融冰淡水会稀释表层海水、阻止它下沉，约一万两千年前的新仙女木骤冷普遍归因于此。</li>
+<li>海洋吸收了人类排放的约四分之一二氧化碳，代价是海水持续变酸，即海洋酸化。</li>
+<li>二氧化碳溶于海水生成碳酸并消耗碳酸根，让珊瑚、贝类等造壳生物难以合成碳酸钙骨骼。</li>
+<li>工业革命以来表层海水 pH 从约 8.2 降到 8.1，由于 pH 是对数刻度，酸度实际上升约 30%。</li>
+<li>1977 年在加拉帕戈斯附近深海发现的热泉生态，食物链根基不是光合作用，而是微生物氧化硫化氢的化能合成。</li>
+<li>巨型管虫没有嘴和消化道，靠体内共生细菌把对多数动物有剧毒的硫化氢变成养分。</li>
+<li>厄尔尼诺年信风减弱、暖水东返，东太平洋冷水上涌停止，降雨带随大气环流一起东移。</li>
+<li>厄尔尼诺与拉尼娜以两到七年的不规则节奏交替，经遥相关能让印尼大火、东非洪灾和秘鲁渔业崩溃同年上演。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

@@ -45,7 +45,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table th{background:#e6eef9;color:#3a86ff;font-weight:700;letter-spacing:0.5px}
 .ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
 .ca-table td.highlight{background:#fff7f5;color:#e85a4f;font-weight:700}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -221,6 +228,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Thermohaline circulation is a global ocean conveyor belt driven by density differences from temperature and salinity, taking about a thousand years per loop.</li>
+<li>In the high-latitude North Atlantic, water cooled and left saltier by sea-ice formation sinks en masse as deep water, the engine of thermohaline circulation.</li>
+<li>Large pulses of meltwater can freshen surface water so it no longer sinks; the Younger Dryas cooling about 12,000 years ago is widely attributed to this.</li>
+<li>The ocean has absorbed roughly a quarter of human CO2 emissions, and the price is steadily acidifying seawater, known as ocean acidification.</li>
+<li>Dissolved CO2 forms carbonic acid and depletes carbonate ions, making it harder for corals and shellfish to build calcium carbonate skeletons.</li>
+<li>Surface ocean pH has fallen from about 8.2 to 8.1 since the Industrial Revolution; because pH is logarithmic, that means roughly 30% more acidity.</li>
+<li>Hydrothermal vent ecosystems, found near the Galápagos in 1977, rest on chemosynthesis by microbes oxidizing hydrogen sulfide rather than on photosynthesis.</li>
+<li>Giant tube worms have no mouth or gut and rely on symbiotic bacteria inside them to turn hydrogen sulfide, toxic to most animals, into food.</li>
+<li>In an El Niño year the trade winds weaken, warm water sloshes east, upwelling off South America stops, and the rain belt shifts east with the atmospheric circulation.</li>
+<li>El Niño and La Niña alternate on an irregular two-to-seven-year rhythm, and through teleconnections can bring Indonesian fires, East African floods and a Peruvian fishery collapse in the same year.</li>
+</ol>
+</div>
 <div class="nav"><a href="index.en.html">← Back to Index</a></div>
 
 </div>

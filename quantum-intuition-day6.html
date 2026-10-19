@@ -83,7 +83,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#7b
 .interp-title.mw{color:#52b788}
 .interp-text{font-size:0.82rem;color:#6b6b7d;line-height:1.6}
 .interp-icon{font-size:1.4rem;margin-bottom:8px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -353,6 +360,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#7b
 <span class="label">思考题</span>
 <p>如果"测量即创造分支而非揭示既有真相"是更接近现实的元假设，那么你日常的"做决定"过程——它是发现你本来就想要什么，还是创造出一个本不存在的"你"？这两种自我观会如何改变你下一次重要选择的方式？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>叠加态不是“不知道是哪个”的经典无知，而是测量前系统本来就没有确定值。</li>
+<li>叠加态用带相位的复数振幅描述，振幅能相互抵消或加强，这正是干涉的来源。</li>
+<li>按 Born 规则，测得某结果的概率是对应振幅的模平方；n 个量子比特需要 2ⁿ 个复数描述。</li>
+<li>退相干让系统与环境耦合、丢失相位信息，叠加便退化成经典概率混合，所以日常物体看不到叠加。</li>
+<li>量子纠缠态无法拆成两个粒子各自的态，粒子没有独立属性，只有整体属性。</li>
+<li>贝尔不等式规定局部隐变量理论的关联值不超过 2，量子力学预测 2√2，实验站在量子一边。</li>
+<li>纠缠关联虽然完美，单边测量结果却完全随机，因此不能用纠缠做超光速通信。</li>
+<li>不确定性原理 Δx·Δp ≥ ℏ/2 源于位置与动量算符不对易，不是测量仪器扰动粒子造成的。</li>
+<li>原子不会塌缩，是因为电子越靠近原子核动量就越大，能量在玻尔半径附近取到最小。</li>
+<li>测量问题问的是线性演化如何给出单一结果：哥本哈根诠释接受坍缩，Everett 的多世界诠释让宇宙分支。</li>
+</ol>
 </div>
 <div class="nav">
 <a href="index.html">← 返回首页</a>

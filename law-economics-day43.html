@@ -51,7 +51,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .goods-cell.row-label{background:#f4f1ed;color:#2a2a3a;font-weight:700;font-size:0.8rem;text-align:center;align-items:center}
 .goods-type{font-size:0.9rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
 .goods-example{font-size:0.78rem;color:#6b6b7d;line-height:1.5}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -224,6 +231,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>在你熟悉的领域里，有哪条打着「为了安全 / 质量」旗号的规则，实际效果却是保护了在位者、挡住了挑战者？如果由你重新设计，怎样既保留它的正当目的，又不让它沦为护城河？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>科斯定理：只要产权清晰、谈判没有成本，无论法律把权利判给谁，双方都会谈出同一个高效结果。</li>
+<li>外部性是相互的：工厂污染伤害渔民，关停工厂也伤害工厂，该问的是哪种安排总价值更高。</li>
+<li>现实里交易成本从不为零，所以法律如何分配初始权利，直接决定社会的效率。</li>
+<li>张五常 1973 年调查华盛顿州果园，发现养蜂人与果农早用合同买卖授粉，这个经典外部性已被市场内部化。</li>
+<li>财产规则给权利人否决权，想拿须先谈价；责任规则允许先拿走，事后按客观价格赔偿。</li>
+<li>交易成本低时用财产规则让市场定价，谈判难或有钉子户时用责任规则，如政府征地。</li>
+<li>1970 年 Boomer 诉大西洋水泥厂案，法院确认邻居受害，却判工厂付永久赔偿后继续运营。</li>
+<li>比较法研究发现普通法系通常比民法系更保护投资者、资本市场更发达，但这一理论仍有争议。</li>
+<li>哈耶克认为普通法是自发秩序：由判例累积而成，是人类行动的产物，而非任何人设计的产物。</li>
+<li>斯蒂格勒的监管俘获：监管收益集中于少数企业、成本分散给大众，监管机构因此常沦为在位者的护城河。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

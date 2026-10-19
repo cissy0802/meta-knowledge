@@ -44,7 +44,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .bar-val{flex:0 0 92px;font-size:0.8rem;color:#6b6b7d;font-weight:600}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:14px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -216,6 +223,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>The idea that large-scale irrigation bred despotism is too simple: water management was mostly local cooperation, and the state seized the countable, taxable grain surplus irrigation created.</li>
+<li>Irrigation forces farmers on a shared canal to plant and release water in sync, and the canal as a sunk investment ties them to the land, producing dense, fixed, taxable populations.</li>
+<li>Most of the earliest writing was accounting: records of grain, oil and debts, so civilization's legibility grew out of tallies kept beside the canals.</li>
+<li>Comparative studies find farmer-managed irrigation systems are generally fairer and more durable than state-engineered ones; Bali's water-temple network has self-organized for about a thousand years.</li>
+<li>Under the American West's prior appropriation doctrine, water left unused for years is forfeited, so farmers rationally use their full allocation and saving water becomes self-punishment.</li>
+<li>The Colorado River was divided using flows from a few wet years, so the water allocated on paper exceeds the river's real annual flow and it routinely fails to reach the sea.</li>
+<li>Use-it-or-lose-it rules breed hoarding and waste in annual budgets, spectrum licenses and cloud quotas too; a property right's expiry terms decide whether it rewards saving or waste.</li>
+<li>Earth's total water is nearly constant; what is scarce is water available at the right time and place at affordable cost, above all fossil groundwater drawn down like an endless account.</li>
+<li>About seventy percent of global freshwater withdrawals go to agriculture, so the modern water crisis is at its core a food problem, not a household-use problem.</li>
+<li>Virtual water is the water consumed along a product's supply chain; a kilogram of beef takes about 15,000 liters, so a dry country importing grain is effectively importing water.</li>
+</ol>
+</div>
 <div class="nav"></div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

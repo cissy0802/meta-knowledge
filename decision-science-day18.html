@@ -49,7 +49,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .dtable.warm th{background:#fbe5d9;color:#f7a072}
 .dtable.warm td.hl{background:#fff3e8;color:#e08a3c}
 .dnote{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -204,6 +211,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <p>面对高不确定的技术押注（押哪个 AI 框架、进哪条赛道），别假装能算准概率。先问两个问题：哪个选择即使错了也可逆？哪个错误会让我永久出局？把不可逆的大错排除掉，再在可逆的空间里大胆试错——这恰是"超级个体"对冲不确定性的元策略。</p>
 <span class="q">▸ 思考题：你正在犹豫的那件事，是"可逆的门"还是"单向门"？想象十年后回望，哪个选择的后悔会更难消化？</span>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>冯·诺依曼与摩根斯坦的期望效用理论认为，理性决策要最大化的是期望效用，而不是期望金钱。</li>
+<li>效用函数是凹的：同一笔钱的边际价值随拥有量递减，所以人愿用确定的小损失买保险，避开不确定的大灾难。</li>
+<li>阿莱悖论里，同一批人在两个结构等价的选择中偏好翻转，违反了独立性公理，这道裂缝后来催生了前景理论。</li>
+<li>西蒙的有限理性认为，认知资源有限的人追求的是“满足”而非最优，靠启发式这类捷径做判断。</li>
+<li>卡尼曼与特沃斯基归纳出代表性、可得性、锚定与调整三大启发式，分别用相似度、回忆难易和起点数字替代真实判断。</li>
+<li>启发式造成的偏误不是随机噪声，而是有方向、可预测的系统性扭曲，所以既能被人利用，也能被人对冲。</li>
+<li>琳达问题中，多数人把“银行出纳且活跃于女权运动”判得比“银行出纳”更可能，违反了合取永不更可能的概率定律。</li>
+<li>多属性效用理论给选项按属性打分、加权求和，价值不在最后的总分，而在逼人把隐藏的权重和权衡摆上台面。</li>
+<li>加权矩阵的结果与直觉打架时，分歧点最值得深挖，它往往指向一个没写进矩阵的隐藏权重。</li>
+<li>概率无法估计时，最小化最大后悔准则选最坏情况下后悔最小的方案，天然偏向保留选择权、回避不可逆的大错。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

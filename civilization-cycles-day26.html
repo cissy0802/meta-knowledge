@@ -55,7 +55,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .cycle-stage .desc{font-size:0.72rem;color:#6b6b7d;line-height:1.5}
 .cycle-stage:last-child{border-top-color:#e85a4f}
 .cycle-stage:last-child .num{background:#e85a4f}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -215,6 +222,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你当前的系统、职业或生活，是在压制小波动以求表面平静，还是在用可控的小失败换取应对大冲击的能力？哪个角落，正在悄悄累积「隐形的脆弱」？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>轴心时代指公元前约 800 到 200 年，中国、印度、希腊、近东几乎同时开始用一个理想标准反思现实。</li>
+<li>雅斯贝尔斯认为，铁器、城市、文字加上旧部落秩序瓦解，造就了一批有闲暇、能读写的思考者。</li>
+<li>孔子、释迦牟尼、苏格拉底彼此从未通信却提出同一命题，更像相似社会条件触及同一临界点，而非巧合。</li>
+<li>康德拉季耶夫长波指资本主义增长以约半个世纪为周期脉动，每一波由一簇基础性技术驱动。</li>
+<li>熊彼特用「创新集群」解释长波：先是金融资本追捧新技术的安装期，泡沫破裂后才是普惠繁荣的展开期。</li>
+<li>萧条和泡沫破裂常是长波的转折点，互联网泡沫之后云计算、移动和社交才大规模铺开。</li>
+<li>伊本·赫勒敦的「团结心」理论认为，群体凝聚力在逆境中最强，定都享乐后约三四代人便逐代涣散。</li>
+<li>结构人口学认为，精英过剩、平民困顿、国家财政吃紧三者叠加时，社会就会滑向动荡。</li>
+<li>塔勒布区分脆弱、强韧、反脆弱三种状态，反脆弱系统靠「凸性」在小剂量压力后过度补偿而变强。</li>
+<li>压制一切小波动不会消灭风险，只会把它累积成罕见的大灾难，美国扑灭每场小火反而酿成特大山火。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

@@ -46,7 +46,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table td.win{color:#52b788;font-weight:800}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -192,6 +199,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你此刻最笃定「已经掌握」的那件事，如果现在就无提示、隔了时间地考自己一次，你敢下多大的注？你的自信，配得上一次真正的提取检验吗？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>表现是此刻做得多好的临时状态，学习是能长期留存并迁移的持久改变，两者可以背道而驰。</li>
+<li>学习无法当场直接观测，只能等支架撤掉、时间过去后，用留存和迁移去反推。</li>
+<li>运动学习实验里，集中练训练时更顺，十天后的保持测试却被随机打乱练的一组大幅反超。</li>
+<li>机器学习的过拟合是同一回事：训练损失一路下降，验证损失却掉头上升。</li>
+<li>流畅错觉：大脑用处理起来有多顺来估计掌握得有多好，这个捷径系统性地骗人。</li>
+<li>重读、划线、看别人解题都很流畅却几乎不留痕迹；回忆、自测、犯错费力，却真正强化提取通路。</li>
+<li>2019 年哈佛物理课对照中，主动学习组客观上学得更多，却自评学得更少、更喜欢讲授课。</li>
+<li>合意困难如间隔、交错、自测能加深学习，但困难必须用对了力且够得着，超出工作记忆就成了淹没。</li>
+<li>交错练数学的学生练习时错更多、觉得教法更差，最终测验却大幅胜出：舒适度是效果的反向指标。</li>
+<li>给「学会了」装校准器：延迟自评，并用无提示提取当尺子，取得出才算学到。</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

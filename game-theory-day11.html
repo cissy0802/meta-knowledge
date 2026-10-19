@@ -46,7 +46,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .payoff-table td.nash{background:#fff7f5;color:#e85a4f;font-weight:700;border:2px solid #e85a4f}
 .payoff-table td.pareto{background:#e3f1e8;color:#2a7a4a;font-weight:600}
 .payoff-note{font-size:0.75rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -179,6 +186,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <p>带团队、做产品、定奖励，本质都是机制设计。最常见的错误是把"KPI 设计"等同于"机制设计"——只想"我要什么"，却不问"<strong>参与者会怎么钻这个 KPI 的空子</strong>"。客服按通话量考核 → 员工会飞快挂断；研发按代码行数考核 → 代码越写越臃肿。每设一个激励，都要反问：如果我是个又聪明又只顾自己的人，把这个指标刷到最高的最省事办法是什么？它和我真正想要的一致吗？孩子也一样：奖励"做了多少题"会催生应付式刷题，奖励"把一道难题讲懂给别人"才让学习本身变成最优策略。</p>
 <span class="q">▸ 思考题：你正在用的某个激励机制（KPI、积分、奖金、家规），如果交给一个绝顶聪明又只顾自己的人去最大化，会冒出什么"完美却荒谬"的结果？</span>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>纳什均衡是一种自洽状态：在别人都不变的前提下，没有人能靠单方面改变策略让自己更好。</li>
+<li>Nash 在 1950 年证明任何博弈都至少有一个这样的均衡，把分析从零和博弈推广到一切非合作博弈。</li>
+<li>均衡不等于最优：囚徒困境里双方背叛是唯一的纳什均衡，结果却比双方合作更差。</li>
+<li>Braess 悖论：拥堵路网里新修一条捷径，反而可能让所有人的通行时间变长。</li>
+<li>一次性博弈里背叛是理性的，但博弈无限重复且未来足够重要时，合作本身就能成为均衡。</li>
+<li>重复囚徒困境竞赛的冠军是“一报还一报”：先合作、被背叛就回敬、对方合作就既往不咎。</li>
+<li>一战堑壕里长期对峙的士兵自发形成互不攻击的默契，轮换部队把重复博弈打回一次性博弈后合作就崩了。</li>
+<li>进化稳定策略不需要任何人懂理性：只要成功者被复制，群体就会收敛到一个新策略入侵不进来的稳定点。</li>
+<li>鹰鸽博弈中群体会稳定在鹰与鸽的混合比例上，这解释了动物冲突为何多是虚张声势的仪式。</li>
+<li>机制设计是逆向博弈论，先定想要的结果再设计规则；次价拍卖让如实出价成为最优策略。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

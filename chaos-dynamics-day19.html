@@ -45,7 +45,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
 .axis{stroke:#9a9aa8;stroke-width:1}
 .axislbl{font-size:11px;fill:#6b6b7d}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -214,6 +221,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你负责的某个系统（也包括你自己的精力与情绪），最近「从扰动中恢复」是变快了还是变慢了？如果它正在变慢，你愿意现在就介入，还是等它真的翻面？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>混沌是确定性系统的长期不可预测：每一步都被方程锁死，初始条件的微小差异却会被指数级放大。</li>
+<li>李雅普诺夫指数为正时相邻轨迹指数分离，仪器精度提高一千倍，可预测时间窗也只线性延长一点。</li>
+<li>1961 年洛伦茨把 0.506127 截成 0.506 重新输入模型，两个月后的模拟天气面目全非，蝴蝶效应由此得名。</li>
+<li>天气预报过两周必然失准，根源是大气本身是混沌系统而非算力不足；混沌系统短期内仍高度可预测。</li>
+<li>奇异吸引子说明混沌不等于无序：轨迹永不重复、不可预测，却始终被约束在一个维度非整数的分形上。</li>
+<li>奇异吸引子的几何来自拉伸与折叠的无限反复：拉伸让相邻轨迹分离，折叠又把它们收回有限区域。</li>
+<li>相变是控制参数缓慢连续变化时，系统在临界点发生的突然整体质变，如磁铁到居里温度骤然失去磁性。</li>
+<li>一阶相变的序参量跳变并吞吐潜热，因而能过冷过热；连续相变在临界点关联长度发散，微观涨落波及全局。</li>
+<li>系统逼近临界翻转点时会出现临界慢化：扰动后恢复变慢，自相关与方差上升，可作通用的早期预警信号。</li>
+<li>滞后回线意味着临界翻转常常不可逆：湖泊落入另一个吸引盆后，把污染降回原水平也不会自动变清。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

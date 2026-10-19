@@ -45,7 +45,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .payoff-table td.nash{background:#fff7f5;color:#e85a4f;font-weight:700;border:2px solid #e85a4f}
 .payoff-table td.pareto{background:#e3f1e8;color:#2a7a4a;font-weight:600}
 .payoff-note{font-size:0.75rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -205,6 +212,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>A Nash equilibrium is a self-consistent state: if everyone else holds still, no one can do better by changing strategy alone.</li>
+<li>In 1950 Nash proved every game has at least one such equilibrium, extending analysis from zero-sum games to all non-cooperative games.</li>
+<li>Equilibrium is not optimum: in the prisoner's dilemma, mutual defection is the only Nash equilibrium yet leaves both worse off than mutual cooperation.</li>
+<li>Braess's paradox: adding a shortcut to a congested road network can make everyone's travel time longer.</li>
+<li>Defection is rational in a one-shot game, but when the game repeats indefinitely and the future matters enough, cooperation itself can be an equilibrium.</li>
+<li>Tit-for-Tat won the repeated prisoner's dilemma tournament: cooperate first, retaliate against defection, forgive as soon as the other side cooperates.</li>
+<li>In the WWI trenches, long-facing units settled into a live-and-let-live truce; rotating troops turned the repeated game back into a one-shot game and broke it.</li>
+<li>An evolutionarily stable strategy needs no rationality: if success gets copied, a population converges to a point no invading strategy can beat.</li>
+<li>In the hawk-dove game a population settles on a stable mix of hawks and doves, which explains why animal fights are mostly ritual bluffing.</li>
+<li>Mechanism design is reverse game theory, choosing the outcome first and then the rules; the second-price auction makes truthful bidding the best strategy.</li>
+</ol>
+</div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>
 <script src="https://hub.cissychen.com/search.js" defer></script>

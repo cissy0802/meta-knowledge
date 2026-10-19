@@ -47,7 +47,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .payoff-table td.good{background:#e3f1e8;color:#2a7a4a;font-weight:700}
 .payoff-table td.reverse{background:#fef0d9;color:#b56b00;font-weight:700}
 .payoff-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -218,6 +225,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
     <p>The real question for career defensibility in the AI era isn't "how many skills do I have," but <strong>"what position do I hold in the network."</strong> Single-point skills are easily flattened by AI, but a <strong>bridging position is brutally hard to replace</strong>: AI can imitate an expert, but it can't inherit the cross-domain relationships and contextual translation you've built over years. The most leveraged move is often to deliberately build a reliable bridge between two groups of people, technologies, or departments that don't currently talk. Same in parenting: giving a child 1–2 friends from completely different groups carries more structural value than expanding a homogeneous circle.</p>
     <span class="q">▸ Reflection: if you stepped away for 3 months, which 2–3 information or collaboration flows would break? Those breakpoints are your real "betweenness" value — is it rising or falling in the AI era?</span>
   </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>A small-world network combines tight neighborhoods with a few cross-group shortcuts, so average distances stay short however large it grows.</li>
+<li>In Milgram's 1967 letter-forwarding experiment, letters reached a stranger through about six intermediaries on average.</li>
+<li>Watts and Strogatz showed in 1998 that randomly rewiring just a few links makes the average distance in a regular network collapse.</li>
+<li>In a scale-free network a few hubs have huge numbers of links while most nodes have few, so there is no "average node."</li>
+<li>Barabási and Albert found in 1999 that growth plus new nodes preferring already-popular nodes automatically produces super-hubs.</li>
+<li>Scale-free networks shrug off random node failures, but a targeted attack on a few hubs can bring the whole network down.</li>
+<li>When the basic reproduction number R₀ is above 1 spread grows exponentially, below 1 it dies out; crossing 1 is a jump, not a slope.</li>
+<li>The herd-immunity threshold is 1 − 1/R₀; with measles at an R₀ of about 15, roughly 94% of people must be immune to stop it.</li>
+<li>On networks with super-hubs spreading has almost no threshold, so network structure often matters more than how strong the virus is.</li>
+<li>Betweenness centrality counts how many shortest paths must pass through a node; bridges across structural holes are hard to replace despite modest titles.</li>
+</ol>
 </div>
 
 </div>

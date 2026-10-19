@@ -46,7 +46,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
 .ca-table td.highlight{background:#fff7f5;color:#e85a4f;font-weight:700}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -218,6 +225,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Earth's great deserts cluster near 30 degrees north and south, a geometric outcome of the atmospheric heat engine rather than a coincidence.</li>
+<li>The Hadley cell is a closed loop: equatorial air heats, rises and rains out, flows poleward aloft, sinks warm and dry near 30 degrees, then returns along the surface.</li>
+<li>The trade winds are not blown directly by Earth's rotation; they are surface return flows deflected by the Coriolis force.</li>
+<li>Under global warming the Hadley cell's descending branch is expanding poleward, pushing subtropical drylands into once semi-humid regions.</li>
+<li>Ice and snow reflect most sunlight while dark ocean reflects about a tenth, so melting exposes darker surfaces that absorb heat and melt more ice: the ice-albedo feedback.</li>
+<li>The ice-albedo feedback is strongest at the poles and is the main reason the Arctic warms two to four times faster than the global average.</li>
+<li>Snowball Earth, about 700 million years ago, was thawed by volcanic carbon dioxide that piled up for lack of weathering until the greenhouse effect melted the ice.</li>
+<li>The carbon cycle runs at two speeds: a fast loop of photosynthesis, respiration and ocean exchange, and a slow loop of volcanism and rock weathering that acts as a million-year thermostat.</li>
+<li>Burning fossil fuels dumps slow-cycle carbon into the fast cycle within two centuries, while rock weathering needs tens to hundreds of thousands of years to clear it.</li>
+<li>Climate tipping points show hysteresis: past a threshold the system jumps to a new state and will not return when the forcing is rolled back, as Amazon deforestation near 20 to 25 percent may trigger.</li>
+</ol>
+</div>
 <div class="nav"><a href="index.en.html">← Back to Index</a></div>
 
 </div>

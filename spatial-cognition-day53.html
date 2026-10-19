@@ -42,7 +42,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -193,6 +200,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你团队真实的沟通网络，是被你设计的流程决定的，还是被工位布局、默认频道、会议室这些「场所」悄悄决定的？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>海马体的位置细胞标记「我在哪」，内嗅皮层的网格细胞以六边形网格提供度量，合成认知地图。</li>
+<li>认知地图是大脑主动建构的而不是眼睛拍下的，在黑暗中、闭眼时也能靠路径积分持续更新。</li>
+<li>伦敦出租车司机的后部海马体比常人明显更大，而且开车年头越久越大，说明空间训练能把脑区「练粗」。</li>
+<li>思考抽象概念的维度时，网格细胞同样按六边形网格放电，大脑把概念空间当成物理空间来导航。</li>
+<li>城市好不好走取决于可读性：路径、边界、区域、节点、地标五种元素能否让人在脑中拼出地图。</li>
+<li>横平竖直的均质网格城市常让人迷路，地标密集的弯曲老城反而好走，可读性不等于几何秩序。</li>
+<li>注意力恢复理论认为，定向注意力会疲劳，而自然场景的「柔性迷人」能让它离线休整。</li>
+<li>「瞭望—庇护」偏好让人爱选既能望远、背后又有依靠的位置，比如餐厅里靠墙能纵览全场的角落座。</li>
+<li>一项经典研究发现，窗外能看到树的手术病人比只看到砖墙的病人康复更快、止痛药用得更少。</li>
+<li>空间加上经历与依恋才成为场所；开放式办公改造后面对面交流反降约 70%，设计是行为的隐形脚本。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

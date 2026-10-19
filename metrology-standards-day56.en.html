@@ -47,7 +47,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .pa-state{font-size:0.9rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
 .pa-desc{font-size:0.78rem;color:#6b6b7d;line-height:1.5}
 .pa-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -199,6 +206,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Reflection</span>
 <p>The metric you're rewarding heavily — if someone wanted only to make the number look good, ignoring the real goal behind it entirely, how would they do it? Is anyone already walking that shortcut?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Units in metrology are negotiated conventions; measuring means anchoring the world to a reproducible reference.</li>
+<li>Since the 2019 SI redefinition, the kilogram is no longer a platinum-iridium artifact but is derived from a fixed value of Planck's constant.</li>
+<li>The international prototype kilogram, "Big K," drifted about 50 micrograms against its copies over a century, which is what forced the 2019 reform.</li>
+<li>Comparability depends on a stable reference, not a precise instrument: if a benchmark or CPI basket drifts, "progress" across periods stops being comparable.</li>
+<li>Standards are power in its quietest form, locked in by coordination games and path dependence, where being widely adopted beats being optimal.</li>
+<li>ISO standard shipping containers let ships, ports, trucks and cranes interoperate, shrinking ocean freight costs and reshaping global supply chains.</li>
+<li>The QWERTY keyboard and the 1,435 mm standard rail gauge show how an accidental historical choice, once widespread, lets compatibility trump efficiency.</li>
+<li>Random measurement error shrinks with repeated averaging, but systematic error never averages away and can only be found through calibration.</li>
+<li>Precision means repeatability and accuracy means closeness to the true value; a precise but uncalibrated instrument gives wrong answers steadily and confidently.</li>
+<li>Goodhart's Law: once a metric becomes a target, people optimize the number itself instead of the real goal it was meant to represent.</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

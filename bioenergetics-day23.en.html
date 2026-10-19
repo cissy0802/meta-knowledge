@@ -52,7 +52,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .o4{background:#3a86ff;flex:15}
 .o5{background:#b7b7c9;flex:25}
 .organ-note{font-size:0.74rem;color:#e85a4f;text-align:center;margin-top:10px;font-weight:600}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -243,6 +250,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
     <span class="label">Reflection</span>
     <p>If you drew yesterday's cognitive energy as one of these allocation bars, how big a slice did "maintenance" chores devour? And which slice should have gone to "reproductive" deep work?</p>
   </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Life does not violate the second law of thermodynamics: it buys local order by exporting even more entropy to its surroundings.</li>
+<li>The second law governs isolated systems; life is an open system that takes in low-entropy sunlight and food and expels high-entropy heat and waste.</li>
+<li>A resting adult gives off about 100 watts of heat, the entropy tax paid to the universe for keeping the body ordered.</li>
+<li>Earth absorbs a few high-energy visible photons and radiates about twenty times as many low-energy infrared ones: equal energy, far more entropy.</li>
+<li>Dissipative-structure theory holds that a system pushed far from equilibrium can spontaneously form order, which collapses once the energy flow stops.</li>
+<li>In B&eacute;nard convection, oil heated past a critical temperature gradient suddenly forms hexagonal cells; a hurricane is the same principle at giant scale.</li>
+<li>Kleiber's law: from mouse to blue whale, metabolic rate scales with body mass to the 3/4 power, so larger animals spend less energy per gram.</li>
+<li>The 3/4 exponent comes from fractal, space-filling supply networks whose terminal capillaries are nearly the same size in every animal.</li>
+<li>Nearly all mammals get about 1.5 billion heartbeats per lifetime: fast hearts mean short lives, slow hearts long ones, with the product roughly constant.</li>
+<li>The human brain is about 2% of body weight yet uses about 20% of its energy; the expensive tissue hypothesis says a shorter gut paid for it.</li>
+</ol>
 </div>
 
 </div>

@@ -51,7 +51,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .rung-scale.yes{color:#52b788}
 .rung-scale.no{color:#e85a4f}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -207,6 +214,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Reflection</span>
 <p>In your team or family, which behaviors are quietly driven by "relative comparison" rather than "absolute gain or loss"? The last time you felt unfairness and wanted to "throw the cucumber back," what was the trigger — a real loss to yourself, or merely the sight of someone else's "grape"?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Tool use is not an on-off switch but a bundle of cognitive prerequisites: seeing an object as what it could become.</li>
+<li>Chimpanzees strip the leaves off a twig before fishing for termites, a preparatory step that implies a means-end representation.</li>
+<li>New Caledonian crows bend straight wire into hooks and use a short stick to fetch a long one, showing flexible causal reasoning evolved convergently in birds.</li>
+<li>Humanity's real superpower is cumulative culture: knowledge ratchets forward across generations, while animal traditions nearly restart each generation.</li>
+<li>Tomasello's ratchet effect depends on imitation, which copies the whole process, rather than emulation, which copies only the result and lets improvements slip away.</li>
+<li>In puzzle-box studies chimps skip irrelevant actions while children copy them too, and this over-imitation is the engine of cumulative culture.</li>
+<li>The hard part of the animal theory-of-mind debate is telling mind-reading apart from behavior-reading, since clever behavioral prediction can look like mind-reading.</li>
+<li>Chimpanzees generally fail explicit false-belief tests, yet in competition for food they track what a rival can see and raid its blind spots.</li>
+<li>A capuchin that sees a partner get a grape for the same task refuses its own cucumber: inequity aversion is about comparison, not the reward itself.</li>
+<li>Protesting when you get less is first-order inequity aversion; feeling uneasy when you get more is second-order, and it is almost never seen in animals.</li>
+</ol>
 </div>
 <div class="nav"><a href="index.en.html">← Home</a></div>
 </div>

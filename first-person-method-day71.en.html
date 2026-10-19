@@ -44,7 +44,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-legend i{width:12px;height:12px;border-radius:50%;display:inline-block}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -238,6 +245,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question</span>
 <p>If a ping went off right now asking "is your mind on the thing in front of you," what fraction of a week do you think you'd answer no? Write the estimate down, then actually sample for a week — when the two numbers disagree, which one would you rather believe?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Introspection can fairly reliably report what appears in the mind, a conclusion or a feeling, but almost never how it got there.</li>
+<li>Nisbett and Wilson argued in 1977 that people explain their choices by drawing on commonsense theories, not by reading their actual mental processes.</li>
+<li>In the stocking study, the rightmost of four identical pairs was chosen far more often, yet no shopper cited position, and they denied it when asked.</li>
+<li>In choice blindness experiments, most people missed that the face photo handed back was the one they had rejected, and fluently gave reasons for it.</li>
+<li>Unreliable introspection comes with no signal of its unreliability: a reason generated on the spot feels exactly like a genuine one.</li>
+<li>Varela's neurophenomenology keeps first-person data but raises its quality, then lets it and neural dynamics constrain each other, with neither acting as referee.</li>
+<li>In a 2002 PNAS study, Lutz, Varela and colleagues sorted EEG by self-reported readiness and found distinct gamma synchrony patterns that plain averaging erased as noise.</li>
+<li>The micro-phenomenological interview returns people to one specific experience, avoids asking why, offers no candidate answers, and asks only how it unfolded.</li>
+<li>Taken back through a recent seizure with this interview, many epilepsy patients who claimed no warning signs identified preceding experiences they had never put into words.</li>
+<li>Experience sampling asks at random moments, sidestepping memory's peak-and-end reconstruction; with it Killingsworth and Gilbert found minds wander nearly half the time, and wandering precedes worse mood.</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

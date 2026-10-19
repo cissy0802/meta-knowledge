@@ -44,7 +44,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-legend i{width:12px;height:12px;border-radius:50%;display:inline-block}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -204,6 +211,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>回想你最近一次被某个数字说服而改变决定——它的分母是什么？如果当时追问这一句，你还会做同样的决定吗？更值得想的是：为什么你当时没问？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>「AI 让开发者快了多少」能得出 +55%、+20%、−19% 三个都没造假的答案，差别在口径而不在数据。</li>
+<li>证据口径构成一条阶梯：事前预期、事后感觉、受控实验、真实场景随机对照，越往上数字越保守。</li>
+<li>高阶证据成本高、低阶证据便宜，流通的数字天然聚在阶梯底部，形成不需要撒谎的系统性乐观偏移。</li>
+<li>2025 年的随机对照实验里，资深开发者用 AI 后实际慢了 19%，却事前预计快 24%、事后自觉快 20%。</li>
+<li>任何比例都是六个旋钮的函数：分母、标尺、样本准入、答卷人、时间窗、自报还是实测。</li>
+<li>2017 年美国把高血压诊断线降到 130/80，成年人患病率从约三成跳到近一半，血压本身没变。</li>
+<li>美国官方同时发布六个版本的失业率，最宽口径通常接近最窄口径的两倍，都叫「失业率」。</li>
+<li>同一组织同一道题，答卷人层级越高答案越乐观，源于信息过滤、身份卷入和抽象度错配三条通路。</li>
+<li>儿童行为评估的汇总分析中，家长、老师和孩子本人之间的评分相关只有约 0.28。</li>
+<li>读任何比例前先问三问：分母是什么、尺子多严、说话的人卖什么；行业资助的偏倚发生在选口径而非量数据。</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

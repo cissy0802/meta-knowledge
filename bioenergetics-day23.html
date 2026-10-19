@@ -53,7 +53,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .o4{background:#3a86ff;flex:15}
 .o5{background:#b7b7c9;flex:25}
 .organ-note{font-size:0.74rem;color:#e85a4f;text-align:center;margin-top:10px;font-weight:600}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -213,6 +220,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>如果把你昨天的认知能量画成这样一张分配条，「维持型」杂务吃掉了多大一块？其中有哪一块，本该划给「繁殖型」的深度投入？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>生命并不违反热力学第二定律：它向环境排出更多的熵，以此换取自身局部的有序。</li>
+<li>第二定律只约束孤立系统；生命是开放系统，摄入低熵的阳光和食物，排出热与废物等高熵产物。</li>
+<li>一个静坐的成年人持续散热约 100 瓦，这是维持体内秩序向宇宙缴纳的「熵税」。</li>
+<li>地球吸收少量高能的可见光光子，向太空辐射约二十倍数量的低能红外光子，能量持平而熵大增。</li>
+<li>耗散结构理论指出：系统被推到远离平衡态时，有序会在持续的能量流中自发涌现，流一断就瓦解。</li>
+<li>贝纳尔对流中，油层温差一越过临界点就突然排出六边形对流胞；飓风是同一原理的巨型版本。</li>
+<li>克莱伯定律：从老鼠到蓝鲸，代谢率与体重的 3/4 次方成正比，越大的动物每克身体越省能。</li>
+<li>3/4 指数源自分形、填满空间的输送网络，而网络末端的毛细血管在所有动物身上几乎一样粗。</li>
+<li>哺乳动物一生的心跳总数都接近 15 亿次：心率快的寿命短，心率慢的寿命长，乘积近乎守恒。</li>
+<li>人脑只占体重约 2% 却耗能约 20%；昂贵组织假说认为人类用更短的肠道换来了大脑的供能。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

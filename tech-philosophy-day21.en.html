@@ -50,7 +50,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .tetrad-cell.c2{border-top:3px solid #3a86ff}.tetrad-cell.c2 .t-head{color:#3a86ff}
 .tetrad-cell.c3{border-top:3px solid #52b788}.tetrad-cell.c3 .t-head{color:#52b788}
 .tetrad-cell.c4{border-top:3px solid #f7a072}.tetrad-cell.c4 .t-head{color:#f7a072}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -248,6 +255,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>"The medium is the message": what reshapes society is not the content a medium carries but the scale, speed and connections the medium itself brings.</li>
+<li>Every medium is an extension of some human sense or faculty, and it quietly shifts the ratios by which we perceive and organize the world.</li>
+<li>The effects of a medium are environmental and invisible, which makes them hardest to notice or resist, just as a fish is the last to discover water.</li>
+<li>The four laws of media ask what a medium enhances, what it makes obsolete, what older thing it retrieves, and what it reverses into when pushed to the extreme.</li>
+<li>The printing press did more than copy books faster: it gave rise to standardized national languages, the private inner self, and the modern scientific method.</li>
+<li>An affordance is a possibility for action that an environment offers a particular actor; it is a relationship, not a fixed property of an object.</li>
+<li>The "Norman door" shows that when people keep using something wrong, the fault usually lies in a design that sends the wrong affordance signal.</li>
+<li>The black box society rests on an asymmetry of visibility: algorithms see everything about you, while you cannot see or question the logic of their verdicts.</li>
+<li>Algorithmic black boxes have a technical layer and an institutional layer, and the institutional secrecy claimed as trade secrets is often the real problem.</li>
+<li>"Code is law": algorithmic governance writes rules into system architecture, shifting from punishment after the fact to prevention, and erasing discretion and exceptions.</li>
+</ol>
+</div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>
 <script src="https://hub.cissychen.com/search.js" defer></script>

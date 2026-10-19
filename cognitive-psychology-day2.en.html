@@ -37,7 +37,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -260,6 +267,22 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
     <span class="label">Question to Sit With</span>
     <p>If part of your cognition lives in your posture, your workspace, and your tools, then "upgrading your thinking" first means redesigning your bodily habits and physical environment. Over the past year, did the time you invested in better chairs, screens, and note systems match the weight it deserved?</p>
   </div>
+</div>
+
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Dual-process theory splits thinking into System 1, fast, automatic and nearly free, and System 2, slow, effortful and reliant on working memory.</li>
+<li>System 2 is a lazy supervisor that accepts System 1's verdicts by default, so many “careful” decisions are rationalizations written after the fact.</li>
+<li>In the bat-and-ball problem, over half of elite students answer 10 cents instead of 5, because intuition answers first and nobody checks.</li>
+<li>Working memory holds and manipulates information at once; it is not short-term memory, and its true capacity is about 4±1 chunks, not Miller's 7±2.</li>
+<li>Chunking lets the same working-memory capacity carry more complex content, and expertise mostly comes from a richer library of chunks.</li>
+<li>Chess masters recall real game positions far better than novices, but with randomly placed pieces they do no better, so their memory rests on patterns.</li>
+<li>Metacognition, named by John Flavell in 1979, is knowing what you know and don't know, and it is only weakly tied to how much you actually know.</li>
+<li>Metacognition has three layers, knowledge, monitoring and control, and good calibration means confidence tracks actual accuracy.</li>
+<li>The Dunning-Kruger effect shows the lowest scorers overestimate their rank, because they lack the skill to recognize what good performance looks like.</li>
+<li>Embodied cognition holds that thinking spans brain, body and environment, and offloading tools such as notebooks and whiteboards are part of the mind itself.</li>
+</ol>
 </div>
 
 <div class="nav">

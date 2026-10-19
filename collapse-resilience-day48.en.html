@@ -46,7 +46,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-legend span{display:inline-flex;align-items:center;gap:6px}
 .dot{width:12px;height:12px;border-radius:50%;display:inline-block}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -201,6 +208,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question</span>
 <p>Look back at your most recent postmortem: is the widely accepted "root cause" narrative pointed to by the data itself, or written for you by your observability blind spots? With a different set of instrumentation, would the same incident be told as a completely different story?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Skeletal evidence shows early farmers were shorter, sicker and harder-worked than contemporary foragers, so agriculture was no simple upgrade.</li>
+<li>Agriculture is a positive-feedback ratchet: surplus grain swells the population, which forces more farming, and there is no way back to foraging.</li>
+<li>Agriculture raised how many people a patch of land could feed, not each person's quality of life: it made humans more numerous, not better off.</li>
+<li>Mesopotamian cuneiform grew out of clay counting tokens; writing was invented to keep accounts, not to write poetry.</li>
+<li>The earliest tablets from Uruk are overwhelmingly administrative records of grain, livestock and rations; narrative literature came roughly 500 years later.</li>
+<li>Writing externalizes memory into portable, checkable, cumulative objects, laying the foundation for law, bureaucracy, contracts and science.</li>
+<li>Tainter argues that societies solve problems by adding complexity, but complexity has diminishing marginal returns until a society can no longer afford it.</li>
+<li>In Tainter's model, past the point of diminishing returns a single shock can make collapse a rational slimming-down to a lower level of complexity.</li>
+<li>Once expansion stopped, the Roman Empire survived on currency debasement, higher taxes and more bureaucracy; after it fell, peasants in some provinces lived better.</li>
+<li>Archaeological collapse is often just the disappearance of elite markers: millions of Maya descendants live today, and Easter Island's ecocide story is now seriously disputed.</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

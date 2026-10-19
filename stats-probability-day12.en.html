@@ -47,7 +47,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .payoff-table td.good{background:#e3f1e8;color:#2a7a4a;font-weight:700}
 .payoff-table td.reverse{background:#fef0d9;color:#b56b00;font-weight:700}
 .payoff-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -219,6 +226,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Bayesian inference treats probability as a degree of belief: prior times likelihood yields a posterior updated by new evidence.</li>
+<li>Every probability is relative to the information you already have; there is no probability detached from information.</li>
+<li>Ignoring the base rate is a systematic error in intuitive probability judgments, made even by doctors, judges and investors.</li>
+<li>For a test that is 95% accurate on a disease with 1% prevalence, a positive result means only about a 16% chance of having it.</li>
+<li>Monte Carlo methods approximate answers no formula can reach by sampling at random many times, relying on the law of large numbers.</li>
+<li>Scatter random points in a square, take the fraction landing inside the inscribed circle, multiply by 4, and you estimate pi.</li>
+<li>Survivorship bias arises when only surviving samples are visible, so their random traits get mistaken for the causes of success.</li>
+<li>In the WWII bomber case, the parts to armor were those with the fewest holes on returning planes, since planes hit there never came back.</li>
+<li>Simpson's paradox: A can beat B overall while B beats A within every subgroup, so aggregation flips the conclusion.</li>
+<li>In the graduate-admissions case, women's lower overall rate came from applying more to departments that were hard to get into.</li>
+</ol>
+</div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>
 <script src="https://hub.cissychen.com/search.js" defer></script>

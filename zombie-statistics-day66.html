@@ -54,7 +54,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .chain-t span{color:#6b6b7d;font-size:0.84rem}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -199,6 +206,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你最近一次写进汇报或决策的那个关键数字，此刻若逼它同时通过「追到一手、查定义、问谁在卖」这三关，它扛得住几关？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>引用次数和背后的实际证据可以完全脱钩：权威常常是引用网络自己长出来的，靠的是转述的密度。</li>
+<li>引用失真有三条通道：偏倚只引支持的，放大让综述层层转述，发明则引一篇根本没这数据的文献来撑结论。</li>
+<li>2009 年《英国医学杂志》一项研究解剖了 242 篇论文、675 条引用，真正含支持性实验数据的只有极少数几篇。</li>
+<li>一个粗略猜测变成公认事实，靠的不是验证，而是每次转述都剥掉不确定性、定义和出处这些限定词。</li>
+<li>数字的事实化是一条四步衰变链：粗估、删掉限定词、安上假出处、被证伪后仍脱离原文继续流通。</li>
+<li>「70% 的变革努力会失败」源自 1993 年一本企业再造书里的非科学估计，原话是 50%–70% 没取得戏剧性成果。</li>
+<li>僵尸数字被证伪后照样活着，因为它服务的是叙事需求而不是求真需求：数字靠有用而活，不靠真而活。</li>
+<li>辟谣出现得晚、传播面窄、不好讲；加上持续影响效应，人被当面纠正后，旧说法仍会影响后续判断。</li>
+<li>「人只用了大脑的 10%」早被神经科学否定，「每天喝 8 杯水」丢了原建议的后半句，两者却因为好讲流传至今。</li>
+<li>对抗僵尸数字靠固定流程而非泛泛怀疑：任何要用的数字先过「追到一手、查定义、问谁在卖」三关。</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

@@ -42,7 +42,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-title{font-size:0.82rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
 .viz svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -224,6 +231,22 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
     <span class="label">Question</span>
     <p>Your most recent system failure or collaboration snag — did it happen "inside a component," or at the "interface" between two? Among the frictions you're trying to eliminate, which ones are actually indispensable "traction"?</p>
   </div>
+</div>
+
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>A dislocation is a line defect, an extra or missing half-row of atoms, and its row-by-row slip is why metals bend instead of shattering.</li>
+<li>Each step of dislocation slip breaks only one bond at a time, like moving a rug by pushing a wrinkle, which explains why real metals are far weaker than theory predicts.</li>
+<li>Strengthening a metal means putting roadblocks in the way of dislocations: grain boundaries, dissolved foreign atoms, precipitate particles, and tangled dislocations from work hardening.</li>
+<li>A paper clip bent back and forth first hardens and then snaps, while nearly defect-free metal whiskers approach theoretical strength, tens of times stronger than bulk metal.</li>
+<li>A phase diagram maps which phases coexist at each temperature and composition; at the eutectic point, tin-lead solder melts around 183°C, below both pure tin and pure lead.</li>
+<li>Adding just 0.02% to 2% carbon turns soft iron into steel, and quenching and tempering use cooling rate to freeze atoms in non-equilibrium states.</li>
+<li>In a composite, stiff fibers carry most of the stress while the soft matrix transfers load and deflects cracks at interfaces, raising strength and toughness together.</li>
+<li>Nacre is about 95% brittle calcium carbonate yet roughly 3,000 times tougher thanks to its brick-and-mortar structure; reinforced concrete pairs complementary materials the same way.</li>
+<li>Two surfaces touch only at tiny asperity peaks, so friction scales mainly with the normal load and barely depends on apparent contact area.</li>
+<li>Most mechanical failures happen through wear at interfaces rather than in the bulk, and lubrication works by putting a layer between surfaces so the peaks cannot weld together.</li>
+</ol>
 </div>
 
 <div class="nav"><a href="index.en.html">← Back to Index</a></div>

@@ -49,7 +49,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .flow-step.alert{border-left-color:#e85a4f}
 .flow-step.alert .flow-num{background:#e85a4f}
 .flow-arrow{text-align:center;color:#3a86ff;font-size:1.1rem;margin:-4px 0}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -195,6 +202,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你正在努力「消除噪声、追求纯净」的某个系统里，那些噪声有没有可能其实是特性而非缺陷？如果设计成「利用噪声」而非「对抗噪声」，会打开什么新空间？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>量子计算的威力不是同时尝试所有答案的超级并行，而是靠干涉让错误答案的概率幅相互抵消。</li>
+<li>N 个量子比特的状态由 2^N 个概率幅描述，但测量只能读出一个结果，概率正比于幅的平方。</li>
+<li>Shor 算法把因数分解变成找函数周期，再用量子傅里叶变换放大真实周期，因此能在多项式时间内破解 RSA。</li>
+<li>量子密钥分发把安全的根基从「数学难题暂时算不动」换成物理定律：无法不留痕迹地窃听量子态。</li>
+<li>量子密钥分发依赖两条铁律：测量必然扰动未知量子态，未知量子态也无法被完美复制（不可克隆定理）。</li>
+<li>BB84 协议里双方随机选基、只保留基一致的比特，窃听者不知道正确的基，测量时必然扰动结果而暴露。</li>
+<li>量子隐形传态传送的是量子态而非物质，原态在贝尔测量中被摧毁，接收方凭两个经典比特把它复原。</li>
+<li>纠缠本身不携带信息，量子隐形传态离不开受光速约束的经典信道，所以无法用来超光速通信。</li>
+<li>量子生物学里证据最扎实的是酶催化中的量子隧穿：质子或电子直接穿过能垒，而不是翻越它。</li>
+<li>候鸟磁感应的自由基对假说较有提示性，光合作用中的量子相干是否真在功能上起作用则争议很大。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

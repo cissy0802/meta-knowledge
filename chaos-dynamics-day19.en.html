@@ -44,7 +44,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
 .axis{stroke:#9a9aa8;stroke-width:1}
 .axislbl{font-size:11px;fill:#6b6b7d}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -247,6 +254,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Chaos is long-term unpredictability in a deterministic system: every step is fixed by equations, yet tiny differences in initial conditions grow exponentially.</li>
+<li>With a positive Lyapunov exponent, nearby trajectories diverge exponentially, so a thousandfold gain in measurement precision extends the forecast window only slightly.</li>
+<li>In 1961 Edward Lorenz re-entered 0.506127 as 0.506, and two months of simulated weather came out completely different; the butterfly effect takes its name from him.</li>
+<li>Weather forecasts inevitably fail beyond about two weeks because the atmosphere is chaotic, not for lack of computing power; chaotic systems stay highly predictable in the short term.</li>
+<li>A strange attractor shows that chaos is not disorder: trajectories never repeat, yet stay confined to a fractal shape with a non-integer dimension.</li>
+<li>The geometry of a strange attractor comes from endless stretching and folding: stretching pulls nearby trajectories apart, folding brings them back into a bounded region.</li>
+<li>A phase transition is a sudden, system-wide change at a critical point as a control parameter varies smoothly, as when a magnet abruptly loses its magnetism at the Curie temperature.</li>
+<li>In a first-order transition the order parameter jumps and latent heat is exchanged, allowing supercooling; in a continuous one the correlation length diverges at the critical point.</li>
+<li>Near a tipping point, critical slowing down appears: recovery from disturbances slows and autocorrelation and variance rise, giving a generic early-warning signal.</li>
+<li>Hysteresis makes tipping points hard to reverse: once a lake falls into another basin of attraction, cutting pollution back to its old level will not make it clear again.</li>
+</ol>
+</div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>
 <script src="https://hub.cissychen.com/search.js" defer></script>

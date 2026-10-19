@@ -39,10 +39,17 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
+  .tk{padding:20px 18px}
 }
 </style>
 </head>
@@ -174,6 +181,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你最近一次把团队的困境归因于「客观条件不行」（地理），有没有可能真正的病根其实卡在一套可以修改的「规则」（制度）上——只是改规则更难、更得罪人？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>贫困陷阱指贫穷可能是一种自我锁定的低水平均衡：门槛之下，努力的回报低于维持成本。</li>
+<li>贫困陷阱源于 S 形的非凸收益曲线，它造出贫困与富裕两个稳定均衡，中间夹着一个不稳定临界点。</li>
+<li>只有一次足够大的「大推动」能把人顶过临界门槛，零敲碎打的小援助会被拽回原点。</li>
+<li>实证发现穷人收入增加后并不多买主食，说明纯粹的营养陷阱在很多地方不成立，贫困陷阱的具体机制必须逐一验证。</li>
+<li>随机对照试验（RCT）把医学的随机分组搬进社会政策，让发展经济学从意见之争转向证据科学。</li>
+<li>随机分配让处理组与对照组在可观测和不可观测特征上平均相同，干预后的差异因此能归因于干预本身。</li>
+<li>肯尼亚的 RCT 发现，免费教科书只帮到了尖子生，几乎免费的驱虫药却大幅提高了到校率。</li>
+<li>资源诅咒指盛产石油、钻石、矿藏的国家，长期增长往往更慢、更动荡、更专制。</li>
+<li>资源诅咒的通道包括挤垮制造业的荷兰病，以及让统治者不必征税、从而斩断「征税→问责」纽带的资源租金。</li>
+<li>「命运的逆转」与殖民者死亡率研究表明，地理主要通过塑造制度来影响今天的贫富。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

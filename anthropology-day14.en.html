@@ -51,7 +51,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ring-table td.core{background:#e3f1e8;color:#2a7a4a;font-weight:700}
 .ring-table td.cap{background:#fff7f5;color:#e85a4f;font-weight:700}
 .ring-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -226,6 +233,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>The heart of a gift economy is unpaid debt: market exchange settles on the spot and ends the relationship, while a gift's lingering obligation keeps two people bound together.</li>
+<li>In his 1925 essay The Gift, Marcel Mauss identified three obligations: to give, to receive, and to reciprocate, with return gifts delayed and slightly unequal.</li>
+<li>Repaying a gift instantly with its exact cash value is an insult rather than politeness, because it announces that you want to be quits.</li>
+<li>At the potlatch of the North American Northwest Coast, chiefs won prestige by publicly destroying and giving away wealth: in gift logic, spending is power.</li>
+<li>Liminality is the in-between stage of any major transition, when the old identity is gone, the new one is not yet formed, and normal rules are suspended.</li>
+<li>Rites of passage run through separation, liminality, and incorporation; Victor Turner found that liminal people, stripped of status, form an equal, intimate communitas.</li>
+<li>Modern societies have largely erased clear coming-of-age rites, producing delayed adulthood; the limbo of a career change is a liminal state, not a sign of failure.</li>
+<li>By comparing neocortex size with group size across primates, Robin Dunbar estimated that humans can maintain roughly 150 stable relationships.</li>
+<li>Social bandwidth is layered in rings of about 5, 15, 50, and 150; inner rings cost more to maintain, and gossip is grooming by voice.</li>
+<li>Pierre Bourdieu argued that cultural capital passes down as habitus, which schools repackage as talent, while symbolic violence makes the dominated blame themselves.</li>
+</ol>
+</div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>
 <script src="https://hub.cissychen.com/search.js" defer></script>

@@ -37,7 +37,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .section.question .label{background:#f7a072;color:#fff}
 .section.question p{font-style:italic;color:#5a4a3a}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -172,6 +179,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你的工作里，哪一块至今**没有孪生**——没有一个能廉价试错的地方——因而逼着你在本该大胆的地方畏首畏尾？若给它造一面镜子，你最想先拿什么去里面失败？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>地理信息系统（GIS）的革命，在于把「在哪里」变成可计算的维度，让位置成为能连接、叠加、运算的键。</li>
+<li>GIS 把世界拆成图层并按位置叠加；地理学第一定律说近处事物的关联强于远处，也就是空间自相关。</li>
+<li>1854 年伦敦霍乱中，约翰·斯诺把死亡病例标上地图，病例聚在布罗德街水泵周围，地图本身就是论证。</li>
+<li>斯诺地图上离水泵很远的死者其实特意去打那口井的水：空间离群点不否证模式，反而指向真正的机制。</li>
+<li>人眼只看到电磁波谱的一小段；卫星遥感借不可见波段扩展感官，健康与濒死植物在近红外下判若云泥。</li>
+<li>归一化植被指数 NDVI =（近红外−红）/（近红外＋红），利用健康植被强反射近红外、吸收红光来测长势。</li>
+<li>合成孔径雷达自带光源、穿云透雾；InSAR 比对两次成像的相位差，能把地面沉降测到毫米级。</li>
+<li>每张地图都是伪装成事实的主张：墨卡托投影让格陵兰看着比非洲大，而非洲真实面积是格陵兰的十四倍。</li>
+<li>1930 年代美国的红线地图把黑人街区标为高风险，此后数十年左右贷款流向，制造了它声称只是记录的隔离。</li>
+<li>数字孪生是实时吸入传感器数据、再反哺决策的双向仿真；阿波罗 13 号靠地面镜像演练生还，价值在于失败免费。</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

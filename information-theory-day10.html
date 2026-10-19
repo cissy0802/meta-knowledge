@@ -44,7 +44,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .channel-box.noise{border-color:#e85a4f;color:#e85a4f;background:#fff7f5}
 .channel-arrow{color:#6b6b7d;font-weight:700}
 .channel-note{font-size:0.75rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -185,6 +192,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <p>判断一个洞察、方案或提案的"真深度"，可以问：<strong>它能压缩到多短、还能讲清楚？</strong>真正深刻的洞察往往一句话就能说透（"有外部性时市场会失灵"）；需要两千字才说明白的，常常是噪声伪装成思想。这条标准对资深技术人尤其残酷：复杂的架构图不等于高价值，能用一张图、一行公式概括的设计才是真功夫。拿它评估自己的写作、演示、汇报：删到不能再删之后，剩下的内核还站得住吗？</p>
 <span class="q">▸ 思考题：把你最近最重要的一项工作压缩成一句话。剥掉所有术语和铺垫后，那个"内核"还有力吗？还是说，铺垫本身就是这件事的全部？</span>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>香农熵衡量的是被消除的不确定性：越可预测的消息信息量越小，越出人意料的消息信息量越大。</li>
+<li>各种结果势均力敌、最难猜时熵最大，结果完全确定时熵为 0。</li>
+<li>英文字母表面上每个约需 4.7 比特，但由于大量规律，真实信息量只有约 1 比特/字母。</li>
+<li>自然语言高度可压缩，这正是大语言模型能精准预测下一个词的根本原因。</li>
+<li>互信息衡量知道 X 之后 Y 的不确定性减少了多少，不要求关系是直线，比相关系数更普适。</li>
+<li>X 在 −1 到 1 均匀取值、Y = X² 时相关系数为 0，但互信息很高：零相关不等于相互独立。</li>
+<li>Shannon 证明：只要传输速率不超过信道容量，就一定存在让出错概率趋近于 0 的编码。</li>
+<li>信道容量随带宽成倍增长，但信噪比翻倍只让容量增加一点点，所以 5G 去抢更宽的频谱。</li>
+<li>柯尔莫哥洛夫复杂度把一个对象的信息量定义为能生成它的最短程序的长度，π 的复杂度因此极低。</li>
+<li>柯尔莫哥洛夫复杂度本身无法计算，却为奥卡姆剃刀给出严格数学版本：学习就是为数据找最短解释。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

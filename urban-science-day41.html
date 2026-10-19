@@ -44,7 +44,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
 .ca-table td.highlight{background:#fff7f5;color:#e85a4f;font-weight:700}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -201,6 +208,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你负责的系统或团队，靠的是少数把关人的集中监督，还是「街道眼」式的分散自然监视？哪一处关键环节，此刻正缺少足够多的眼睛在持续看着？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>城市人口翻倍时，人均工资、专利和 GDP 多出约 15%，人均道路和管线却省下约 15%。</li>
+<li>社会经济产出随人口超线性增长、指数约 1.15，因为人与人的潜在连接比人口增长得更快。</li>
+<li>城市基础设施呈亚线性标度、指数约 0.85，像血管网络一样，规模越大单位成本越省。</li>
+<li>超线性是双刃剑：犯罪、传染病和心理压力同样随城市规模攀升，城市须靠持续创新避开资源天花板。</li>
+<li>公司像生物一样呈亚线性、会老会死，城市却能开放式长存，这是两者标度方向上的根本分野。</li>
+<li>道路流量随车辆密度先升后崩，越过临界密度后一脚刹车就会放大成停走波，形成无事故的幽灵堵车。</li>
+<li>诱导需求解释了扩路为何无效：新增车道吸引更多驾车和远距离出行，车流量几乎与车道里程同比增长。</li>
+<li>布雷斯悖论：路网多一条捷径可能让人人更慢；首尔拆高架、恢复清溪川后周边交通反而更顺。</li>
+<li>15 分钟城市把规划目标从速度换成邻近，靠高密度和混合功能让日常所需都在步行骑行可达之内。</li>
+<li>「街道眼」：混合功能让街道全天有人，陌生人的自然监视比警察和隔离更能守住街区安全。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

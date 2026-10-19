@@ -44,7 +44,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-legend i{width:12px;height:12px;border-radius:50%;display:inline-block}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -204,6 +211,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question</span>
 <p>Think of the last time a number changed your mind — what was its denominator? If you had asked that one question at the time, would you have decided the same way? And the more useful question: why didn't you ask?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>“How much faster does AI make developers?” yields +55%, +20% and −19%, none faked; the difference lies in definitions, not data.</li>
+<li>Evidence forms a ladder: prior expectation, felt effect afterward, controlled experiment, randomized trial on real work; higher rungs give more sober numbers.</li>
+<li>Because high-rung evidence is costly and low-rung evidence is cheap, circulating numbers pile up at the bottom, creating optimism without anyone lying.</li>
+<li>In a 2025 randomized trial, experienced developers were 19% slower with AI, yet expected a 24% speedup and still felt 20% faster afterward.</li>
+<li>Every rate is a function of six dials: denominator, threshold, sample admission, who answers, time window, and self-report versus measurement.</li>
+<li>When the US lowered the hypertension cutoff to 130/80 in 2017, adult prevalence jumped from about a third to nearly half with no change in blood pressure.</li>
+<li>The US officially publishes six unemployment rates, and the broadest is typically close to double the narrowest, though all are called unemployment.</li>
+<li>Within one organization, the higher the respondent's rank, the rosier the answer, driven by information filtering, personal stake and mismatched abstraction.</li>
+<li>A large meta-analysis of child behavior ratings found that parents, teachers and the children themselves agree at a correlation of only about 0.28.</li>
+<li>Before reading any rate, ask what the denominator is, how strict the ruler is, and what the speaker sells; funder bias enters through chosen definitions, not data.</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

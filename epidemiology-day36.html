@@ -54,7 +54,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .dag-arrows{display:flex;gap:80px;color:#52b788;font-size:0.78rem;font-weight:700}
 .dag-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center}
 .dag-link{font-size:0.78rem;color:#e85a4f;font-weight:700;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -217,6 +224,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你的系统（或团队、产品）出问题时，你是靠领先指标提前一周预警，还是靠用户投诉这种「临床病例」事后才知道？哪一个指标，能成为你的「污水监测」？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>基本再生数 R0 是每个感染者在全易感人群里平均传染的人数，R0=1 是疫情熄灭与指数爆发的临界线。</li>
+<li>R0 不是病原体的固有属性，而是传染概率、接触人数、传染持续期三者的乘积，受行为和环境左右。</li>
+<li>疫情展开后看有效再生数 Rt，防控的本质就是把 Rt 压到 1 以下，让传播链断掉。</li>
+<li>R0 只衡量传得多快，不衡量病得多重：麻疹 R0 高达 12–18 而致死率不高，埃博拉约 2 却极其致命。</li>
+<li>SARS 能被扑灭而新冠难控，关键在于传染窗口与症状出现的先后：症状前就能传染，隔离便截不断链条。</li>
+<li>群体免疫阈值等于 1−1/R0，免疫比例越过它，没免疫的婴儿和免疫缺陷者也被间接保护。</li>
+<li>群体免疫有搭便车陷阱：麻疹阈值约 95%，接种率滑落几个百分点，免疫墙就会突然、非线性地塌出缺口。</li>
+<li>混杂因子同时影响暴露和结局，能凭空制造虚假相关；随机化能斩断它，调整只能处理测量到的混杂。</li>
+<li>激素替代疗法曾因观察性研究被认为护心，随机对照试验却显示它增加心血管风险，假象来自健康使用者偏倚。</li>
+<li>疾病监测要跟指数增长赛跑：确诊只是漏报金字塔的尖，污水监测能领先临床病例数天到一周。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

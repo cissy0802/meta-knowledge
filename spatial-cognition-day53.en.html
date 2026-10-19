@@ -41,7 +41,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -192,6 +199,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question</span>
 <p>Your team's real communication network — is it decided by the process you designed, or quietly by the "places": desk layout, default channels, meeting rooms?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Place cells in the hippocampus mark where you are, grid cells in the entorhinal cortex supply a hexagonal metric, and together they form a cognitive map.</li>
+<li>The cognitive map is actively constructed by the brain rather than photographed by the eyes, and it keeps updating in the dark through path integration.</li>
+<li>London taxi drivers have a measurably larger posterior hippocampus than average, and it grows the longer they drive, so spatial training can enlarge a brain region.</li>
+<li>When people reason about abstract conceptual dimensions, grid cells fire in the same hexagonal pattern, so the brain navigates concept space like physical space.</li>
+<li>How navigable a city feels depends on legibility: whether paths, edges, districts, nodes, and landmarks let people assemble a mental map.</li>
+<li>Uniform grid cities often disorient people while landmark-rich winding old towns feel easy, which shows that legibility is not the same as geometric order.</li>
+<li>Attention restoration theory holds that directed attention tires with use, and the soft fascination of natural scenes lets it rest and recover.</li>
+<li>The prospect-refuge preference draws people to spots with a wide view and protected back, like the corner restaurant seat against the wall.</li>
+<li>In a classic study, surgical patients whose window faced trees recovered faster and needed fewer painkillers than those facing a brick wall.</li>
+<li>Space becomes place through experience and attachment, and after one company went open-plan, face-to-face interaction fell by about 70 percent: design scripts behavior.</li>
+</ol>
 </div>
 <div class="nav"><a href="index.en.html">← Back to Index</a></div>
 </div>

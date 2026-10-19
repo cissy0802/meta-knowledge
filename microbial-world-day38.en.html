@@ -53,7 +53,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .qs-state.silent .t{color:#8a8a9a}
 .qs-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;color:#52b788;font-weight:700;font-size:0.82rem;min-width:78px}
 .qs-arrow .big{font-size:1.4rem}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -248,6 +255,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>The human body is an ecosystem of human cells and tens of trillions of microbes, so the boundary of the "self" extends across the whole symbiotic network.</li>
+<li>Gut microbes break down dietary fiber that human enzymes cannot digest into short-chain fatty acids, which fuel the gut lining, curb inflammation and tune immunity.</li>
+<li>Gut microbes talk to the brain in both directions through metabolites, immune signals and the vagus nerve, a pathway known as the gut-brain axis.</li>
+<li>In germ-free mice, microbiome transplants carry over traits such as obesity and timidity, and fecal transplants cure over 90% of stubborn C. difficile infections.</li>
+<li>Horizontal gene transfer moves genes sideways between unrelated species, so the base of the tree of life looks more like a web than a tree.</li>
+<li>Bacteria acquire genes horizontally in three ways: transformation takes up free DNA, transduction uses phages as couriers, and conjugation passes plasmids across a pilus bridge.</li>
+<li>A biofilm is a bacterial "city" wrapped in self-secreted slime, and bacteria inside it can be up to a thousand times more resistant to antibiotics.</li>
+<li>Quorum sensing switches a whole bacterial population to collective action once signal-molecule concentration crosses a threshold, a distributed vote with no central command.</li>
+<li>Persister cells carry no resistance mutation; they slip into near-dormancy to survive antibiotics, then wake up and rebuild the colony, causing infections to relapse.</li>
+<li>Antibiotics select for resistance rather than create it, and underdosing or unfinished courses are the most dangerous, clearing competitors and breeding superbugs.</li>
+</ol>
+</div>
 <div class="nav"><a href="index.en.html">← Back to Index</a></div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

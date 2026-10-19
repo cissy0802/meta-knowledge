@@ -52,7 +52,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ext-table th{background:#e3f1e8;color:#52b788;font-weight:700}
 .ext-table td.evt{text-align:left;font-weight:600;color:#2a2a3a}
 .ext-table td.loss{color:#e85a4f;font-weight:700}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -240,6 +247,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Plate tectonics shows that the seemingly eternal ground is Earth's youngest surface: no seafloor rock is older than about 200 million years.</li>
+<li>Mantle convection works like a conveyor belt, creating new seafloor at mid-ocean ridges and recycling old plates into the mantle at subduction zones.</li>
+<li>Continental drift was mocked for decades until symmetric magnetic stripes on both sides of mid-ocean ridges proved the seafloor is spreading.</li>
+<li>Isotopic dating relies on fixed half-lives: measure the ratio of parent to daughter isotopes in a rock and you can work out its age.</li>
+<li>Dating requires the right clock: carbon-14 only reaches organic material younger than about 50,000 years, while uranium-238 can date billion-year-old rocks.</li>
+<li>Lord Kelvin used Earth's cooling rate to put its age at a few tens of millions of years, missing the heat supplied by radioactive decay.</li>
+<li>The history of life was repeatedly reset by five mass extinctions, the worst being the end-Permian, which wiped out about 96% of marine species.</li>
+<li>What kills in a mass extinction is usually the rate of environmental change: when it outpaces adaptation and migration, populations cannot adjust.</li>
+<li>The first hard evidence for the asteroid impact at the end of the Cretaceous was a thin global layer rich in iridium, an element concentrated in meteorites.</li>
+<li>Human intuition evolved for spans of decades and fails at deep time, so we grasp it only through analogies like compressing Earth's history into one day or an arm's length.</li>
+</ol>
+</div>
 <div class="nav"><a href="index.en.html">← Back to Index</a></div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

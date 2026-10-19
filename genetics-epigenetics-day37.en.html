@@ -56,7 +56,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .norm-bar .b{flex:1;border-radius:6px 6px 0 0;display:flex;align-items:flex-end;justify-content:center;color:#fff;font-size:0.7rem;font-weight:700;padding-bottom:4px}
 .norm-lbl{display:flex;gap:10px;font-size:0.68rem;color:#6b6b7d;text-align:center;margin-top:4px}
 .norm-lbl span{flex:1}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -253,6 +260,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>The central dogma says genetic information flows from DNA to RNA to protein, and only in that one direction.</li>
+<li>Because changes in proteins cannot be written back into DNA, the central dogma rules out the inheritance of acquired traits at the molecular level.</li>
+<li>Retroviruses such as HIV copy RNA back into DNA, and prions spread through protein shape alone; both are exceptions to the central dogma.</li>
+<li>Nearly every cell carries the same genome; what sets a neuron apart from a liver cell is which genes are switched on.</li>
+<li>Transcription factors bind promoters and enhancers, and different combinations of just a few of them can encode a great many cell types.</li>
+<li>Shinya Yamanaka reprogrammed mature skin cells into a pluripotent state with only four transcription factors, earning the 2012 Nobel Prize.</li>
+<li>Epigenetic marks such as DNA methylation and histone modifications leave the sequence untouched yet switch genes on or off, and they can be both written and erased.</li>
+<li>Children of mothers starved during the 1944 Dutch Hunger Winter had more obesity, diabetes and heart disease as adults, through changed methylation rather than changed DNA.</li>
+<li>Genes supply a reaction norm rather than a destiny: one genotype yields different phenotypes in different environments, and the two interact multiplicatively.</li>
+<li>The low-activity MAOA variant raises antisocial risk mainly after childhood maltreatment, and phenylketonuria is harmless with the right diet: environment can rewrite a gene's outcome.</li>
+</ol>
+</div>
 <div class="nav"><a href="index.en.html">← Home</a></div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

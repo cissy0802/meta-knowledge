@@ -43,7 +43,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-title{font-size:0.82rem;color:#e85a4f;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:12px;text-transform:uppercase}
 .viz svg{display:block;width:100%;height:auto}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -225,6 +232,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你最近一次强烈的情绪，有多少来自真实的外部输入，又有多少来自大脑早已写好的那套剧本？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>意识的「易问题」是注意、记忆、报告等功能，「难问题」是这些信息处理为什么会伴随主观体验。</li>
+<li>「玛丽房间」思想实验暗示：掌握全部颜色物理知识的人初见红色若学到新东西，体验就在物理事实之外。</li>
+<li>全局工作空间理论把意识看作信息架构：大量无意识模块并行竞争，胜出的内容被广播给全脑共享。</li>
+<li>信息突破阈值会「点燃」前额叶—顶叶网络的大范围同步激活，没被点燃的加工照样在暗处高效运转。</li>
+<li>双眼竞争和注意瞬脱说明意识带宽有限：两幅图轮流进入意识，紧随其后约半秒内的第二个目标会被漏掉。</li>
+<li>整合信息理论用 Φ 度量系统作为整体才拥有、一旦拆开就消失的信息，意识的多少等于系统不可分割的程度。</li>
+<li>按整合信息理论，意识取决于连接拓扑而非神经元数量：小脑有全脑约 80% 的神经元，损坏它却几乎不影响意识。</li>
+<li>受控幻觉的观点认为，知觉是大脑由内向外生成的最佳猜测，感官输入只负责校正其中的预测误差。</li>
+<li>幻觉与正常知觉本质相同，区别只在感官误差信号对预测的约束强弱，迷幻剂和做梦会让这种约束松动。</li>
+<li>橡胶手错觉说明身体所有权也是大脑的预测，连「自我」都来自大脑对身体内部状态的持续建模。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

@@ -44,7 +44,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
 .ca-table td.highlight{background:#fff7f5;color:#e85a4f;font-weight:700}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -203,6 +210,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你想吸引的人才或想加入的圈子，挡在中间的究竟是「势差」不够，还是「势垒」太高？你能先拆掉哪一道门槛，让流动自己发生？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>人口转型理论指出，近代人口爆炸主要源于死亡率下降，而不是人们生得更多。</li>
+<li>人口转型分四个阶段：高生高死、死亡率先降、出生率追降、低生低死，两次下降之间隔着一两代人的时滞。</li>
+<li>收入与生育率几乎全程负相关，许多国家的生育率在计划生育政策出手前就已自发跌破约 2.1 的更替水平。</li>
+<li>抚养比等于少儿加老人除以劳动年龄人口，转型中段抚养比触底，劳动供给和储蓄率同时走高。</li>
+<li>人口红利只开一次窗口，劳动者老去后抚养比掉头向上，中国的红利窗口在 2010 年前后已经关闭。</li>
+<li>人口红利不会自动兑现：东亚靠教育、出口和高储蓄兑成了增长，部分拉美与中东国家的红利却白白蒸发。</li>
+<li>老龄化让临近退休者多储蓄少消费、资本回报下降，储蓄过剩与投资不足一起把自然利率往下拽。</li>
+<li>老龄社会容易陷入低利率、低增长、低通胀的长期停滞，老龄化本身是一股通缩力量。</li>
+<li>移民驼峰：最穷的国家外迁最少，收入升到中等时外迁激增，跨过中高门槛后才回落。</li>
+<li>边境管得越严，循环往返的移民越倾向于永久定居并接来家人，净移民反而可能上升。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

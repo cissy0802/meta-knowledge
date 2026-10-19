@@ -45,7 +45,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .bar-val{flex:0 0 84px;font-size:0.8rem;color:#6b6b7d;font-weight:600}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:14px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -211,6 +218,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>挑一个你团队近来「买来省事」的决定（一个 SaaS、一个 API、一套外包）。它账面上的价格背后，真正被转移进暗处的「虚拟水」是什么——那笔隐性成本，将来会在谁的头上、以什么形式浮现？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>「大型灌溉催生专制」的说法过于简化：治水多是地方协作，国家攫取的是灌溉造出的可清点、可征税的粮食盈余。</li>
+<li>灌溉强迫共用一条渠的农户同步播种放水，水渠这种沉没投资又把人绑在土地上，形成稠密、固定、可征税的人口。</li>
+<li>古代最早的文字大多是记粮、记油、记欠账的账本，文明的可读性从水渠边的清点里长出来。</li>
+<li>比较研究发现，农民自管的灌溉系统普遍比国家工程师修建的更公平、更耐用；巴厘岛水神庙分水网就自组织运转了上千年。</li>
+<li>美国西部「先占先得」水权规定连续用不完就失权，逼得农户把配额全部用掉，节约反成自我惩罚。</li>
+<li>科罗拉多河分水协定按丰水年流量切分，纸面上分出的水超过真实年径流，这条河常年流不到出海口。</li>
+<li>「用不完就作废」的规则在年度预算、频谱许可和云配额里同样催生囤积与空耗，产权的到期条款决定激励节约还是浪费。</li>
+<li>地球的水总量几乎恒定，真正稀缺的是在对的时间、地点、以可负担成本可及的水，尤其是被当作无限账户抽取的化石地下水。</li>
+<li>全球淡水取用约七成流向农业，所以现代水危机的内核是粮食问题，而不是居民用水。</li>
+<li>虚拟水指商品生产链上消耗的水：一公斤牛肉约耗一万五千升，缺水国进口粮食就等于进口别国的水。</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

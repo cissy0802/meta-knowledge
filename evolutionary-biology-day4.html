@@ -38,7 +38,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#52
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#52b788;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #52b788;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#52b788;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -221,6 +228,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#52
 <span class="label">思考题</span>
 <p>回顾你过去十年最重要的三次跃迁——它们发生时你处于"主流舒适区"还是"边缘隔离期"？如果未来五年你的发展曲线注定是间断式的，你今天该主动制造什么样的"边缘隔离"来催化下一次跃迁？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>自然选择的三要素是变异、遗传和差异繁殖，选择压力就是环境造成的差异化死亡与繁殖。</li>
+<li>选择压力有定向选择、稳定化选择和分裂选择三种典型形态，强度可以用选择系数 s 来量化。</li>
+<li>自然选择只能从已有变异里挑，不会凭空创造新性状，所以进化产物都带着前身的补丁感。</li>
+<li>Grant 夫妇在加拉帕戈斯追踪地雀发现，1977 年大旱后一年内种群平均喙深增加约 4%，进化可以实时发生。</li>
+<li>性选择是达尔文提出的第二种力量，由同性竞争和异性挑选组成，能解释孔雀尾这类有损生存的性状。</li>
+<li>Zahavi 的累赘原理认为，信号只有昂贵到适应度差者负担不起才可靠；Fisher 失控选择则让偏好与性状互相推高。</li>
+<li>汉密尔顿规则 rB &gt; C：亲缘系数乘以受益方收益大于施惠方成本时，利他行为就会被自然选择保留。</li>
+<li>膜翅目雄性是单倍体，工蜂姐妹间亲缘系数达 0.75，高于母女的 0.5，这解释了真社会性昆虫为何多次独立演化。</li>
+<li>间断平衡论（Eldredge 与 Gould，1972）认为物种大多时间处于停滞，形态变化集中在地质上短暂的时期。</li>
+<li>间断平衡的机制是新物种多在地理隔离的小边缘种群中快速形成，过渡期太短，化石层难以记录下来。</li>
+</ol>
 </div>
 <div class="nav">
 <a href="index.html">← 返回元知识</a>

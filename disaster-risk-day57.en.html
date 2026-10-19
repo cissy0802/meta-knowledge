@@ -47,7 +47,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .pa-state{font-size:0.9rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
 .pa-desc{font-size:0.78rem;color:#6b6b7d;line-height:1.5}
 .pa-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -199,6 +206,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Reflection</span>
 <p>When did your automated workflow last "almost break but get saved"? What or who saved it that time? If that rescuer were absent one day, would the system still hold?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Perrow's Normal Accident Theory holds that in some systems major accidents are a normal property, impossible to eliminate however careful the operators are.</li>
+<li>Interactive complexity hides a system's true state and tight coupling leaves no time to intervene; together they let small faults cascade into disaster.</li>
+<li>Redundancy added for safety itself raises complexity and can open new failure paths, so real risk reduction means restructuring: less complexity, looser coupling.</li>
+<li>The 1979 Three Mile Island accident had no single big error: a stuck-open valve, an indicator light hidden by a tag, and operator misreadings combined into disaster.</li>
+<li>A black swan, in Taleb's sense, is extremely rare and unpredictable beforehand; a gray rhino is likely, clearly signaled, and still systematically ignored.</li>
+<li>People overreact to sudden, novel shocks yet grow numb to slow, certain threats, which is why many preventable crises are later relabeled black swans.</li>
+<li>The Swiss cheese model treats each layer of defense as a slice with holes; disaster happens when the holes in every layer line up at the same moment.</li>
+<li>Efficiency pressure makes systems drift toward the failure boundary: each shortcut that goes unpunished erodes the safety margin and reinforces risk-taking.</li>
+<li>Before the 1986 Challenger disaster, O-ring failure in cold weather was a known hazard, but earlier lucky launches led people to mistake no explosion for safety.</li>
+<li>Resilience engineering defines safety as a system's capacity to keep adapting under surprise, while the irony of automation erodes people's ability to take over.</li>
+</ol>
 </div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

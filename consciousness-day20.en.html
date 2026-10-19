@@ -42,7 +42,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-title{font-size:0.82rem;color:#e85a4f;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:12px;text-transform:uppercase}
 .viz svg{display:block;width:100%;height:auto}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -255,6 +262,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
     <span class="label">Question</span>
     <p>Your most recent intense emotion — how much of it came from real external input, and how much from a script your brain had already written?</p>
   </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>The "easy problems" of consciousness are functions like attention, memory and report; the "hard problem" asks why that processing comes with subjective experience.</li>
+<li>The Mary's Room thought experiment suggests that if someone who knows every physical fact about color learns something on first seeing red, experience lies beyond physical facts.</li>
+<li>Global Workspace Theory treats consciousness as an information architecture: parallel unconscious modules compete, and the winning content is broadcast to the whole brain.</li>
+<li>Information that crosses threshold triggers "ignition," a large-scale synchronous activation of the prefrontal–parietal network, while unignited processing keeps running in the dark.</li>
+<li>Binocular rivalry and the attentional blink show consciousness has limited bandwidth: rival images alternate, and a second target within about half a second goes unseen.</li>
+<li>Integrated Information Theory measures consciousness with Φ, the information a system holds only as a whole and loses when cut apart.</li>
+<li>Under Integrated Information Theory, consciousness depends on connection topology, not neuron count: the cerebellum holds about 80% of the brain's neurons, yet damaging it barely affects consciousness.</li>
+<li>The controlled-hallucination view holds that perception is the brain's inside-out best guess, with sensory input serving only to correct prediction errors.</li>
+<li>Hallucination and ordinary perception are fundamentally the same, differing only in how tightly sensory error signals constrain the predictions, a constraint that loosens in dreams or on psychedelics.</li>
+<li>The rubber-hand illusion shows that body ownership is itself a prediction, and even the "self" arises from the brain's ongoing model of the body's internal states.</li>
+</ol>
 </div>
 
 </div>

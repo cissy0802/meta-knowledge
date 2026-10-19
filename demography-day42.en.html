@@ -43,7 +43,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
 .ca-table td.highlight{background:#fff7f5;color:#e85a4f;font-weight:700}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -226,6 +233,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Demographic transition theory holds that modern population explosions came from falling death rates, not from people having more children.</li>
+<li>The demographic transition runs through four stages, and a lag of one or two generations separates the fall in death rates from the fall in birth rates.</li>
+<li>Income and fertility are negatively correlated almost throughout, and many countries fell below the roughly 2.1 replacement level before any family-planning policy.</li>
+<li>The dependency ratio is children plus elderly divided by the working-age population; it bottoms out mid-transition, lifting both labor supply and savings.</li>
+<li>The demographic dividend is a one-time window that reverses as workers age, and China's window closed around 2010.</li>
+<li>A demographic dividend is not cashed automatically: East Asia turned it into growth through education, exports and saving, while parts of Latin America and the Middle East let it evaporate.</li>
+<li>In an aging economy, people near retirement save more and spend less while capital returns fall, so excess saving and weak investment drag the natural interest rate down.</li>
+<li>Aging societies tend to slide into secular stagnation with low rates, low growth and low inflation, because aging itself is a deflationary force.</li>
+<li>The migration hump: the poorest countries send the fewest migrants, out-migration surges at middle incomes, and it falls only past an upper-middle threshold.</li>
+<li>Tighter border controls push circular migrants to settle permanently and bring their families, so net migration can rise rather than fall.</li>
+</ol>
+</div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>
 <script src="https://hub.cissychen.com/search.js" defer></script>

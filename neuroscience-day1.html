@@ -38,7 +38,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -221,6 +228,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>如果你身边的人正在悄悄模拟你的每个微表情和情绪基调，那么"以身作则"是不是被严重低估的领导力杠杆？反过来，你今天的情绪基调里，有多少是从某个特定的人那里"镜像"来的？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>预测加工理论认为，大脑不停生成对世界的预测，低层只把与预测不符的“预测误差”往高层传。</li>
+<li>预测加工把注意力解释为调节预测误差的精度权重，同一框架还能统一解释知觉、运动控制和学习。</li>
+<li>McGurk 效应中，声音是 /ba/、嘴型是 /ga/，多数人听到的是 /da/，说明视觉先验会改写听觉。</li>
+<li>默认模式网络是一组在不做任务时反而更活跃的脑区，负责自我反思、回忆过去、想象未来和揣摩他人。</li>
+<li>默认模式网络与任务正激活网络此起彼伏；重度抑郁患者的默认模式网络过度激活且难以下调，表现为反刍思维。</li>
+<li>迷幻药会瓦解默认模式网络，连接强度降得越多，受试者报告的“自我消融”体验越强。</li>
+<li>神经可塑性指大脑终身按经验改写自身结构，Hebb 1949 年提出同时放电的神经元之间连接会增强。</li>
+<li>伦敦出租车司机的海马后部明显大于常人，且与开车年限正相关，是成人大脑可塑性的经典证据。</li>
+<li>镜像神经元在自己做动作和看别人做同一动作时都会放电，1992 年由 Rizzolatti 团队在恒河猴运动皮层发现。</li>
+<li>镜像神经元现象真实但解释力被夸大，Rizzolatti 之后学界共识是共情更可能靠多个系统协作。</li>
+</ol>
 </div>
 <div class="nav">
 <a href="index.html">← 返回目录</a>

@@ -49,7 +49,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .sr-seg{height:3px;background:#cdd8e6;position:relative;display:flex;align-items:center;justify-content:center}
 .sr-seg span{position:absolute;top:6px;font-size:0.72rem;color:#3a86ff;white-space:nowrap}
 .s1{flex:1}.s2{flex:2}.s3{flex:3.5}.s4{flex:5}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -241,6 +248,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Vygotsky's zone of proximal development is the narrow band of tasks a learner cannot yet do alone but can do with help from a person or tool.</li>
+<li>Good teaching builds scaffolding inside the zone of proximal development, giving just enough support and fading it as ability grows.</li>
+<li>The "2 sigma problem" found that students given one-on-one tutoring scored about two standard deviations above peers in a conventional classroom.</li>
+<li>The forgetting curve shows memory decaying roughly exponentially; spaced repetition reviews near the tipping point, and each successful retrieval lets the next interval stretch longer.</li>
+<li>The harder a memory is to retrieve, the bigger the gain once retrieval succeeds, so difficulty itself is what feeds learning.</li>
+<li>Given the same time, self-testing preserves far more long-term memory than rereading, whose familiarity often masquerades as mastery: the fluency illusion.</li>
+<li>Dual coding theory holds that information encoded in both the verbal and imagery systems gains a second, independent retrieval path.</li>
+<li>Images help only when they integrate with the text to lighten working memory; irrelevant seductive details hurt learning, while drawing your own diagrams helps more.</li>
+<li>Knowledge memorized by rote and detached from context tends to be inert: retrievable on a test, yet unused in front of a real problem.</li>
+<li>Far transfer requires stripping away surface features to see deep structure; in the tumor-ray puzzle, only about a third transferred a structurally identical fortress story unprompted.</li>
+</ol>
+</div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>
 <script src="https://hub.cissychen.com/search.js" defer></script>

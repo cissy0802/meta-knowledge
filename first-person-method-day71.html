@@ -44,7 +44,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-legend i{width:12px;height:12px;border-radius:50%;display:inline-block}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -238,6 +245,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>如果现在随机响一声，问你「此刻心思在手上这件事上吗」，你觉得一周里你会有多大比例答「不在」？把这个估计先写下来，然后真的采一周——两个数字不一致时，你更愿意相信哪一个？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>内省能较可靠地报告心里出现了什么结论或情绪，却几乎无法报告这些结论是怎么产生的。</li>
+<li>Nisbett 与 Wilson 1977 年指出，人解释自己的选择时，是从常识理论里取答案，而不是读取真实的心理过程。</li>
+<li>商场丝袜实验中，四双相同丝袜里最右边那双更常被选中，但没有人把位置当作理由，提示后还会否认。</li>
+<li>选择盲视实验里，被试拿到被调包的、自己没选的人脸照片，多数没有察觉，还能流利地为它编出理由。</li>
+<li>不可靠的内省不附带任何不可靠的信号：现场生成的理由在主观上和真实理由感觉完全一样。</li>
+<li>Varela 的神经现象学不废掉第一人称数据，而是提升报告质量，再让它与神经动力学数据互相约束，谁都不当仲裁者。</li>
+<li>Lutz 与 Varela 等按被试自报的准备状态切分脑电，在常规平均会抹掉的噪声里找出了伽马同步模式。</li>
+<li>微观现象学访谈把人带回一次具体经验，不问为什么、不给候选答案、不接受泛化，只追问是怎么做的。</li>
+<li>用微观现象学访谈回溯发作，许多自称毫无预兆的癫痫患者识别出了此前从未言明的前驱体验。</li>
+<li>经验取样法在随机时点当场提问以避开回忆偏差，用它发现人近半时间在走神，且走神先于心情变差。</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

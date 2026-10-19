@@ -37,7 +37,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#52
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#52b788;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #52b788;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#52b788;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -262,6 +269,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#52
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Natural selection rests on variation, heredity and differential reproduction; selection pressure is the environment's uneven sorting of who dies and who breeds.</li>
+<li>Selection pressure takes three classic forms, directional, stabilizing and disruptive, and its strength can be measured with the selection coefficient s.</li>
+<li>Selection can only choose among variation that already exists; it never invents new traits, which is why evolved designs look patched together.</li>
+<li>Tracking finches in the Galapagos, the Grants found that after the 1977 drought the population's average beak depth rose about 4% in a single year.</li>
+<li>Sexual selection, Darwin's second force, works through rivalry within a sex and choice by the other sex, explaining costly traits like the peacock's tail.</li>
+<li>Zahavi's handicap principle says a signal is reliable only if weaker rivals cannot afford it; Fisherian runaway lets preference and trait push each other to extremes.</li>
+<li>Hamilton's rule, rB &gt; C, says altruism is favored when relatedness times the recipient's benefit exceeds the cost to the helper.</li>
+<li>Hymenopteran males are haploid, so worker sisters share r = 0.75, more than a mother shares with a daughter, helping explain repeated origins of eusocial insects.</li>
+<li>Punctuated equilibrium (Eldredge and Gould, 1972) holds that species spend most of their history in stasis, with change packed into geologically brief episodes.</li>
+<li>The proposed mechanism: new species form quickly in small, geographically isolated fringe populations, and the transition is too brief for the fossil layers to capture.</li>
+</ol>
+</div>
 <div class="nav">
   <a href="index.en.html">&larr; Back to Meta Knowledge</a>
 </div>

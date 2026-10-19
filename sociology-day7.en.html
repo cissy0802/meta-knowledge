@@ -71,7 +71,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .cap-name{font-size:0.92rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
 .cap-en{font-size:0.72rem;color:#6b6b7d;font-style:italic;margin-bottom:8px}
 .cap-text{font-size:0.78rem;color:#3a3a4a;line-height:1.55;text-align:left}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -398,6 +405,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Social capital is the trust, information and obligations embedded in relationships; Bourdieu set it beside economic and cultural capital as forms that convert into one another.</li>
+<li>A 2022 study of 72 million Facebook users found that the share of cross-class friendships is the strongest predictor of upward mobility for low-income children.</li>
+<li>Granovetter found that job leads usually come from acquaintances seen only occasionally, not from close friends seen often: the strength of weak ties.</li>
+<li>Bridges between otherwise separate clusters are almost always weak ties, because two people with a strong tie tend to share friends, so new information crosses groups through weak ties.</li>
+<li>A large randomized experiment on LinkedIn in 2022 causally confirmed the strength of weak ties, with the biggest effect from moderately weak ties and in digital industries.</li>
+<li>Merton's self-fulfilling prophecy is a false definition of a situation that triggers behavior making the false belief come true, as in bank runs and teacher-expectation effects.</li>
+<li>A self-fulfilling prophecy is a positive feedback loop: belief changes behavior, behavior shapes others' responses, and those responses confirm the belief; deposit insurance can break it.</li>
+<li>Institutional isomorphism holds that organizations grow alike in order to look legitimate under uncertainty, not because the shared practices are the most efficient.</li>
+<li>Isomorphism works through three channels: coercive pressure from regulators, mimetic copying of successful peers, and normative standards spread by professions.</li>
+<li>Once a practice becomes an industry standard it often decays from an efficiency tool into a legitimacy symbol: hospitals that adopted TQM late saw almost no performance gains.</li>
+</ol>
+</div>
 <div class="nav">
   <a href="index.en.html">← Back to Index</a>
 </div>

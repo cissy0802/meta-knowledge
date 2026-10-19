@@ -49,11 +49,18 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .coda ol{margin:10px 0 12px 22px;font-size:0.95rem;color:#3a3a4a}
 .coda li{margin-bottom:3px}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
   .coda{padding:20px 18px}
+  .tk{padding:20px 18px}
 }
 </style>
 </head>
@@ -247,6 +254,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question</span>
 <p>Which "works for group A, not group B" does your team currently believe? Has anyone tested the interaction? If not, is it evidence — or a hypothesis that has been used as a conclusion for a long time?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>The same teen screen data can yield 0.4% of variance in well-being or a correlation of 0.15 to 0.22, depending on which rung of the construct ladder you stand on.</li>
+<li>On the exposure side the rule is dilution: bundling many behaviors into a composite like screen time thins out the signal of the one behavior that matters.</li>
+<li>On the outcome side the rule is a trade-off: self-report scales have power but carry reporting bias, while hospitalization and death are solid but rare, with wide intervals.</li>
+<li>The nominal sample in an abstract almost never equals the analytic sample, which shrinks through variable availability, listwise deletion of missing covariates, and subgroup splits.</li>
+<li>With a huge sample almost any faint association turns significant, yet once you split into subgroups the intervals grow wide enough to fit any conclusion.</li>
+<li>Clinical trials must report a full flow diagram from screening through randomization to analysis, because without it readers systematically overrate how thick the evidence is.</li>
+<li>One association can be legitimately stated as variance explained, a correlation, an odds ratio, a relative risk, or a standardized difference, so choosing the unit quietly becomes choosing a side.</li>
+<li>A correlation must be squared to give variance explained, odds ratios exaggerate risk ratios when outcomes are common, and relative risk means little without the absolute base rate.</li>
+<li>Effect size alone never settles importance: aspirin's effect on heart attacks is a correlation of about 0.03, yet it reshaped clinical guidelines because the outcome is grave and the intervention cheap.</li>
+<li>One group significant and the other not does not show the groups differ; you must test the interaction directly, and detecting a difference of the same size takes roughly four times the sample.</li>
+</ol>
 </div>
 <div class="coda">
 <h3>Four questions before you read a number</h3>

@@ -44,7 +44,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -191,6 +198,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你想改变团队或用户的某个行为时，是在用「力」硬推（下命令、加规则、频繁催促），还是在「弯曲空间」（改默认项、调激励、改变路径阻力）？哪一种更省力，也更持久？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>欧氏几何的第五公设即平行公设，两千年来人们一直想用前四条公理证出它，全部失败。</li>
+<li>19 世纪高斯、鲍耶、罗巴切夫斯基发现否定平行公设能得到自洽的双曲几何，黎曼又给出椭圆几何。</li>
+<li>非欧几何说明几何是一套可选的公理系统，换掉一条公理就得到另一个同样自洽的世界。</li>
+<li>在球面上三角形内角和永远大于 180°，「直线」是大圆弧，看似平行的经线都在两极相交。</li>
+<li>高斯的绝妙定理指出，曲率是空间的内禀性质，只靠在空间内部量三角形和圆周就能测出来。</li>
+<li>平直空间里半径 r 的圆周长正好 2πr，正曲率的球面上小于 2πr，负曲率的马鞍面上大于 2πr。</li>
+<li>平面曲率为零而球面曲率为正，所以纸能卷成圆筒却包不住球，任何平面世界地图都必然变形。</li>
+<li>对称是施加某种变换后保持不变；一个物体的全部对称构成群，比如正方形的 8 种对称构成 D₄。</li>
+<li>诺特定理说每个连续对称都对应一个守恒量，时间平移对称给出能量守恒，空间平移给出动量守恒。</li>
+<li>广义相对论把引力解释成几何：质量弯曲时空，自由下落的物体沿测地线走，GPS 卫星钟因此需要修正。</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

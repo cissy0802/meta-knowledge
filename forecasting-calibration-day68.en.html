@@ -44,10 +44,17 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-legend i{width:22px;height:0;border-top-width:3px;border-top-style:solid;display:inline-block}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
+  .tk{padding:20px 18px}
 }
 </style>
 </head>
@@ -208,6 +215,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Calibration isn't judged by whether one forecast came true, but by whether roughly 70% of the things you called "70% likely" actually happened.</li>
+<li>Binning forecasts by confidence gives a calibration curve; most people's curve sags below the diagonal, the fingerprint of overconfidence.</li>
+<li>Weather forecasters are among the best-calibrated professionals because they get unambiguous daily feedback, while famous TV pundits often forecast worse the more famous they are.</li>
+<li>Deep neural networks are overconfident too, so engineers apply confidence calibration such as temperature scaling to pull probabilities back to real frequencies.</li>
+<li>The Brier score averages the squared gap between your stated probability and the outcome (1 or 0); lower is better, and confident misses are punished hard.</li>
+<li>Good forecasts need both calibration and resolution: someone who always says 50% can be perfectly calibrated yet give no information useful for decisions.</li>
+<li>Reference class forecasting starts from the base rate of similar cases, then adjusts modestly for the specific evidence, and the order matters.</li>
+<li>The planning fallacy makes people almost always underestimate time, cost and risk: a team that expected to finish a textbook in two years took eight.</li>
+<li>In a large forecasting tournament, trained and scored amateurs beat intelligence analysts with access to classified briefings by roughly thirty percent in accuracy.</li>
+<li>Superforecasters break questions down, hunt for disconfirming evidence, anchor on a reference class, and update their probabilities often in small steps.</li>
+</ol>
+</div>
 <div class="nav"></div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

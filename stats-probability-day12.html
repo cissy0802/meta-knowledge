@@ -48,7 +48,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .payoff-table td.good{background:#e3f1e8;color:#2a7a4a;font-weight:700}
 .payoff-table td.reverse{background:#fef0d9;color:#b56b00;font-weight:700}
 .payoff-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -192,6 +199,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <p>数据驱动决策的最大陷阱，往往不是"没数据"，而是<strong>只看加总数据</strong>。团队整体生产力涨了 10%，可能是新来的高产成员拉高的，老成员其实人人都在下滑；日活涨了 20%，也可能是新用户活跃度低于流失用户，看着增长、实则稀释。看任何关键指标，都<strong>立刻追问一句"按不同方式分组之后，结论还成立吗"</strong>——这正是工程师和"虚荣指标"之间的根本区别。育儿同理：孩子"这个月做题快了"，是真进步，还是这个月的题更简单了？</p>
 <span class="q">▸ 思考题：你团队、产品或家庭里最近一个"明显变好/变差"的指标，按 3 种不同方式分组后还成立吗？哪一种分组会让结论翻转？</span>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>贝叶斯推断把概率看作相信的程度：先验乘以似然，得到被新证据更新后的后验。</li>
+<li>任何概率都相对于你已知的信息而言，没有脱离信息、独立存在的概率。</li>
+<li>忽略基础率是直觉判断概率时的系统性错误，医生、法官和投资人都会犯。</li>
+<li>发病率 1%、准确率 95% 的检测，测出阳性的人真正患病的概率只有约 16%。</li>
+<li>蒙特卡罗方法用大量随机采样逼近算不出的答案，背后的原理是大数定律。</li>
+<li>在正方形里随机撒点，数落进内切圆的比例再乘以 4，就能估出圆周率 π。</li>
+<li>生存偏差指只看得到幸存样本时，会把幸存者身上的随机特征误当成成功原因。</li>
+<li>二战轰炸机案例里，该加固的是返航飞机上弹孔最少的部位，因为打中那里的飞机没能飞回。</li>
+<li>辛普森悖论：整体上 A 优于 B，分组后每一组却都可能是 B 优于 A，结论彻底反转。</li>
+<li>研究生录取案例中，整体女性录取率偏低，是因为女性更多申请了难录取的院系。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

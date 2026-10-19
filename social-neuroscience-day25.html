@@ -54,7 +54,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .mf-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
 .dot{letter-spacing:2px;color:#f7a072;font-weight:700}
 .dot.dim{color:#d8cfc4}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -214,6 +221,22 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <p>回想一次你坚信对方「不可理喻」的争论。如果换成「我们在用不同的道德味蕾」这个假设，对方的立场是否突然变得可以理解了？</p>
 </div>
 </div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>镜像神经元最早在猕猴前运动皮层被发现：猴子自己抓取食物和看别人做同一动作时，它都会放电。</li>
+<li>看别人被针扎，自己的痛觉相关区域也会部分激活；共情可能是在复用亲历时的神经线路，而不是抽象推理。</li>
+<li>1960 年代初的耶鲁电击实验里，基础版有 65% 的被试服从到最高的 450 伏，精神科医生事前预测却不到 1%。</li>
+<li>服从权威的关键机制是「代理状态」：人把责任让渡给权威，自己变成执行指令的代理，道德负担转给下令者。</li>
+<li>服从率随情境剧烈波动：受害者同处一室时降到 40%，权威者离场改用电话下令时跌到约 21%，问题在结构不在性格。</li>
+<li>网络掷球实验中，被排斥的体验激活背侧前扣带回和前脑岛，与身体疼痛里负责「痛苦」的成分重叠。</li>
+<li>连续数周服用止痛成分对乙酰氨基酚的人，每日报告的社会疼痛明显下降，dACC 的排斥反应也减弱。</li>
+<li>道德判断主要靠直觉：情绪这头「大象」先定方向，理性这个「骑象人」事后才编理由。</li>
+<li>道德基础理论把道德拆成关爱、公平、忠诚、权威、神圣等独立基础；自由派偏重前两项，保守派用得更均衡。</li>
+<li>「道德失声」：面对无人受害却触犯禁忌的故事，多数人坚称是错的却说不出理由，说明判断先于理由。</li>
+</ol>
+</div>
+
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

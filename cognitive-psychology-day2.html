@@ -38,7 +38,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -221,6 +228,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>如果你的认知一部分驻留在你的身体姿势、办公环境和工具里，那么"提升思维"是不是首先意味着重新设计你的身体习惯和物理空间？过去一年你花在升级椅子、屏幕、笔记系统上的时间，是不是远少于该有的比重？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>双系统理论把思维分成两套：System 1 快速、自动、几乎不耗能，System 2 缓慢、费力、依赖工作记忆。</li>
+<li>System 2 是个懒惰的监工，默认接受 System 1 的结论，许多“深思熟虑”其实是事后给直觉写理由。</li>
+<li>球拍与球问题里，名校学生过半答 10 美分而非 5 美分，原因是直觉抢答后没有复核，而非智力不够。</li>
+<li>工作记忆负责同时持有并操纵信息，它不等于短时记忆，真实容量约 4±1 个组块，而不是 Miller 的 7±2。</li>
+<li>组块（chunking）让同样的工作记忆容量装下更复杂的内容，专家的优势主要来自更丰富的组块库。</li>
+<li>象棋大师能记住真实棋局的布局，棋子一旦随机摆放就和新手差不多，说明强记忆来自模式而非容量。</li>
+<li>元认知是“知道自己知道什么、不知道什么”的能力，由 Flavell 在 1979 年提出，与知识水平关系很弱。</li>
+<li>元认知包含三层：元认知知识、元认知监测和元认知控制，校准好坏要看信心与实际正确率是否一致。</li>
+<li>Dunning-Kruger 效应显示，测试得分最低的人反而高估自己的排名，因为他们缺乏判断“什么算好”的能力。</li>
+<li>具身认知主张思维分布在大脑、身体和环境之中，纸笔、白板这类认知卸载工具本身就是心智的一部分。</li>
+</ol>
 </div>
 <div class="nav">
 <a href="index.html">← 返回目录</a>

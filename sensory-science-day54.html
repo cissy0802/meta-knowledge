@@ -42,7 +42,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -210,6 +217,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你每天要「盯着看」的哪一类数据，其实更适合被翻译成一种能被身体感觉到的信号？如果它平时安静、只在异常时才「响」，你会因此腾出多少注意力？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>嗅觉是唯一不经丘脑中转的感觉，嗅球信号直接投射到杏仁核（情绪）和内嗅皮层—海马（记忆）。</li>
+<li>普鲁斯特效应：气味诱发的自传体记忆比文字或图片诱发的更集中在人生头十年，情绪也更浓。</li>
+<li>嗅觉存在命名障碍：人能分辨上千种气味却叫不出名字，因为嗅觉与语言皮层的连接很弱。</li>
+<li>舌头只分辨甜、咸、酸、苦、鲜五种基本味，捏住鼻子就分不清苹果和生洋葱，因为苹果味主要靠嗅觉。</li>
+<li>风味是大脑的一次预测，由味觉叠加鼻后嗅觉、三叉神经、颜色、咀嚼声和预期共同建构。</li>
+<li>期待能改写风味：染红的白葡萄酒会被用红酒词汇描述，标价更高的同款酒让奖赏脑区激活更强。</li>
+<li>辣不是味觉而是痛觉：辣椒素激活的 TRPV1 受体，正是感知高温灼烧的那个通道。</li>
+<li>联觉是一种感觉自动、稳定地引发另一种，主流解释是相邻脑区之间未被完全修剪的交叉连接。</li>
+<li>bouba/kiki 效应说明几乎人人都有弱联觉，这种跨感官映射可能是隐喻乃至语言的起点之一。</li>
+<li>感官替代证明脑区功能由输入决定：图像转成触觉后盲人能定位物体，先天盲人读盲文时视觉皮层也被激活。</li>
+</ol>
 </div>
 <div class="nav">
 <a href="index.html">← 返回目录</a>

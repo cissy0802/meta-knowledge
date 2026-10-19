@@ -63,7 +63,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .lemon-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:#f7a072;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.82rem}
 .lemon-text{font-size:0.85rem;color:#3a3a4a;flex:1}
 .lemon-arrow{text-align:center;color:#f7a072;font-size:1.1rem;margin:-4px 0}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -297,6 +304,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>在你最近的一次重要决策（雇佣、合作、投资、购买）中，你是信息优势方还是劣势方？你用了什么"信号"或"筛选"机制来对抗不对称？事后证明它有效吗？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>机会成本是为一个选择所放弃的次优选项的价值，真正的成本不是付出的钱，而是放弃的可能。</li>
+<li>机会成本概念由奥地利学派的维塞尔在 1889 年的《自然价值》中系统提出。</li>
+<li>李嘉图在 1817 年以英国呢绒和葡萄牙葡萄酒为例，首次严格证明了比较优势原理。</li>
+<li>比较优势看的是机会成本之比而非绝对生产率：即使一方样样更强，专业分工加交换仍让双方获益。</li>
+<li>外部性指私人决策的成本或收益溢出到第三方，负外部性导致过度供给，正外部性导致供给不足。</li>
+<li>庇古主张用税收和补贴把外部成本内部化；萨缪尔森 1954 年用非排他性和非竞争性定义了公共品。</li>
+<li>奥斯特罗姆发现社区可以靠自定规则治理渔场、灌溉等公共池塘资源，打破了「非市场即政府」的二元对立。</li>
+<li>阿克洛夫 1970 年的柠檬市场模型表明，买方分不清好坏车时只肯出均价，好车主退出，市场可能整体崩塌。</li>
+<li>逆向选择发生在交易前，道德风险发生在交易后，应对手段有信号、筛选和激励合约，如保修、体检和免赔额。</li>
+<li>斯宾塞的信号理论认为，教育的经济价值有很大一部分来自信号传递，而不只来自学到的知识。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

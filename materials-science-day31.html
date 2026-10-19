@@ -43,7 +43,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-title{font-size:0.82rem;color:#3a86ff;font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:14px;text-transform:uppercase}
 .viz-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
 .viz svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -200,6 +207,22 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <p>你最近一次系统故障或协作卡顿，是发生在某个「组件内部」，还是发生在两者之间的「界面」上？你正在努力消除的摩擦里，有哪几处其实是不可或缺的「抓地力」？</p>
 </div>
 </div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>位错是晶体里多出或少了半排原子的线缺陷，金属能被弯折而不脆断，靠的正是位错逐排滑移。</li>
+<li>位错滑移每一步只断开一处键，像推动地毯褶皱去挪整张地毯，这解释了金属实测强度远低于理论值。</li>
+<li>强化金属就是给位错设路障：晶界、固溶的异类原子、析出的微粒，以及位错缠结造成的加工硬化。</li>
+<li>反复弯折的回形针会先变硬再断裂，而近乎无缺陷的金属晶须强度可逼近理论极限，比块体强几十倍。</li>
+<li>相图标出各温度和配比下共存的相；在共晶点，锡铅焊料约 183°C 就熔化，比纯锡和纯铅都低。</li>
+<li>往纯铁里掺 0.02%–2% 的碳就得到钢，淬火和回火则靠冷却速度把原子冻结在非平衡状态。</li>
+<li>复合材料里硬纤维分走大部分应力，软基体传力并在界面偏转裂纹，强度和韧性得以同时提高。</li>
+<li>珍珠母约 95% 是脆性碳酸钙，却靠「砖泥结构」比纯碳酸钙坚韧约三千倍；钢筋混凝土同理。</li>
+<li>两个表面只在微小峰尖上真正接触，所以摩擦力主要正比于法向压力，几乎与表观接触面积无关。</li>
+<li>机械失效多发生在界面磨损而非材料本体，润滑的本质是用一层介质隔开两个表面，免得峰尖焊死。</li>
+</ol>
+</div>
+
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

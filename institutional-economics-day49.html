@@ -39,7 +39,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -174,6 +181,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你上一个「推行失败」的流程或规范，是败在设计不对，还是败在组织根本没有执行它的能力？这两者的药方完全不同——你抓对了吗？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>主流经济学默认交易免费，科斯指出使用市场本身就有成本，并由此追问企业为什么会存在。</li>
+<li>交易成本是搜寻、谈判、签约、监督和执行合约的摩擦；市场摩擦高过内部协调成本时，活动就被收进企业。</li>
+<li>科斯定理说，交易成本为零时产权初始判给谁不影响资源最终流向，制度的意义正在于对付非零的摩擦。</li>
+<li>诺斯把制度定义为社会博弈的规则，并把制度（规则）与组织（下场的玩家）明确区分开。</li>
+<li>制度分正式规则与非正式约束，习俗、规范、信任这类非正式约束往往更顽固，也更难移植。</li>
+<li>好制度让长期合作的收益高过背叛的短期收益，提供「今天投资、明天成果不被没收」的可预期性。</li>
+<li>诺加莱斯被美墨边境一分为二，两侧地理族裔相近而收入悬殊，说明决定贫富的是制度而非地理或文化。</li>
+<li>路径依赖由报酬递增驱动：早期偶然的领先被正反馈不断放大，即使出现更优方案也换不掉。</li>
+<li>QWERTY 键盘布局在机械卡键问题消失后仍被锁定沿用，是次优标准因路径依赖长存的经典例子。</li>
+<li>国家能力指政府征税、执法、贯彻政策的实际本领，其地基是统计人口、丈量土地这类「看得见」的能力。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

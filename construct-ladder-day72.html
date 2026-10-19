@@ -49,11 +49,18 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .coda ol{margin:10px 0 12px 22px;font-size:0.95rem;color:#3a3a4a}
 .coda li{margin-bottom:3px}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
   .coda{padding:20px 18px}
+  .tk{padding:20px 18px}
 }
 </style>
 </head>
@@ -247,6 +254,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你团队现在信以为真的某个「A 组有效、B 组无效」，做过交互检验吗？如果没有，它究竟是证据，还是一个被当成结论用了很久的假设？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>同一批青少年屏幕数据，既能算出只解释幸福感 0.4% 的变异，也能算出 0.15 到 0.22 的相关，差别在构念之梯上站的格子。</li>
+<li>暴露端的规律是稀释：把多种行为打包成「屏幕时间」这类合成指标，真正相关的那种行为的信号会被无关成分摊薄。</li>
+<li>结局端的规律是取舍：自评量表功效足却混着报告偏差，住院、死亡这类硬结局可信却稀少，置信区间很宽。</li>
+<li>摘要里的名义样本几乎从不等于分析样本，经过变量可得性、协变量缺失剔除和子群切分，往往只剩一小部分。</li>
+<li>样本极大时几乎任何微弱关联都会显著，切到子群后样本变小，置信区间又宽得什么结论都容得下。</li>
+<li>临床试验要求报告从筛选、随机化到纳入分析的完整流程图，因为不写时读者会系统性高估证据的厚度。</li>
+<li>同一份关联可以合法写成方差比例、相关系数、比值比、相对风险或标准化差异，单位的选择悄悄成了立场的选择。</li>
+<li>相关系数要平方才是方差比例；比值比在结局常见时会夸大风险比；相对风险必须配上绝对基率才能判断轻重。</li>
+<li>效应量不单独决定重要性：阿司匹林预防心梗的相关系数约 0.03，却因结局严重、干预便宜而足以改写临床指南。</li>
+<li>「一组显著、一组不显著」推不出两组不同，必须直接检验交互项，而侦测同等大小的组间差异约需四倍样本量。</li>
+</ol>
 </div>
 <div class="coda">
 <h3>读数前的四问</h3>

@@ -45,7 +45,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .ca-table td.diag{color:#e85a4f;font-weight:800}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -193,6 +200,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question to Ponder</span>
 <p>Is the thorniest problem on your desk stuck because you keep grinding at it in the "time domain"? Is there a transform, a viewpoint, that could rotate it into some "frequency domain" — making the entangled parts orthogonal, independent, divisible-and-conquerable? Finding that key transform often matters more than solving harder.</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>The ε-δ definition drops infinitesimals and turns "approaching" into a promise: however small the error ε you demand, some range δ honors it.</li>
+<li>Weierstrass's curve, continuous everywhere yet differentiable nowhere, broke the intuition that continuous curves are mostly smooth and forced analysis to become rigorous.</li>
+<li>Two infinite sets are compared by one-to-one pairing, so the even numbers, the integers and the fractions are equally numerous: all countably infinite.</li>
+<li>Cantor's diagonal argument changes one digit of every number on a supposedly complete list, building a real number missing from it, so the reals are uncountable.</li>
+<li>Only countably many numbers can ever be named or computed by a program, so almost every real number cannot be described in any finite language.</li>
+<li>The halting problem falls to the same diagonal argument: programs are countable but problems are not, so most problems have no algorithm at all.</li>
+<li>Riemann integration slices the domain into strips, while Lebesgue integration slices the range, which lets it integrate the Dirichlet function to exactly 0.</li>
+<li>The Banach–Tarski paradox cuts a solid ball into 5 pieces and reassembles two identical balls; the catch is that the pieces are non-measurable sets with no volume.</li>
+<li>Kolmogorov built probability theory on measure theory: a random event is a measurable set, and probability is a measure with total mass 1.</li>
+<li>Fourier decomposition writes any signal as a sum of sine waves, yet a square wave built this way keeps a roughly 9% overshoot at the jump: the Gibbs phenomenon.</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

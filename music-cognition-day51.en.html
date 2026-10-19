@@ -42,7 +42,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -192,6 +199,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question</span>
 <p>Does your team have a ritual that is "of no practical use, yet makes everyone feel like one tribe"? If not, what is the trust foundation of your collaboration actually resting on?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Rhythmic entrainment means the brain predicts the next beat and phase-locks its internal neural oscillations to the external rhythm, rather than reacting after each drumbeat.</li>
+<li>Negative mean asynchrony: when people tap along, their fingers land tens of milliseconds before the actual beat, showing the brain predicts rather than chases.</li>
+<li>When a drumbeat is removed and replaced by silence, the motor areas still fire at the moment the beat should arrive, so the beat has become an internal model.</li>
+<li>Species that can move to a beat are almost all vocal learners, such as Snowball the cockatoo, cetaceans and humans, while chimpanzees can barely do it.</li>
+<li>The brain learns the statistical regularities of a musical system and keeps predicting the next note; musical pleasure comes from the game between expectation and its violation.</li>
+<li>Prediction error and pleasure follow an inverted-U Wundt curve: too predictable is boring, too surprising sounds like noise, and pleasure sits in the sweet spot between.</li>
+<li>During music that gives chills, dopamine is released first in the caudate during anticipation and only in the nucleus accumbens at the peak, so suspense drives reward.</li>
+<li>Music evokes emotion through parallel routes such as brainstem reflexes, rhythmic entrainment, learned associations and expectation, most of them bypassing language and reason.</li>
+<li>People with musical anhedonia have normal hearing and normal pleasure from other rewards yet feel nothing for music, showing the music-to-pleasure pathway can be cut on its own.</li>
+<li>The adaptationist case for music's universality is social bonding through synchronized endorphin-releasing group activity, and listeners can tell a foreign song's function from sound alone.</li>
+</ol>
 </div>
 <div class="nav"><a href="index.en.html">← Home</a></div>
 </div>

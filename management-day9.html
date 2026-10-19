@@ -92,7 +92,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .pa-issue{padding:10px 12px;background:#fff7f5;border-radius:8px;border-left:3px solid #f7a072}
 .pa-issue-title{font-size:0.78rem;font-weight:700;color:#c93f33;margin-bottom:4px}
 .pa-issue-body{font-size:0.74rem;color:#5a4a3a;line-height:1.5}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -385,6 +392,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label" data-en="Reflection" data-zh="思考题">思考题</span>
 <p data-en="Run the Munger test on an incentive you currently use (a team KPI, your child's reward rule, your own OKR): if you were the one being measured, what's the easiest way to game or perform it? Did that test reveal an agency cost you hadn't seen?" data-zh="在你正在使用的某个激励机制（团队 KPI、孩子的奖励规则、自己的 OKR）上做一次 Munger 测试：如果你是被考核的人，最容易作弊或表演的方式是什么？这个测试有没有让你意识到一个隐藏的代理成本？">在你正在使用的某个激励机制（团队 KPI、孩子的奖励规则、自己的 OKR）上做一次 Munger 测试：如果你是被考核的人，最容易作弊或表演的方式是什么？这个测试有没有让你意识到一个隐藏的代理成本？</p>
 </div>
+</div>
+<div class="tk">
+<h3 data-en="Ten takeaways" data-zh="十条要点">十条要点</h3>
+<ol class="takeaways">
+<li data-en="Organizational ambidexterity means doing two contradictory things at once: exploiting current capabilities for today&#x27;s profit while exploring the businesses that may replace them." data-zh="双元能力指组织同时做两件矛盾的事：利用现有能力赚今天的钱，又探索可能取代它的新业务。">双元能力指组织同时做两件矛盾的事：利用现有能力赚今天的钱，又探索可能取代它的新业务。</li>
+<li data-en="March (1991) showed that the standardization and reuse of experience that make organizations efficient also kill exploration, so pure exploiters win the short term and lose the long run." data-zh="March（1991）指出，让组织高效的标准化和经验复用恰恰扼杀探索：纯利用的组织短期赢、长期被淘汰。">March（1991）指出，让组织高效的标准化和经验复用恰恰扼杀探索：纯利用的组织短期赢、长期被淘汰。</li>
+<li data-en="Structural ambidexterity puts exploration and exploitation in separate units bridged by senior leadership, and the more volatile the environment, the larger the explore share should be." data-zh="结构性双元把探索和利用分进不同单元、由高层调配资源；环境越动荡，探索占比应越高。">结构性双元把探索和利用分进不同单元、由高层调配资源；环境越动荡，探索占比应越高。</li>
+<li data-en="Greenleaf proposed servant leadership in 1970: a leader is a servant first, and real authority comes from the voluntary followership of those served." data-zh="Greenleaf 在 1970 年提出服务型领导：领导者首先是仆人，权威来自被服务者的自愿追随。">Greenleaf 在 1970 年提出服务型领导：领导者首先是仆人，权威来自被服务者的自愿追随。</li>
+<li data-en="Servant leadership lifts performance through three mechanisms: psychological safety, activated intrinsic motivation, and top talent self-selecting into the team." data-zh="服务型领导靠三条机制提升绩效：心理安全、激活内在动机，以及顶尖人才自我筛选进入团队。">服务型领导靠三条机制提升绩效：心理安全、激活内在动机，以及顶尖人才自我筛选进入团队。</li>
+<li data-en="High reliability organizations such as carriers, nuclear plants, and air traffic control succeed not by eliminating error but by making weak signals impossible to ignore." data-zh="高可靠组织（航母、核电站、空管）的秘诀不是消灭错误，而是让微小的异常信号无法被忽视。">高可靠组织（航母、核电站、空管）的秘诀不是消灭错误，而是让微小的异常信号无法被忽视。</li>
+<li data-en="Of Weick and Sutcliffe&#x27;s five HRO principles, the first three build sensitivity that prevents failure and the last two build resilience for fast recovery." data-zh="Weick 与 Sutcliffe 的 HRO 五原则中，前三条防止失败发生，后两条保证失败后快速恢复。">Weick 与 Sutcliffe 的 HRO 五原则中，前三条防止失败发生，后两条保证失败后快速恢复。</li>
+<li data-en="The HRO principle that breaks most sharply with bureaucracy is deference to expertise: in a crisis, authority flows to whoever knows most, not to rank." data-zh="HRO 最反科层的一条是尊重专长：危机中决策权流向最懂的人，而不是级别最高的人。">HRO 最反科层的一条是尊重专长：危机中决策权流向最懂的人，而不是级别最高的人。</li>
+<li data-en="The principal-agent problem arises from misaligned goals plus information asymmetry, so agency cost is structural: hiring good people cannot fix it, only mechanism design can reduce it." data-zh="委托代理问题源于目标不一致和信息不对称，代理成本是结构性的，招好人解决不了，只能靠机制设计降低。">委托代理问题源于目标不一致和信息不对称，代理成本是结构性的，招好人解决不了，只能靠机制设计降低。</li>
+<li data-en="Stock options were meant to align CEOs with shareholders, yet they bred short-termism aimed at pumping the stock price, a textbook case of Goodhart&#x27;s Law." data-zh="股票期权本为让 CEO 与股东利益对齐，却催生了拉抬短期股价的短视行为，是古德哈特定律的典型。">股票期权本为让 CEO 与股东利益对齐，却催生了拉抬短期股价的短视行为，是古德哈特定律的典型。</li>
+</ol>
 </div>
 <div class="nav"><a data-en="← Back to Index" data-zh="← 返回首页" href="index.html">← 返回首页</a></div>
 </div>

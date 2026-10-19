@@ -42,7 +42,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -195,6 +202,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你最近获得的「啊，原来如此」的爽感里，有多少真的沉淀成了可迁移的模型，有多少只是奖赏回路被漂亮地刷了一次？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>无论美来自画作、旋律还是数学公式，大脑都在内侧眶额皮层（mOFC）这块价值中枢登记它。</li>
+<li>在大脑里，美更像奖赏系统给出的估值评分，而不是感官记录下来的表象属性。</li>
+<li>数学家觉得欧拉恒等式越美，mOFC 信号越强，说明审美评估的是结构而非感官外表。</li>
+<li>峰值移位原理：辨别训练后，动物对比训练刺激更极端的版本反应更强。</li>
+<li>漫画放大一张脸偏离平均脸的地方，造出比真人更像本人、也更传神的超常刺激。</li>
+<li>银鸥雏鸟更爱啄画了三道红条纹的假棍子，说明夸张的超常刺激能压过真实信号。</li>
+<li>加工流畅性：东西越容易加工，大脑越会把这份顺畅错当成对象本身更美、更真、更可信。</li>
+<li>押韵的句子显得更真，重复的谎言感觉更可信（错觉性真相效应），流畅一直在冒充真理。</li>
+<li>艺术毫无生存价值，却点亮与食物、性、药物相同的多巴胺奖赏回路，奖赏的是成功建模本身。</li>
+<li>审美奖赏是自上而下建构的：同一杯酒被说成昂贵，人报告更好喝，mOFC 也真的更活跃。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

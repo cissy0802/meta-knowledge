@@ -48,7 +48,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .rung-text{font-size:0.83rem;color:#3a3a4a;flex:1}
 .rung-scale{flex-shrink:0;font-size:0.74rem;color:#e85a4f;font-weight:700;text-align:right;width:96px}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -227,6 +234,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>The scale of the universe is measured with a distance ladder of parallax, Cepheids, Type Ia supernovae and Hubble's law, each rung calibrated by the one below.</li>
+<li>Errors at the bottom of the distance ladder amplify upward: Hubble's first expansion rate was off roughly sevenfold because of a faulty Cepheid calibration.</li>
+<li>The Hubble tension: the distance ladder gives an expansion rate of about 73 km/s/Mpc, the cosmic microwave background about 67, and both are precise yet irreconcilable.</li>
+<li>The Fermi paradox rests on a time asymmetry: the galaxy is about ten billion years old, colonizing it takes a few million, yet the sky is silent.</li>
+<li>The Great Filter is a step from dead matter to star-faring civilization that almost nothing crosses; if it lies ahead, most technological civilizations destroy themselves.</li>
+<li>Finding life on Mars would be bad news: the easier life arises, the more likely the Great Filter lies ahead of humanity rather than behind it.</li>
+<li>Visible matter describable by known physics makes up only about 5% of the universe; the other 95% is dark matter and dark energy, inferred only from gravity.</li>
+<li>Dark matter is inferred from stars on galaxy outskirts orbiting too fast and from gravitational lensing; it neither emits nor blocks light and is fully transparent.</li>
+<li>In the 1990s two teams used distant Type Ia supernovae to measure how fast cosmic expansion was slowing and found it accelerating, revealing dark energy.</li>
+<li>Exoplanets are detected indirectly: transits give a planet's radius, radial velocity gives its mass, and together they yield density, separating rocky worlds from gas giants.</li>
+</ol>
+</div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>
 <script src="https://hub.cissychen.com/search.js" defer></script>

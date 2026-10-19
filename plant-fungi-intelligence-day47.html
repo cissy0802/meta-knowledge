@@ -46,7 +46,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .viz-legend span{display:inline-flex;align-items:center;gap:6px}
 .dot{width:12px;height:12px;border-radius:50%;display:inline-block}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -207,6 +214,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>盘一盘你当前依赖的关键外部能力（某个模型 API、某个平台）：哪些已经重要到该「内共生」——收进来、能掌控？哪些保持松耦合的共生反而更明智？你有没有把某个核心代谢，危险地外包给了一个随时可能涨价或消失的「租客」？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>菌根真菌用菌丝替植物搜刮磷、氮和水，换取植物光合作用产出的碳，这场交换已持续约四亿年。</li>
+<li>同一株菌根真菌同时接上多棵树时，就形成共享菌根网络，树与树之间的养分和信号都要经过真菌这一中间层。</li>
+<li>给桦树注入放射性碳，几周后能在邻近冷杉的根里检测到，说明碳可以借真菌在树间流动。</li>
+<li>生物市场理论认为菌根真菌并不无私：它把更多磷回馈给供碳多的植物，并克扣供碳少的一方。</li>
+<li>植物被啃食时释放挥发性有机物，邻株接收后会提前启动防御基因，相当于一次空中广播警报。</li>
+<li>植物受伤会激起沿全株传播的钙离子波，其中的谷氨酸受体样基因与动物神经递质受体同源。</li>
+<li>含羞草被反复无害地跌落后不再合叶，这种习惯化能维持数周，没有神经元却出现了学习的特征。</li>
+<li>向光性靠生长素在背光侧富集、让背光侧细胞伸长更快；向地性靠细胞里沉降的淀粉体感知重力。</li>
+<li>达尔文父子发现感光的是茎尖、弯曲却发生在下方；寄生的菟丝子能循寄主气味定向生长，还偏向营养更丰的寄主。</li>
+<li>内共生理论认为线粒体源自被古菌吞入的细菌、叶绿体源自蓝细菌；地衣和深海管虫也模糊了个体与共生体的界线。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回目录</a></div>
 </div>

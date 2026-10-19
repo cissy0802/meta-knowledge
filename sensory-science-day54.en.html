@@ -42,7 +42,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -214,6 +221,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Smell is the only sense that skips the thalamus relay: olfactory bulb signals project straight to the amygdala (emotion) and the entorhinal cortex and hippocampus (memory).</li>
+<li>The Proust effect: autobiographical memories cued by odors cluster more in the first decade of life and feel more emotional than those cued by words or pictures.</li>
+<li>Smell suffers from a naming gap: people can tell apart thousands of odors yet struggle to name them, because olfaction is only weakly wired to language areas.</li>
+<li>The tongue detects just five basic tastes (sweet, salty, sour, bitter, umami); with your nose pinched, an apple and a raw onion are nearly indistinguishable.</li>
+<li>Flavor is a prediction the brain builds from taste plus retronasal smell, the trigeminal nerve, color, chewing sounds and expectation.</li>
+<li>Expectation rewrites flavor: white wine dyed red gets described in red-wine terms, and a higher price tag on the same wine boosts activity in reward-related brain areas.</li>
+<li>Spiciness is pain, not taste: capsaicin activates the TRPV1 receptor, the same channel that senses scalding heat.</li>
+<li>Synesthesia is one sense automatically and consistently triggering another, often explained by incompletely pruned cross-connections between neighboring brain areas.</li>
+<li>The bouba/kiki effect shows nearly everyone has a weak form of synesthesia, and such cross-sensory mappings may be one root of metaphor and even language.</li>
+<li>Sensory substitution shows brain areas are defined by their input: blind users locate objects through touch-encoded camera images, and congenitally blind people recruit visual cortex to read Braille.</li>
+</ol>
+</div>
 <div class="nav">
 <a href="index.en.html">← Back to Index</a>
 </div>

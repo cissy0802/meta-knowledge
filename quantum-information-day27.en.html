@@ -48,7 +48,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .flow-step.alert{border-left-color:#e85a4f}
 .flow-step.alert .flow-num{background:#e85a4f}
 .flow-arrow{text-align:center;color:#3a86ff;font-size:1.1rem;margin:-4px 0}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -217,6 +224,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>The power of quantum computing is not trying every answer in parallel but interference, which makes the amplitudes of wrong answers cancel out.</li>
+<li>The state of N qubits is described by 2^N probability amplitudes, yet a measurement reads out only one result, with probability equal to the amplitude squared.</li>
+<li>Shor's algorithm turns factoring into finding a function's period and amplifies the true period with the quantum Fourier transform, so it can break RSA in polynomial time.</li>
+<li>Quantum key distribution moves security from "hard math problems we can't yet solve" to physical law: a quantum state cannot be eavesdropped on without leaving traces.</li>
+<li>Quantum key distribution rests on two rules: measuring an unknown quantum state disturbs it, and an unknown quantum state cannot be copied perfectly (the no-cloning theorem).</li>
+<li>In the BB84 protocol both sides pick bases at random and keep only matching-basis bits; an eavesdropper who doesn't know the basis inevitably disturbs the results and is exposed.</li>
+<li>Quantum teleportation transmits a quantum state, not matter: the original is destroyed in a Bell measurement, and the receiver rebuilds it from two classical bits.</li>
+<li>Entanglement alone carries no information; quantum teleportation needs a classical channel bound by the speed of light, so it cannot be used for faster-than-light messaging.</li>
+<li>The firmest evidence in quantum biology is quantum tunneling in enzyme catalysis, where protons or electrons pass straight through an energy barrier instead of climbing over it.</li>
+<li>The radical-pair hypothesis of bird magnetoreception is suggestive, while whether quantum coherence actually does functional work in photosynthesis remains highly contested.</li>
+</ol>
+</div>
 <div class="nav"><a href="index.en.html">← Home</a></div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

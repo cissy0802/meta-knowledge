@@ -53,7 +53,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .dag-arrows{display:flex;gap:80px;color:#52b788;font-size:0.78rem;font-weight:700}
 .dag-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center}
 .dag-link{font-size:0.78rem;color:#e85a4f;font-weight:700;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -244,6 +251,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>The basic reproduction number R0 is how many people one case infects in a fully susceptible population; R0 = 1 separates fizzling out from exponential spread.</li>
+<li>R0 is not a fixed property of a pathogen but the product of transmission probability, contact rate and infectious duration, so behavior and environment change it.</li>
+<li>Once an outbreak is under way the effective reproduction number Rt matters, and control means pushing Rt below 1 so transmission chains break.</li>
+<li>R0 measures how fast a disease spreads, not how severe it is: measles has an R0 of 12–18 with low lethality, while Ebola sits near 2 yet is highly lethal.</li>
+<li>SARS was contained and COVID-19 was not largely because of timing: when people are infectious before symptoms, isolating the sick cannot cut the chain.</li>
+<li>The herd immunity threshold is 1 − 1/R0; once immunity passes it, infants and immunocompromised people who cannot be vaccinated are protected indirectly.</li>
+<li>Herd immunity invites free-riding, and with a measles threshold near 95%, a drop of a few points in coverage can suddenly and nonlinearly breach the wall.</li>
+<li>A confounder drives both exposure and outcome and can manufacture a spurious correlation; randomization severs it, while adjustment only handles confounders you measured.</li>
+<li>Observational studies suggested hormone replacement therapy protected the heart, but randomized trials showed higher cardiovascular risk; healthy user bias created the illusion.</li>
+<li>Disease surveillance races exponential growth: confirmed cases are the tip of an underreporting pyramid, and wastewater signals can lead clinical cases by days to a week.</li>
+</ol>
+</div>
 <div class="nav"><a href="index.en.html">← Back to Index</a></div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

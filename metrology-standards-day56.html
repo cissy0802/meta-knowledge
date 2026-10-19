@@ -47,7 +47,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .pa-state{font-size:0.9rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
 .pa-desc{font-size:0.78rem;color:#6b6b7d;line-height:1.5}
 .pa-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -199,6 +206,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你正在重赏的那个指标，如果有人只想让数字好看、完全不管背后的真实目标，他会怎么做？这条捷径，是不是已经有人在走了？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>计量学的单位是人类协商出的约定，测量就是把世界锚定到一个可复现的参照上。</li>
+<li>2019 年国际单位制改革后，公斤不再由一块铂铱合金原器定义，而由普朗克常数的固定值导出。</li>
+<li>国际公斤原器「大K」一个多世纪里相对复制品漂移约 50 微克，用会变的物定义「不变」正是改革的动因。</li>
+<li>可比性依赖参照的稳定而非仪器的精密：评测集或 CPI 篮子一旦漂移，跨期的「进步」就不可比。</li>
+<li>标准是权力的安静形态：靠协调博弈和路径依赖自我锁定，「已被广泛采用」比「最优」更重要。</li>
+<li>ISO 标准集装箱让船、港、卡车和吊机互换协作，把跨洋运费压到近乎可忽略，重塑了全球产业链。</li>
+<li>QWERTY 键盘和 1435 毫米标准轨距都说明，偶然的历史选择一旦普及，兼容就压过了效率。</li>
+<li>测量误差分两类：随机误差靠多次平均压小，系统误差无论测多少次都消不掉，只能靠校准发现。</li>
+<li>精密指重复性好，准确指离真值近；高精密却未校准的仪器会稳定而自信地给出错误答案。</li>
+<li>古德哈特定律：指标一旦成为考核目标，人们就会优化数字本身而非它所代表的真实目标。</li>
+</ol>
 </div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>

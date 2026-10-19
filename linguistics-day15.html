@@ -46,7 +46,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .flow-text strong{color:#2a2a3a}
 .flow-arrow{text-align:center;color:#f7a072;font-size:1.05rem;margin:-2px 0}
 .flow-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:10px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -180,6 +187,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <p>在团队沟通里少用"试着做"、"或许"等弱化语气——明确的承诺与明确的拒绝都是<strong>高功率言语行为</strong>，它们直接搭建协作的脚手架。育儿里，"我命令你"和"我请求你"是两种不同的行为，前者用多了授权感会贬值。AI 协作里，把 prompt 当承诺与宣告来写：明确权限、明确边界、明确意图，远胜含糊的描述。</p>
 <span class="q">▸ 思考题：你最近一次关键沟通用的是"描述"语气还是"执行"语气？模糊的语气，有没有让本可发生的事悄悄没发生？</span>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>普遍语法认为人脑预装了语言能力，儿童能从零碎、错漏的输入里学会复杂语法就是证据。</li>
+<li>乔姆斯基的“原则与参数”理论认为，儿童不是从零归纳语法，而是用母语输入设定参数，如主语可否省略。</li>
+<li>尼加拉瓜聋童在没人教的情况下，第二代自发把简陋手势发展成了有完整语法的手语。</li>
+<li>萨丕尔-沃尔夫假说的强版本“语言决定思维”已被否定，弱版本“语言影响注意力分配”得到实验支持。</li>
+<li>俄语用两个独立的词区分浅蓝和深蓝，俄语母语者辨别这两种蓝色也比英语母语者更快。</li>
+<li>Guugu Yimithirr 语没有“左/右”，只用东南西北，其使用者随时都能精准指出方向。</li>
+<li>概念隐喻理论认为，人们借身体、空间、容器、旅程等具身经验来理解时间、爱情、争论这类抽象概念。</li>
+<li>莱考夫指出主导隐喻会暗中规定推理方式：把“争论是战争”内化后，人们会把对话当成零和的攻防。</li>
+<li>奥斯汀指出很多话本身就是行动，并把一句话拆成言之所述、言之所为、言之效果三层。</li>
+<li>言语行为要生效必须满足恰当条件，如说话者有权威、有诚意；没有资格的人宣布结婚就什么也没发生。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>

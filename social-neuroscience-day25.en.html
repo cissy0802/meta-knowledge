@@ -53,7 +53,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .mf-table td.label-col{background:#f4f1ed;font-weight:600;color:#2a2a3a;text-align:left}
 .dot{letter-spacing:2px;color:#f7a072;font-weight:700}
 .dot.dim{color:#d8cfc4}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -234,6 +241,22 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
     <span class="label">Question</span>
     <p>Recall an argument where you were sure the other side was "beyond reason." Under the assumption "we're tasting with different moral receptors," does their position suddenly become understandable?</p>
   </div>
+</div>
+
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Mirror neurons were first found in the macaque premotor cortex: they fire both when a monkey grasps food and when it watches another do the same.</li>
+<li>Watching someone get pricked by a needle partly activates your own pain-related regions; empathy may reuse the circuits of lived experience rather than abstract reasoning.</li>
+<li>In the early-1960s Yale shock experiments, 65% of subjects in the baseline version obeyed all the way to 450 volts, while psychiatrists had predicted under 1%.</li>
+<li>The key mechanism of obedience is the "agentic state": people hand responsibility to the authority and become its agents, shifting the moral burden to whoever gives orders.</li>
+<li>Obedience swings with the situation: it fell to 40% with the victim in the same room and about 21% when the authority gave orders by phone, so structure matters more than character.</li>
+<li>In the Cyberball experiment, being excluded activates the dorsal anterior cingulate cortex and anterior insula, overlapping with the distress component of physical pain.</li>
+<li>People who took acetaminophen, a common painkiller, for several weeks reported clearly less daily social pain, and their dACC response to exclusion was weaker.</li>
+<li>Moral judgment runs mainly on intuition: the emotional elephant sets the direction first, and the rational rider makes up reasons afterward.</li>
+<li>Moral Foundations Theory splits morality into separate foundations such as care, fairness, loyalty, authority and sanctity; liberals lean on the first two, conservatives use them more evenly.</li>
+<li>Moral dumbfounding: told a harmless but taboo-breaking story, most people insist it is wrong yet cannot give a reason, showing that judgment comes before reasons.</li>
+</ol>
 </div>
 
 <div class="nav"><a href="index.en.html">← Home</a></div>

@@ -50,7 +50,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .goods-cell.row-label{background:#f4f1ed;color:#2a2a3a;font-weight:700;font-size:0.78rem;text-align:center;align-items:center}
 .goods-type{font-size:0.9rem;font-weight:700;color:#2a2a3a;margin-bottom:4px}
 .goods-example{font-size:0.78rem;color:#6b6b7d;line-height:1.5}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -251,6 +258,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
   </div>
 </div>
 
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>The Coase theorem: with clear property rights and costless bargaining, the parties reach the same efficient outcome no matter who holds the right.</li>
+<li>Externalities are reciprocal: pollution harms the fishermen, but shutting the factory harms the factory, so the question is which arrangement creates more total value.</li>
+<li>Real-world transaction costs are never zero, so how the law assigns initial rights directly shapes how efficient a society is.</li>
+<li>Steven Cheung's 1973 study of Washington orchards found growers and beekeepers already trading pollination by contract, a textbook externality the market had long internalized.</li>
+<li>A property rule gives the right-holder a veto, so anyone wanting the right must negotiate; a liability rule lets others take it and pay objectively set compensation afterward.</li>
+<li>Property rules fit cases where bargaining is cheap; liability rules, like eminent domain, fit cases where holdouts or bargaining costs would block any deal.</li>
+<li>In Boomer v. Atlantic Cement (1970), the court confirmed the neighbors were harmed but let the plant keep running after paying permanent damages.</li>
+<li>Comparative-law research finds common-law countries usually protect investors better and have deeper capital markets than civil-law ones, though the theory is contested.</li>
+<li>Hayek saw common law as spontaneous order: built up case by case, the product of human action but not of human design.</li>
+<li>Stigler's regulatory capture: regulation's benefits concentrate on a few firms while costs spread across the public, so regulators often end up protecting incumbents.</li>
+</ol>
+</div>
 </div>
 <script src="https://hub.cissychen.com/comments.js" defer></script>
 <script src="https://hub.cissychen.com/search.js" defer></script>

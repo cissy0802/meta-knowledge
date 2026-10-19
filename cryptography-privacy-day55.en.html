@@ -42,7 +42,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -206,6 +213,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question</span>
 <p>Over the past week, how many things you thought "I chose to do" were actually picked for you by some ranking or push? Which digital habit would you rather use if you paid for it and it collected nothing?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Public-key cryptography lets two strangers who never shared a secret talk privately over a wiretapped public channel, something thought impossible before 1976.</li>
+<li>Public-key cryptography rests on trapdoor one-way functions: easy to compute forward, hard to reverse, except for whoever holds the private key as the trapdoor.</li>
+<li>RSA's security depends on the unproven assumption that factoring large numbers is hard, so cryptographic security means breaking it costs more than it is worth, not that it is impossible.</li>
+<li>A large enough quantum computer running Shor's algorithm could break today's factoring-based encryption overnight.</li>
+<li>A zero-knowledge proof convinces a verifier that you know a secret without revealing anything about the secret, separating proving from disclosing.</li>
+<li>In the Ali Baba cave, a prover without the magic word guesses right only half the time per round, so after 20 rounds the odds of bluffing through fall below one in a million.</li>
+<li>zk-SNARKs engineer zero-knowledge proofs into practice, letting a blockchain verify that a transaction is valid and funded without exposing the parties or the amount.</li>
+<li>Differential privacy adds calibrated noise to statistics so answers look almost the same whether or not you are in the database; a smaller epsilon means more privacy and less accuracy.</li>
+<li>De-identified data with names removed is not safe, because a few harmless-looking facts combined can single a person out; the 2020 US Census adopted differential privacy.</li>
+<li>Surveillance capitalism treats the data exhaust of user behavior as raw material, turns it into prediction products sold to advertisers, and ends in nudging and modifying behavior at scale.</li>
+</ol>
 </div>
 <div class="nav">
 <a href="index.en.html">← Back to Index</a>

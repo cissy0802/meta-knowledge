@@ -37,7 +37,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .section.question .label{background:#f7a072;color:#fff}
 .section.question p{font-style:italic;color:#5a4a3a}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -172,6 +179,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question to Ponder</span>
 <p>Are you, somewhere, quietly counting on a silver bullet that "proves the whole system correct in one shot"? If it cannot exist mathematically, then on what patchwork of "local certainties" should your confidence rest instead?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>Formal logic strips reasoning away from content: whether an argument is valid depends only on its form.</li>
+<li>Material implication P→Q is false only when P is true and Q is false, so a false premise implies anything.</li>
+<li>Predicate logic adds the quantifiers ∀ and ∃, and swapping their order changes a statement's meaning entirely.</li>
+<li>The Wason selection task shows people are poor at pure formal reasoning, yet they succeed once it is framed as checking drinking ages.</li>
+<li>The negation of "all nodes are healthy" is "some node is unhealthy"; De Morgan's laws help untangle Boolean conditions.</li>
+<li>Induction, contradiction and construction are the main proof methods, and a loop invariant is really an inductive proof.</li>
+<li>A non-constructive existence proof shows an object exists without producing it, which fueled the intuitionist challenge to classical mathematics.</li>
+<li>The liar paradox and Russell's paradox share one self-referential structure: once a system can talk about itself, paradox follows.</li>
+<li>Cantor's diagonal argument shows there are more reals than naturals, and Gödel and Turing later used the same trick for their impossibility results.</li>
+<li>Gödel's incompleteness theorems say a consistent system strong enough for arithmetic has true but unprovable statements and cannot prove its own consistency.</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

@@ -38,7 +38,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .nav{text-align:center;margin-top:40px;padding:20px}
 .nav a{color:#e85a4f;text-decoration:none;font-weight:600;padding:10px 24px;border:1.5px solid #e85a4f;border-radius:24px;transition:all 0.2s}
 .nav a:hover{background:#e85a4f;color:#fff}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -221,6 +228,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你今年立下却已破功的目标，是缺意志力，还是缺一个能在"现在的你"叛变前就锁死"未来的你"的承诺装置？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>前景理论认为，人不按财富的最终状态做决策，而是按相对于某个参照点的得失来做决策。</li>
+<li>损失厌恶：同等数额的损失带来的痛苦，约是同等收益快感的两倍多，价值函数在损失一侧更陡。</li>
+<li>前景理论的 S 形价值曲线解释了收益域风险规避、损失域风险偏好的反转，人还会高估小概率事件。</li>
+<li>Kahneman 与 Tversky 的亚洲疾病问题显示，同一政策用“救活”或“死亡”来表述，多数人的选择会反转。</li>
+<li>可得性启发式是指，人用一件事有多容易被想起，来代替估计它真实发生的频率。</li>
+<li>生动性、近因和情绪显著性会放大可得性，所以人最怕的往往不是最危险的事，而是最容易想起的事。</li>
+<li>禀赋效应是指，拥有一件东西本身就会抬高它的估值，卖方要价因此系统性地高于买方出价。</li>
+<li>Thaler 等人的咖啡杯实验里，杯子随机发放后成交远少于古典理论的预测，持有者要价约为买方出价的两倍多。</li>
+<li>双曲贴现是指，人对近期的折扣很陡、对远期较平缓，于是计划时理智、临场时屈服，出现偏好反转。</li>
+<li>对抗双曲贴现，承诺装置和默认选项比意志力可靠，例如强制截止日和 401(k) 改为默认自动加入。</li>
+</ol>
 </div>
 <div class="nav">
 <a href="index.html">← 返回元知识</a>

@@ -51,7 +51,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .rung-scale.yes{color:#52b788}
 .rung-scale.no{color:#e85a4f}
 .ca-note{font-size:0.78rem;color:#6b6b7d;text-align:center;margin-top:12px;font-style:italic}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -207,6 +214,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>在你的团队或家庭里，哪些行为其实是被「相对比较」而非「绝对得失」悄悄驱动的？你上一次感到不公、想「把黄瓜砸回去」，触发点是自己真的受损，还是仅仅看见了别人的「葡萄」？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>工具使用不是「有或没有」的开关，而是一束认知前提：把眼前的物体看成它可以变成什么。</li>
+<li>黑猩猩钓白蚁前先把树枝上的叶子撸掉，这一步预加工说明它脑中已有手段—目的的表征。</li>
+<li>新喀鸦能把直铁丝弯成钩、用短棍去够长棍，说明脑结构迥异的鸟类也趋同演化出了灵活的因果推理。</li>
+<li>人类真正的超能力是累积文化：知识在代际间像棘轮一样只进不退，而动物的传统几乎每代都得从头再来。</li>
+<li>Tomasello 的棘轮效应依赖模仿而非仿效：模仿复制整个过程，只复制结果的仿效让改进攒不住。</li>
+<li>开箱实验里黑猩猩跳过无关动作，儿童却连多余动作一起照抄，这种过度模仿正是累积文化的发动机。</li>
+<li>动物心智理论之争的难点在于区分读心和读行为，因为精巧的行为预测看起来也很像读心。</li>
+<li>黑猩猩在显式错误信念测试上普遍失败，却能在竞争抢食时追踪对手看得见什么，专挑盲区下手。</li>
+<li>卷尾猴看见同伴做同样的活拿到葡萄，就拒绝自己的黄瓜，说明不公厌恶的关键在比较而不在报酬本身。</li>
+<li>拿得比别人少就抗议是第一序不公厌恶；拿得比别人多也不安的第二序不公厌恶，在动物界几乎见不到。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

@@ -37,7 +37,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .section.question .label{background:#f7a072;color:#fff}
 .section.question p{font-style:italic;color:#5a4a3a}
 .nav{text-align:center;margin-top:40px;padding:20px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -172,6 +179,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">Question to Ponder</span>
 <p>Which part of your work still has <strong>no twin</strong> — no cheap place to fail — and therefore forces you to be timid exactly where boldness would pay off? If you built it a mirror, what would you most want to fail at inside it first?</p>
 </div>
+</div>
+<div class="tk">
+<h3>Ten takeaways</h3>
+<ol class="takeaways">
+<li>The real revolution of GIS is turning “where” into a computable dimension, so location becomes a key you can join, overlay and compute on.</li>
+<li>GIS splits the world into layers aligned by location, and Tobler’s first law says near things are more related than distant ones: spatial autocorrelation.</li>
+<li>In the 1854 London cholera outbreak, John Snow mapped the deaths and they clustered around the Broad Street pump; the map itself was the argument.</li>
+<li>The outliers on Snow’s map lived far from the pump but still fetched its water: spatial outliers point to the real mechanism rather than refuting the pattern.</li>
+<li>Human eyes see only a sliver of the spectrum; satellite remote sensing extends the senses, and healthy versus dying plants differ sharply in near-infrared.</li>
+<li>NDVI = (NIR − Red) / (NIR + Red) maps plant vigor because healthy vegetation strongly reflects near-infrared and absorbs red light.</li>
+<li>Synthetic aperture radar brings its own illumination through cloud and darkness, and InSAR compares phase between passes to measure subsidence to the millimeter.</li>
+<li>Every map is a claim disguised as fact: the Mercator projection makes Greenland look bigger than Africa, which is actually fourteen times larger.</li>
+<li>1930s US redlining maps marked Black neighborhoods as high risk, steered lending for decades, and produced the segregation they claimed only to record.</li>
+<li>A digital twin is a two-way simulation fed by live sensor data that feeds decisions back; Apollo 13’s ground rehearsals show its value is that failure is free.</li>
+</ol>
 </div>
 <div class="nav"></div>
 </div>

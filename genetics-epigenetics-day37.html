@@ -57,7 +57,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .norm-bar .b{flex:1;border-radius:6px 6px 0 0;display:flex;align-items:flex-end;justify-content:center;color:#fff;font-size:0.7rem;font-weight:700;padding-bottom:4px}
 .norm-lbl{display:flex;gap:10px;font-size:0.68rem;color:#6b6b7d;text-align:center;margin-top:4px}
 .norm-lbl span{flex:1}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -226,6 +233,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <span class="label">思考题</span>
 <p>你身边有没有一个被判定为「不行」或「难搞」的人（或一段代码、一个产品），其实只是「兰花放错了土壤」？如果你只能改变环境而不能改变其本性，你会先调哪一个环境变量？</p>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>中心法则说的是遗传信息从 DNA 转录成 RNA、再翻译成蛋白质，而且只能单向流动。</li>
+<li>蛋白质的变化无法写回 DNA，中心法则因此从分子层面否定了「获得性可遗传」。</li>
+<li>逆转录病毒（如 HIV）能把 RNA 反向抄写成 DNA，朊病毒只靠蛋白质构象就能传播，都是中心法则的例外。</li>
+<li>全身细胞携带几乎相同的基因组，细胞身份的差别在于哪些基因此刻被打开。</li>
+<li>转录因子结合启动子和增强子来调控基因，少数几种因子的不同组合就能编码出大量细胞类型。</li>
+<li>山中伸弥只用四个转录因子就把成熟皮肤细胞重编程回多能状态，并因此获得 2012 年诺贝尔奖。</li>
+<li>DNA 甲基化和组蛋白修饰这类表观标记不改动序列，却决定基因开关，而且能被写入也能被擦除。</li>
+<li>1944 年荷兰大饥荒中，孕期挨饿母亲的孩子成年后更易肥胖、患糖尿病和心血管病，序列未改而甲基化模式变了。</li>
+<li>基因给的不是命运而是反应规范：同一基因型在不同环境中长出不同表型，二者是乘积式互作。</li>
+<li>MAOA 低活性变体只在童年受虐时才明显升高反社会风险，苯丙酮尿症靠饮食控制即可正常，说明环境能改写基因的结局。</li>
+</ol>
 </div>
 <div class="nav"><a href="index.html">← 返回首页</a></div>
 </div>

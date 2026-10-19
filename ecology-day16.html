@@ -61,7 +61,14 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 .cycle-stage span{font-size:0.72rem;color:#6b6b7d;font-weight:500;margin-left:6px}
 .cycle-desc{font-size:0.8rem;color:#5a5a6a;line-height:1.55}
 .cycle-flow{text-align:center;margin-top:14px;font-size:0.85rem;color:#f7a072;font-weight:600;letter-spacing:1px}
+.tk{background:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 14px rgba(0,0,0,0.05);border-left:4px solid #e85a4f}
+.tk h3{font-size:1.08rem;color:#e85a4f;margin-bottom:12px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid #f0d2cf;border-radius:12px;background:#fffaf8}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid #f6e1de;font-size:0.95rem;line-height:1.75;color:#3a3a4a}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e85a4f}
 @media(max-width:600px){
+  .tk{padding:20px 18px}
   header h1{font-size:1.4rem}
   .card{padding:22px 18px}
   .card h2{font-size:1.15rem}
@@ -219,6 +226,21 @@ header .day{display:inline-block;margin-top:14px;padding:4px 14px;background:#e8
 <p>检查你的职业、技能栈、关系网，哪个已经在 K 阶段太久（效率高但僵化）？主动安排"小释放"——每年重写技能优先级、每两年换一次合作生态、定期把自动驾驶任务交给 AI 然后强迫自己学新东西——成本远低于被动崩盘。育儿：不要为孩子营造无 Ω 的环境，适度小挫折是免疫训练。</p>
 <span class="q">▸ 思考题：你人生当前在 r / K / Ω / α 哪一象限？如果是 K，你愿意自己点燃下一次小 Ω，还是等它自己来？</span>
 </div>
+</div>
+<div class="tk">
+<h3>十条要点</h3>
+<ol class="takeaways">
+<li>生态位是物种在食物、时间、空间等多个维度上的完整“职业说明书”，不只是住在哪儿。</li>
+<li>Gause 的竞争排斥原理：生态位完全重叠的两个物种不能长期共存，要么一方灭绝，要么分化。</li>
+<li>Hutchinson 把生态位描述成 n 维超体积；物种在越多维度上错开，共存空间就越大。</li>
+<li>基础生态位是物种理论上能占的全部范围，现实生态位是被竞争者挤压后实际占到的部分，总是更小。</li>
+<li>1977 年加拉帕戈斯大干旱后种子变硬，粗喙的达尔文雀活了下来，种群平均喙径随之变大。</li>
+<li>能量每升一个营养级大约只传递 10%，其余多以热散失，所以食物链短、顶级捕食者稀少。</li>
+<li>蓝鲸直接吃磷虾、跳过中间营养级，才养得起巨大体型；吃肉的能量成本远高于直接吃植物。</li>
+<li>关键物种像拱顶石，数量不多却撑起群落结构：Paine 移走海星后，贻贝霸占岩面，多种生物随之消失。</li>
+<li>黄石公园 1995 年起重新引入灰狼，麋鹿不再过度啃食河谷，柳树恢复、河狸回归，形成营养级联。</li>
+<li>Holling 的适应性循环把生态系统看成生长、保护、释放、重组四阶段的轮回，长期压制小扰动会换来大崩溃。</li>
+</ol>
 </div>
 </div>
 <script defer="" src="https://hub.cissychen.com/comments.js"></script>
